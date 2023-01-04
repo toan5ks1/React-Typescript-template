@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuizTable /> should match snapshot 1`] = `
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-2 tbody tr {
+  vertical-align: baseline;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+  width: 15%;
+}
+
+.emotion-9 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.emotion-11 {
+  display: table-row-group;
+}
+
+.emotion-13 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: center;
+  padding: 0;
+  color: #212121;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  color: #757575;
+  background-color: #FAFAFA;
+  height: 80px;
+  border: none;
+}
+
+.emotion-15 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-17 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  height: 24px;
+  margin-right: 5px;
+  color: #00000061;
+}
+
+.emotion-18 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiTableContainer-root emotion-1"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="QuizTable__table"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              data-testid="QuizTable__description"
+              scope="col"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-6"
+                data-testid="TableBase__cellHeader"
+              >
+                Description
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-6"
+                data-testid="TableBase__cellHeader"
+              >
+                Type
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-9"
+              scope="col"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-6"
+                data-testid="TableBase__cellHeader"
+              >
+                Actions
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-11"
+        >
+          <tr
+            class="MuiTableRow-root emotion-4"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-paddingNone MuiTableCell-sizeMedium emotion-13"
+              colspan="12"
+              data-testid="TableBase__noDataMessage"
+            >
+              <div
+                class="MuiBox-root emotion-14"
+              >
+                <div
+                  class="MuiBox-root emotion-15"
+                >
+                  <div
+                    class="MuiBox-root emotion-16"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-17"
+                      data-testid="NoData__icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04-.39.08-.74.28-1.01.55-.18.18-.33.4-.43.64-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-18"
+                      data-testid="NoData__message"
+                    >
+                      ra.message.noDataInformation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

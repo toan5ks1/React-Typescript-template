@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+.emotion-0 .StudyPlanItemTable-loNameColumn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.emotion-0 .StudyPlanItemTable-dateColumn {
+  width: 13.8%;
+}
+
+.emotion-0 .StudyPlanItemTable-topicColumn {
+  width: 17.2%;
+}
+
+.emotion-0 .StudyPlanItemTable-dateEditColumn {
+  width: 15.8%;
+}
+
+.emotion-0 .StudyPlanItemTable-topicEditColumn {
+  width: 13%;
+}
+
+.emotion-0 .StudyPlanItemTable-visibilityEditColumn {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0"
+    />
+  </div>
+</body>
+`;

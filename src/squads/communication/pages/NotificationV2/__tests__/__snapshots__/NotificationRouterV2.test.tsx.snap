@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationRouterV2 /> should render course list without crash 1`] = `
+<div>
+  <div>
+    NotificationList
+  </div>
+</div>
+`;

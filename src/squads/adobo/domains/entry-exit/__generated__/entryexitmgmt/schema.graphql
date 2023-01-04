@@ -1,0 +1,3573 @@
+schema {
+  query: query_root
+  mutation: mutation_root
+  subscription: subscription_root
+}
+
+"""
+expression to compare columns of type Boolean. All fields are combined with logical 'AND'.
+"""
+input Boolean_comparison_exp {
+  _eq: Boolean
+  _gt: Boolean
+  _gte: Boolean
+  _in: [Boolean!]
+  _is_null: Boolean
+  _lt: Boolean
+  _lte: Boolean
+  _neq: Boolean
+  _nin: [Boolean!]
+}
+
+"""
+expression to compare columns of type Int. All fields are combined with logical 'AND'.
+"""
+input Int_comparison_exp {
+  _eq: Int
+  _gt: Int
+  _gte: Int
+  _in: [Int!]
+  _is_null: Boolean
+  _lt: Int
+  _lte: Int
+  _neq: Int
+  _nin: [Int!]
+}
+
+"""
+expression to compare columns of type String. All fields are combined with logical 'AND'.
+"""
+input String_comparison_exp {
+  _eq: String
+  _gt: String
+  _gte: String
+  _ilike: String
+  _in: [String!]
+  _is_null: Boolean
+  _like: String
+  _lt: String
+  _lte: String
+  _neq: String
+  _nilike: String
+  _nin: [String!]
+  _nlike: String
+  _nsimilar: String
+  _similar: String
+}
+
+"""
+columns and relationships of "locations"
+"""
+type locations {
+  access_path: String
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  is_archived: Boolean!
+  location_id: String!
+  location_type: String
+  name: String!
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String!
+  updated_at: timestamptz!
+
+  """An array relationship"""
+  user_access_paths(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): [user_access_paths!]!
+
+  """An aggregated array relationship"""
+  user_access_paths_aggregate(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): user_access_paths_aggregate!
+}
+
+"""
+aggregated selection of "locations"
+"""
+type locations_aggregate {
+  aggregate: locations_aggregate_fields
+  nodes: [locations!]!
+}
+
+"""
+aggregate fields of "locations"
+"""
+type locations_aggregate_fields {
+  count(columns: [locations_select_column!], distinct: Boolean): Int
+  max: locations_max_fields
+  min: locations_min_fields
+}
+
+"""
+order by aggregate values of table "locations"
+"""
+input locations_aggregate_order_by {
+  count: order_by
+  max: locations_max_order_by
+  min: locations_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "locations"
+"""
+input locations_arr_rel_insert_input {
+  data: [locations_insert_input!]!
+  on_conflict: locations_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "locations". All fields are combined with a logical 'AND'.
+"""
+input locations_bool_exp {
+  _and: [locations_bool_exp]
+  _not: locations_bool_exp
+  _or: [locations_bool_exp]
+  access_path: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  is_archived: Boolean_comparison_exp
+  location_id: String_comparison_exp
+  location_type: String_comparison_exp
+  name: String_comparison_exp
+  parent_location_id: String_comparison_exp
+  partner_internal_id: String_comparison_exp
+  partner_internal_parent_id: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+  user_access_paths: user_access_paths_bool_exp
+}
+
+"""
+unique or primary key constraints on table "locations"
+"""
+enum locations_constraint {
+  """unique or primary key constraint"""
+  location_pk
+}
+
+"""
+input type for inserting data into table "locations"
+"""
+input locations_insert_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_access_paths: user_access_paths_arr_rel_insert_input
+}
+
+"""aggregate max on columns"""
+type locations_max_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "locations"
+"""
+input locations_max_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type locations_min_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "locations"
+"""
+input locations_min_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "locations"
+"""
+type locations_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [locations!]!
+}
+
+"""
+input type for inserting object relation for remote table "locations"
+"""
+input locations_obj_rel_insert_input {
+  data: locations_insert_input!
+  on_conflict: locations_on_conflict
+}
+
+"""
+on conflict condition type for table "locations"
+"""
+input locations_on_conflict {
+  constraint: locations_constraint!
+  update_columns: [locations_update_column!]!
+  where: locations_bool_exp
+}
+
+"""
+ordering options when selecting data from "locations"
+"""
+input locations_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  is_archived: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_access_paths_aggregate: user_access_paths_aggregate_order_by
+}
+
+"""
+primary key columns input for table: "locations"
+"""
+input locations_pk_columns_input {
+  location_id: String!
+}
+
+"""
+select columns of table "locations"
+"""
+enum locations_select_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_type
+
+  """column name"""
+  name
+
+  """column name"""
+  parent_location_id
+
+  """column name"""
+  partner_internal_id
+
+  """column name"""
+  partner_internal_parent_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "locations"
+"""
+input locations_set_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "locations"
+"""
+enum locations_update_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_type
+
+  """column name"""
+  name
+
+  """column name"""
+  parent_location_id
+
+  """column name"""
+  partner_internal_id
+
+  """column name"""
+  partner_internal_parent_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+}
+
+"""mutation root"""
+type mutation_root {
+  """
+  delete data from the table: "locations"
+  """
+  delete_locations(
+    """filter the rows which have to be deleted"""
+    where: locations_bool_exp!
+  ): locations_mutation_response
+
+  """
+  delete single row from the table: "locations"
+  """
+  delete_locations_by_pk(location_id: String!): locations
+
+  """
+  delete data from the table: "student_entryexit_records"
+  """
+  delete_student_entryexit_records(
+    """filter the rows which have to be deleted"""
+    where: student_entryexit_records_bool_exp!
+  ): student_entryexit_records_mutation_response
+
+  """
+  delete single row from the table: "student_entryexit_records"
+  """
+  delete_student_entryexit_records_by_pk(entryexit_id: Int!): student_entryexit_records
+
+  """
+  delete data from the table: "student_parents"
+  """
+  delete_student_parents(
+    """filter the rows which have to be deleted"""
+    where: student_parents_bool_exp!
+  ): student_parents_mutation_response
+
+  """
+  delete single row from the table: "student_parents"
+  """
+  delete_student_parents_by_pk(parent_id: String!, student_id: String!): student_parents
+
+  """
+  delete data from the table: "student_qr"
+  """
+  delete_student_qr(
+    """filter the rows which have to be deleted"""
+    where: student_qr_bool_exp!
+  ): student_qr_mutation_response
+
+  """
+  delete single row from the table: "student_qr"
+  """
+  delete_student_qr_by_pk(qr_id: Int!): student_qr
+
+  """
+  delete data from the table: "students"
+  """
+  delete_students(
+    """filter the rows which have to be deleted"""
+    where: students_bool_exp!
+  ): students_mutation_response
+
+  """
+  delete single row from the table: "students"
+  """
+  delete_students_by_pk(student_id: String!): students
+
+  """
+  delete data from the table: "user_access_paths"
+  """
+  delete_user_access_paths(
+    """filter the rows which have to be deleted"""
+    where: user_access_paths_bool_exp!
+  ): user_access_paths_mutation_response
+
+  """
+  delete single row from the table: "user_access_paths"
+  """
+  delete_user_access_paths_by_pk(location_id: String!, user_id: String!): user_access_paths
+
+  """
+  delete data from the table: "users"
+  """
+  delete_users(
+    """filter the rows which have to be deleted"""
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  """
+  delete single row from the table: "users"
+  """
+  delete_users_by_pk(user_id: String!): users
+
+  """
+  insert data into the table: "locations"
+  """
+  insert_locations(
+    """the rows to be inserted"""
+    objects: [locations_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: locations_on_conflict
+  ): locations_mutation_response
+
+  """
+  insert a single row into the table: "locations"
+  """
+  insert_locations_one(
+    """the row to be inserted"""
+    object: locations_insert_input!
+
+    """on conflict condition"""
+    on_conflict: locations_on_conflict
+  ): locations
+
+  """
+  insert data into the table: "student_entryexit_records"
+  """
+  insert_student_entryexit_records(
+    """the rows to be inserted"""
+    objects: [student_entryexit_records_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: student_entryexit_records_on_conflict
+  ): student_entryexit_records_mutation_response
+
+  """
+  insert a single row into the table: "student_entryexit_records"
+  """
+  insert_student_entryexit_records_one(
+    """the row to be inserted"""
+    object: student_entryexit_records_insert_input!
+
+    """on conflict condition"""
+    on_conflict: student_entryexit_records_on_conflict
+  ): student_entryexit_records
+
+  """
+  insert data into the table: "student_parents"
+  """
+  insert_student_parents(
+    """the rows to be inserted"""
+    objects: [student_parents_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: student_parents_on_conflict
+  ): student_parents_mutation_response
+
+  """
+  insert a single row into the table: "student_parents"
+  """
+  insert_student_parents_one(
+    """the row to be inserted"""
+    object: student_parents_insert_input!
+
+    """on conflict condition"""
+    on_conflict: student_parents_on_conflict
+  ): student_parents
+
+  """
+  insert data into the table: "student_qr"
+  """
+  insert_student_qr(
+    """the rows to be inserted"""
+    objects: [student_qr_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: student_qr_on_conflict
+  ): student_qr_mutation_response
+
+  """
+  insert a single row into the table: "student_qr"
+  """
+  insert_student_qr_one(
+    """the row to be inserted"""
+    object: student_qr_insert_input!
+
+    """on conflict condition"""
+    on_conflict: student_qr_on_conflict
+  ): student_qr
+
+  """
+  insert data into the table: "students"
+  """
+  insert_students(
+    """the rows to be inserted"""
+    objects: [students_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: students_on_conflict
+  ): students_mutation_response
+
+  """
+  insert a single row into the table: "students"
+  """
+  insert_students_one(
+    """the row to be inserted"""
+    object: students_insert_input!
+
+    """on conflict condition"""
+    on_conflict: students_on_conflict
+  ): students
+
+  """
+  insert data into the table: "user_access_paths"
+  """
+  insert_user_access_paths(
+    """the rows to be inserted"""
+    objects: [user_access_paths_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: user_access_paths_on_conflict
+  ): user_access_paths_mutation_response
+
+  """
+  insert a single row into the table: "user_access_paths"
+  """
+  insert_user_access_paths_one(
+    """the row to be inserted"""
+    object: user_access_paths_insert_input!
+
+    """on conflict condition"""
+    on_conflict: user_access_paths_on_conflict
+  ): user_access_paths
+
+  """
+  insert data into the table: "users"
+  """
+  insert_users(
+    """the rows to be inserted"""
+    objects: [users_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: users_on_conflict
+  ): users_mutation_response
+
+  """
+  insert a single row into the table: "users"
+  """
+  insert_users_one(
+    """the row to be inserted"""
+    object: users_insert_input!
+
+    """on conflict condition"""
+    on_conflict: users_on_conflict
+  ): users
+
+  """
+  update data of the table: "locations"
+  """
+  update_locations(
+    """sets the columns of the filtered rows to the given values"""
+    _set: locations_set_input
+
+    """filter the rows which have to be updated"""
+    where: locations_bool_exp!
+  ): locations_mutation_response
+
+  """
+  update single row of the table: "locations"
+  """
+  update_locations_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: locations_set_input
+    pk_columns: locations_pk_columns_input!
+  ): locations
+
+  """
+  update data of the table: "student_entryexit_records"
+  """
+  update_student_entryexit_records(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: student_entryexit_records_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_entryexit_records_set_input
+
+    """filter the rows which have to be updated"""
+    where: student_entryexit_records_bool_exp!
+  ): student_entryexit_records_mutation_response
+
+  """
+  update single row of the table: "student_entryexit_records"
+  """
+  update_student_entryexit_records_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: student_entryexit_records_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_entryexit_records_set_input
+    pk_columns: student_entryexit_records_pk_columns_input!
+  ): student_entryexit_records
+
+  """
+  update data of the table: "student_parents"
+  """
+  update_student_parents(
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_parents_set_input
+
+    """filter the rows which have to be updated"""
+    where: student_parents_bool_exp!
+  ): student_parents_mutation_response
+
+  """
+  update single row of the table: "student_parents"
+  """
+  update_student_parents_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_parents_set_input
+    pk_columns: student_parents_pk_columns_input!
+  ): student_parents
+
+  """
+  update data of the table: "student_qr"
+  """
+  update_student_qr(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: student_qr_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_qr_set_input
+
+    """filter the rows which have to be updated"""
+    where: student_qr_bool_exp!
+  ): student_qr_mutation_response
+
+  """
+  update single row of the table: "student_qr"
+  """
+  update_student_qr_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: student_qr_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: student_qr_set_input
+    pk_columns: student_qr_pk_columns_input!
+  ): student_qr
+
+  """
+  update data of the table: "students"
+  """
+  update_students(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: students_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: students_set_input
+
+    """filter the rows which have to be updated"""
+    where: students_bool_exp!
+  ): students_mutation_response
+
+  """
+  update single row of the table: "students"
+  """
+  update_students_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: students_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: students_set_input
+    pk_columns: students_pk_columns_input!
+  ): students
+
+  """
+  update data of the table: "user_access_paths"
+  """
+  update_user_access_paths(
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_access_paths_set_input
+
+    """filter the rows which have to be updated"""
+    where: user_access_paths_bool_exp!
+  ): user_access_paths_mutation_response
+
+  """
+  update single row of the table: "user_access_paths"
+  """
+  update_user_access_paths_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_access_paths_set_input
+    pk_columns: user_access_paths_pk_columns_input!
+  ): user_access_paths
+
+  """
+  update data of the table: "users"
+  """
+  update_users(
+    """sets the columns of the filtered rows to the given values"""
+    _set: users_set_input
+
+    """filter the rows which have to be updated"""
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  """
+  update single row of the table: "users"
+  """
+  update_users_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: users_set_input
+    pk_columns: users_pk_columns_input!
+  ): users
+}
+
+"""column ordering options"""
+enum order_by {
+  """in the ascending order, nulls last"""
+  asc
+
+  """in the ascending order, nulls first"""
+  asc_nulls_first
+
+  """in the ascending order, nulls last"""
+  asc_nulls_last
+
+  """in the descending order, nulls first"""
+  desc
+
+  """in the descending order, nulls first"""
+  desc_nulls_first
+
+  """in the descending order, nulls last"""
+  desc_nulls_last
+}
+
+"""query root"""
+type query_root {
+  """
+  fetch data from the table: "locations"
+  """
+  locations(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): [locations!]!
+
+  """
+  fetch aggregated fields from the table: "locations"
+  """
+  locations_aggregate(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): locations_aggregate!
+
+  """fetch data from the table: "locations" using primary key columns"""
+  locations_by_pk(location_id: String!): locations
+
+  """
+  fetch data from the table: "student_entryexit_records"
+  """
+  student_entryexit_records(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): [student_entryexit_records!]!
+
+  """
+  fetch aggregated fields from the table: "student_entryexit_records"
+  """
+  student_entryexit_records_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): student_entryexit_records_aggregate!
+
+  """
+  fetch data from the table: "student_entryexit_records" using primary key columns
+  """
+  student_entryexit_records_by_pk(entryexit_id: Int!): student_entryexit_records
+
+  """
+  fetch data from the table: "student_parents"
+  """
+  student_parents(
+    """distinct select on columns"""
+    distinct_on: [student_parents_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_parents_order_by!]
+
+    """filter the rows returned"""
+    where: student_parents_bool_exp
+  ): [student_parents!]!
+
+  """
+  fetch aggregated fields from the table: "student_parents"
+  """
+  student_parents_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_parents_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_parents_order_by!]
+
+    """filter the rows returned"""
+    where: student_parents_bool_exp
+  ): student_parents_aggregate!
+
+  """fetch data from the table: "student_parents" using primary key columns"""
+  student_parents_by_pk(parent_id: String!, student_id: String!): student_parents
+
+  """
+  fetch data from the table: "student_qr"
+  """
+  student_qr(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): [student_qr!]!
+
+  """
+  fetch aggregated fields from the table: "student_qr"
+  """
+  student_qr_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): student_qr_aggregate!
+
+  """fetch data from the table: "student_qr" using primary key columns"""
+  student_qr_by_pk(qr_id: Int!): student_qr
+
+  """
+  fetch data from the table: "students"
+  """
+  students(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): [students!]!
+
+  """
+  fetch aggregated fields from the table: "students"
+  """
+  students_aggregate(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): students_aggregate!
+
+  """fetch data from the table: "students" using primary key columns"""
+  students_by_pk(student_id: String!): students
+
+  """
+  fetch data from the table: "user_access_paths"
+  """
+  user_access_paths(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): [user_access_paths!]!
+
+  """
+  fetch aggregated fields from the table: "user_access_paths"
+  """
+  user_access_paths_aggregate(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): user_access_paths_aggregate!
+
+  """
+  fetch data from the table: "user_access_paths" using primary key columns
+  """
+  user_access_paths_by_pk(location_id: String!, user_id: String!): user_access_paths
+
+  """
+  fetch data from the table: "users"
+  """
+  users(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): [users!]!
+
+  """
+  fetch aggregated fields from the table: "users"
+  """
+  users_aggregate(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): users_aggregate!
+
+  """fetch data from the table: "users" using primary key columns"""
+  users_by_pk(user_id: String!): users
+}
+
+scalar smallint
+
+"""
+expression to compare columns of type smallint. All fields are combined with logical 'AND'.
+"""
+input smallint_comparison_exp {
+  _eq: smallint
+  _gt: smallint
+  _gte: smallint
+  _in: [smallint!]
+  _is_null: Boolean
+  _lt: smallint
+  _lte: smallint
+  _neq: smallint
+  _nin: [smallint!]
+}
+
+"""
+columns and relationships of "student_entryexit_records"
+"""
+type student_entryexit_records {
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  entry_at: timestamptz!
+  entryexit_id: Int!
+  exit_at: timestamptz
+  resource_path: String
+  student_id: String!
+
+  """An object relationship"""
+  students: students!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "student_entryexit_records"
+"""
+type student_entryexit_records_aggregate {
+  aggregate: student_entryexit_records_aggregate_fields
+  nodes: [student_entryexit_records!]!
+}
+
+"""
+aggregate fields of "student_entryexit_records"
+"""
+type student_entryexit_records_aggregate_fields {
+  avg: student_entryexit_records_avg_fields
+  count(columns: [student_entryexit_records_select_column!], distinct: Boolean): Int
+  max: student_entryexit_records_max_fields
+  min: student_entryexit_records_min_fields
+  stddev: student_entryexit_records_stddev_fields
+  stddev_pop: student_entryexit_records_stddev_pop_fields
+  stddev_samp: student_entryexit_records_stddev_samp_fields
+  sum: student_entryexit_records_sum_fields
+  var_pop: student_entryexit_records_var_pop_fields
+  var_samp: student_entryexit_records_var_samp_fields
+  variance: student_entryexit_records_variance_fields
+}
+
+"""
+order by aggregate values of table "student_entryexit_records"
+"""
+input student_entryexit_records_aggregate_order_by {
+  avg: student_entryexit_records_avg_order_by
+  count: order_by
+  max: student_entryexit_records_max_order_by
+  min: student_entryexit_records_min_order_by
+  stddev: student_entryexit_records_stddev_order_by
+  stddev_pop: student_entryexit_records_stddev_pop_order_by
+  stddev_samp: student_entryexit_records_stddev_samp_order_by
+  sum: student_entryexit_records_sum_order_by
+  var_pop: student_entryexit_records_var_pop_order_by
+  var_samp: student_entryexit_records_var_samp_order_by
+  variance: student_entryexit_records_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "student_entryexit_records"
+"""
+input student_entryexit_records_arr_rel_insert_input {
+  data: [student_entryexit_records_insert_input!]!
+  on_conflict: student_entryexit_records_on_conflict
+}
+
+"""aggregate avg on columns"""
+type student_entryexit_records_avg_fields {
+  entryexit_id: Float
+}
+
+"""
+order by avg() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_avg_order_by {
+  entryexit_id: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "student_entryexit_records". All fields are combined with a logical 'AND'.
+"""
+input student_entryexit_records_bool_exp {
+  _and: [student_entryexit_records_bool_exp]
+  _not: student_entryexit_records_bool_exp
+  _or: [student_entryexit_records_bool_exp]
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  entry_at: timestamptz_comparison_exp
+  entryexit_id: Int_comparison_exp
+  exit_at: timestamptz_comparison_exp
+  resource_path: String_comparison_exp
+  student_id: String_comparison_exp
+  students: students_bool_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "student_entryexit_records"
+"""
+enum student_entryexit_records_constraint {
+  """unique or primary key constraint"""
+  student_entryexit_records_pk
+}
+
+"""
+input type for incrementing integer column in table "student_entryexit_records"
+"""
+input student_entryexit_records_inc_input {
+  entryexit_id: Int
+}
+
+"""
+input type for inserting data into table "student_entryexit_records"
+"""
+input student_entryexit_records_insert_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  entry_at: timestamptz
+  entryexit_id: Int
+  exit_at: timestamptz
+  resource_path: String
+  student_id: String
+  students: students_obj_rel_insert_input
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type student_entryexit_records_max_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  entry_at: timestamptz
+  entryexit_id: Int
+  exit_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_max_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  entry_at: order_by
+  entryexit_id: order_by
+  exit_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type student_entryexit_records_min_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  entry_at: timestamptz
+  entryexit_id: Int
+  exit_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_min_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  entry_at: order_by
+  entryexit_id: order_by
+  exit_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "student_entryexit_records"
+"""
+type student_entryexit_records_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [student_entryexit_records!]!
+}
+
+"""
+input type for inserting object relation for remote table "student_entryexit_records"
+"""
+input student_entryexit_records_obj_rel_insert_input {
+  data: student_entryexit_records_insert_input!
+  on_conflict: student_entryexit_records_on_conflict
+}
+
+"""
+on conflict condition type for table "student_entryexit_records"
+"""
+input student_entryexit_records_on_conflict {
+  constraint: student_entryexit_records_constraint!
+  update_columns: [student_entryexit_records_update_column!]!
+  where: student_entryexit_records_bool_exp
+}
+
+"""
+ordering options when selecting data from "student_entryexit_records"
+"""
+input student_entryexit_records_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  entry_at: order_by
+  entryexit_id: order_by
+  exit_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  students: students_order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "student_entryexit_records"
+"""
+input student_entryexit_records_pk_columns_input {
+  entryexit_id: Int!
+}
+
+"""
+select columns of table "student_entryexit_records"
+"""
+enum student_entryexit_records_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  entry_at
+
+  """column name"""
+  entryexit_id
+
+  """column name"""
+  exit_at
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "student_entryexit_records"
+"""
+input student_entryexit_records_set_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  entry_at: timestamptz
+  entryexit_id: Int
+  exit_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type student_entryexit_records_stddev_fields {
+  entryexit_id: Float
+}
+
+"""
+order by stddev() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_stddev_order_by {
+  entryexit_id: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type student_entryexit_records_stddev_pop_fields {
+  entryexit_id: Float
+}
+
+"""
+order by stddev_pop() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_stddev_pop_order_by {
+  entryexit_id: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type student_entryexit_records_stddev_samp_fields {
+  entryexit_id: Float
+}
+
+"""
+order by stddev_samp() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_stddev_samp_order_by {
+  entryexit_id: order_by
+}
+
+"""aggregate sum on columns"""
+type student_entryexit_records_sum_fields {
+  entryexit_id: Int
+}
+
+"""
+order by sum() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_sum_order_by {
+  entryexit_id: order_by
+}
+
+"""
+update columns of table "student_entryexit_records"
+"""
+enum student_entryexit_records_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  entry_at
+
+  """column name"""
+  entryexit_id
+
+  """column name"""
+  exit_at
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type student_entryexit_records_var_pop_fields {
+  entryexit_id: Float
+}
+
+"""
+order by var_pop() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_var_pop_order_by {
+  entryexit_id: order_by
+}
+
+"""aggregate var_samp on columns"""
+type student_entryexit_records_var_samp_fields {
+  entryexit_id: Float
+}
+
+"""
+order by var_samp() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_var_samp_order_by {
+  entryexit_id: order_by
+}
+
+"""aggregate variance on columns"""
+type student_entryexit_records_variance_fields {
+  entryexit_id: Float
+}
+
+"""
+order by variance() on columns of table "student_entryexit_records"
+"""
+input student_entryexit_records_variance_order_by {
+  entryexit_id: order_by
+}
+
+"""
+columns and relationships of "student_parents"
+"""
+type student_parents {
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  parent_id: String!
+  relationship: String!
+  resource_path: String!
+  student_id: String!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "student_parents"
+"""
+type student_parents_aggregate {
+  aggregate: student_parents_aggregate_fields
+  nodes: [student_parents!]!
+}
+
+"""
+aggregate fields of "student_parents"
+"""
+type student_parents_aggregate_fields {
+  count(columns: [student_parents_select_column!], distinct: Boolean): Int
+  max: student_parents_max_fields
+  min: student_parents_min_fields
+}
+
+"""
+order by aggregate values of table "student_parents"
+"""
+input student_parents_aggregate_order_by {
+  count: order_by
+  max: student_parents_max_order_by
+  min: student_parents_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "student_parents"
+"""
+input student_parents_arr_rel_insert_input {
+  data: [student_parents_insert_input!]!
+  on_conflict: student_parents_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "student_parents". All fields are combined with a logical 'AND'.
+"""
+input student_parents_bool_exp {
+  _and: [student_parents_bool_exp]
+  _not: student_parents_bool_exp
+  _or: [student_parents_bool_exp]
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  parent_id: String_comparison_exp
+  relationship: String_comparison_exp
+  resource_path: String_comparison_exp
+  student_id: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "student_parents"
+"""
+enum student_parents_constraint {
+  """unique or primary key constraint"""
+  student_parents_pk
+}
+
+"""
+input type for inserting data into table "student_parents"
+"""
+input student_parents_insert_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  parent_id: String
+  relationship: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type student_parents_max_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  parent_id: String
+  relationship: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "student_parents"
+"""
+input student_parents_max_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  parent_id: order_by
+  relationship: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type student_parents_min_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  parent_id: String
+  relationship: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "student_parents"
+"""
+input student_parents_min_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  parent_id: order_by
+  relationship: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "student_parents"
+"""
+type student_parents_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [student_parents!]!
+}
+
+"""
+input type for inserting object relation for remote table "student_parents"
+"""
+input student_parents_obj_rel_insert_input {
+  data: student_parents_insert_input!
+  on_conflict: student_parents_on_conflict
+}
+
+"""
+on conflict condition type for table "student_parents"
+"""
+input student_parents_on_conflict {
+  constraint: student_parents_constraint!
+  update_columns: [student_parents_update_column!]!
+  where: student_parents_bool_exp
+}
+
+"""
+ordering options when selecting data from "student_parents"
+"""
+input student_parents_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  parent_id: order_by
+  relationship: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "student_parents"
+"""
+input student_parents_pk_columns_input {
+  parent_id: String!
+  student_id: String!
+}
+
+"""
+select columns of table "student_parents"
+"""
+enum student_parents_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  parent_id
+
+  """column name"""
+  relationship
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "student_parents"
+"""
+input student_parents_set_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  parent_id: String
+  relationship: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "student_parents"
+"""
+enum student_parents_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  parent_id
+
+  """column name"""
+  relationship
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+columns and relationships of "student_qr"
+"""
+type student_qr {
+  created_at: timestamptz!
+  qr_id: Int!
+  qr_url: String!
+  resource_path: String
+  student_id: String!
+
+  """An object relationship"""
+  students: students!
+  updated_at: timestamptz!
+  version: String
+}
+
+"""
+aggregated selection of "student_qr"
+"""
+type student_qr_aggregate {
+  aggregate: student_qr_aggregate_fields
+  nodes: [student_qr!]!
+}
+
+"""
+aggregate fields of "student_qr"
+"""
+type student_qr_aggregate_fields {
+  avg: student_qr_avg_fields
+  count(columns: [student_qr_select_column!], distinct: Boolean): Int
+  max: student_qr_max_fields
+  min: student_qr_min_fields
+  stddev: student_qr_stddev_fields
+  stddev_pop: student_qr_stddev_pop_fields
+  stddev_samp: student_qr_stddev_samp_fields
+  sum: student_qr_sum_fields
+  var_pop: student_qr_var_pop_fields
+  var_samp: student_qr_var_samp_fields
+  variance: student_qr_variance_fields
+}
+
+"""
+order by aggregate values of table "student_qr"
+"""
+input student_qr_aggregate_order_by {
+  avg: student_qr_avg_order_by
+  count: order_by
+  max: student_qr_max_order_by
+  min: student_qr_min_order_by
+  stddev: student_qr_stddev_order_by
+  stddev_pop: student_qr_stddev_pop_order_by
+  stddev_samp: student_qr_stddev_samp_order_by
+  sum: student_qr_sum_order_by
+  var_pop: student_qr_var_pop_order_by
+  var_samp: student_qr_var_samp_order_by
+  variance: student_qr_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "student_qr"
+"""
+input student_qr_arr_rel_insert_input {
+  data: [student_qr_insert_input!]!
+  on_conflict: student_qr_on_conflict
+}
+
+"""aggregate avg on columns"""
+type student_qr_avg_fields {
+  qr_id: Float
+}
+
+"""
+order by avg() on columns of table "student_qr"
+"""
+input student_qr_avg_order_by {
+  qr_id: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "student_qr". All fields are combined with a logical 'AND'.
+"""
+input student_qr_bool_exp {
+  _and: [student_qr_bool_exp]
+  _not: student_qr_bool_exp
+  _or: [student_qr_bool_exp]
+  created_at: timestamptz_comparison_exp
+  qr_id: Int_comparison_exp
+  qr_url: String_comparison_exp
+  resource_path: String_comparison_exp
+  student_id: String_comparison_exp
+  students: students_bool_exp
+  updated_at: timestamptz_comparison_exp
+  version: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "student_qr"
+"""
+enum student_qr_constraint {
+  """unique or primary key constraint"""
+  student_qr_pk
+
+  """unique or primary key constraint"""
+  student_qr_qr_url_key
+
+  """unique or primary key constraint"""
+  student_qr_student_id_key
+}
+
+"""
+input type for incrementing integer column in table "student_qr"
+"""
+input student_qr_inc_input {
+  qr_id: Int
+}
+
+"""
+input type for inserting data into table "student_qr"
+"""
+input student_qr_insert_input {
+  created_at: timestamptz
+  qr_id: Int
+  qr_url: String
+  resource_path: String
+  student_id: String
+  students: students_obj_rel_insert_input
+  updated_at: timestamptz
+  version: String
+}
+
+"""aggregate max on columns"""
+type student_qr_max_fields {
+  created_at: timestamptz
+  qr_id: Int
+  qr_url: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+  version: String
+}
+
+"""
+order by max() on columns of table "student_qr"
+"""
+input student_qr_max_order_by {
+  created_at: order_by
+  qr_id: order_by
+  qr_url: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+  version: order_by
+}
+
+"""aggregate min on columns"""
+type student_qr_min_fields {
+  created_at: timestamptz
+  qr_id: Int
+  qr_url: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+  version: String
+}
+
+"""
+order by min() on columns of table "student_qr"
+"""
+input student_qr_min_order_by {
+  created_at: order_by
+  qr_id: order_by
+  qr_url: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+  version: order_by
+}
+
+"""
+response of any mutation on the table "student_qr"
+"""
+type student_qr_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [student_qr!]!
+}
+
+"""
+input type for inserting object relation for remote table "student_qr"
+"""
+input student_qr_obj_rel_insert_input {
+  data: student_qr_insert_input!
+  on_conflict: student_qr_on_conflict
+}
+
+"""
+on conflict condition type for table "student_qr"
+"""
+input student_qr_on_conflict {
+  constraint: student_qr_constraint!
+  update_columns: [student_qr_update_column!]!
+  where: student_qr_bool_exp
+}
+
+"""
+ordering options when selecting data from "student_qr"
+"""
+input student_qr_order_by {
+  created_at: order_by
+  qr_id: order_by
+  qr_url: order_by
+  resource_path: order_by
+  student_id: order_by
+  students: students_order_by
+  updated_at: order_by
+  version: order_by
+}
+
+"""
+primary key columns input for table: "student_qr"
+"""
+input student_qr_pk_columns_input {
+  qr_id: Int!
+}
+
+"""
+select columns of table "student_qr"
+"""
+enum student_qr_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  qr_id
+
+  """column name"""
+  qr_url
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  version
+}
+
+"""
+input type for updating data in table "student_qr"
+"""
+input student_qr_set_input {
+  created_at: timestamptz
+  qr_id: Int
+  qr_url: String
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+  version: String
+}
+
+"""aggregate stddev on columns"""
+type student_qr_stddev_fields {
+  qr_id: Float
+}
+
+"""
+order by stddev() on columns of table "student_qr"
+"""
+input student_qr_stddev_order_by {
+  qr_id: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type student_qr_stddev_pop_fields {
+  qr_id: Float
+}
+
+"""
+order by stddev_pop() on columns of table "student_qr"
+"""
+input student_qr_stddev_pop_order_by {
+  qr_id: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type student_qr_stddev_samp_fields {
+  qr_id: Float
+}
+
+"""
+order by stddev_samp() on columns of table "student_qr"
+"""
+input student_qr_stddev_samp_order_by {
+  qr_id: order_by
+}
+
+"""aggregate sum on columns"""
+type student_qr_sum_fields {
+  qr_id: Int
+}
+
+"""
+order by sum() on columns of table "student_qr"
+"""
+input student_qr_sum_order_by {
+  qr_id: order_by
+}
+
+"""
+update columns of table "student_qr"
+"""
+enum student_qr_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  qr_id
+
+  """column name"""
+  qr_url
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  version
+}
+
+"""aggregate var_pop on columns"""
+type student_qr_var_pop_fields {
+  qr_id: Float
+}
+
+"""
+order by var_pop() on columns of table "student_qr"
+"""
+input student_qr_var_pop_order_by {
+  qr_id: order_by
+}
+
+"""aggregate var_samp on columns"""
+type student_qr_var_samp_fields {
+  qr_id: Float
+}
+
+"""
+order by var_samp() on columns of table "student_qr"
+"""
+input student_qr_var_samp_order_by {
+  qr_id: order_by
+}
+
+"""aggregate variance on columns"""
+type student_qr_variance_fields {
+  qr_id: Float
+}
+
+"""
+order by variance() on columns of table "student_qr"
+"""
+input student_qr_variance_order_by {
+  qr_id: order_by
+}
+
+"""
+columns and relationships of "students"
+"""
+type students {
+  created_at: timestamptz!
+  current_grade: smallint
+  deleted_at: timestamptz
+  enrollment_status: String!
+  resource_path: String!
+  school_id: Int
+
+  """An object relationship"""
+  student_entryexit_record: student_entryexit_records
+
+  """An array relationship"""
+  student_entryexit_records(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): [student_entryexit_records!]!
+
+  """An aggregated array relationship"""
+  student_entryexit_records_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): student_entryexit_records_aggregate!
+  student_id: String!
+
+  """An array relationship"""
+  student_qrs(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): [student_qr!]!
+
+  """An aggregated array relationship"""
+  student_qrs_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): student_qr_aggregate!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "students"
+"""
+type students_aggregate {
+  aggregate: students_aggregate_fields
+  nodes: [students!]!
+}
+
+"""
+aggregate fields of "students"
+"""
+type students_aggregate_fields {
+  avg: students_avg_fields
+  count(columns: [students_select_column!], distinct: Boolean): Int
+  max: students_max_fields
+  min: students_min_fields
+  stddev: students_stddev_fields
+  stddev_pop: students_stddev_pop_fields
+  stddev_samp: students_stddev_samp_fields
+  sum: students_sum_fields
+  var_pop: students_var_pop_fields
+  var_samp: students_var_samp_fields
+  variance: students_variance_fields
+}
+
+"""
+order by aggregate values of table "students"
+"""
+input students_aggregate_order_by {
+  avg: students_avg_order_by
+  count: order_by
+  max: students_max_order_by
+  min: students_min_order_by
+  stddev: students_stddev_order_by
+  stddev_pop: students_stddev_pop_order_by
+  stddev_samp: students_stddev_samp_order_by
+  sum: students_sum_order_by
+  var_pop: students_var_pop_order_by
+  var_samp: students_var_samp_order_by
+  variance: students_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "students"
+"""
+input students_arr_rel_insert_input {
+  data: [students_insert_input!]!
+  on_conflict: students_on_conflict
+}
+
+"""aggregate avg on columns"""
+type students_avg_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by avg() on columns of table "students"
+"""
+input students_avg_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "students". All fields are combined with a logical 'AND'.
+"""
+input students_bool_exp {
+  _and: [students_bool_exp]
+  _not: students_bool_exp
+  _or: [students_bool_exp]
+  created_at: timestamptz_comparison_exp
+  current_grade: smallint_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  enrollment_status: String_comparison_exp
+  resource_path: String_comparison_exp
+  school_id: Int_comparison_exp
+  student_entryexit_record: student_entryexit_records_bool_exp
+  student_entryexit_records: student_entryexit_records_bool_exp
+  student_id: String_comparison_exp
+  student_qrs: student_qr_bool_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "students"
+"""
+enum students_constraint {
+  """unique or primary key constraint"""
+  students_pk
+}
+
+"""
+input type for incrementing integer column in table "students"
+"""
+input students_inc_input {
+  current_grade: smallint
+  school_id: Int
+}
+
+"""
+input type for inserting data into table "students"
+"""
+input students_insert_input {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  enrollment_status: String
+  resource_path: String
+  school_id: Int
+  student_entryexit_record: student_entryexit_records_obj_rel_insert_input
+  student_entryexit_records: student_entryexit_records_arr_rel_insert_input
+  student_id: String
+  student_qrs: student_qr_arr_rel_insert_input
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type students_max_fields {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  enrollment_status: String
+  resource_path: String
+  school_id: Int
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "students"
+"""
+input students_max_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  enrollment_status: order_by
+  resource_path: order_by
+  school_id: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type students_min_fields {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  enrollment_status: String
+  resource_path: String
+  school_id: Int
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "students"
+"""
+input students_min_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  enrollment_status: order_by
+  resource_path: order_by
+  school_id: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "students"
+"""
+type students_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [students!]!
+}
+
+"""
+input type for inserting object relation for remote table "students"
+"""
+input students_obj_rel_insert_input {
+  data: students_insert_input!
+  on_conflict: students_on_conflict
+}
+
+"""
+on conflict condition type for table "students"
+"""
+input students_on_conflict {
+  constraint: students_constraint!
+  update_columns: [students_update_column!]!
+  where: students_bool_exp
+}
+
+"""
+ordering options when selecting data from "students"
+"""
+input students_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  enrollment_status: order_by
+  resource_path: order_by
+  school_id: order_by
+  student_entryexit_record: student_entryexit_records_order_by
+  student_entryexit_records_aggregate: student_entryexit_records_aggregate_order_by
+  student_id: order_by
+  student_qrs_aggregate: student_qr_aggregate_order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "students"
+"""
+input students_pk_columns_input {
+  student_id: String!
+}
+
+"""
+select columns of table "students"
+"""
+enum students_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  current_grade
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  enrollment_status
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  school_id
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "students"
+"""
+input students_set_input {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  enrollment_status: String
+  resource_path: String
+  school_id: Int
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type students_stddev_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by stddev() on columns of table "students"
+"""
+input students_stddev_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type students_stddev_pop_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by stddev_pop() on columns of table "students"
+"""
+input students_stddev_pop_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type students_stddev_samp_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by stddev_samp() on columns of table "students"
+"""
+input students_stddev_samp_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""aggregate sum on columns"""
+type students_sum_fields {
+  current_grade: smallint
+  school_id: Int
+}
+
+"""
+order by sum() on columns of table "students"
+"""
+input students_sum_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""
+update columns of table "students"
+"""
+enum students_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  current_grade
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  enrollment_status
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  school_id
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type students_var_pop_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by var_pop() on columns of table "students"
+"""
+input students_var_pop_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""aggregate var_samp on columns"""
+type students_var_samp_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by var_samp() on columns of table "students"
+"""
+input students_var_samp_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""aggregate variance on columns"""
+type students_variance_fields {
+  current_grade: Float
+  school_id: Float
+}
+
+"""
+order by variance() on columns of table "students"
+"""
+input students_variance_order_by {
+  current_grade: order_by
+  school_id: order_by
+}
+
+"""subscription root"""
+type subscription_root {
+  """
+  fetch data from the table: "locations"
+  """
+  locations(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): [locations!]!
+
+  """
+  fetch aggregated fields from the table: "locations"
+  """
+  locations_aggregate(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): locations_aggregate!
+
+  """fetch data from the table: "locations" using primary key columns"""
+  locations_by_pk(location_id: String!): locations
+
+  """
+  fetch data from the table: "student_entryexit_records"
+  """
+  student_entryexit_records(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): [student_entryexit_records!]!
+
+  """
+  fetch aggregated fields from the table: "student_entryexit_records"
+  """
+  student_entryexit_records_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_entryexit_records_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_entryexit_records_order_by!]
+
+    """filter the rows returned"""
+    where: student_entryexit_records_bool_exp
+  ): student_entryexit_records_aggregate!
+
+  """
+  fetch data from the table: "student_entryexit_records" using primary key columns
+  """
+  student_entryexit_records_by_pk(entryexit_id: Int!): student_entryexit_records
+
+  """
+  fetch data from the table: "student_parents"
+  """
+  student_parents(
+    """distinct select on columns"""
+    distinct_on: [student_parents_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_parents_order_by!]
+
+    """filter the rows returned"""
+    where: student_parents_bool_exp
+  ): [student_parents!]!
+
+  """
+  fetch aggregated fields from the table: "student_parents"
+  """
+  student_parents_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_parents_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_parents_order_by!]
+
+    """filter the rows returned"""
+    where: student_parents_bool_exp
+  ): student_parents_aggregate!
+
+  """fetch data from the table: "student_parents" using primary key columns"""
+  student_parents_by_pk(parent_id: String!, student_id: String!): student_parents
+
+  """
+  fetch data from the table: "student_qr"
+  """
+  student_qr(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): [student_qr!]!
+
+  """
+  fetch aggregated fields from the table: "student_qr"
+  """
+  student_qr_aggregate(
+    """distinct select on columns"""
+    distinct_on: [student_qr_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [student_qr_order_by!]
+
+    """filter the rows returned"""
+    where: student_qr_bool_exp
+  ): student_qr_aggregate!
+
+  """fetch data from the table: "student_qr" using primary key columns"""
+  student_qr_by_pk(qr_id: Int!): student_qr
+
+  """
+  fetch data from the table: "students"
+  """
+  students(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): [students!]!
+
+  """
+  fetch aggregated fields from the table: "students"
+  """
+  students_aggregate(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): students_aggregate!
+
+  """fetch data from the table: "students" using primary key columns"""
+  students_by_pk(student_id: String!): students
+
+  """
+  fetch data from the table: "user_access_paths"
+  """
+  user_access_paths(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): [user_access_paths!]!
+
+  """
+  fetch aggregated fields from the table: "user_access_paths"
+  """
+  user_access_paths_aggregate(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): user_access_paths_aggregate!
+
+  """
+  fetch data from the table: "user_access_paths" using primary key columns
+  """
+  user_access_paths_by_pk(location_id: String!, user_id: String!): user_access_paths
+
+  """
+  fetch data from the table: "users"
+  """
+  users(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): [users!]!
+
+  """
+  fetch aggregated fields from the table: "users"
+  """
+  users_aggregate(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): users_aggregate!
+
+  """fetch data from the table: "users" using primary key columns"""
+  users_by_pk(user_id: String!): users
+}
+
+scalar timestamptz
+
+"""
+expression to compare columns of type timestamptz. All fields are combined with logical 'AND'.
+"""
+input timestamptz_comparison_exp {
+  _eq: timestamptz
+  _gt: timestamptz
+  _gte: timestamptz
+  _in: [timestamptz!]
+  _is_null: Boolean
+  _lt: timestamptz
+  _lte: timestamptz
+  _neq: timestamptz
+  _nin: [timestamptz!]
+}
+
+"""
+columns and relationships of "user_access_paths"
+"""
+type user_access_paths {
+  access_path: String
+  created_at: timestamptz!
+  deleted_at: timestamptz
+
+  """An object relationship"""
+  location: locations!
+  location_id: String!
+  resource_path: String!
+  updated_at: timestamptz!
+
+  """An object relationship"""
+  user: users!
+  user_id: String!
+}
+
+"""
+aggregated selection of "user_access_paths"
+"""
+type user_access_paths_aggregate {
+  aggregate: user_access_paths_aggregate_fields
+  nodes: [user_access_paths!]!
+}
+
+"""
+aggregate fields of "user_access_paths"
+"""
+type user_access_paths_aggregate_fields {
+  count(columns: [user_access_paths_select_column!], distinct: Boolean): Int
+  max: user_access_paths_max_fields
+  min: user_access_paths_min_fields
+}
+
+"""
+order by aggregate values of table "user_access_paths"
+"""
+input user_access_paths_aggregate_order_by {
+  count: order_by
+  max: user_access_paths_max_order_by
+  min: user_access_paths_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "user_access_paths"
+"""
+input user_access_paths_arr_rel_insert_input {
+  data: [user_access_paths_insert_input!]!
+  on_conflict: user_access_paths_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "user_access_paths". All fields are combined with a logical 'AND'.
+"""
+input user_access_paths_bool_exp {
+  _and: [user_access_paths_bool_exp]
+  _not: user_access_paths_bool_exp
+  _or: [user_access_paths_bool_exp]
+  access_path: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  location: locations_bool_exp
+  location_id: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+  user: users_bool_exp
+  user_id: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "user_access_paths"
+"""
+enum user_access_paths_constraint {
+  """unique or primary key constraint"""
+  user_access_paths_pk
+}
+
+"""
+input type for inserting data into table "user_access_paths"
+"""
+input user_access_paths_insert_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location: locations_obj_rel_insert_input
+  location_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user: users_obj_rel_insert_input
+  user_id: String
+}
+
+"""aggregate max on columns"""
+type user_access_paths_max_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+order by max() on columns of table "user_access_paths"
+"""
+input user_access_paths_max_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_id: order_by
+}
+
+"""aggregate min on columns"""
+type user_access_paths_min_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+order by min() on columns of table "user_access_paths"
+"""
+input user_access_paths_min_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_id: order_by
+}
+
+"""
+response of any mutation on the table "user_access_paths"
+"""
+type user_access_paths_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [user_access_paths!]!
+}
+
+"""
+input type for inserting object relation for remote table "user_access_paths"
+"""
+input user_access_paths_obj_rel_insert_input {
+  data: user_access_paths_insert_input!
+  on_conflict: user_access_paths_on_conflict
+}
+
+"""
+on conflict condition type for table "user_access_paths"
+"""
+input user_access_paths_on_conflict {
+  constraint: user_access_paths_constraint!
+  update_columns: [user_access_paths_update_column!]!
+  where: user_access_paths_bool_exp
+}
+
+"""
+ordering options when selecting data from "user_access_paths"
+"""
+input user_access_paths_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location: locations_order_by
+  location_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user: users_order_by
+  user_id: order_by
+}
+
+"""
+primary key columns input for table: "user_access_paths"
+"""
+input user_access_paths_pk_columns_input {
+  location_id: String!
+  user_id: String!
+}
+
+"""
+select columns of table "user_access_paths"
+"""
+enum user_access_paths_select_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  location_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_id
+}
+
+"""
+input type for updating data in table "user_access_paths"
+"""
+input user_access_paths_set_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+update columns of table "user_access_paths"
+"""
+enum user_access_paths_update_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  location_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_id
+}
+
+"""
+columns and relationships of "users"
+"""
+type users {
+  allow_notification: Boolean
+  country: String!
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  device_token: String
+  given_name: String
+  name: String!
+  resource_path: String!
+  updated_at: timestamptz!
+
+  """An array relationship"""
+  user_access_paths(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): [user_access_paths!]!
+
+  """An aggregated array relationship"""
+  user_access_paths_aggregate(
+    """distinct select on columns"""
+    distinct_on: [user_access_paths_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_access_paths_order_by!]
+
+    """filter the rows returned"""
+    where: user_access_paths_bool_exp
+  ): user_access_paths_aggregate!
+  user_group: String!
+  user_id: String!
+}
+
+"""
+aggregated selection of "users"
+"""
+type users_aggregate {
+  aggregate: users_aggregate_fields
+  nodes: [users!]!
+}
+
+"""
+aggregate fields of "users"
+"""
+type users_aggregate_fields {
+  count(columns: [users_select_column!], distinct: Boolean): Int
+  max: users_max_fields
+  min: users_min_fields
+}
+
+"""
+order by aggregate values of table "users"
+"""
+input users_aggregate_order_by {
+  count: order_by
+  max: users_max_order_by
+  min: users_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "users"
+"""
+input users_arr_rel_insert_input {
+  data: [users_insert_input!]!
+  on_conflict: users_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "users". All fields are combined with a logical 'AND'.
+"""
+input users_bool_exp {
+  _and: [users_bool_exp]
+  _not: users_bool_exp
+  _or: [users_bool_exp]
+  allow_notification: Boolean_comparison_exp
+  country: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  device_token: String_comparison_exp
+  given_name: String_comparison_exp
+  name: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+  user_access_paths: user_access_paths_bool_exp
+  user_group: String_comparison_exp
+  user_id: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "users"
+"""
+enum users_constraint {
+  """unique or primary key constraint"""
+  users_pk
+}
+
+"""
+input type for inserting data into table "users"
+"""
+input users_insert_input {
+  allow_notification: Boolean
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  given_name: String
+  name: String
+  resource_path: String
+  updated_at: timestamptz
+  user_access_paths: user_access_paths_arr_rel_insert_input
+  user_group: String
+  user_id: String
+}
+
+"""aggregate max on columns"""
+type users_max_fields {
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  given_name: String
+  name: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+order by max() on columns of table "users"
+"""
+input users_max_order_by {
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  given_name: order_by
+  name: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""aggregate min on columns"""
+type users_min_fields {
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  given_name: String
+  name: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+order by min() on columns of table "users"
+"""
+input users_min_order_by {
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  given_name: order_by
+  name: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""
+response of any mutation on the table "users"
+"""
+type users_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [users!]!
+}
+
+"""
+input type for inserting object relation for remote table "users"
+"""
+input users_obj_rel_insert_input {
+  data: users_insert_input!
+  on_conflict: users_on_conflict
+}
+
+"""
+on conflict condition type for table "users"
+"""
+input users_on_conflict {
+  constraint: users_constraint!
+  update_columns: [users_update_column!]!
+  where: users_bool_exp
+}
+
+"""
+ordering options when selecting data from "users"
+"""
+input users_order_by {
+  allow_notification: order_by
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  given_name: order_by
+  name: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_access_paths_aggregate: user_access_paths_aggregate_order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""
+primary key columns input for table: "users"
+"""
+input users_pk_columns_input {
+  user_id: String!
+}
+
+"""
+select columns of table "users"
+"""
+enum users_select_column {
+  """column name"""
+  allow_notification
+
+  """column name"""
+  country
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  device_token
+
+  """column name"""
+  given_name
+
+  """column name"""
+  name
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_group
+
+  """column name"""
+  user_id
+}
+
+"""
+input type for updating data in table "users"
+"""
+input users_set_input {
+  allow_notification: Boolean
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  given_name: String
+  name: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+update columns of table "users"
+"""
+enum users_update_column {
+  """column name"""
+  allow_notification
+
+  """column name"""
+  country
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  device_token
+
+  """column name"""
+  given_name
+
+  """column name"""
+  name
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_group
+
+  """column name"""
+  user_id
+}

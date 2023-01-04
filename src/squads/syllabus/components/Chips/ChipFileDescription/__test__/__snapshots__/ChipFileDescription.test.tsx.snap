@@ -1,0 +1,685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChipFileDescription /> should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 32px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #BDBDBD;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background-color: transparent;
+  padding: 4px 2px 4px 2px;
+  height: 32px;
+  position: relative;
+}
+
+.emotion-0::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-0.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-0 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-0.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-0 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-0 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-0 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-0 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-0 .MuiChip-icon {
+  color: #616161;
+  margin-left: 5px;
+  margin-right: -6px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+}
+
+.emotion-0 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-0.Mui-focusVisible {
+  background-color: rgba(235, 235, 235, 0.2);
+}
+
+.emotion-0.MuiChip-clickable:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-0.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.emotion-0 .MuiChip-avatar {
+  margin-left: 4px;
+}
+
+.emotion-0 .MuiChip-avatarSmall {
+  margin-left: 2px;
+}
+
+.emotion-0 .MuiChip-icon {
+  margin-left: 4px;
+}
+
+.emotion-0 .MuiChip-iconSmall {
+  margin-left: 2px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  margin-right: 5px;
+}
+
+.emotion-0 .MuiChip-deleteIconSmall {
+  margin-right: 3px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  width: inherit;
+}
+
+.emotion-0 .ChipFileDescription-retry {
+  background: #F44336;
+  border: 1px solid #EF5350;
+}
+
+.emotion-0 .ChipFileDescription-label {
+  padding-left: 4px;
+  padding-right: 14px;
+}
+
+.emotion-1 {
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1>svg {
+  width: 11px;
+}
+
+.emotion-1>svg>path {
+  fill: #F44336;
+}
+
+.emotion-2 {
+  min-width: 28px;
+  min-height: 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  color: #2196F3;
+}
+
+.emotion-5:hover {
+  -webkit-text-decoration: underlined;
+  text-decoration: underlined;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-8>span {
+  font-size: 0.75rem;
+}
+
+.emotion-8>svg {
+  margin-left: 3.4px;
+}
+
+<div>
+  <div
+    class="MuiButtonBase-root ChipFileDescription-root ChipFileDescription-retry MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-outlinedDefault emotion-0"
+    data-testid="ChipFileDescription"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+      data-testid="ChipFileDescriptionConversionErrorIcon__root"
+    >
+      <svg
+        fill="none"
+        height="24"
+        viewBox="0 0 96 96"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M92 48C92 72.3005 72.3005 92 48 92C23.6995 92 4 72.3005 4 48C4 23.6995 23.6995 4 48 4C72.3005 4 92 23.6995 92 48ZM42 29C42 25.6863 44.6863 23 48 23C51.3137 23 54 25.6863 54 29V49C54 52.3137 51.3137 55 48 55C44.6863 55 42 52.3137 42 49V29ZM48 61C44.6863 61 42 63.6863 42 67C42 70.3137 44.6863 73 48 73C51.3137 73 54 70.3137 54 67C54 63.6863 51.3137 61 48 61Z"
+          fill="#586189"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      class="MuiBox-root emotion-2"
+      data-testid="FileIcon"
+    >
+      <svg
+        data-testid="FileIcon__file"
+        height="28"
+        width="28"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <image
+          height="100%"
+          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfmBBMPOinXog2mAAAA30lEQVRIx2NgoBJghLNEGOwZdIjQ0YhfWofhNcN/oiABMJ9IY3AaxAKl IxgYGBgYGigPo/9oIUYyYCJfK3avoQMHBnssojcYVhIyEDkgTRgu4wzqfFIMOo3DkN/EGIVsEC7X BBNjFDEGMRBjFHEGEWEUsQYRNIp4gwgYRYpBeI0izSCEUeEwAXKzyFqGCIY/DAwMGjABFhI04y2L qJZpRw2io0Gw6G+glkGNFJlCTa+NMIP+kKD/Cz6DNpBg0FF8kjYM34lsmUxHaMLebNBh8GbgIOCW HwwrGR6QE5oEAADy5/IIXX8MJwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNC0xOVQxMjo1ODo0 MSswMzowMD4idSYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDQtMTlUMTI6NTg6NDErMDM6MDBP f82aAAAAAElFTkSuQmCC"
+          width="100%"
+        />
+      </svg>
+    </div>
+    <span
+      class="ChipFileDescription-label MuiChip-label MuiChip-labelMedium emotion-3"
+    >
+      <div
+        class="MuiBox-root emotion-4"
+        data-testid="ChipFileDescription__name"
+      >
+        <a
+          class="MuiBox-root emotion-5"
+          data-testid="ExternalLink"
+          href="href"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-6"
+          >
+            Test Name
+          </p>
+        </a>
+      </div>
+    </span>
+    <div
+      class="MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault MuiBox-root emotion-7"
+    >
+      <div
+        class="MuiBox-root emotion-8"
+        data-testid="ChipFileDescriptionRetryConversion__root"
+      >
+        <span>
+          resources.courses.lessonConvert.tryAgain
+        </span>
+        <svg
+          fill="none"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.244 2.881a4.5 4.5 0 101.198 3.836C10.506 6.324 10.177 6 9.78 6h-.028c-.382 0-.684.314-.77.686A3.06 3.06 0 118.225 3.9l-.798.798a.25.25 0 00.176.427h2.647a.25.25 0 00.25-.25V2.229a.25.25 0 00-.427-.177l-.83.83z"
+            fill="#395AD2"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ChipFileDescription with delete action/> should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 32px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #BDBDBD;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background-color: transparent;
+  padding: 4px 2px 4px 2px;
+  height: 32px;
+  position: relative;
+}
+
+.emotion-0::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-0.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-0 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-0.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-0 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-0 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-0 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-0 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-0 .MuiChip-icon {
+  color: #616161;
+  margin-left: 5px;
+  margin-right: -6px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+}
+
+.emotion-0 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-0.Mui-focusVisible {
+  background-color: rgba(235, 235, 235, 0.2);
+}
+
+.emotion-0.MuiChip-clickable:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-0.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.emotion-0 .MuiChip-avatar {
+  margin-left: 4px;
+}
+
+.emotion-0 .MuiChip-avatarSmall {
+  margin-left: 2px;
+}
+
+.emotion-0 .MuiChip-icon {
+  margin-left: 4px;
+}
+
+.emotion-0 .MuiChip-iconSmall {
+  margin-left: 2px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  margin-right: 5px;
+}
+
+.emotion-0 .MuiChip-deleteIconSmall {
+  margin-right: 3px;
+}
+
+.emotion-0 .MuiChip-deleteIcon {
+  width: inherit;
+}
+
+.emotion-0 .ChipFileDescription-retry {
+  background: #F44336;
+  border: 1px solid #EF5350;
+}
+
+.emotion-0 .ChipFileDescription-label {
+  padding-left: 4px;
+  padding-right: 14px;
+}
+
+.emotion-1 {
+  min-width: 28px;
+  min-height: 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.25rem;
+  color: #9E9E9E;
+  cursor: pointer;
+}
+
+<div>
+  <div
+    class="MuiButtonBase-root ChipFileDescription-root MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-outlinedDefault emotion-0"
+    data-testid="ChipFileDescription"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+      data-testid="FileIcon"
+    >
+      <svg
+        data-testid="FileIcon__file"
+        height="28"
+        width="28"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <image
+          height="100%"
+          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfmBBMPOinXog2mAAAA30lEQVRIx2NgoBJghLNEGOwZdIjQ0YhfWofhNcN/oiABMJ9IY3AaxAKl IxgYGBgYGigPo/9oIUYyYCJfK3avoQMHBnssojcYVhIyEDkgTRgu4wzqfFIMOo3DkN/EGIVsEC7X BBNjFDEGMRBjFHEGEWEUsQYRNIp4gwgYRYpBeI0izSCEUeEwAXKzyFqGCIY/DAwMGjABFhI04y2L qJZpRw2io0Gw6G+glkGNFJlCTa+NMIP+kKD/Cz6DNpBg0FF8kjYM34lsmUxHaMLebNBh8GbgIOCW HwwrGR6QE5oEAADy5/IIXX8MJwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNC0xOVQxMjo1ODo0 MSswMzowMD4idSYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDQtMTlUMTI6NTg6NDErMDM6MDBP f82aAAAAAElFTkSuQmCC"
+          width="100%"
+        />
+      </svg>
+    </div>
+    <span
+      class="ChipFileDescription-label MuiChip-label MuiChip-labelMedium emotion-2"
+    >
+      <div
+        class="MuiBox-root emotion-3"
+        data-testid="ChipFileDescription__name"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+        >
+          Test Name
+        </p>
+      </div>
+    </span>
+    <div
+      class="MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault MuiBox-root emotion-5"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall emotion-6"
+        data-testid="ChipRemoveIcon__icon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

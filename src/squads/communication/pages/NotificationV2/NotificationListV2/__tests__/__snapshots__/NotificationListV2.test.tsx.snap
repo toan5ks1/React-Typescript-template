@@ -1,0 +1,2394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationListV2 /> should render snapshot 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.emotion-1 {
+  padding-bottom: 24px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.6;
+}
+
+.emotion-3 {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 560px;
+  max-width: 100%;
+}
+
+.emotion-6 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.emotion-7 .TextFieldBase-readOnly .MuiInputBase-root {
+  background-color: #FAFAFA;
+}
+
+.emotion-7 .TextFieldFilter-inputRoot {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.emotion-7 .TextFieldFilter-inputPadding {
+  padding-top: 8.5px;
+  padding-bottom: 8.5px;
+  height: 1.1876em;
+}
+
+.emotion-8 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.1876em;
+  position: relative;
+  border-radius: 4px;
+  padding-left: 14px;
+}
+
+.emotion-8.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-8:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #212121;
+}
+
+@media (hover: none) {
+  .emotion-8:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+}
+
+.emotion-8.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.emotion-8.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: #F44336;
+}
+
+.emotion-8.Mui-disabled .MuiOutlinedInput-notchedOutline {
+  border-color: #BDBDBD;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.01em;
+  max-height: 2em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.54);
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-11 {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding: 16.5px 14px;
+  padding-left: 0;
+}
+
+.emotion-11::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-11::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-11:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-11::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-11:focus {
+  outline: 0;
+}
+
+.emotion-11:invalid {
+  box-shadow: none;
+}
+
+.emotion-11::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-11:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-11.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-11:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-11:-webkit-autofill {
+  border-radius: inherit;
+}
+
+.emotion-12 {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: -5px;
+  left: 0;
+  margin: 0;
+  padding: 0 8px;
+  pointer-events: none;
+  border-radius: inherit;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  min-width: 0%;
+  border-color: rgba(0, 0, 0, 0.23);
+}
+
+.emotion-13 {
+  float: unset;
+  overflow: hidden;
+  padding: 0;
+  line-height: 11px;
+  -webkit-transition: width 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: width 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+}
+
+.emotion-14 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  font-family: Roboto,sans-serif;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border: 1px solid rgba(224, 224, 224, 0.5);
+  color: #E0E0E0;
+  border-radius: 4px;
+  color: #212121;
+  border-color: rgba(0, 0, 0, 0.23);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #FAFAFA;
+  border-color: #E0E0E0;
+  border-left: none;
+  color: #757575;
+}
+
+.emotion-14::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-14.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-14 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-14:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(224, 224, 224, 0.04);
+  border: 1px solid #E0E0E0;
+}
+
+@media (hover: none) {
+  .emotion-14:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-14.Mui-disabled {
+  color: #BDBDBD;
+  border: 1px solid #E0E0E0;
+}
+
+.emotion-14.Mui-disabled {
+  border: 1px solid #E0E0E0;
+}
+
+.emotion-14:hover {
+  border-color: rgba(0, 0, 0, 0.23);
+  background-color: rgba(33, 33, 33, 0.04);
+}
+
+.emotion-14:hover {
+  border-color: #E0E0E0;
+  border-left: none;
+}
+
+.emotion-15 {
+  display: inherit;
+  margin-right: -4px;
+  margin-left: 8px;
+}
+
+.emotion-15>*:nth-of-type(1) {
+  font-size: 20px;
+}
+
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-17 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  font-family: Roboto,sans-serif;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #fff;
+  background-color: #2196F3;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px rgba(0, 0, 0, 0.14),0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.emotion-18::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-18.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-18 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #0B79D0;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px rgba(0, 0, 0, 0.14),0px 1px 10px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: none) {
+  .emotion-18:hover {
+    background-color: #2196F3;
+  }
+}
+
+.emotion-18:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.emotion-18.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px rgba(0, 0, 0, 0.14),0px 1px 18px rgba(0, 0, 0, 0.12);
+}
+
+.emotion-18.Mui-disabled {
+  color: #BDBDBD;
+  box-shadow: none;
+  background-color: #E0E0E0;
+}
+
+.emotion-19 {
+  display: inherit;
+  margin-right: 8px;
+  margin-left: -4px;
+}
+
+.emotion-19>*:nth-of-type(1) {
+  font-size: 20px;
+}
+
+.emotion-22 {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+}
+
+.emotion-23 .MuiToggleButtonGroup-grouped:not(:first-of-type) {
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-23 .MuiToggleButtonGroup-grouped:not(:last-of-type) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.emotion-23 .MuiToggleButtonGroup-grouped.Mui-selected+.MuiToggleButtonGroup-grouped.Mui-selected {
+  border-left: 0;
+  margin-left: 0;
+}
+
+.emotion-23 .Mui-selected {
+  border-color: #90CAF9!important;
+}
+
+.emotion-24 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  font-family: Roboto,sans-serif;
+  line-height: 1.75;
+  border-radius: 4px;
+  padding: 7px;
+  border: 1px solid #E0E0E0;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-24::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-24.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-24 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-24.Mui-disabled {
+  color: #BDBDBD;
+  border: 1px solid #E0E0E0;
+}
+
+.emotion-24:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(33, 33, 33, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-24:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-24.Mui-selected {
+  color: #212121;
+  background-color: rgba(33, 33, 33, 0.08);
+}
+
+.emotion-24.Mui-selected:hover {
+  background-color: rgba(33, 33, 33, 0.12);
+}
+
+@media (hover: none) {
+  .emotion-24.Mui-selected:hover {
+    background-color: rgba(33, 33, 33, 0.08);
+  }
+}
+
+.emotion-24.ToggleButtonBase-root {
+  color: #757575;
+  padding: 6px 1rem;
+}
+
+.emotion-24.ToggleButtonBase-selected {
+  color: #2196F3;
+  background-color: #EDF7FE;
+  border-color: #90CAF9;
+}
+
+.emotion-25 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  font-family: Roboto,sans-serif;
+  line-height: 1.75;
+}
+
+.emotion-36 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-37 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-38 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-38 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-39 {
+  display: table-header-group;
+}
+
+.emotion-40 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-40.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-40.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-40.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-41 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-42 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-43 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-44 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-55 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-57 {
+  display: table-row-group;
+}
+
+.emotion-58 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-58.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-58.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-58.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-58.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-59 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-62 {
+  cursor: pointer;
+  color: #2196F3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-62:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-68 {
+  position: relative;
+}
+
+.emotion-69 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#4CAF50;
+  color: #3B873E;
+}
+
+.emotion-69.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-69 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-69 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-69 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-69 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-69 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-69 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-69 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-70 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.emotion-72 {
+  color: #212121;
+}
+
+.emotion-76 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-88 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#F44336;
+  color: #F44336;
+}
+
+.emotion-88.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-88 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-88 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-88 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-88 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-88 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-88 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-88 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-107 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#FF9800;
+  color: #C77700;
+}
+
+.emotion-107.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-107 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-107 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-107 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-107 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-107 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-107 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-107 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-115 {
+  overflow: auto;
+  color: #212121;
+  font-size: 0.875rem;
+}
+
+.emotion-115:last-child {
+  padding: 0;
+}
+
+.emotion-115 .MuiInputBase-input {
+  padding: 9px 35px 7px 8px;
+  font-size: 12px;
+}
+
+.emotion-115 .MuiTablePagination-selectIcon {
+  top: calc(50% - 13px);
+  right: 7px;
+}
+
+.emotion-115 .MuiTablePagination-select {
+  padding-right: 35px!important;
+}
+
+.emotion-116 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+  min-height: 52px;
+  padding-right: 2px;
+}
+
+@media (min-width:600px) {
+  .emotion-116 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-116 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-116 {
+    min-height: 64px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-116 {
+    min-height: 52px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-116 {
+    min-height: 52px;
+    padding-right: 2px;
+  }
+}
+
+.emotion-116 .MuiTablePagination-actions {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.emotion-117 {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.emotion-118 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-119 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+}
+
+.emotion-120 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.1876em;
+  color: inherit;
+  font-size: inherit;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 32px;
+  margin-left: 8px;
+}
+
+.emotion-120.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-120 .MuiTablePagination-select {
+  padding-left: 8px;
+  padding-right: 24px;
+  text-align: right;
+  -webkit-text-align-last: right;
+  text-align-last: right;
+}
+
+.emotion-121 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+}
+
+.emotion-121:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.emotion-121::-ms-expand {
+  display: none;
+}
+
+.emotion-121.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-121[multiple] {
+  height: auto;
+}
+
+.emotion-121:not([multiple]) option,
+.emotion-121:not([multiple]) optgroup {
+  background-color: #fff;
+}
+
+.emotion-121.emotion-121.emotion-121 {
+  padding-right: 24px;
+  min-width: 16px;
+}
+
+.emotion-121.MuiSelect-select {
+  height: auto;
+  min-height: 1.4375em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.emotion-121.MuiSelect-select {
+  line-height: 1.4375em;
+}
+
+.emotion-121::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-121::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-121:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-121::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-121:focus {
+  outline: 0;
+}
+
+.emotion-121:invalid {
+  box-shadow: none;
+}
+
+.emotion-121::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-121:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-121.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-121:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-122 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-123 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: calc(50% - .5em);
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-123.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-124 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-126 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.emotion-126::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-126.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-126 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-126:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-126:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-126.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <h6
+        aria-label="title"
+        class="MuiTypography-root MuiTypography-h6 emotion-2"
+      >
+        Notification
+      </h6>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiBox-root emotion-4"
+          data-testid="FormFilterAdvanced__root"
+        >
+          <div
+            class="MuiBox-root emotion-5"
+          >
+            <div
+              class="MuiBox-root emotion-6"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root emotion-7"
+                data-testid="FormFilterAdvanced__textField"
+              >
+                <div
+                  class="TextFieldFilter-inputRoot MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart emotion-8"
+                >
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeMedium emotion-9"
+                  >
+                    <span
+                      class="notranslate"
+                    >
+                      ​
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall emotion-10"
+                      data-testid="SearchIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    class="TextFieldFilter-inputPadding MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart emotion-11"
+                    id="mui-1"
+                    placeholder="Search by Notification Title"
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="MuiOutlinedInput-notchedOutline emotion-12"
+                  >
+                    <legend
+                      class="emotion-13"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+              <button
+                class="MuiButton-root MuiButton-outlined MuiButton-outlinedDefault MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  emotion-14"
+                data-testid="ButtonDropdownWithPopover__button"
+                style="word-break: keep-all;"
+                tabindex="0"
+                type="button"
+              >
+                ra.common.action.filter
+                <span
+                  class="MuiButton-endIcon MuiButton-iconSizeMedium emotion-15"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-16"
+                    data-testid="KeyboardArrowDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root emotion-17"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button
+        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  emotion-18"
+        data-testid="NotificationListV2__buttonCompose"
+        style="word-break: keep-all;"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-startIcon MuiButton-iconSizeMedium emotion-19"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-16"
+            data-testid="AddIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </span>
+        Compose
+        <span
+          class="MuiTouchRipple-root emotion-17"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiBox-root emotion-22"
+    >
+      <div
+        class="MuiToggleButtonGroup-root emotion-23"
+        data-testid="NotificationListV2__buttonGroupCategory"
+        role="group"
+      >
+        <button
+          aria-pressed="true"
+          class="MuiButtonBase-root ToggleButtonBase-root MuiToggleButton-root ToggleButtonBase-selected Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal emotion-24"
+          data-testid="NotificationCategoryV2__NOTIFICATION_STATUS_NONE"
+          tabindex="0"
+          type="button"
+          value="NOTIFICATION_STATUS_NONE"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-button emotion-25"
+          >
+            All (1)
+          </span>
+          <span
+            class="MuiTouchRipple-root emotion-17"
+          />
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root ToggleButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal emotion-24"
+          data-testid="NotificationCategoryV2__NOTIFICATION_STATUS_SENT"
+          tabindex="0"
+          type="button"
+          value="NOTIFICATION_STATUS_SENT"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-button emotion-25"
+          >
+            Sent (1)
+          </span>
+          <span
+            class="MuiTouchRipple-root emotion-17"
+          />
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root ToggleButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal emotion-24"
+          data-testid="NotificationCategoryV2__NOTIFICATION_STATUS_SCHEDULED"
+          tabindex="0"
+          type="button"
+          value="NOTIFICATION_STATUS_SCHEDULED"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-button emotion-25"
+          >
+            Scheduled (1)
+          </span>
+          <span
+            class="MuiTouchRipple-root emotion-17"
+          />
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root ToggleButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal emotion-24"
+          data-testid="NotificationCategoryV2__NOTIFICATION_STATUS_DRAFT"
+          tabindex="0"
+          type="button"
+          value="NOTIFICATION_STATUS_DRAFT"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-button emotion-25"
+          >
+            Draft (1)
+          </span>
+          <span
+            class="MuiTouchRipple-root emotion-17"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root emotion-36"
+  >
+    <div
+      class="MuiTableContainer-root emotion-37"
+      style="overflow-x: unset;"
+    >
+      <table
+        class="MuiTable-root emotion-38"
+        data-testid="Notification__tableV2"
+      >
+        <thead
+          class="MuiTableHead-root emotion-39"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-40"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-41"
+              scope="col"
+              style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 20%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Title
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 18%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Composer
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 12%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Audience Type
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 10%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Status
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 7%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Read
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-43"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Sent Date
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-55"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-44"
+                data-testid="TableBase__cellHeader"
+              >
+                Tag
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-57"
+          data-testid="TableBaseBody__root"
+        >
+          <tr
+            class="MuiTableRow-root emotion-58"
+            data-testid="TableBase__row"
+            data-value="0"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="TableIndexCell__index"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-62"
+                data-testid="NotificationTableV2__title"
+                href="/communication/notifications/notification_id_1/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                  title="Notification Title 1"
+                >
+                  Notification Title 1
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 18%;"
+            />
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__recipient"
+              >
+                School Admin |||| School Admin of %{smart_count}
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-68"
+                data-testid="NotificationTableV2__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-69"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-70"
+                  >
+                    Sent
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-72"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                >
+                  0/0
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__sentDate"
+              >
+                2021/08/23, 22:06
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-76"
+              style="width: 15%;"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-58"
+            data-testid="TableBase__row"
+            data-value="1"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="TableIndexCell__index"
+              >
+                2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-62"
+                data-testid="NotificationTableV2__title"
+                href="/communication/notifications/notification_id_2/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                  title="Notification Title 2"
+                >
+                  Notification Title 2
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 18%;"
+            />
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__recipient"
+              >
+                School Admin |||| School Admin of %{smart_count}
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-68"
+                data-testid="NotificationTableV2__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-88"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-70"
+                  >
+                    Draft
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-72"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                >
+                  --
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__sentDate"
+              >
+                2021/08/23, 22:06
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-76"
+              style="width: 15%;"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-58"
+            data-testid="TableBase__row"
+            data-value="2"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="TableIndexCell__index"
+              >
+                3
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-62"
+                data-testid="NotificationTableV2__title"
+                href="/communication/notifications/notification_id_3/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                  title="Notification Title 3"
+                >
+                  Notification Title 3
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 18%;"
+            />
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__recipient"
+              >
+                School Admin |||| School Admin of %{smart_count}
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-68"
+                data-testid="NotificationTableV2__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-107"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-70"
+                  >
+                    Scheduled
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-72"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-42"
+                >
+                  --
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-59"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-42"
+                data-testid="NotificationTableV2__sentDate"
+              >
+                Scheduled
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-76"
+              style="width: 15%;"
+            />
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="MuiTablePagination-root emotion-115"
+        data-testid="TableBaseFooter"
+        limit="10"
+        offset="0"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar emotion-116"
+        >
+          <div
+            class="MuiTablePagination-spacer emotion-117"
+          />
+          <p
+            class="MuiTablePagination-selectLabel emotion-118"
+            id="mui-2"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-119"
+            >
+              ra.navigation.page_rows_per_page
+            </span>
+          </p>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary emotion-120"
+            variant="standard"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="mui-2 TableBaseFooter__select"
+              class="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input emotion-121"
+              id="TableBaseFooter__select"
+              role="button"
+              tabindex="0"
+            >
+              10
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput emotion-122"
+              tabindex="-1"
+              value="10"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard emotion-123"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTablePagination-displayedRows emotion-124"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-119"
+              data-testid="TableBaseFooter__totalRows"
+            >
+              ra.navigation.page_range_info
+            </span>
+          </p>
+          <div
+            class="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-126"
+              disabled=""
+              tabindex="-1"
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-16"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-126"
+              disabled=""
+              tabindex="-1"
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-16"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

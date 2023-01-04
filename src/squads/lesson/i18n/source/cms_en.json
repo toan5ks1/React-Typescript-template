@@ -1,0 +1,322 @@
+{
+    "ra": {
+        "action": {
+            "add": "Add",
+            "delete": "Delete",
+            "discard": "Discard",
+            "edit": "Edit",
+            "remove": "Remove",
+            "close": "Close",
+            "leave": "Leave",
+            "save": "Save",
+            "apply": "Apply"
+        },
+        "message": {
+            "noDataInformation": "No Information",
+            "unableToLoadData": "Unable to load data, please try again!",
+            "invalidSearchQueryReturningAllItems": "Invalid search query - returning all items",
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "uploadBrightcoveLinkFail": "Video link is not supported, please try another link!"
+        },
+        "notification": {
+            "i18n_error": "Cannot load the translations for the specified language"
+        },
+        "manabie-error": {
+            "specified": {
+                "getBrightcoveProfileFail": "Failed to get Brightcove account information"
+            },
+            "unknown": "We meet an unknown error. Please try again or contact with Staff.",
+            "invalid_params": "Invalid params. Please check your data"
+        },
+        "common": {
+            "action": {
+                "add": "Add",
+                "delete": "Delete",
+                "OK": "OK",
+                "cancel": "Cancel",
+                "filter": "Filter",
+                "upload": "Upload"
+            },
+            "saveDraft": "Save Draft",
+            "convertingAllFilesSuccessfully": "Converting all files successfully!"
+        }
+    },
+    "resources": {
+        "common": {
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "youFilterBy": "You filter by",
+            "youAreOffline": "Please try again, your network is down",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "somethingWentWrong": "Something went wrong",
+            "pleaseHelpUsReport": "Please help us report this issue by sending our staff the error message below",
+            "back": "Go Back",
+            "details": "Details",
+            "netWorkUnstable": "Your internet connection is unstable, Please refresh the page or try again",
+            "brightcoveVideoLink": "Brightcove Link"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}"
+            },
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller",
+            "pasteVideoLink": "Paste video link"
+        },
+        "button": {
+            "clearAll": "Clear All"
+        },
+        "choices": {
+            "grades": {
+                "0": "Others",
+                "1": "Grade 1",
+                "2": "Grade 2",
+                "3": "Grade 3",
+                "4": "Grade 4",
+                "5": "Grade 5",
+                "6": "Grade 6",
+                "7": "Grade 7",
+                "8": "Grade 8",
+                "9": "Grade 9",
+                "10": "Grade 10",
+                "11": "Grade 11",
+                "12": "Grade 12",
+                "13": "University 1",
+                "14": "University 2",
+                "15": "University 3",
+                "16": "University 4"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "Monday",
+                "DATE_OF_WEEK_TUESDAY": "Tuesday",
+                "DATE_OF_WEEK_WEDNESDAY": "Wednesday",
+                "DATE_OF_WEEK_THURSDAY": "Thursday",
+                "DATE_OF_WEEK_FRIDAY": "Friday",
+                "DATE_OF_WEEK_SATURDAY": "Saturday",
+                "DATE_OF_WEEK_SUNDAY": "Sunday"
+            },
+            "assignedStudentStatus": {
+                "STUDENT_ASSIGNED_STATUS_JUST_ASSIGNED": "Just Assigned",
+                "STUDENT_ASSIGNED_STATUS_UNDER_ASSIGNED": "Under assigned",
+                "STUDENT_ASSIGNED_STATUS_OVER_ASSIGNED": "Over assigned"
+            },
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_DRAFT": "Draft",
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "Published",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "Completed",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "Cancelled"
+            }
+        },
+        "lesson_reports": {
+            "actions": {
+                "submit": "Submit"
+            },
+            "messages": {
+                "needToFillInTheRequiredInformation": "You need to fill in the required information"
+            },
+            "generalInfo": "General Info",
+            "course": "Course",
+            "subject": "Subject",
+            "previousReport": "Previous Report",
+            "submitLessonReport": "Submit Lesson Report",
+            "areYouSureSubmitLessonReport": "Are you sure want to submit this lesson report?",
+            "submitLessonReportNote": "The status of the lesson is Draft, so when you submit this lesson report, the lesson will automatically be published as well.",
+            "internalOnly": "Internal Only",
+            "applyToBlankOnly": "Apply to only blank",
+            "addReport": "Add Report",
+            "editReport": "Edit Report"
+        },
+        "lesson_management": {
+            "name": "Lesson Management",
+            "createTitle": "Add Lesson",
+            "editTitle": "Edit Lesson",
+            "lessonStatusSection": "Status",
+            "generalInfo": "General Info",
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_DRAFT": "Draft",
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "Published",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "Completed",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "Cancelled"
+            },
+            "messages": {
+                "success": {
+                    "addLesson": "You have created a lesson successfully!",
+                    "deleteLesson": "You have deleted the lesson successfully!",
+                    "editLesson": "You have edited the lesson successfully!"
+                },
+                "needToFillInTheRequiredInformation": "You need to fill in the required information",
+                "bulkActionSuccessfully": "You have Bulk Action successfully",
+                "createdReportSuccessfully": "You have created individual report successfully",
+                "editedIndividualReportSuccessfully": "You have edited individual report successfully",
+                "submittedIndividualReportSuccessfully": "You have submitted individual report successfully",
+                "deletedIndividualReportSuccessfully": "You have deleted lesson report successfully",
+                "addedStudentsSuccessfully": "You have added students successfully!",
+                "removedStudentsSuccessfully": "You have removed students successfully!",
+                "pleaseAddOnlyOneStudentCourse": "Please add only one student course for one student to the lesson"
+            },
+            "actions": {
+                "submitAll": "Submit All",
+                "bulkAction": "Bulk Action",
+                "submit": "Submit",
+                "alert": "Alert",
+                "publish": "Publish"
+            },
+            "columns": {
+                "studentName": "Student Name",
+                "lessonTime": "Lesson Time",
+                "center": "Center",
+                "teachingMedium": "Teaching Medium",
+                "teachingMethod": "Teaching Method",
+                "teacher": "Teacher",
+                "lessonDate": "Lesson Date",
+                "lessonStatus": "Lesson Status",
+                "reportStatus": "Report Status",
+                "teachingType": "Teaching Type",
+                "courseName": "Course Name",
+                "grade": "Grade",
+                "course": "Course",
+                "class": "Class",
+                "location": "Location"
+            },
+            "errors": {
+                "errorWhileFetchingFormConfig": "Error while fetching form config: %{message}",
+                "canNotGetPartnerFormConfig": "Unable to get form configuration.",
+                "unableToGetLessonReport": "Unable to get lesson report information",
+                "studentDoesNotBelongToAnyCourse": "This student doesn't belong to any course",
+                "unableToFindTeacher": "Unable to find the teachers of this lesson",
+                "unableToGetLessonId": "Unable to get lesson id",
+                "unableToFindLessonInfo": "Unable to find this lesson's information",
+                "unableToFetchTheLinkToThisStudentStudyPlan": "Unable to fetch the link to this student's study plan",
+                "unableToFetchLessonGroup": "Unable to fetch lesson group of this lesson",
+                "unableToFetchMedia": "Unable to fetch media of this lesson",
+                "unableToFetchCenter": "Unable to fetch center",
+                "unableToFetchClass": "Unable to fetch class",
+                "unableToFetchSchedule": "Unable to fetch schedule",
+                "noCourseInLesson": "There is no course in this lesson",
+                "errorDuringFileConversion": "Error during file conversion for %{mediaIds}",
+                "startDateMustComeBeforeEndDate": "Lesson date must come before end date!"
+            },
+            "status": {
+                "LESSON_REPORT_SUBMITTING_STATUS_SAVED": "Draft",
+                "LESSON_REPORT_SUBMITTING_STATUS_SUBMITTED": "Submitted"
+            },
+            "studentAttendanceStatus": {
+                "STUDENT_ATTEND_STATUS_ATTEND": "Attend",
+                "STUDENT_ATTEND_STATUS_ABSENT": "Absent",
+                "STUDENT_ATTEND_STATUS_LATE": "Late",
+                "STUDENT_ATTEND_STATUS_LEAVE_EARLY": "Leave Early",
+                "STUDENT_ATTEND_STATUS_INFORMED_ABSENT": "Absent (informed)",
+                "STUDENT_ATTEND_STATUS_INFORMED_LATE": "Late (informed)"
+            },
+            "filters": {
+                "lessonStatus": "Lesson Status",
+                "fromDate": "Lesson Start Date",
+                "toDate": "Lesson End Date",
+                "dayOfTheWeekFilter": "Lesson day of the week",
+                "startTime": "Start Time",
+                "endTime": "End Time",
+                "teachers": "Teacher Name",
+                "centers": "Center",
+                "students": "Student Name",
+                "grades": "Grade",
+                "courses": "Course",
+                "locations": "Location",
+                "classes": "Class"
+            },
+            "recurringLesson": {
+                "oneTime": "One Time",
+                "weeklyRecurring": "Weekly Recurring",
+                "recurringSettings": "Recurring Settings",
+                "pleaseSelectAnOptionToSave": "Please select an option to save",
+                "editRecurringLessons": "Edit Recurring Lessons",
+                "onlyThisLesson": "Only this Lesson",
+                "thisAndTheFollowingLessons": "This and the following lessons",
+                "deleteRecurringLessons": "Delete Recurring Lessons",
+                "titleWarningDeleteRecurringLessons": "You are trying to delete recurring lessons. If you delete this lesson, the Lesson Report and Allocated Students (if any) in the lesson(s) will also be deleted.",
+                "savingOption": "Saving Option",
+                "repeatDuration": "Repeat Duration",
+                "repeatDurationTime": "Weekly on %{dayOfWeek}, until %{endDate}"
+            },
+            "lessonReport": "Lesson Report",
+            "attendance": "Attendance",
+            "attendanceStatus": "Attendance Status",
+            "attendanceRemark": "Remark",
+            "course": "Course",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "reportDetail": "Report Detail",
+            "previousReport": "Previous Report",
+            "viewStudyPlan": "View Study Plan",
+            "bulkUpdateAttendance": "Bulk Update Attendance",
+            "lessonInfo": "Lesson Info",
+            "report": "Report",
+            "createIndividualReport": "Create Individual Report",
+            "editIndividualReport": "Edit Individual Report",
+            "missingTranslation": "Missing Translation",
+            "areYouSureSubmitLessonReport": "Are you sure want to submit this lesson report?",
+            "addStudent": "Add Student",
+            "enterStudentName": "Enter Student Name",
+            "lessonDetail": "Lesson Detail",
+            "studentInfo": "Student Info",
+            "materialInfo": "Material Info",
+            "dayOfTheWeek": "Day of the week",
+            "totalTime": "Total Time",
+            "minutes": "minutes",
+            "LESSON_TEACHING_METHOD_INDIVIDUAL": "Individual",
+            "LESSON_TEACHING_METHOD_GROUP": "Group",
+            "LESSON_TEACHING_MEDIUM_ONLINE": "Online",
+            "LESSON_TEACHING_MEDIUM_OFFLINE": "Offline",
+            "futureLessons": "Future Lessons",
+            "pastLessons": "Past Lessons",
+            "areYouSureYouWantToDeleteTheLessonReport": "Are you sure you want to delete the lesson report?",
+            "deleteLessonReport": "Delete Lesson Report",
+            "deleteLesson": "Delete Lesson",
+            "areYouSureDeleteTheLesson": "Are you sure you want to delete the lesson?",
+            "ifYouDeleteThisLesson": "If you delete this lesson, the lesson report of this lesson will also be deleted",
+            "ifYouDeleteThisLessonV2": "If you delete this lesson, the Lesson Report and Allocated Students (if any) in the lesson will also be deleted",
+            "studentDoesNotHavePreviousLessonReportForThisCourse": "Student does not have previous lesson report for this course",
+            "cannotSaveLessonPleaseAddStudentFromSameCenter": "This lesson cannot be saved. Please add student from the same center as lesson.",
+            "endDate": "End Date",
+            "cannotCreateLessonReportWhenLessonNoMember": "You cannot create lesson report when there is no student in the lesson"
+        },
+        "assigned_student_list": {
+            "name": "Assigned Student List",
+            "recurring": "Recurring",
+            "slot": "Slot",
+            "enterStudentName": "Enter Student Name",
+            "studentAssignedStatus": {
+                "STUDENT_ASSIGNED_STATUS_JUST_ASSIGNED": "Just assigned",
+                "STUDENT_ASSIGNED_STATUS_UNDER_ASSIGNED": "Under assigned",
+                "STUDENT_ASSIGNED_STATUS_OVER_ASSIGNED": "Over assigned"
+            },
+            "columns": {
+                "colStudentName": "Student",
+                "colCourseName": "Course",
+                "colLocation": "Location",
+                "colDuration": "Duration",
+                "colWeek": "Week",
+                "colPurchasedSlot": "Purchased Slots",
+                "colAssignedSlot": "Assigned Slots",
+                "colSlotGap": "Slot Gap",
+                "colStatus": "Status"
+            },
+            "filters": {
+                "assignedStudentStatus": "Status",
+                "students": "Student",
+                "courses": "Courses",
+                "startDate": "Start Date",
+                "endDate": "End Date",
+                "locations": "Location"
+            }
+        },
+        "courses": {
+            "lessonConvert": {
+                "converting": "%{fileName} converting ...",
+                "tryAgain": "Try again",
+                "success": "Converting files successfully",
+                "failedUnknown": "Failed to upload your files. Please try again or contact with Staff."
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionnaireDetailAnswerItem should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  color: #9E9E9E;
+  height: 4px;
+  width: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="QuestionnaireDetailAnswerItem__root"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      A. Answer (5 Votes)
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-2"
+      data-testid="CircleIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"
+      />
+    </svg>
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      50.00%
+    </div>
+  </div>
+</div>
+`;

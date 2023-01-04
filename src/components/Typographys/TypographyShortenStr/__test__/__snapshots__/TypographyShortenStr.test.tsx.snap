@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyShortenStr /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="TypographyShortenStr"
+    title="1234567890"
+  >
+    12345...
+  </p>
+</div>
+`;
+
+exports[`<TypographyShortenStr /> without tooltip should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+  >
+    12345
+  </p>
+</div>
+`;

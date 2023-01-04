@@ -1,0 +1,1 @@
+import{cQ as o}from"./index.7daee9ef.js";var e=o,i=1/0,I=17976931348623157e292;function f(r){if(!r)return r===0?r:0;if(r=e(r),r===i||r===-i){var t=r<0?-1:1;return t*I}return r===r?r:0}var m=f,N=m;function s(r){var t=N(r),n=t%1;return t===t?n?t-n:t:0}var _=s;export{m as a,_ as t};

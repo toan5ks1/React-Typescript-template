@@ -1,0 +1,498 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabLayout /> have action should match snapshot: with action button 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  overflow: hidden;
+  min-height: 48px;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width:599.95px) {
+  .emotion-1 .MuiTabs-scrollButtons {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  max-width: 360px;
+  min-width: 90px;
+  position: relative;
+  min-height: 48px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 12px 16px;
+  overflow: hidden;
+  white-space: normal;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emotion-4::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-4.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-4 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-4.Mui-selected {
+  color: #1976d2;
+}
+
+.emotion-4.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.emotion-5 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-8 {
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #1976d2;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-11 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-12 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-bottom-width: 0;
+  height: 100%;
+  border-right-width: thin;
+}
+
+<div>
+  <div
+    data-testid="TabLayout"
+  >
+    <div
+      class="MuiBox-root emotion-0"
+    >
+      <div
+        class="MuiTabs-root emotion-1"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed emotion-2"
+          style="overflow: hidden; margin-bottom: 0px;"
+        >
+          <div
+            class="MuiTabs-flexContainer emotion-3"
+            role="tablist"
+          >
+            <button
+              aria-controls="nav-tabpanel-0"
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected emotion-4"
+              data-testid="Tab"
+              id="nav-tab-0"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              Tab 1
+              <span
+                class="MuiTouchRipple-root emotion-5"
+              />
+            </button>
+            <button
+              aria-controls="nav-tabpanel-1"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary emotion-4"
+              data-testid="Tab"
+              id="nav-tab-1"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              Tab 2
+              <span
+                class="MuiTouchRipple-root emotion-5"
+              />
+            </button>
+          </div>
+          <span
+            class="MuiTabs-indicator emotion-8"
+            style="left: 0px; width: 0px;"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiBox-root emotion-9"
+      >
+        <div
+          class="MuiBox-root emotion-0"
+        >
+          <div
+            class="MuiBox-root emotion-11"
+          >
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical emotion-12"
+            />
+          </div>
+          <button>
+            Action button
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-labelledby="nav-tab-0"
+      class="MuiBox-root emotion-13"
+      data-testid="TabPanel"
+      id="nav-tabpanel-0"
+      role="tabpanel"
+    >
+      <div>
+        Tab Panel 1
+      </div>
+    </div>
+    <div
+      aria-labelledby="nav-tab-1"
+      class="MuiBox-root emotion-13"
+      data-testid="TabPanel"
+      hidden=""
+      id="nav-tabpanel-1"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;
+
+exports[`<TabLayout /> non action should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  overflow: hidden;
+  min-height: 48px;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width:599.95px) {
+  .emotion-1 .MuiTabs-scrollButtons {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  max-width: 360px;
+  min-width: 90px;
+  position: relative;
+  min-height: 48px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 12px 16px;
+  overflow: hidden;
+  white-space: normal;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emotion-4::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-4.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-4 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-4.Mui-selected {
+  color: #1976d2;
+}
+
+.emotion-4.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.emotion-5 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-8 {
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #1976d2;
+}
+
+<div>
+  <div
+    data-testid="TabLayout"
+  >
+    <div
+      class="MuiBox-root emotion-0"
+    >
+      <div
+        class="MuiTabs-root emotion-1"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed emotion-2"
+          style="overflow: hidden; margin-bottom: 0px;"
+        >
+          <div
+            class="MuiTabs-flexContainer emotion-3"
+            role="tablist"
+          >
+            <button
+              aria-controls="nav-tabpanel-0"
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected emotion-4"
+              data-testid="Tab"
+              id="nav-tab-0"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              Tab 1
+              <span
+                class="MuiTouchRipple-root emotion-5"
+              />
+            </button>
+            <button
+              aria-controls="nav-tabpanel-1"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary emotion-4"
+              data-testid="Tab"
+              id="nav-tab-1"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              Tab 2
+              <span
+                class="MuiTouchRipple-root emotion-5"
+              />
+            </button>
+          </div>
+          <span
+            class="MuiTabs-indicator emotion-8"
+            style="left: 0px; width: 0px;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      aria-labelledby="nav-tab-0"
+      class="MuiBox-root emotion-9"
+      data-testid="TabPanel"
+      id="nav-tabpanel-0"
+      role="tabpanel"
+    >
+      <div>
+        Tab Panel 1
+      </div>
+    </div>
+    <div
+      aria-labelledby="nav-tab-1"
+      class="MuiBox-root emotion-9"
+      data-testid="TabPanel"
+      hidden=""
+      id="nav-tabpanel-1"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;

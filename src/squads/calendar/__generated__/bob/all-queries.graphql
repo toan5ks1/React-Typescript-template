@@ -1,0 +1,26 @@
+query Calendar_LocationTypesList($limit: Int = 100) {
+    location_types(limit: $limit) {
+        name
+        display_name
+        location_type_id
+        parent_location_type_id
+        parent_name
+        is_archived
+    }
+}
+query Calendar_LocationsListByLocationTypes($location_type_id: String!, $limit: Int = 100) {
+    locations(limit: $limit, where: { location_type: { _eq: $location_type_id } }) {
+        location_id
+        name
+        locations {
+            location_id
+            name
+        }
+        location_types {
+            location_type_id
+            display_name
+            name
+        }
+        is_archived
+    }
+}

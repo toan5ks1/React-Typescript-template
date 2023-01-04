@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CircularProgressBase /> should match snapshot 1`] = `
+@keyframes animation-0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-1 {
+  0% {
+    stroke-dasharray: 1px,200px;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 100px,200px;
+    stroke-dashoffset: -15px;
+  }
+
+  100% {
+    stroke-dasharray: 100px,200px;
+    stroke-dashoffset: -125px;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  color: #1976d2;
+  -webkit-animation: animation-0 1.4s linear infinite;
+  animation: animation-0 1.4s linear infinite;
+}
+
+.emotion-1 {
+  display: block;
+}
+
+.emotion-2 {
+  stroke: currentColor;
+  stroke-dasharray: 80px,200px;
+  stroke-dashoffset: 0;
+  -webkit-animation: animation-1 1.4s ease-in-out infinite;
+  animation: animation-1 1.4s ease-in-out infinite;
+}
+
+<div>
+  <span
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary emotion-0"
+    data-testid="Loading__root"
+    role="progressbar"
+    style="width: 40px; height: 40px;"
+  >
+    <svg
+      class="MuiCircularProgress-svg emotion-1"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate emotion-2"
+        cx="44"
+        cy="44"
+        fill="none"
+        r="20.2"
+        stroke-width="3.6"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<CircularProgressBase /> should match snapshot 2`] = `
+@keyframes animation-0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-1 {
+  0% {
+    stroke-dasharray: 1px,200px;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 100px,200px;
+    stroke-dashoffset: -15px;
+  }
+
+  100% {
+    stroke-dasharray: 100px,200px;
+    stroke-dashoffset: -125px;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  color: #1976d2;
+  -webkit-animation: animation-0 1.4s linear infinite;
+  animation: animation-0 1.4s linear infinite;
+}
+
+.emotion-1 {
+  display: block;
+}
+
+.emotion-2 {
+  stroke: currentColor;
+  stroke-dasharray: 80px,200px;
+  stroke-dashoffset: 0;
+  -webkit-animation: animation-1 1.4s ease-in-out infinite;
+  animation: animation-1 1.4s ease-in-out infinite;
+}
+
+<div>
+  <span
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary emotion-0"
+    data-testid="Loading__root"
+    role="progressbar"
+    style="width: 18px; height: 18px;"
+  >
+    <svg
+      class="MuiCircularProgress-svg emotion-1"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate emotion-2"
+        cx="44"
+        cy="44"
+        fill="none"
+        r="20.2"
+        stroke-width="3.6"
+      />
+    </svg>
+  </span>
+</div>
+`;

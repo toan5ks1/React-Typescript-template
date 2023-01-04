@@ -1,0 +1,16 @@
+fragment StudentAttrsWithListStudentId on student_packages {
+    properties
+    student_package_id
+    student_id
+    end_at
+    start_at
+}
+query User_StudentPackagesByListStudentIdV2(
+    $student_ids: [String!] = []
+    $order_by: student_packages_order_by! = { created_at: desc }
+) {
+    student_packages(where: { student_id: { _in: $student_ids } }, order_by: [$order_by]) {
+        ...StudentAttrsWithListStudentId
+        location_ids
+    }
+}

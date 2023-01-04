@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationTaskbar /> should match snapshot 1`] = `
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  display: inline-block;
+  height: 64px;
+  z-index: 1201;
+  padding-left: 32px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  width: 224px;
+  height: 67px;
+  padding: 24px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #E6E8EF;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.emotion-2:not(:first-of-type) {
+  margin-left: 4px;
+}
+
+.emotion-3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+      data-testid="NotificationTaskbar__list"
+    >
+      <div
+        class="MuiBox-root emotion-2"
+        data-testid="NotificationTaskbarItem__root"
+      >
+        <div
+          class="MuiBox-root emotion-3"
+          data-content="lesson 01 converting ..."
+          data-testid="NotificationTaskbarItem__name"
+        >
+          lesson 01 converting ...
+        </div>
+      </div>
+      <div
+        class="MuiBox-root emotion-2"
+        data-testid="NotificationTaskbarItem__root"
+      >
+        <div
+          class="MuiBox-root emotion-3"
+          data-content="lesson 02 converting ..."
+          data-testid="NotificationTaskbarItem__name"
+        >
+          lesson 02 converting ...
+        </div>
+      </div>
+      <div
+        class="MuiBox-root emotion-2"
+        data-testid="NotificationTaskbarItem__root"
+      >
+        <div
+          class="MuiBox-root emotion-3"
+          data-content="Uploading FILE_NAME ..."
+          data-testid="NotificationTaskbarItem__name"
+        >
+          Uploading FILE_NAME ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,134 @@
+- table:
+    schema: public
+    name: locations
+  array_relationships:
+  - name: user_access_paths
+    using:
+      foreign_key_constraint_on:
+        column: location_id
+        table:
+          schema: public
+          name: user_access_paths
+- table:
+    schema: public
+    name: student_entryexit_records
+  object_relationships:
+  - name: students
+    using:
+      foreign_key_constraint_on: student_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - deleted_at
+      - entry_at
+      - entryexit_id
+      - exit_at
+      - student_id
+      filter:
+        _and:
+        - resource_path:
+            _eq: X-Hasura-Resource-Path
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - deleted_at
+      - entry_at
+      - entryexit_id
+      - exit_at
+      - student_id
+      filter:
+        _and:
+        - resource_path:
+            _eq: X-Hasura-Resource-Path
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: student_parents
+- table:
+    schema: public
+    name: student_qr
+  object_relationships:
+  - name: students
+    using:
+      foreign_key_constraint_on: student_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - created_at
+      - qr_id
+      - qr_url
+      - student_id
+      - version
+      filter:
+        _and:
+        - resource_path:
+            _eq: X-Hasura-Resource-Path
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - created_at
+      - qr_id
+      - qr_url
+      - student_id
+      - version
+      filter:
+        _and:
+        - resource_path:
+            _eq: X-Hasura-Resource-Path
+      allow_aggregations: true
+- table:
+    schema: public
+    name: students
+  object_relationships:
+  - name: student_entryexit_record
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: student_entryexit_records
+        column_mapping:
+          student_id: student_id
+  array_relationships:
+  - name: student_entryexit_records
+    using:
+      foreign_key_constraint_on:
+        column: student_id
+        table:
+          schema: public
+          name: student_entryexit_records
+  - name: student_qrs
+    using:
+      foreign_key_constraint_on:
+        column: student_id
+        table:
+          schema: public
+          name: student_qr
+- table:
+    schema: public
+    name: user_access_paths
+  object_relationships:
+  - name: location
+    using:
+      foreign_key_constraint_on: location_id
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
+- table:
+    schema: public
+    name: users
+  array_relationships:
+  - name: user_access_paths
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: user_access_paths

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExternalLink /> should match snapshot 1`] = `
+.emotion-0 {
+  color: #1976d2;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underlined;
+  text-decoration: underlined;
+}
+
+<a
+  class="MuiBox-root emotion-0"
+  data-testid="ExternalLink"
+  href="test-link"
+  rel="noopener noreferrer"
+  target="_blank"
+/>
+`;

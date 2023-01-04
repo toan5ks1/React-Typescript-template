@@ -1,0 +1,526 @@
+fragment CourseAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+}
+fragment User_CourseWithLocationAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+    course_access_paths {
+        location {
+            name
+            location_type
+            location_id
+            parent_location_id
+            access_path
+        }
+    }
+}
+query CoursesMany($course_id: [String!] = []) {
+    courses(where: { course_id: { _in: $course_id } }) {
+        ...CourseAttrs
+    }
+}
+query User_CoursesManyWithLocation($course_id: [String!] = []) {
+    courses(where: { course_id: { _in: $course_id } }) {
+        ...User_CourseWithLocationAttrs
+    }
+}
+fragment UserAttrs on users {
+    user_id
+    name
+    email
+    avatar
+    phone_number
+    user_group
+    country
+}
+query User_GrantedRoleAccessPathByGrantedRoleIds($granted_role_ids: [String!] = []) {
+    granted_role_access_path(where: { granted_role_id: { _in: $granted_role_ids } }) {
+        granted_role_id
+        location {
+            location_id
+            name
+            parent_location_id
+            access_path
+            location_type
+            is_archived
+        }
+    }
+}
+query User_GrantedRoleList($user_group_id: String!, $limit: Int = 10, $offset: Int = 0) {
+    granted_role(
+        where: { user_group_id: { _eq: $user_group_id } }
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+    ) {
+        granted_role_id
+        role {
+            role_id
+            role_name
+        }
+    }
+    granted_role_aggregate(where: { user_group_id: { _eq: $user_group_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query User_LocationListByIds($location_ids: [String!] = []) {
+    locations(where: { location_id: { _in: $location_ids } }) {
+        location_id
+        name
+        access_path
+        location_type
+        parent_location_id
+    }
+}
+fragment ParentAttrs on users {
+    user_id
+    name
+    email
+    phone_number
+    country
+}
+query ParentsManyReference($email: String, $name: String, $limit: Int = 10, $offset: Int = 0) {
+    users(
+        limit: $limit
+        offset: $offset
+        where: {
+            _and: [
+                { user_group: { _eq: "USER_GROUP_PARENT" } }
+                { _or: [{ email: { _ilike: $email } }, { name: { _ilike: $name } }] }
+            ]
+        }
+    ) {
+        ...ParentAttrs
+    }
+}
+query User_StaffListV2(
+    $limit: Int = 10
+    $offset: Int = 0
+    $user_name: String
+    $user_email: String
+    $school_id: Int! = 0
+) {
+    find_teacher_by_school_id(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+        args: { school_id: $school_id }
+        where: { name: { _ilike: $user_name }, email: { _ilike: $user_email } }
+    ) {
+        name
+        email
+        user_id
+        resource_path
+    }
+    find_teacher_by_school_id_aggregate(
+        args: { school_id: $school_id }
+        where: { name: { _ilike: $user_name }, email: { _ilike: $user_email } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment User_StaffAttrs on teachers {
+    users {
+        name
+        email
+        avatar
+        phone_number
+        user_group
+        country
+    }
+    teacher_id
+}
+query User_StaffOne($teacher_id: String!) {
+    teachers(where: { teacher_id: { _eq: $teacher_id } }) {
+        teacher_by_school_ids {
+            school_id
+        }
+        ...User_StaffAttrs
+    }
+}
+query StudentQRCodeByStudentIdsV2($student_ids: [String!] = []) {
+    student_qr(where: { student_id: { _in: $student_ids } }) {
+        qr_url
+        qr_id
+        student_id
+        version
+    }
+}
+query StudentQRCodeByStudentIds($student_ids: [String!] = []) {
+    student_qr(where: { student_id: { _in: $student_ids } }) {
+        qr_url
+        qr_id
+        student_id
+    }
+}
+fragment StudentParentAttrs on student_parents {
+    parent_id
+    student_id
+    relationship
+    parent_user {
+        name
+        email
+        phone_number
+        country
+    }
+}
+query ParentsMany($student_ids: [String!]!) {
+    student_parents(where: { student_id: { _in: $student_ids } }) {
+        ...StudentParentAttrs
+        parent_user {
+            name
+            email
+            phone_number
+            country
+        }
+    }
+}
+query ParentRelationshipsByUserId($userId: String, $limit: Int = 1) {
+    student_parents(limit: $limit, where: { parent_id: { _eq: $userId } }) {
+        relationship
+    }
+}
+fragment StudentFrg on students {
+    student_id
+    current_grade
+    user {
+        ...UserAttrs
+        last_login_date
+        gender
+        birthday
+    }
+}
+fragment StudentWithoutGradeFrg on users {
+    user_id
+    name
+    email
+    phone_number
+    country
+    last_login_date
+    resource_path
+}
+fragment StudentUserAttrs on users {
+    user_id
+    name
+    email
+    avatar
+}
+query User_StudentsListByFiltersWithoutGradeAndAggregateV3(
+    $name: String
+    $email: String
+    $limit: Int = 10
+    $offset: Int = 0
+    $order_by: users_order_by! = { created_at: desc }
+    $student_ids: [String!]
+    $grades: [smallint!]
+    $enrollment_status: String
+    $last_login_date: Boolean
+) {
+    users(
+        where: {
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+            user_id: { _in: $student_ids }
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            last_login_date: { _is_null: $last_login_date }
+            student: {
+                current_grade: { _in: $grades }
+                enrollment_status: { _eq: $enrollment_status }
+            }
+        }
+        limit: $limit
+        offset: $offset
+        order_by: [$order_by]
+    ) {
+        ...StudentWithoutGradeFrg
+    }
+}
+query StudentsMany($user_ids: [String!] = []) {
+    users(where: { user_group: { _eq: "USER_GROUP_STUDENT" }, user_id: { _in: $user_ids } }) {
+        ...StudentUserAttrs
+    }
+}
+query StudentsManyReference(
+    $user_ids: [String!]
+    $name: String
+    $email: String
+    $limit: Int = 30
+    $offset: Int = 0
+) {
+    users(
+        where: {
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            user_id: { _in: $user_ids }
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+        }
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+    ) {
+        ...StudentUserAttrs
+    }
+}
+query StudentsManyReferenceByNameAndEmail(
+    $keyword: String
+    $limit: Int = 30
+    $offset: Int = 0
+) {
+    users(
+        where: {
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            _or: [{ email: { _ilike: $keyword } }, { name: { _ilike: $keyword } }]
+        }
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+    ) {
+        ...StudentUserAttrs
+    }
+}
+query StudentsOneV3($id: String!) {
+    students(where: { student_id: { _eq: $id } }) {
+        enrollment_status
+        student_external_id
+        student_note
+        ...StudentFrg
+    }
+}
+query GradesOfStudentsList($student_ids: [String!] = []) {
+    students(where: { student_id: { _in: $student_ids } }) {
+        student_id
+        current_grade
+        enrollment_status
+    }
+}
+query CountStudentWithFilter(
+    $name: String
+    $email: String
+    $grades: [smallint!]
+    $student_ids: [String!]
+    $enrollment_status: String
+    $last_login_date: Boolean
+) {
+    users_aggregate(
+        where: {
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+            user_id: { _in: $student_ids }
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            last_login_date: { _is_null: $last_login_date }
+            student: {
+                current_grade: { _in: $grades }
+                enrollment_status: { _eq: $enrollment_status }
+            }
+        }
+    ) {
+        aggregate {
+            count(columns: user_id)
+        }
+    }
+}
+query User_StudentsListByFiltersWithoutGradeAndAggregateV4(
+    $name: String
+    $email: String
+    $limit: Int = 10
+    $offset: Int = 0
+    $order_by: users_order_by! = { created_at: desc }
+    $student_ids: [String!]
+    $grades: [smallint!]
+    $enrollment_status: String
+    $last_login_date: Boolean
+    $location_ids: [String!]
+) {
+    users(
+        where: {
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+            user_id: { _in: $student_ids }
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            last_login_date: { _is_null: $last_login_date }
+            student: {
+                current_grade: { _in: $grades }
+                enrollment_status: { _eq: $enrollment_status }
+            }
+            user_access_paths: { location_id: { _in: $location_ids } }
+        }
+        limit: $limit
+        offset: $offset
+        order_by: [$order_by]
+    ) {
+        ...StudentWithoutGradeFrg
+    }
+}
+query User_CountStudentWithFilterV2(
+    $name: String
+    $email: String
+    $grades: [smallint!]
+    $student_ids: [String!]
+    $enrollment_status: String
+    $last_login_date: Boolean
+    $location_ids: [String!]
+) {
+    users_aggregate(
+        where: {
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+            user_id: { _in: $student_ids }
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            last_login_date: { _is_null: $last_login_date }
+            student: {
+                current_grade: { _in: $grades }
+                enrollment_status: { _eq: $enrollment_status }
+            }
+            user_access_paths: { location_id: { _in: $location_ids } }
+        }
+    ) {
+        aggregate {
+            count(columns: user_id)
+        }
+    }
+}
+fragment TeacherAttrs on teachers {
+    users {
+        name
+        email
+        avatar
+        phone_number
+        user_group
+        country
+    }
+    teacher_id
+}
+query TeacherList(
+    $limit: Int = 10
+    $offset: Int = 0
+    $user_name: String
+    $user_email: String
+    $school_id: Int! = 0
+) {
+    find_teacher_by_school_id(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+        args: { school_id: $school_id }
+        where: { name: { _ilike: $user_name }, email: { _ilike: $user_email } }
+    ) {
+        name
+        email
+        user_id
+    }
+    find_teacher_by_school_id_aggregate(
+        args: { school_id: $school_id }
+        where: { name: { _ilike: $user_name }, email: { _ilike: $user_email } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+query TeacherOne($teacher_id: String!) {
+    teachers(where: { teacher_id: { _eq: $teacher_id } }) {
+        teacher_by_school_ids {
+            school_id
+        }
+        ...TeacherAttrs
+    }
+}
+query User_UserAccessPathWithFilterV3($user_id: String!) {
+    user_access_paths(where: { user_id: { _eq: $user_id } }) {
+        location {
+            location_id
+            name
+            access_path
+            location_type
+            parent_location_id
+            is_archived
+        }
+    }
+}
+query User_UserAccessPathByUserIdsV2($user_ids: [String!] = []) {
+    user_access_paths(where: { user_id: { _in: $user_ids } }) {
+        user_id
+        location {
+            location_id
+            name
+            access_path
+            location_type
+            parent_location_id
+            is_archived
+        }
+    }
+}
+query User_OneUserByUserIdAndLocationId($location_id: String!, $user_id: String!) {
+    user_access_paths(
+        where: { location_id: { _eq: $location_id }, user_id: { _eq: $user_id } }
+    ) {
+        user_id
+        location_id
+    }
+}
+query User_UserGroupList($limit: Int = 10, $offset: Int = 0) {
+    user_group(limit: $limit, offset: $offset, order_by: { created_at: desc }) {
+        user_group_id
+        user_group_name
+    }
+    user_group_aggregate {
+        aggregate {
+            count
+        }
+    }
+}
+query User_UserGroupOne($user_group_id: String!) {
+    user_group(where: { user_group_id: { _eq: $user_group_id } }) {
+        user_group_id
+        user_group_name
+    }
+}
+query UsersTitle($user_id: String!) {
+    users(where: { user_id: { _eq: $user_id } }) {
+        ...UserAttrs
+    }
+}
+query UserNameByIds($user_id: [String!] = []) {
+    users(where: { user_id: { _in: $user_id } }) {
+        user_id
+        name
+    }
+}
+query UsersMany($user_id: [String!] = []) {
+    users(where: { user_id: { _in: $user_id } }) {
+        ...UserAttrs
+    }
+    users_aggregate(where: { user_id: { _in: $user_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query UserByEmail($email: String, $phone_number: String, $user_id: String) {
+    users(
+        where: {
+            email: { _eq: $email }
+            phone_number: { _eq: $phone_number }
+            user_id: { _neq: $user_id }
+        }
+    ) {
+        ...UserAttrs
+    }
+}

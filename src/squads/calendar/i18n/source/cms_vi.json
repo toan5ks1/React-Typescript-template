@@ -1,0 +1,148 @@
+{
+    "ra": {
+        "message": {
+            "unableToLoadData": "Unable to load data, please try again!"
+        },
+        "action": {
+            "cancel": "Hủy bỏ",
+            "save": "Lưu",
+            "search": "Tìm kiếm",
+            "close": "Đóng"
+        },
+        "boolean": {
+            "true": "Có",
+            "false": "Không",
+            "null": ""
+        },
+        "manabie-error": {
+            "invalid_params": "Dữ liệu không hợp lệ. Vui lòng kiểm tra dữ liệu của bạn"
+        },
+        "common": {
+            "action": {
+                "cancel": "Hủy bỏ",
+                "confirm": "Xác nhận",
+                "search": "Tìm kiếm",
+                "save": "Lưu",
+                "OK": "Xác nhận"
+            },
+            "save": "Lưu",
+            "more": "Thêm"
+        }
+    },
+    "resources": {
+        "schedule": {
+            "name": "Calendar",
+            "button": {
+                "today": "Hiện tại",
+                "releaseTime": "Áp dụng thời gian",
+                "releaseEvent": "Áp dụng sự kiện",
+                "addEvent": "Thêm Sự Kiện",
+                "openTime": "Mở",
+                "setTime": "Tạo Giờ",
+                "moreEvent": "xem thêm",
+                "viewCenter": "View Centers"
+            },
+            "label": {
+                "scheduleTitle": "Lịch trình hội thảo của %{brand}",
+                "datePickerTitle": "Chọn ngày",
+                "openingStatus": "Opening Status",
+                "repeatType": "Repeat Condition",
+                "openingHour": "Opening Hour",
+                "openingMinute": "Opening Minutes",
+                "endHour": "End Hour",
+                "endMinute": "End Minute",
+                "openingDate": "Opening Date",
+                "endDate": "End Date",
+                "date": "Date",
+                "brandName": "Tên Chi Nhánh",
+                "centerName": "Tên Trung Tâm",
+                "month": "Month",
+                "week": "Week",
+                "day": "Day",
+                "year": "Year",
+                "remark": "Remark",
+                "eventName": "Event name",
+                "tomorrow": "Tomorrow",
+                "lookingFor": "Looking for",
+                "schedule": "Schedule",
+                "lookingForSchedule": "Looking for Schedule",
+                "helperText": "Please use the filter to look for a specific Schedule",
+                "selectLocation": "Select Location"
+            },
+            "openingStatus": {
+                "0": "CLOSED",
+                "1": "IRREGULAR",
+                "2": "SPARE",
+                "3": "CLOSED"
+            },
+            "choices": {
+                "openingStatus": {
+                    "0": "Regular Class",
+                    "1": "Non Regular Class",
+                    "2": "Spare Class",
+                    "3": "Closed"
+                },
+                "repeatType": {
+                    "0": "Doesn't Repeat",
+                    "1": "Daily Until",
+                    "2": "Weekly Until",
+                    "3": "Monthly Until"
+                },
+                "scheduleSearchType": {
+                    "0": "Chi nhánh",
+                    "1": "Trung tâm"
+                },
+                "dayConditionType": {
+                    "0": "All day",
+                    "1": "Specific time"
+                }
+            },
+            "event": {
+                "addEventTitle": "Add Event",
+                "editEventTitle": "Edit Event",
+                "eventCentersApplied": "This event will be apply to %{centerNumber} centers",
+                "allDayEventDescription": "This is a all day event from %{openingDate} to %{closeDate}",
+                "specificTimeEventDescription": "This is a specific time event",
+                "missingName": "Event missing name",
+                "releaseEventTitle": "Release Event?",
+                "releaseEventMessage": "Events will be apply for selected center you chose."
+            },
+            "message": {
+                "success": {
+                    "releaseEvent": "You have released an event successfully!",
+                    "releaseTime": "You have released time successfully!",
+                    "addOpenningTime": "You have added an opening time successfully!"
+                }
+            },
+            "error": {
+                "eventName": {
+                    "required": "Event name is required"
+                },
+                "openingStatus": {
+                    "required": "Opening Status is required"
+                },
+                "openingHour": {
+                    "required": "Opening Hour is required"
+                },
+                "openingMinutes": {
+                    "required": "Opening Minutes is required"
+                },
+                "repeatOption": {
+                    "required": "Repeat Condition is required"
+                },
+                "date": {
+                    "required": "Date is required"
+                }
+            }
+        },
+        "common": {
+            "youAreOffline": "Please try again, your network is down",
+            "somethingWentWrong": "Có gì đó sai sai ở đây",
+            "netWorkUnstable": "Kết nối internet của bạn không ổn định, Vui lòng tải lại trang hoặc thử lại",
+            "pleaseHelpUsReport": "Vui lòng giúp chúng tôi báo cáo sự cố này bằng cách gửi hoặc thông báo lỗi này cho nhân viên của chúng tôi",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "back": "Trở về",
+            "details": "Chi tiết"
+        }
+    }
+}

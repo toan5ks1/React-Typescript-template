@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DoubleDash /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+<div>
+  <span
+    class="MuiTypography-root MuiTypography-body2 emotion-0"
+  >
+    --
+  </span>
+</div>
+`;

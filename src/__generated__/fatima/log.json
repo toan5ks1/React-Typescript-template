@@ -1,0 +1,258 @@
+{
+  "createdValues": [],
+  "editedValues": [],
+  "deletedValues": [
+    {
+      "kind": "D",
+      "path": [
+        "StudentPackageList"
+      ],
+      "lhs": "query StudentPackageList($student_id: String! = \"\", $order_by: student_packages_order_by! = {created_at: desc}, $limit: Int, $offset: Int) {\n  student_packages(\n    where: {student_id: {_eq: $student_id}}\n    order_by: [$order_by]\n    limit: $limit\n    offset: $offset\n  ) {\n    ...StudentAttrs\n  }\n  student_packages_aggregate(where: {student_id: {_eq: $student_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment StudentAttrs on student_packages {\n  start_at\n  end_at\n  properties\n  student_package_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentPackagesByListStudentId"
+      ],
+      "lhs": "query StudentPackagesByListStudentId($student_ids: [String!] = [], $order_by: student_packages_order_by! = {created_at: desc}) {\n  student_packages(\n    where: {student_id: {_in: $student_ids}}\n    order_by: [$order_by]\n  ) {\n    ...StudentAttrsWithListStudentId\n  }\n}\n\nfragment StudentAttrsWithListStudentId on student_packages {\n  properties\n  student_package_id\n  student_id\n  end_at\n  start_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentPackageById"
+      ],
+      "lhs": "query StudentPackageById($id: String!) {\n  student_packages(where: {student_package_id: {_eq: $id}}) {\n    ...StudentAttrs\n  }\n}\n\nfragment StudentAttrs on student_packages {\n  start_at\n  end_at\n  properties\n  student_package_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyBillItems"
+      ],
+      "lhs": "query Payment_GetManyBillItems($order_id: String!, $limit: Int = 5, $offset: Int = 0) {\n  bill_item(\n    where: {order_id: {_eq: $order_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {bill_item_sequence_number: asc}\n  ) {\n    bill_item_sequence_number\n    product_description\n    billing_status\n    billing_date\n    final_price\n    order_id\n  }\n  bill_item_aggregate(where: {order_id: {_eq: $order_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetLocationNameByLocationId"
+      ],
+      "lhs": "query Payment_GetLocationNameByLocationId($location_id: String!) {\n  locations(where: {location_id: {_eq: $location_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyActionLogsByOrderId"
+      ],
+      "lhs": "query Payment_GetManyActionLogsByOrderId($order_id: String!, $limit: Int = 5, $offset: Int = 0) {\n  order_action_log(\n    where: {order_id: {_eq: $order_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n  ) {\n    ...Payment_ActionLogsAttr\n  }\n  order_action_log_aggregate(where: {order_id: {_eq: $order_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment Payment_ActionLogsAttr on order_action_log {\n  user_id\n  action\n  comment\n  created_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetOrderItemsByOrderId"
+      ],
+      "lhs": "query Payment_GetOrderItemsByOrderId($orderId: String!, $limit: Int = 5, $offset: Int) {\n  order_item(limit: $limit, offset: $offset, where: {order_id: {_eq: $orderId}}) {\n    discount_id\n    product_id\n    start_date\n  }\n  order_item_aggregate(where: {order_id: {_eq: $orderId}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyDiscountsByDiscountIds"
+      ],
+      "lhs": "query Payment_GetManyDiscountsByDiscountIds($discountIds: [Int!]) {\n  discount(\n    where: {discount_id: {_in: $discountIds}}\n    order_by: {discount_id: asc}\n  ) {\n    ...DiscountAttrs\n  }\n}\n\nfragment DiscountAttrs on discount {\n  available_from\n  available_until\n  created_at\n  discount_amount_type\n  discount_amount_value\n  discount_type\n  discount_id\n  name\n  recurring_valid_duration\n  remarks\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyDiscounts"
+      ],
+      "lhs": "query Payment_GetManyDiscounts($current_date: timestamptz!, $name: String, $limit: Int = 30) {\n  discount(\n    limit: $limit\n    where: {_and: [{available_from: {_lte: $current_date}}, {available_until: {_gte: $current_date}}, {name: {_ilike: $name}}]}\n  ) {\n    ...DiscountAttrs\n  }\n}\n\nfragment DiscountAttrs on discount {\n  available_from\n  available_until\n  created_at\n  discount_amount_type\n  discount_amount_value\n  discount_type\n  discount_id\n  name\n  recurring_valid_duration\n  remarks\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetOrderByOrderId"
+      ],
+      "lhs": "query Payment_GetOrderByOrderId($order_id: String!) {\n  order(where: {order_id: {_eq: $order_id}}) {\n    ...Payment_OrderAttrs\n  }\n}\n\nfragment Payment_OrderAttrs on order {\n  order_id\n  order_sequence_number\n  order_status\n  order_type\n  student_id\n  location_id\n  created_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyProductsByProductIdsAndAvailableDate"
+      ],
+      "lhs": "query Payment_GetManyProductsByProductIdsAndAvailableDate($name: String, $product_ids: [Int!] = [], $available_from: timestamptz, $available_until: timestamptz) {\n  product(\n    where: {available_from: {_lte: $available_from}, available_until: {_gte: $available_until}, name: {_ilike: $name}, product_id: {_in: $product_ids}}\n    order_by: {created_at: desc}\n  ) {\n    ...ProductAttrs\n  }\n}\n\nfragment ProductAttrs on product {\n  product_id\n  available_from\n  available_until\n  billing_schedule_id\n  created_at\n  custom_billing_period\n  disable_pro_rating_flag\n  name\n  product_type\n  remarks\n  tax_id\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyProductsReference"
+      ],
+      "lhs": "query Payment_GetManyProductsReference($name: String, $limit: Int = 30) {\n  product(limit: $limit, where: {name: {_ilike: $name}}) {\n    ...ProductAttrs\n  }\n}\n\nfragment ProductAttrs on product {\n  product_id\n  available_from\n  available_until\n  billing_schedule_id\n  created_at\n  custom_billing_period\n  disable_pro_rating_flag\n  name\n  product_type\n  remarks\n  tax_id\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyProductsByProductIds"
+      ],
+      "lhs": "query Payment_GetManyProductsByProductIds($productIds: [Int!]) {\n  product(where: {product_id: {_in: $productIds}}, order_by: {product_id: asc}) {\n    ...ProductAttrs\n  }\n}\n\nfragment ProductAttrs on product {\n  product_id\n  available_from\n  available_until\n  billing_schedule_id\n  created_at\n  custom_billing_period\n  disable_pro_rating_flag\n  name\n  product_type\n  remarks\n  tax_id\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetProductPriceByProductId"
+      ],
+      "lhs": "query Payment_GetProductPriceByProductId($product_id: Int!) {\n  product_price(where: {product_id: {_eq: $product_id}}) {\n    ...ProductPriceAttrs\n  }\n}\n\nfragment ProductPriceAttrs on product_price {\n  product_price_id\n  billing_schedule_period_id\n  created_at\n  price\n  product_id\n  quantity\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetFeeByProductId"
+      ],
+      "lhs": "query Payment_GetFeeByProductId($product_id: Int!) {\n  fee(where: {fee_id: {_eq: $product_id}}) {\n    fee_type\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetProductIdsByGradeIds"
+      ],
+      "lhs": "query Payment_GetProductIdsByGradeIds($grade_ids: [Int!] = []) {\n  product_grade(where: {grade_id: {_in: $grade_ids}}) {\n    product_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetProductIdsByLocationIds"
+      ],
+      "lhs": "query Payment_GetProductIdsByLocationIds($location_ids: [String!] = []) {\n  product_location(where: {location_id: {_in: $location_ids}}) {\n    product_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetMaterialByProductId"
+      ],
+      "lhs": "query Payment_GetMaterialByProductId($product_id: Int!) {\n  material(where: {material_id: {_eq: $product_id}}) {\n    custom_billing_date\n    material_type\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyMaterialsByProductIds"
+      ],
+      "lhs": "query Payment_GetManyMaterialsByProductIds($productIds: [Int!]) {\n  material(where: {material_id: {_in: $productIds}}, order_by: {material_id: asc}) {\n    material_id\n    material_type\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetPackageByProductId"
+      ],
+      "lhs": "query Payment_GetPackageByProductId($product_id: Int!) {\n  package(where: {package_id: {_eq: $product_id}}) {\n    max_slot\n    package_end_date\n    package_start_date\n    package_type\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyProductPricesByProductIds"
+      ],
+      "lhs": "query Payment_GetManyProductPricesByProductIds($productIds: [Int!]) {\n  product_price(\n    where: {product_id: {_in: $productIds}}\n    order_by: {product_id: asc}\n  ) {\n    ...ProductPriceAttrs\n  }\n}\n\nfragment ProductPriceAttrs on product_price {\n  product_price_id\n  billing_schedule_period_id\n  created_at\n  price\n  product_id\n  quantity\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetTaxByTaxId"
+      ],
+      "lhs": "query Payment_GetTaxByTaxId($tax_id: Int!) {\n  tax(where: {tax_id: {_eq: $tax_id}}) {\n    tax_percentage\n    tax_category\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetBillingSchedulePeriodIdByName"
+      ],
+      "lhs": "query Payment_Eibanam_GetBillingSchedulePeriodIdByName($name: String) {\n  billing_schedule_period(where: {name: {_eq: $name}}) {\n    billing_schedule_period_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetBillingScheduleIdByName"
+      ],
+      "lhs": "query Payment_Eibanam_GetBillingScheduleIdByName($name: String) {\n  billing_schedule(where: {name: {_eq: $name}}) {\n    billing_schedule_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetManyDiscounts"
+      ],
+      "lhs": "query Payment_Eibanam_GetManyDiscounts {\n  discount(where: {is_archived: {_eq: false}}) {\n    available_from\n    available_until\n    created_at\n    discount_amount_type\n    discount_amount_value\n    discount_type\n    discount_id\n    name\n    recurring_valid_duration\n    remarks\n    updated_at\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetProductIdByName"
+      ],
+      "lhs": "query Payment_Eibanam_GetProductIdByName($name: String) {\n  product(where: {name: {_eq: $name}}) {\n    product_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetTaxIdByName"
+      ],
+      "lhs": "query Payment_Eibanam_GetTaxIdByName($name: String) {\n  tax(where: {name: {_eq: $name}}) {\n    tax_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetDiscountIdByName"
+      ],
+      "lhs": "query Payment_Eibanam_GetDiscountIdByName($name: String) {\n  discount(where: {name: {_eq: $name}}) {\n    discount_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyCourseByCourseIds"
+      ],
+      "lhs": "query Payment_GetManyCourseByCourseIds($course_ids: [String!] = []) {\n  courses(where: {course_id: {_in: $course_ids}}) {\n    course_id\n    grade\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyPackageCourseByPackageId"
+      ],
+      "lhs": "query Payment_GetManyPackageCourseByPackageId($package_id: Int!) {\n  package_course(where: {package_id: {_eq: $package_id}}) {\n    course_id\n    course_weight\n    created_at\n    mandatory_flag\n    max_slots_per_course\n    package_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyFeesByProductIds"
+      ],
+      "lhs": "query Payment_GetManyFeesByProductIds($productIds: [Int!]) {\n  fee(where: {fee_id: {_in: $productIds}}, order_by: {fee_id: asc}) {\n    fee_id\n    fee_type\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyBillItemsV2"
+      ],
+      "lhs": "query Payment_GetManyBillItemsV2($order_id: String!, $limit: Int = 5, $offset: Int = 0) {\n  bill_item(\n    where: {order_id: {_eq: $order_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {bill_item_sequence_number: asc}\n  ) {\n    bill_item_sequence_number\n    product_description\n    billing_status\n    billing_date\n    final_price\n    order_id\n    product_id\n  }\n  bill_item_aggregate(where: {order_id: {_eq: $order_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetTaxByTaxIdV2"
+      ],
+      "lhs": "query Payment_GetTaxByTaxIdV2($tax_id: Int!) {\n  tax(where: {tax_id: {_eq: $tax_id}}) {\n    ...TaxAttrs\n  }\n}\n\nfragment TaxAttrs on tax {\n  tax_percentage\n  tax_category\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyTaxesByTaxIds"
+      ],
+      "lhs": "query Payment_GetManyTaxesByTaxIds($tax_ids: [Int!]) {\n  tax(where: {tax_id: {_in: $tax_ids}}) {\n    ...TaxAttrs\n    tax_id\n  }\n}\n\nfragment TaxAttrs on tax {\n  tax_percentage\n  tax_category\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyPackageCourseFeesByPackageId"
+      ],
+      "lhs": "query Payment_GetManyPackageCourseFeesByPackageId($current_date: timestamptz!, $package_id: Int!) {\n  package_course_fee(\n    where: {package_id: {_eq: $package_id}, _and: [{available_from: {_lte: $current_date}}, {available_until: {_gte: $current_date}}]}\n  ) {\n    available_from\n    available_until\n    course_id\n    created_at\n    fee_id\n    package_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_GetManyPackageCourseMaterialsByPackageId"
+      ],
+      "lhs": "query Payment_GetManyPackageCourseMaterialsByPackageId($current_date: timestamptz!, $package_id: Int!) {\n  package_course_material(\n    where: {package_id: {_eq: $package_id}, _and: [{available_from: {_lte: $current_date}}, {available_until: {_gte: $current_date}}]}\n  ) {\n    available_from\n    available_until\n    course_id\n    created_at\n    material_id\n    package_id\n  }\n}\n"
+    }
+  ]
+}

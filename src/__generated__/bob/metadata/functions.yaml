@@ -1,0 +1,30 @@
+- function:
+    schema: public
+    name: find_quiz_by_lo_id
+- function:
+    schema: public
+    name: find_teacher_by_school_id
+- function:
+    schema: public
+    name: get_locations_active_by_course_id
+- function:
+    schema: public
+    name: get_locations_lowest_level
+- function:
+    schema: public
+    name: get_lowest_location_types
+- function:
+    schema: public
+    name: get_partner_dynamic_form_field_values_by_student
+- function:
+    schema: public
+    name: get_previous_report_of_student
+- function:
+    schema: public
+    name: get_previous_report_of_student_v2
+- function:
+    schema: public
+    name: get_previous_report_of_student_v3
+- function:
+    schema: public
+    name: search_courses_by_name

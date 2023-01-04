@@ -1,0 +1,2193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaffTimesheetList /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.emotion-1 {
+  padding-bottom: 24px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.6;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: -16px;
+  width: calc(100% + 16px);
+  margin-left: -16px;
+}
+
+.emotion-3>.MuiGrid-item {
+  padding-top: 16px;
+}
+
+.emotion-3>.MuiGrid-item {
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+@media (min-width:600px) {
+  .emotion-4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  font-family: Roboto,sans-serif;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #fff;
+  background-color: #2196F3;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px rgba(0, 0, 0, 0.14),0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.emotion-6::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-6.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-6 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-6:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #0B79D0;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px rgba(0, 0, 0, 0.14),0px 1px 10px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: none) {
+  .emotion-6:hover {
+    background-color: #2196F3;
+  }
+}
+
+.emotion-6:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.emotion-6.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px rgba(0, 0, 0, 0.14),0px 1px 18px rgba(0, 0, 0, 0.12);
+}
+
+.emotion-6.Mui-disabled {
+  color: #BDBDBD;
+  box-shadow: none;
+  background-color: #E0E0E0;
+}
+
+.emotion-7 {
+  display: inherit;
+  margin-right: 8px;
+  margin-left: -4px;
+}
+
+.emotion-7>*:nth-of-type(1) {
+  font-size: 20px;
+}
+
+.emotion-8 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-9 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-11 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-12 {
+  background-color: #fff;
+  color: #212121;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px rgba(0, 0, 0, 0.14),0px 1px 5px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-13 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-13 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-14 {
+  display: table-header-group;
+}
+
+.emotion-15 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-15.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-15.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-15.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-16 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-17 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-18 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-19 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-28 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-30 {
+  display: table-row-group;
+}
+
+.emotion-31 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-31.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-31.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-31.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-31.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-32 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-35 {
+  cursor: pointer;
+  color: #2196F3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-35:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-37 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: #F5F5F5;
+  color: #757575;
+}
+
+.emotion-37.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-37 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-37 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-37 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-37 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-37 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-37 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-37 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-38 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.emotion-40 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.emotion-45 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-191 {
+  overflow: auto;
+  color: #212121;
+  font-size: 0.875rem;
+}
+
+.emotion-191:last-child {
+  padding: 0;
+}
+
+.emotion-191 .MuiInputBase-input {
+  padding: 9px 35px 7px 8px;
+  font-size: 12px;
+}
+
+.emotion-191 .MuiTablePagination-selectIcon {
+  top: calc(50% - 13px);
+  right: 7px;
+}
+
+.emotion-191 .MuiTablePagination-select {
+  padding-right: 35px!important;
+}
+
+.emotion-192 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+  min-height: 52px;
+  padding-right: 2px;
+}
+
+@media (min-width:600px) {
+  .emotion-192 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-192 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-192 {
+    min-height: 64px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-192 {
+    min-height: 52px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-192 {
+    min-height: 52px;
+    padding-right: 2px;
+  }
+}
+
+.emotion-192 .MuiTablePagination-actions {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.emotion-193 {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.emotion-194 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-195 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+}
+
+.emotion-196 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.1876em;
+  color: inherit;
+  font-size: inherit;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 32px;
+  margin-left: 8px;
+}
+
+.emotion-196.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-196 .MuiTablePagination-select {
+  padding-left: 8px;
+  padding-right: 24px;
+  text-align: right;
+  -webkit-text-align-last: right;
+  text-align-last: right;
+}
+
+.emotion-197 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+}
+
+.emotion-197:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.emotion-197::-ms-expand {
+  display: none;
+}
+
+.emotion-197.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-197[multiple] {
+  height: auto;
+}
+
+.emotion-197:not([multiple]) option,
+.emotion-197:not([multiple]) optgroup {
+  background-color: #fff;
+}
+
+.emotion-197.emotion-197.emotion-197 {
+  padding-right: 24px;
+  min-width: 16px;
+}
+
+.emotion-197.MuiSelect-select {
+  height: auto;
+  min-height: 1.4375em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.emotion-197.MuiSelect-select {
+  line-height: 1.4375em;
+}
+
+.emotion-197::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-197::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-197:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-197::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-197:focus {
+  outline: 0;
+}
+
+.emotion-197:invalid {
+  box-shadow: none;
+}
+
+.emotion-197::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-197:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-197.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-197:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-198 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-199 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: calc(50% - .5em);
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-199.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-200 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-202 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.emotion-202::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-202.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-202 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-202:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-202:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-202.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <h6
+        aria-label="title"
+        class="MuiTypography-root MuiTypography-h6 emotion-2"
+      >
+        Timesheet Management
+      </h6>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 emotion-3"
+      data-testid="StaffTimesheetList"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 emotion-4"
+      >
+        <div
+          class="MuiBox-root emotion-5"
+          data-testid="StaffTimesheetListNavbar__root"
+        >
+          <button
+            aria-label="ra.common.action.create"
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  emotion-6"
+            data-testid="StaffTimesheetListNavbar__addButton"
+            resource="timesheet_management"
+            style="word-break: keep-all;"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium emotion-7"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-8"
+                data-testid="AddIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            Create
+            <span
+              class="MuiTouchRipple-root emotion-9"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 emotion-4"
+      >
+        <div
+          class="MuiBox-root emotion-11"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiTableContainer-root emotion-12"
+          >
+            <table
+              class="MuiTable-root emotion-13"
+              data-testid="StaffTimesheetList__table"
+            >
+              <thead
+                class="MuiTableHead-root emotion-14"
+                data-testid="TableBase__header"
+              >
+                <tr
+                  class="MuiTableRow-root MuiTableRow-head emotion-15"
+                >
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-16"
+                    scope="col"
+                    style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    />
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-18"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Date
+                    </h6>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-18"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Status
+                    </h6>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-18"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Location
+                    </h6>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-18"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Number of Lessons
+                    </h6>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-18"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Lesson Hours
+                    </h6>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-28"
+                    scope="col"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 emotion-19"
+                      data-testid="TableBase__cellHeader"
+                    >
+                      Other Working Hours
+                    </h6>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="MuiTableBody-root emotion-30"
+                data-testid="TableBaseBody__root"
+              >
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="0"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_0/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 0
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="1"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      2
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_1/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="2"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      3
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_2/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 2
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="3"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      4
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_3/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 3
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="4"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      5
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_4/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 4
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="5"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      6
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_5/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 5
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="6"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      7
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_6/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 6
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="7"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      8
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_7/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 7
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="8"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      9
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_8/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 8
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root emotion-31"
+                  data-testid="TableBase__row"
+                  data-value="9"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                    style="min-width: 60px;"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-17"
+                      data-testid="TableIndexCell__index"
+                    >
+                      10
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <a
+                      class="emotion-35"
+                      data-testid="StaffTimesheetListTable__timesheetDate"
+                      href="/timesheet/timesheet_management/timesheet_9/show"
+                    >
+                      2021/09/01
+                    </a>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <div
+                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-37"
+                      data-testid="StaffTimesheetListTable__timesheetStatus"
+                    >
+                      <span
+                        class="MuiChip-label MuiChip-labelSmall emotion-38"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__timesheetLocation"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      Location 9
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__numberOfLessons"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-32"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__lessonHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      2 hr
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-45"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-40"
+                      data-testid="StaffTimesheetListTable__otherWorkingHours"
+                      id="TypographyMaxLines__TypographyBase"
+                      title=""
+                    >
+                      1 min
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div
+              class="MuiTablePagination-root emotion-191"
+              data-testid="TableBaseFooter"
+              limit="10"
+              offset="10"
+            >
+              <div
+                class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar emotion-192"
+              >
+                <div
+                  class="MuiTablePagination-spacer emotion-193"
+                />
+                <p
+                  class="MuiTablePagination-selectLabel emotion-194"
+                  id="mui-1"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption emotion-195"
+                  >
+                    ra.navigation.page_rows_per_page
+                  </span>
+                </p>
+                <div
+                  class="MuiInputBase-root MuiInputBase-colorPrimary emotion-196"
+                  variant="standard"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="mui-1 TableBaseFooter__select"
+                    class="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input emotion-197"
+                    id="TableBaseFooter__select"
+                    role="button"
+                    tabindex="0"
+                  >
+                    10
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput emotion-198"
+                    tabindex="-1"
+                    value="10"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard emotion-199"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="MuiTablePagination-displayedRows emotion-200"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption emotion-195"
+                    data-testid="TableBaseFooter__totalRows"
+                  >
+                    ra.navigation.page_range_info
+                  </span>
+                </p>
+                <div
+                  class="MuiTablePagination-actions"
+                >
+                  <button
+                    aria-label="Go to previous page"
+                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-202"
+                    disabled=""
+                    tabindex="-1"
+                    title="Go to previous page"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-8"
+                      data-testid="KeyboardArrowLeftIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Go to next page"
+                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-202"
+                    disabled=""
+                    tabindex="-1"
+                    title="Go to next page"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-8"
+                      data-testid="KeyboardArrowRightIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

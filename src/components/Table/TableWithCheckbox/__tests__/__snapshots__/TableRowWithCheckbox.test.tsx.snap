@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableRowWithCheckbox /> should match snapshot 1`] = `
+.emotion-0 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-0.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-0.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-0.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-1 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  position: relative;
+  border-right: 1px;
+  border-bottom: 1px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.emotion-3 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr
+        class="MuiTableRow-root TableBaseRow-selected Mui-selected emotion-0"
+        data-testid="TableBase__row"
+        data-value="1"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-sizeMedium emotion-1"
+          style="width: 60%;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-2"
+          />
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-sizeMedium emotion-3"
+          style="width: 40%;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-2"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<TableRowWithCheckbox /> with render column should render correct cell props 1`] = `
+.emotion-0 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-0.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-0.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-0.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-1 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  position: relative;
+  border-right: 1px;
+  border-bottom: 1px;
+}
+
+.emotion-2 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr
+        class="MuiTableRow-root TableBaseRow-selected Mui-selected emotion-0"
+        data-testid="TableBase__row"
+        data-value="1"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-sizeMedium emotion-1"
+          style="width: 60%;"
+        />
+        <td
+          class="MuiTableCell-root MuiTableCell-sizeMedium emotion-2"
+          data-testid="Testing__iWantToTestAnotherAttr"
+          style="width: 40%;"
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

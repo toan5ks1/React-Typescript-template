@@ -1,0 +1,1609 @@
+- table:
+    schema: public
+    name: assign_study_plan_tasks
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - id
+      - study_plan_ids
+      - status
+      - course_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - id
+      - study_plan_ids
+      - status
+      - course_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: assignment_study_plan_items
+  object_relationships:
+  - name: assignment
+    using:
+      foreign_key_constraint_on: assignment_id
+  - name: study_plan_item
+    using:
+      foreign_key_constraint_on: study_plan_item_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - assignment_id
+      - study_plan_item_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - assignment_id
+      - study_plan_item_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: assignments
+  array_relationships:
+  - name: assignment_study_plan_items
+    using:
+      foreign_key_constraint_on:
+        column: assignment_id
+        table:
+          schema: public
+          name: assignment_study_plan_items
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - assignment_id
+      - attachment
+      - check_list
+      - content
+      - created_at
+      - deleted_at
+      - display_order
+      - instruction
+      - is_required_grade
+      - max_grade
+      - name
+      - settings
+      - status
+      - type
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - assignment_id
+      - attachment
+      - check_list
+      - content
+      - created_at
+      - deleted_at
+      - display_order
+      - instruction
+      - is_required_grade
+      - max_grade
+      - name
+      - settings
+      - status
+      - type
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - resource_path:
+            _eq: X-Hasura-Resource-Path
+      allow_aggregations: true
+- table:
+    schema: public
+    name: books
+  array_relationships:
+  - name: book_chapters
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: books_chapters
+        column_mapping:
+          book_id: book_id
+  - name: course_books
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: courses_books
+        column_mapping:
+          book_id: book_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - book_id
+      - copied_from
+      - country
+      - created_at
+      - deleted_at
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - book_id
+      - copied_from
+      - country
+      - created_at
+      - deleted_at
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - grade
+      - school_id
+      - book_id
+      - country
+      - name
+      - subject
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - grade
+      - school_id
+      - book_id
+      - country
+      - name
+      - subject
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: books_chapters
+  object_relationships:
+  - name: book
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: books
+        column_mapping:
+          book_id: book_id
+  - name: chapter
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: chapters
+        column_mapping:
+          chapter_id: chapter_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - book_id
+      - chapter_id
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - book_id
+      - chapter_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - book:
+            school_id:
+              _in: X-Hasura-School-Ids
+        - chapter:
+            school_id:
+              _in: X-Hasura-School-Ids
+        - book:
+            deleted_at:
+              _is_null: true
+        - chapter:
+            deleted_at:
+              _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - book_id
+      - chapter_id
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        deleted_at:
+          _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - book_id
+      - chapter_id
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        deleted_at:
+          _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: brands
+  object_relationships:
+  - name: org
+    using:
+      foreign_key_constraint_on: org_id
+  array_relationships:
+  - name: centers
+    using:
+      foreign_key_constraint_on:
+        column: brand_id
+        table:
+          schema: public
+          name: centers
+  - name: scheduler_items
+    using:
+      foreign_key_constraint_on:
+        column: brand_id
+        table:
+          schema: public
+          name: scheduler_items
+  - name: scheduler_patterns
+    using:
+      foreign_key_constraint_on:
+        column: brand_id
+        table:
+          schema: public
+          name: scheduler_patterns
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - brand_id
+      - name
+      - org_id
+      - created_at
+      - updated_at
+      - deleted_at
+      - owner
+      - time_zone
+      - academic_year_beginning
+      - academic_year_end
+      - scheduler_release_status
+      filter: {}
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - brand_id
+      - name
+      - org_id
+      - owner
+      - scheduler_release_status
+      - time_zone
+      - academic_year_beginning
+      - academic_year_end
+      - created_at
+      - deleted_at
+      - updated_at
+      filter: {}
+- table:
+    schema: public
+    name: centers
+  object_relationships:
+  - name: brands
+    using:
+      foreign_key_constraint_on: brand_id
+  array_relationships:
+  - name: scheduler_items
+    using:
+      foreign_key_constraint_on:
+        column: center_id
+        table:
+          schema: public
+          name: scheduler_items
+  - name: scheduler_patterns
+    using:
+      foreign_key_constraint_on:
+        column: center_id
+        table:
+          schema: public
+          name: scheduler_patterns
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - center_id
+      - name
+      - brand_id
+      - created_at
+      - updated_at
+      - deleted_at
+      - owner
+      - time_zone
+      filter: {}
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - center_id
+      - name
+      - brand_id
+      - created_at
+      - updated_at
+      - deleted_at
+      - owner
+      - time_zone
+      filter: {}
+      allow_aggregations: true
+- table:
+    schema: public
+    name: chapters
+  object_relationships:
+  - name: book_chapters
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: books_chapters
+        column_mapping:
+          chapter_id: chapter_id
+  array_relationships:
+  - name: topics
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: topics
+        column_mapping:
+          chapter_id: chapter_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - chapter_id
+      - country
+      - created_at
+      - deleted_at
+      - display_order
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - chapter_id
+      - country
+      - created_at
+      - deleted_at
+      - display_order
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - chapter_id
+      - country
+      - created_at
+      - deleted_at
+      - display_order
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - chapter_id
+      - country
+      - created_at
+      - deleted_at
+      - display_order
+      - grade
+      - name
+      - school_id
+      - subject
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: class_students
+- table:
+    schema: public
+    name: class_study_plans
+  object_relationships:
+  - name: study_plan
+    using:
+      foreign_key_constraint_on: study_plan_id
+- table:
+    schema: public
+    name: course_classes
+- table:
+    schema: public
+    name: course_students
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - course_id
+      - course_student_id
+      - student_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - course_id
+      - student_id
+      - created_at
+      - updated_at
+      - deleted_at
+      - course_student_id
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: course_study_plans
+  object_relationships:
+  - name: study_plan
+    using:
+      foreign_key_constraint_on: study_plan_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - course_id
+      - study_plan_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - course_id
+      - study_plan_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - study_plan:
+            school_id:
+              _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: courses_books
+  object_relationships:
+  - name: books
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: books
+        column_mapping:
+          book_id: book_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - books:
+            _and:
+            - deleted_at:
+                _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - books:
+            _and:
+            - school_id:
+                _in: X-Hasura-School-Ids
+            - deleted_at:
+                _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - books:
+            _and:
+            - school_id:
+                _in: X-Hasura-School-Ids
+            - deleted_at:
+                _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: learning_objectives
+  array_relationships:
+  - name: quiz_sets
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: quiz_sets
+        column_mapping:
+          lo_id: lo_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - lo_id
+      - name
+      - country
+      - grade
+      - subject
+      - topic_id
+      - master_lo_id
+      - display_order
+      - prerequisites
+      - video
+      - study_guide
+      - video_script
+      - updated_at
+      - created_at
+      - school_id
+      - deleted_at
+      - copied_from
+      - type
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - display_order
+      - grade
+      - school_id
+      - copied_from
+      - country
+      - lo_id
+      - master_lo_id
+      - name
+      - study_guide
+      - subject
+      - topic_id
+      - type
+      - video
+      - video_script
+      - prerequisites
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - school_id:
+            _in: X-Hasura-School-Ids
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - display_order
+      - grade
+      - school_id
+      - copied_from
+      - country
+      - lo_id
+      - master_lo_id
+      - name
+      - study_guide
+      - subject
+      - topic_id
+      - type
+      - video
+      - video_script
+      - prerequisites
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - school_id:
+            _in: X-Hasura-School-Ids
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - display_order
+      - grade
+      - school_id
+      - copied_from
+      - country
+      - lo_id
+      - master_lo_id
+      - name
+      - study_guide
+      - subject
+      - topic_id
+      - type
+      - video
+      - video_script
+      - prerequisites
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - school_id:
+            _in: X-Hasura-School-Ids
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: lesson_study_plan_items
+- table:
+    schema: public
+    name: lo_study_plan_items
+  object_relationships:
+  - name: study_plan_item
+    using:
+      foreign_key_constraint_on: study_plan_item_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - lo_id
+      - study_plan_item_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - lo_id
+      - study_plan_item_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: orgs
+  array_relationships:
+  - name: brands
+    using:
+      foreign_key_constraint_on:
+        column: org_id
+        table:
+          schema: public
+          name: brands
+- table:
+    schema: public
+    name: quiz_sets
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - quiz_set_id
+      - lo_id
+      - quiz_external_ids
+      - status
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - lo_id
+      - quiz_set_id
+      - status
+      - quiz_external_ids
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - lo_id
+      - quiz_set_id
+      - status
+      - quiz_external_ids
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - lo_id
+      - quiz_set_id
+      - status
+      - quiz_external_ids
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: quizzes
+  array_relationships:
+  - name: quiz_sets
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: quiz_sets
+        column_mapping:
+          external_id: quiz_external_ids
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - quiz_id
+      - country
+      - school_id
+      - external_id
+      - kind
+      - question
+      - explanation
+      - options
+      - tagged_los
+      - difficulty_level
+      - created_by
+      - approved_by
+      - status
+      - updated_at
+      - created_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - difficulty_level
+      - school_id
+      - explanation
+      - options
+      - question
+      - approved_by
+      - country
+      - created_by
+      - external_id
+      - kind
+      - quiz_id
+      - status
+      - tagged_los
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - difficulty_level
+      - school_id
+      - explanation
+      - options
+      - question
+      - approved_by
+      - country
+      - created_by
+      - external_id
+      - kind
+      - quiz_id
+      - status
+      - tagged_los
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - difficulty_level
+      - school_id
+      - explanation
+      - options
+      - question
+      - approved_by
+      - country
+      - created_by
+      - external_id
+      - kind
+      - quiz_id
+      - status
+      - tagged_los
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+- table:
+    schema: public
+    name: scheduler_items
+  object_relationships:
+  - name: brand
+    using:
+      foreign_key_constraint_on: brand_id
+  - name: center
+    using:
+      foreign_key_constraint_on: center_id
+  - name: scheduler_pattern
+    using:
+      foreign_key_constraint_on: scheduler_pattern_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - all_day
+      - meta_data
+      - brand_id
+      - center_id
+      - owner
+      - scheduler_item_id
+      - scheduler_pattern_id
+      - created_at
+      - deleted_at
+      - end_time
+      - start_time
+      - updated_at
+      filter: {}
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - scheduler_item_id
+      - scheduler_pattern_id
+      - start_time
+      - end_time
+      - all_day
+      - created_at
+      - updated_at
+      - deleted_at
+      - meta_data
+      - brand_id
+      - center_id
+      - owner
+      filter: {}
+      allow_aggregations: true
+- table:
+    schema: public
+    name: scheduler_patterns
+  object_relationships:
+  - name: brand
+    using:
+      foreign_key_constraint_on: brand_id
+  - name: center
+    using:
+      foreign_key_constraint_on: center_id
+  - name: scheduler_pattern
+    using:
+      foreign_key_constraint_on: scheduler_pattern_parent_id
+  array_relationships:
+  - name: scheduler_items
+    using:
+      foreign_key_constraint_on:
+        column: scheduler_pattern_id
+        table:
+          schema: public
+          name: scheduler_items
+  - name: scheduler_patterns
+    using:
+      foreign_key_constraint_on:
+        column: scheduler_pattern_parent_id
+        table:
+          schema: public
+          name: scheduler_patterns
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - scheduler_pattern_id
+      - scheduler_pattern_parent_id
+      - scheduler_type
+      - time_zone
+      - start_time
+      - end_time
+      - all_day
+      - created_at
+      - updated_at
+      - deleted_at
+      - meta_data
+      - repeat_option_data
+      - latest_released_at
+      - brand_id
+      - center_id
+      - owner
+      filter: {}
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - scheduler_pattern_id
+      - scheduler_pattern_parent_id
+      - scheduler_type
+      - time_zone
+      - start_time
+      - end_time
+      - all_day
+      - created_at
+      - updated_at
+      - deleted_at
+      - meta_data
+      - repeat_option_data
+      - latest_released_at
+      - brand_id
+      - center_id
+      - owner
+      filter: {}
+      allow_aggregations: true
+- table:
+    schema: public
+    name: student_study_plans
+  object_relationships:
+  - name: study_plan
+    using:
+      foreign_key_constraint_on: study_plan_id
+  array_relationships:
+  - name: course_students
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: course_students
+        column_mapping:
+          student_id: student_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - study_plan_id
+      - student_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - course_students:
+            _and:
+            - deleted_at:
+                _is_null: true
+        - study_plan:
+            _and:
+            - deleted_at:
+                _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - study_plan_id
+      - student_id
+      - created_at
+      - updated_at
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - course_students:
+            _and:
+            - deleted_at:
+                _is_null: true
+        - study_plan:
+            _and:
+            - deleted_at:
+                _is_null: true
+            - school_id:
+                _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: student_submission_grades
+- table:
+    schema: public
+    name: student_submissions
+- table:
+    schema: public
+    name: study_plan_items
+  object_relationships:
+  - name: assignment_study_plan_item
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: assignment_study_plan_items
+        column_mapping:
+          study_plan_item_id: study_plan_item_id
+  - name: lo_study_plan_item
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: lo_study_plan_items
+        column_mapping:
+          study_plan_item_id: study_plan_item_id
+  - name: study_plan
+    using:
+      foreign_key_constraint_on: study_plan_id
+  array_relationships:
+  - name: assignment_study_plan_items
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_item_id
+        table:
+          schema: public
+          name: assignment_study_plan_items
+  - name: lo_study_plan_items
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_item_id
+        table:
+          schema: public
+          name: lo_study_plan_items
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - available_from
+      - available_to
+      - completed_at
+      - content_structure
+      - copy_study_plan_item_id
+      - created_at
+      - deleted_at
+      - display_order
+      - end_date
+      - start_date
+      - status
+      - study_plan_id
+      - study_plan_item_id
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - available_from
+      - available_to
+      - completed_at
+      - content_structure
+      - copy_study_plan_item_id
+      - created_at
+      - deleted_at
+      - display_order
+      - end_date
+      - start_date
+      - status
+      - study_plan_id
+      - study_plan_item_id
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - study_plan:
+            school_id:
+              _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: study_plans
+  object_relationships:
+  - name: study_plan
+    using:
+      foreign_key_constraint_on: master_study_plan_id
+  array_relationships:
+  - name: class_study_plans
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_id
+        table:
+          schema: public
+          name: class_study_plans
+  - name: course_study_plans
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_id
+        table:
+          schema: public
+          name: course_study_plans
+  - name: student_study_plans
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_id
+        table:
+          schema: public
+          name: student_study_plans
+  - name: study_plan_items
+    using:
+      foreign_key_constraint_on:
+        column: study_plan_id
+        table:
+          schema: public
+          name: study_plan_items
+  - name: study_plans
+    using:
+      foreign_key_constraint_on:
+        column: master_study_plan_id
+        table:
+          schema: public
+          name: study_plans
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - created_at
+      - deleted_at
+      - grades
+      - master_study_plan_id
+      - name
+      - school_id
+      - status
+      - study_plan_id
+      - study_plan_type
+      - track_school_progress
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - book_id
+      - course_id
+      - created_at
+      - deleted_at
+      - grades
+      - master_study_plan_id
+      - name
+      - school_id
+      - status
+      - study_plan_id
+      - study_plan_type
+      - track_school_progress
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: topics
+  array_relationships:
+  - name: learning_objectives
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: learning_objectives
+        column_mapping:
+          topic_id: topic_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - topic_id
+      - name
+      - country
+      - grade
+      - subject
+      - topic_type
+      - updated_at
+      - created_at
+      - status
+      - display_order
+      - published_at
+      - total_los
+      - chapter_id
+      - icon_url
+      - school_id
+      - attachment_names
+      - attachment_urls
+      - instruction
+      - copied_topic_id
+      - essay_required
+      - deleted_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - essay_required
+      - display_order
+      - grade
+      - school_id
+      - total_los
+      - chapter_id
+      - copied_topic_id
+      - country
+      - icon_url
+      - instruction
+      - name
+      - status
+      - subject
+      - topic_id
+      - topic_type
+      - attachment_names
+      - attachment_urls
+      - created_at
+      - deleted_at
+      - published_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_STAFF
+    permission:
+      columns:
+      - essay_required
+      - display_order
+      - grade
+      - school_id
+      - total_los
+      - chapter_id
+      - copied_topic_id
+      - country
+      - icon_url
+      - instruction
+      - name
+      - status
+      - subject
+      - topic_id
+      - topic_type
+      - attachment_names
+      - attachment_urls
+      - created_at
+      - deleted_at
+      - published_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+  - role: USER_GROUP_TEACHER
+    permission:
+      columns:
+      - essay_required
+      - display_order
+      - grade
+      - school_id
+      - total_los
+      - chapter_id
+      - copied_topic_id
+      - country
+      - icon_url
+      - instruction
+      - name
+      - status
+      - subject
+      - topic_id
+      - topic_type
+      - attachment_names
+      - attachment_urls
+      - created_at
+      - deleted_at
+      - published_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - school_id:
+            _in: X-Hasura-School-Ids
+      allow_aggregations: true
+- table:
+    schema: public
+    name: topics_assignments
+  object_relationships:
+  - name: assignment
+    using:
+      foreign_key_constraint_on: assignment_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - topic_id
+      - assignment_id
+      - display_order
+      - created_at
+      - updated_at
+      - deleted_at
+      - resource_path
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: false
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - display_order
+      - assignment_id
+      - resource_path
+      - topic_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - assignment:
+            _and:
+            - resource_path:
+                _eq: X-Hasura-Resource-Path
+- table:
+    schema: public
+    name: topics_learning_objectives
+  object_relationships:
+  - name: learning_objective
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: learning_objectives
+        column_mapping:
+          lo_id: lo_id
+  select_permissions:
+  - role: USER_GROUP_ADMIN
+    permission:
+      columns:
+      - display_order
+      - lo_id
+      - resource_path
+      - topic_id
+      - created_at
+      - deleted_at
+      - updated_at
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - learning_objective:
+            deleted_at:
+              _is_null: true
+      allow_aggregations: true
+  - role: USER_GROUP_SCHOOL_ADMIN
+    permission:
+      columns:
+      - topic_id
+      - lo_id
+      - display_order
+      - updated_at
+      - created_at
+      - deleted_at
+      - resource_path
+      filter:
+        _and:
+        - deleted_at:
+            _is_null: true
+        - learning_objective:
+            deleted_at:
+              _is_null: true

@@ -1,0 +1,9 @@
+/* Override css of component Editor */
+
+.public-DraftEditor-content {
+    overflow: initial !important;
+}
+
+.DraftEditor-root {
+    padding-top: 0px !important;
+}

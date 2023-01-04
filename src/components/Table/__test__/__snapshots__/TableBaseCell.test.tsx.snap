@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBaseCell /> should match snapshot 1`] = `
+.emotion-0 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  position: relative;
+}
+
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="MuiTableCell-root MuiTableCell-sizeMedium emotion-0"
+        >
+          Test
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

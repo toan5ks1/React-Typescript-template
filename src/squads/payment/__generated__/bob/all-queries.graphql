@@ -1,0 +1,52 @@
+query LocationsListByNameLowestLevel($limit: Int = 10, $offset: Int = 0, $name: String = "") {
+    get_locations_lowest_level(
+        args: { location_limit: $limit, location_offset: $offset, location_search_name: $name }
+    ) {
+        name
+        location_id
+    }
+}
+query LocationByLocationId($location_id: String!) {
+    locations(where: { location_id: { _eq: $location_id } }) {
+        location_id
+        name
+    }
+}
+query LocationListByIds($location_ids: [String!] = []) {
+    locations(where: { location_id: { _in: $location_ids } }) {
+        name
+        location_id
+    }
+}
+query User_LocationListByIds($location_ids: [String!] = []) {
+    locations(where: { location_id: { _in: $location_ids } }) {
+        location_id
+        name
+        access_path
+        location_type
+        parent_location_id
+    }
+}
+query Payment_GetStudentsManyV3($studentIds: [String!]!) {
+    students(where: { student_id: { _in: $studentIds } }) {
+        enrollment_status
+        student_external_id
+        student_note
+        student_id
+        current_grade
+        user {
+            user_id
+            email
+            user_group
+            country
+            first_name
+            last_name
+        }
+    }
+}
+query UserNameByIds($user_id: [String!] = []) {
+    users(where: { user_id: { _in: $user_id } }) {
+        user_id
+        name
+    }
+}

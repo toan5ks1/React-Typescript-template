@@ -1,0 +1,1108 @@
+{
+  "src/common/constants/helper": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/constants/const": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/helpers/helpers": [
+    "communication",
+    "user"
+  ],
+  "src/common/utils/time": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/constants/enum": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/choice": [
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Typographys/TypographyBase": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Typographys/TypographyShortenStr": [
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/other": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/manabie-event": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonBase": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Utilities/SpacingGroup": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/grpc": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/app/AppProvider": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Loading": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/index.css": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/stackdriver": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/warner": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/packages/feature-controller": [
+    "communication",
+    "payment"
+  ],
+  "src/internals/feature-controller": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/typings/configuration": [
+    "communication",
+    "syllabus"
+  ],
+  "src/internals/configuration": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/packages/configuration": [
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/file": [
+    "architecture",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/error": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/packages/stackdriver/utils": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/auth-manager": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/interceptors": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/configuration/utils": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "path": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Route/SwitchWith404Route": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonPrimaryOutlined": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Menus/ActionPanel": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/TextFields/TextFieldHF": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Autocompletes/AutocompleteHF": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/providers/MuiPickersUtilsProvider": [
+    "adobo",
+    "communication",
+    "syllabus"
+  ],
+  "src/components/Autocompletes/AutocompleteBase": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/styles": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/styles/themes/variants/manabieV5": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Chips/ChipStatus": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment"
+  ],
+  "src/components/Autocompletes/TimePickerAutocompleteHF": [
+    "communication",
+    "syllabus"
+  ],
+  "src/components/DatePickers/DatePickerHF": [
+    "adobo",
+    "calendar",
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonPrimaryContained": [
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonDelete": [
+    "communication",
+    "payment",
+    "user"
+  ],
+  "src/components/Backdrops/BackdropLoading": [
+    "calendar",
+    "communication",
+    "user"
+  ],
+  "src/components/Dialogs/DialogFullScreenHF": [
+    "adobo",
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Dialogs/DialogCancelConfirm": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonPrimaryText": [
+    "communication",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/components/Forms/FormFilterAdvanced": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/hooks/useFormFilterAdvanced": [
+    "communication"
+  ],
+  "src/common/constants/file-size": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Dialogs/DialogWithHeaderFooter": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Inputs/UploadInput": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Autocompletes/GradesAutocompleteHF": [
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Divider/DividerDashed": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Papers/PaperSectionWrapper": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/RadioGroups/RadioGroupHF": [
+    "communication",
+    "user"
+  ],
+  "src/components/Typographys/TypographyHeader": [
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Typographys/TypographyPageTitle": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/IconButton/IconButtonBase": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/ListMediaChipsBase": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/draft-js": [
+    "communication",
+    "syllabus"
+  ],
+  "src/components/Buttons/ButtonDropdownWithPopover": [
+    "communication",
+    "lesson"
+  ],
+  "src/components/DoubleDash": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Accordions/AccordionBase": [
+    "communication",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Accordions/AccordionSummaryBase/AccordionSummaryBase": [
+    "communication",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Papers/PaperRoundedBorders": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Select/SelectHF": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Forms/FormControlLabelBase": [
+    "communication",
+    "syllabus"
+  ],
+  "src/components/Chips/ChipBase/ChipBase": [
+    "communication",
+    "syllabus"
+  ],
+  "src/components/Typographys/TypographyTextSecondary": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Chips/ChipBase": [
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/routing/type": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/StyledLink": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table/TableBase": [
+    "adobo",
+    "communication",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/providers/TranslationProvider": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperLookingFor": [
+    "communication",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/components/Popovers/PopoverBase": [
+    "communication",
+    "syllabus"
+  ],
+  "src/components/TextFields/TextFieldBase": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/sanitizer": [
+    "communication",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Breadcrumbs": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperPageContent": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/query": [
+    "communication",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/components/Buttons/ToggleButtonGroupBase/ToggleButtonGroupBase": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Route/RouteGuard": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/components/Typographys/TypographyMaxLines": [
+    "communication",
+    "lesson",
+    "syllabus"
+  ],
+  "src/components/Forms/HookForm": [
+    "adobo",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/utils/id-generator": [
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/internals/errors": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/axios-client": [
+    "communication",
+    "lesson",
+    "syllabus"
+  ],
+  "src/common/utils/timezone": [
+    "adobo",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/query-client": [
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/packages/standalone-query-client": [
+    "communication",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "util": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/packages/warner": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "communication",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/common/constants/choices": [
+    "lesson",
+    "user"
+  ],
+  "src/components/Chips/ChipAutocomplete": [
+    "calendar",
+    "lesson",
+    "user"
+  ],
+  "src/components/RelatedUser/Avatar": [
+    "calendar",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/hooks/useTextEllipsis": [
+    "calendar",
+    "lesson",
+    "user"
+  ],
+  "src/components/Alerts/AlertBase": [
+    "lesson",
+    "user"
+  ],
+  "src/components/Typographys/TypographyWithValue": [
+    "adobo",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Divider/DividerBase": [
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperGrid": [
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperNoData": [
+    "adobo",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/hooks/useBrightcoveProfileData": [
+    "lesson",
+    "syllabus"
+  ],
+  "src/components/SvgIcons/BrightcoveLogoIcon": [
+    "lesson"
+  ],
+  "src/hooks/useOnChangeVideoLink": [
+    "lesson"
+  ],
+  "src/components/Table/TableSke": [
+    "adobo",
+    "lesson",
+    "user"
+  ],
+  "src/components/Table/utils": [
+    "adobo",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table/TableBaseCell": [
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table/TableIndexCell": [
+    "lesson",
+    "user"
+  ],
+  "src/components/Table/TableBaseBody": [
+    "lesson",
+    "user"
+  ],
+  "src/components/Table/TableBaseHeader": [
+    "adobo",
+    "lesson",
+    "user"
+  ],
+  "src/components/Table/TableWithCheckbox": [
+    "adobo",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Typographys/TypographyPrimary": [
+    "adobo",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table/TableBaseFooter": [
+    "adobo",
+    "lesson",
+    "user"
+  ],
+  "src/components/Tabs/TabLayout": [
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Chips/ChipStatus/ChipStatus": [
+    "lesson"
+  ],
+  "src/components/NoResultPage": [
+    "lesson"
+  ],
+  "src/app/useUpdatePermissionMicroApplication": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "lesson",
+    "user"
+  ],
+  "src/hooks/useDataProvider": [
+    "lesson",
+    "payment",
+    "syllabus"
+  ],
+  "src/typings/react-admin": [
+    "adobo",
+    "lesson"
+  ],
+  "src/components/CicularProgress/CicularProgressBase": [
+    "calendar",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperPageHeader": [
+    "adobo",
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Checkboxes/CheckboxBase": [
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Popovers/PopoverRightBottom": [
+    "lesson"
+  ],
+  "src/components/Buttons/ButtonEdit": [
+    "lesson",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonCreate": [
+    "adobo",
+    "lesson",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/hooks/useGlobalLocations": [
+    "lesson",
+    "user"
+  ],
+  "src/components/Dialogs/DialogFullScreen": [
+    "lesson",
+    "payment"
+  ],
+  "src/app/useAppPermission": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "lesson",
+    "user"
+  ],
+  "src/hooks/useStandaloneFeatureToggle": [
+    "adobo",
+    "architecture",
+    "calendar",
+    "lesson",
+    "payment",
+    "user"
+  ],
+  "src/components/Autocompletes/MAutocompleteServiceHF": [
+    "payment"
+  ],
+  "src/components/IconButton/IconButtonWithAnchorMenu": [
+    "payment"
+  ],
+  "src/hooks/useActionMenu": [
+    "payment"
+  ],
+  "src/components/Autocompletes/MAutocompleteCustom": [
+    "payment"
+  ],
+  "src/components/Select/SelectBase": [
+    "calendar",
+    "payment"
+  ],
+  "src/common/constants/other": [
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Dialogs/DialogFooterConfirm": [
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperPortalDialogFooter": [
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Wrappers/WrapperPortalBase": [
+    "payment"
+  ],
+  "src/components/NotFound": [
+    "adobo",
+    "payment",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Papers/PaperBase": [
+    "payment"
+  ],
+  "src/components/Backdrops/BackdropBase": [
+    "syllabus"
+  ],
+  "src/components/ListMediaChipsBase/utils/type": [
+    "syllabus"
+  ],
+  "src/components/Chips/ChipRemoveIcon": [
+    "syllabus"
+  ],
+  "src/components/ExternalLink": [
+    "syllabus"
+  ],
+  "src/components/FileIcon": [
+    "syllabus"
+  ],
+  "src/store/lesson-convert": [
+    "syllabus"
+  ],
+  "src/components/Dialogs/DialogWithHeaderFooter/DialogHeader": [
+    "syllabus"
+  ],
+  "src/components/Dialogs/DialogWithHeaderFooter/DialogWithHeaderFooter": [
+    "syllabus"
+  ],
+  "src/components/Tabs/TabPanel": [
+    "syllabus"
+  ],
+  "src/components/Tabs/TabsBase": [
+    "syllabus"
+  ],
+  "src/hooks/useTabs": [
+    "syllabus"
+  ],
+  "src/models/brightcove": [
+    "syllabus"
+  ],
+  "src/contexts/Can": [
+    "syllabus"
+  ],
+  "src/typings/i18n-provider": [
+    "syllabus"
+  ],
+  "src/common/utils/label-generator": [
+    "syllabus"
+  ],
+  "src/components/Checkboxes/CheckboxLabelHF": [
+    "adobo",
+    "syllabus",
+    "user"
+  ],
+  "src/components/Dialogs/DialogWithHeaderFooterHF": [
+    "adobo",
+    "syllabus",
+    "user"
+  ],
+  "src/internals/grpc/errors": [
+    "syllabus"
+  ],
+  "src/components/Audios/AudioButtonBase": [
+    "syllabus"
+  ],
+  "src/components/BrightcoveVideoReview": [
+    "syllabus"
+  ],
+  "src/providers/PermissonProvider": [
+    "syllabus"
+  ],
+  "src/components/Table/TableBaseRow": [
+    "adobo",
+    "syllabus"
+  ],
+  "src/components/Menus/ButtonDropdownMenu": [
+    "syllabus",
+    "user"
+  ],
+  "src/components/Buttons/ButtonDefaultOutlined": [
+    "syllabus",
+    "user"
+  ],
+  "src/components/Table/TableWithCheckbox/TableCheckbox": [
+    "syllabus",
+    "user"
+  ],
+  "src/app/useFeatureController": [
+    "syllabus"
+  ],
+  "src/providers/ThemeProvider": [
+    "user"
+  ],
+  "src/components/SvgIcons": [
+    "user"
+  ],
+  "src/components/Menus/MenuComponent": [
+    "user"
+  ],
+  "src/packages/abstract-auth": [
+    "user"
+  ],
+  "src/i18n": [
+    "user"
+  ],
+  "src/common/utils/tests": [
+    "calendar",
+    "user"
+  ],
+  "src/components/SvgIcons/FlagJapanIcon": [
+    "user"
+  ],
+  "src/components/SvgIcons/FlagVietnamIcon": [
+    "user"
+  ],
+  "src/components/Table/TableWithCheckbox/TableRowWithCheckbox": [
+    "user"
+  ],
+  "src/internals/configuration/dynamic-config": [
+    "user"
+  ],
+  "src/internals/auth-provider": [
+    "user"
+  ],
+  "src/squads/adobo/domains/entry-exit/services/infer-service": [
+    "user"
+  ],
+  "src/common/helpers/project": [
+    "user"
+  ],
+  "src/app/useAppInit": [
+    "user"
+  ],
+  "src/store/import-user": [
+    "user"
+  ],
+  "src/hooks/useBreadcrumb": [
+    "user"
+  ],
+  "src/squads/adobo/domains/entry-exit/modules/student-entryexit": [
+    "user"
+  ],
+  "src/squads/adobo/domains/invoice/pages/student-invoice/StudentInvoice": [
+    "user"
+  ],
+  "src/squads/payment/domains/OrderManagement/components/StudentBillingTab": [
+    "user"
+  ],
+  "src/components/Autocompletes/CoursesAutocompleteHF": [
+    "user"
+  ],
+  "virtual:generated-pages-react": [
+    "user"
+  ],
+  "src/internals/permission": [
+    "user"
+  ],
+  "src/components/DatePickers/TimePickerBase": [
+    "adobo"
+  ],
+  "src/components/Select/SelectBase/SelectBase": [
+    "adobo"
+  ],
+  "src/components/Layout/Layout/useRouteGuardLayout": [
+    "adobo"
+  ],
+  "src/components/Table/table-types": [
+    "adobo"
+  ],
+  "src/components/Table/TableWrapper": [
+    "adobo"
+  ],
+  "src/components/Typographys/TypographyLookingFor": [
+    "calendar"
+  ],
+  "src/internals/localizer/luxon": [
+    "calendar"
+  ],
+  "src/components/Drawers/DrawerBase": [
+    "calendar"
+  ]
+}

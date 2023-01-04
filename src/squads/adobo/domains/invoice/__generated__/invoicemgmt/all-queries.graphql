@@ -1,0 +1,166 @@
+query Invoice_BillItems(
+    $student_id: String
+    $billing_statuses: [String!] = []
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    bill_item(
+        where: { student_id: { _eq: $student_id }, billing_status: { _in: $billing_statuses } }
+        limit: $limit
+        offset: $offset
+        order_by: { bill_item_sequence_number: asc }
+    ) {
+        billing_item_description
+        final_price
+        student_id
+        billing_date
+        billing_status
+        bill_item_sequence_number
+    }
+    bill_item_aggregate(
+        where: { student_id: { _eq: $student_id }, billing_status: { _in: $billing_statuses } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+query Invoice_BillItemsList($invoice_id: String, $limit: Int = 10, $offset: Int = 0) {
+    invoice_bill_item(
+        where: { invoice_id: { _eq: $invoice_id } }
+        limit: $limit
+        offset: $offset
+        order_by: { bill_item_sequence_number: asc }
+    ) {
+        invoice_bill_item_id
+        invoice_id
+        bill_item_sequence_number
+    }
+    invoice_bill_item_aggregate(where: { invoice_id: { _eq: $invoice_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Invoice_BillItemMany(
+    $bill_item_sequence_number: [Int!]
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    bill_item(
+        where: { bill_item_sequence_number: { _in: $bill_item_sequence_number } }
+        limit: $limit
+        offset: $offset
+    ) {
+        bill_item_sequence_number
+        billing_item_description
+        billing_date
+        discount_amount
+        discount_amount_type
+        discount_amount_value
+        tax_amount
+        tax_percentage
+        tax_id
+        tax_category
+        final_price
+    }
+}
+query Invoice_InvoiceOne($invoice_id: String) {
+    invoice(where: { invoice_id: { _eq: $invoice_id } }) {
+        invoice_id
+        invoice_sequence_number
+        status
+        sub_total
+        student_id
+        total
+        type
+        created_at
+    }
+}
+query Invoice_Invoices($limit: Int = 10, $offset: Int = 0) {
+    invoice(limit: $limit, offset: $offset) {
+        invoice_id
+        invoice_sequence_number
+        status
+        student_id
+        sub_total
+        total
+        type
+    }
+    invoice_aggregate {
+        aggregate {
+            count
+        }
+    }
+}
+query Invoice_InvoicesByStatus($status: String, $limit: Int = 10, $offset: Int = 0) {
+    invoice(where: { status: { _eq: $status } }, limit: $limit, offset: $offset) {
+        invoice_id
+        invoice_sequence_number
+        status
+        student_id
+        sub_total
+        total
+        type
+    }
+    invoice_aggregate(where: { status: { _eq: $status } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Invoice_InvoicesByStudentId($studentId: String, $limit: Int = 10, $offset: Int = 0) {
+    invoice(where: { student_id: { _eq: $studentId } }, limit: $limit, offset: $offset) {
+        invoice_id
+        invoice_sequence_number
+        status
+        student_id
+        sub_total
+        total
+        type
+    }
+    invoice_aggregate(where: { student_id: { _eq: $studentId } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Invoice_Users($user_ids: [String!] = []) {
+    users(where: { user_id: { _in: $user_ids } }) {
+        user_id
+        name
+    }
+}
+query Invoice_PaymentHistory(
+    $invoice_id: String
+    $payment_status: String
+    $limit: Int = 10
+    $offset: Int = 0
+    $payment_order_by: payment_order_by! = { payment_sequence_number: asc }
+) {
+    payment(
+        where: { invoice_id: { _eq: $invoice_id }, payment_status: { _eq: $payment_status } }
+        limit: $limit
+        offset: $offset
+        order_by: [$payment_order_by]
+    ) {
+        invoice_id
+        payment_date
+        payment_due_date
+        payment_expiry_date
+        payment_id
+        payment_method
+        payment_sequence_number
+        payment_status
+        result
+        created_at
+        updated_at
+    }
+    payment_aggregate(
+        where: { invoice_id: { _eq: $invoice_id }, payment_status: { _eq: $payment_status } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}

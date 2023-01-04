@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WrapperPageContent /> component should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div>
+      Test
+    </div>
+  </div>
+</div>
+`;

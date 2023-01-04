@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RemarkSection /> should render match snapshot 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 24px;
+  padding-bottom: 24px;
+}
+
+.emotion-0 .RemarkSection-labelOneColumn {
+  max-width: 12.5%;
+}
+
+.emotion-0 .RemarkSection-valueOneColumn {
+  max-width: 37.2%;
+  white-space: pre-wrap;
+}
+
+.emotion-0 .RemarkSection-breakWord {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: -24px;
+  width: calc(100% + 24px);
+  margin-left: -24px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-1>.MuiGrid-item {
+  padding-top: 24px;
+}
+
+.emotion-1>.MuiGrid-item {
+  padding-left: 24px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3 {
+  margin-bottom: 8px;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.emotion-5 {
+  margin-top: 16px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  word-break: break-word;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 16.666667%;
+  -ms-flex-preferred-size: 16.666667%;
+  flex-basis: 16.666667%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 16.666667%;
+}
+
+@media (min-width:600px) {
+  .emotion-8 {
+    -webkit-flex-basis: 16.666667%;
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 16.666667%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-8 {
+    -webkit-flex-basis: 16.666667%;
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 16.666667%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-8 {
+    -webkit-flex-basis: 16.666667%;
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 16.666667%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-8 {
+    -webkit-flex-basis: 16.666667%;
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 16.666667%;
+  }
+}
+
+.emotion-9 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 83.333333%;
+  -ms-flex-preferred-size: 83.333333%;
+  flex-basis: 83.333333%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 83.333333%;
+}
+
+@media (min-width:600px) {
+  .emotion-10 {
+    -webkit-flex-basis: 83.333333%;
+    -ms-flex-preferred-size: 83.333333%;
+    flex-basis: 83.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 83.333333%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-10 {
+    -webkit-flex-basis: 83.333333%;
+    -ms-flex-preferred-size: 83.333333%;
+    flex-basis: 83.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 83.333333%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-10 {
+    -webkit-flex-basis: 83.333333%;
+    -ms-flex-preferred-size: 83.333333%;
+    flex-basis: 83.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 83.333333%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-10 {
+    -webkit-flex-basis: 83.333333%;
+    -ms-flex-preferred-size: 83.333333%;
+    flex-basis: 83.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 83.333333%;
+  }
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="RemarkSection__root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 emotion-1"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item emotion-2"
+      >
+        <div
+          class="MuiBox-root emotion-3"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 emotion-4"
+            data-testid="RemarkSection__title"
+          >
+            Remarks
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-5"
+      data-testid="RemarkSection__remark"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-6"
+        data-testid="RemarkSection__remarkItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-7"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 emotion-8"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-9"
+            >
+              Remark
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 emotion-10"
+          >
+            <div
+              class="MuiBox-root emotion-11"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-12"
+              >
+                Remark 0
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

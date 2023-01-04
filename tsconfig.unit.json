@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "skipLibCheck": true,
+        "declaration": false,
+        "types": ["@types/react", "@types/jest", "@types/react-dom", "@testing-library/jest-dom"]
+    },
+    "include": [
+        "src/**/*.test.*",
+        "src/env.d.ts",
+        "setupTests.ts",
+        "src/vite-env.d.ts",
+        "src/**/{__test__,__tests__,__mocks__}/**/*.{ts,tsx}",
+        "global.d.ts"
+    ],
+    "exclude": ["src/squads"]
+}

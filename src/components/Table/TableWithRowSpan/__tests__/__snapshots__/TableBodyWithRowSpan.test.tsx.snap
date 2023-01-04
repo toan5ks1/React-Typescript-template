@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBodyWithRowSpan /> should match snapshot 1`] = `
+.emotion-0 {
+  display: table-row-group;
+}
+
+.emotion-1 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-1.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-1.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-1.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-2 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.emotion-5 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #000;
+}
+
+<div>
+  <table>
+    <tbody
+      class="MuiTableBody-root emotion-0"
+      data-testid="TableBaseBody__root"
+    >
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableBase__row"
+        data-value="1"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+          rowspan="2"
+          style="vertical-align: top;"
+        >
+          Group 1
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Item 1
+          </p>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-5"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Type 1
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableBase__row"
+        data-value="2"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Item 2
+          </p>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-5"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Type 1
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableBase__row"
+        data-value="3"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+          rowspan="1"
+          style="vertical-align: top;"
+        >
+          Group 2
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Item 3
+          </p>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-5"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+          >
+            Type 2
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

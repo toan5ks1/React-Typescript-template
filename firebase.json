@@ -1,0 +1,124 @@
+{
+    "hosting": [
+        {
+            "target": "production-ga",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "production-renseikai",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "dev-mui-v5",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "production-jprep",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "uat-jprep",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "staging-jprep",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "synersia",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "green",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "production-manabie",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        },
+        {
+            "target": "uat-manabie",
+            "public": "build",
+            "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+            "redirects": [],
+            "rewrites": [
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        }
+    ]
+}

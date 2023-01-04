@@ -1,0 +1,63 @@
+fragment Timesheet_LocationAttrs on locations {
+    location_id
+    name
+}
+query Timesheet_LocationListByIds($location_ids: [String!] = []) {
+    locations(where: { location_id: { _in: $location_ids } }) {
+        ...Timesheet_LocationAttrs
+    }
+}
+query Timesheet_LocationOne($location_id: String!) {
+    locations(where: { location_id: { _eq: $location_id } }) {
+        ...Timesheet_LocationAttrs
+    }
+}
+query Timesheet_LocationList($name: String, $limit: Int = 10, $offset: Int = 0) {
+    locations(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc, name: asc }
+        where: { name: { _ilike: $name } }
+    ) {
+        ...Timesheet_LocationAttrs
+    }
+}
+fragment Timesheet_StaffAttrs on users {
+    user_id
+    name
+    email
+}
+query Timesheet_StaffListByIds($staff_ids: [String!] = []) {
+    users(where: { user_id: { _in: $staff_ids } }) {
+        ...Timesheet_StaffAttrs
+    }
+}
+query Timesheet_StaffOne($staff_id: String!) {
+    users(where: { user_id: { _eq: $staff_id } }) {
+        ...Timesheet_StaffAttrs
+    }
+}
+query Timesheet_StaffList($email: String, $name: String, $limit: Int = 10, $offset: Int = 0) {
+    users(
+        limit: $limit
+        offset: $offset
+        where: { _and: [{ _or: [{ email: { _ilike: $email } }, { name: { _ilike: $name } }] }] }
+    ) {
+        ...Timesheet_StaffAttrs
+    }
+}
+query Timesheet_StaffListV2($keyword: String, $limit: Int = 10, $offset: Int = 0) {
+    staff(
+        limit: $limit
+        offset: $offset
+        where: {
+            user: { _or: [{ email: { _ilike: $keyword } }, { name: { _ilike: $keyword } }] }
+        }
+    ) {
+        user {
+            name
+            email
+        }
+        staff_id
+    }
+}

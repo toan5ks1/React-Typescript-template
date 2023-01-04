@@ -1,0 +1,315 @@
+{
+    "ra": {
+        "message": {
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "unableToLoadData": "Unable to load data, please try again!"
+        },
+        "navigation": {
+            "page_range_info": "%{offsetBegin}-%{offsetEnd} của %{total}",
+            "page_rows_per_page": "Số hàng trên mỗi trang:"
+        },
+        "notification": {
+            "item_doesnt_exist": "Thành phần không tồn tại"
+        },
+        "manabie-error": {
+            "specified": {
+                "cantDiscardDeletedNotification": "The notification has been deleted",
+                "cantEditSentNotification": "The notification has been sent, you can no longer edit this notification",
+                "cantDiscardSentNotification": "The notification has been sent, you can no longer discard this notification",
+                "cantSendSentNotification": "The notification has been sent",
+                "cantEditDiscardedNotification": "The notification has been deleted, you can no longer edit this notification",
+                "cantSendDiscardedNotification": "The notification has been deleted, you can no longer send this notification",
+                "cantSchedulePastTimeNotification": "You cannot schedule at a time in the past",
+                "cantScheduleInvalidTimeNotification": "Expiration Date cannot be either in the past or prior to Schedule Date",
+                "cantSentNotificationWithInvalidToken": "Notification Server Error: Notification not sent, please try again",
+                "tagNameIsExist": "Something went wrong. Please reload the page and try again.",
+                "tagNameIsEmpty": "Failed to create Tag Name. Please try again",
+                "getBrightcoveProfileFail": "Failed to get Brightcove account information"
+            },
+            "unknown": "Chúng ta gặp một lỗi không xác định. Vui lòng thử lại hoặc liên hệ với nhân viên.",
+            "cannotUpload": "Không thể tải tệp lên",
+            "uploadedFileIsInvalid": "%{fileType} file type is not allowed or File size is bigger than %{fileMaxSize}%{fileUnit}",
+            "not_found": "Chúng tôi không tìm thấy dữ liệu của bạn."
+        },
+        "common": {
+            "action": {
+                "delete": "Xóa",
+                "discard": "Discard",
+                "dispose": "Dispose",
+                "upload": "Tải lên",
+                "cancel": "Hủy bỏ",
+                "remove": "Xóa bỏ",
+                "save": "Save",
+                "viewResultQuestionnaire": "View Result",
+                "downloadResultQuestionnaire": "Download Result",
+                "notifyUnread": "Notify Unread",
+                "filter": "Filter"
+            },
+            "send": "Send",
+            "saveDraft": "Save Draft",
+            "saveSchedule": "Save Schedule",
+            "editedSuccess": "Chỉnh sửa thành công |||| Bạn đã chỉnh sửa %{smart_count} thành công",
+            "sendSuccess": "Send successfully |||| You have sent the %{smart_count} successfully",
+            "createdSuccess": "Created successfully |||| You have created a new %{smart_count} successfully",
+            "resendSuccess": "Notification send to unread user successfully",
+            "resendFail": "Oops! There is somthing wrong. Please wait a few minute and try again.",
+            "deleteSuccess": "Xóa thành công |||| Bạn đã xóa %{smart_count} thành công",
+            "discardMessage": "Discard Message?",
+            "areYouSureWantToDiscardThisMessage": "Are you sure you want to discard this message? All the contents will be permanently deleted.",
+            "disposeNotification": "Dispose Notification?",
+            "areYouSureWantToExitThisForm": "Are you sure you want to exit this form? This action cannot be undone.",
+            "resendNotification": "Are you sure you want to resend this notification to unread users?",
+            "createdTagSuccess": "You have created a new Tag successfully!",
+            "addNewTag": "Are you sure you want to add a new Tag?",
+            "addOptionPrefix": "Add",
+            "workInProgress": "Work in progress"
+        }
+    },
+    "resources": {
+        "configs": {
+            "config_title": "Cấu hình",
+            "apply": "Áp dụng",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "Toàn cầu",
+                    "COUNTRY_VN": "Việt Nam",
+                    "COUNTRY_ID": "Indonesia",
+                    "COUNTRY_SG": "Singapore",
+                    "COUNTRY_JP": "Japan"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "Thứ Hai",
+                "tuesday": "Thứ Ba",
+                "wednesday": "Thứ Tư",
+                "thursday": "Thứ Năm",
+                "friday": "Thứ Sáu",
+                "saturday": "Thứ Bảy",
+                "sunday": "Chủ Nhật"
+            },
+            "name": "Tên",
+            "city": "Thành phố/Tỉnh",
+            "district": "Quận/Huyện",
+            "school": "Trường học (%{smart_count})",
+            "just_show_system_school": "Chỉ hiển thị những trường đã được xác minh",
+            "teacher": "Giáo viên (%{smart_count})",
+            "config": "Cấu hình",
+            "material": "Tài liệu",
+            "removeMaterial": "Xóa tài liệu",
+            "removeMaterialConfirmText": "Bạn có chắc là bạn muốn xóa tài liệu này? |||| You’re about to remove the file named “%{name}” for %{week}.",
+            "doYouWantToDoThis": "Bạn có muốn thực hiện hành động này?",
+            "viewDetail": "Xem chi tiết",
+            "accountInfo": "Thông tin tài khoản",
+            "account": "Tài khoản",
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "noResultSearch": "Please use try again with different keywords",
+            "studyItem": "Study Item",
+            "students": "Học sinh",
+            "parents": "Phụ huynh",
+            "youFilterBy": "You filter by",
+            "all": "All",
+            "youAreOffline": "Please try again, your network is down",
+            "somethingWentWrong": "Có gì đó sai sai ở đây",
+            "netWorkUnstable": "Kết nối internet của bạn không ổn định, Vui lòng tải lại trang hoặc thử lại",
+            "pleaseHelpUsReport": "Vui lòng giúp chúng tôi báo cáo sự cố này bằng cách gửi hoặc thông báo lỗi này cho nhân viên của chúng tôi",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "back": "Trở về",
+            "details": "Chi tiết"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "limitLength": "%{field} must not exceed %{length} characters",
+                "dateMustComeAfter": "%{endDate} must come after %{startDate}",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}",
+                "fieldCannotBeBlank": "%{field} cannot be blank!",
+                "duplicatedAnswer": "Answer contains duplicated content",
+                "invalidExpirationDate": "Invalid Expiration Date",
+                "invalidExpirationTime": "Invalid Expiration Time",
+                "invalidFromDate": "From Date must be less than or equal to To Date.",
+                "invalidToDate": "To Date must be greater than or equal to From Date.",
+                "invalidFromTime": "From Time must be less than or equal to To Time.",
+                "invalidToTime": "To Time must be greater than or equal to From Time."
+            },
+            "dropFileHere": "Drop your file here",
+            "pleaseUploadFileSizeLessThan": "Please, upload file size less than %{maxSize}MB",
+            "dragAndDropFileHere": "Drag & drop your files or",
+            "dragAndDropCSVFileHere": "Drag and drop or select a CSV files to upload",
+            "uploading": "Đang tải lên...",
+            "cannotUpload": "Tải lên thất bại",
+            "pasteVideoLink": "Paste video link",
+            "chooseFilesToUpload": "Choose files to upload",
+            "browse": "browse",
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller"
+        },
+        "choices": {
+            "grades": {
+                "0": "Khác",
+                "1": "Lớp 1",
+                "2": "Lớp 2",
+                "3": "Lớp 3",
+                "4": "Lớp 4",
+                "5": "Lớp 5",
+                "6": "Lớp 6",
+                "7": "Lớp 7",
+                "8": "Lớp 8",
+                "9": "Lớp 9",
+                "10": "Lớp 10",
+                "11": "Lớp 11",
+                "12": "Lớp 12",
+                "13": "CĐ/ĐH năm 1",
+                "14": "CĐ/ĐH năm 2",
+                "15": "CĐ/ĐH năm 3",
+                "16": "CĐ/ĐH năm 4"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Quản trị viên Manabie",
+                "USER_GROUP_SCHOOL_ADMIN": "Quản trị viên |||| Quản trị viên của trường %{smart_count}",
+                "USER_GROUP_STUDENT": "Student",
+                "USER_GROUP_TEACHER": "Teacher",
+                "USER_GROUP_PARENT": "Parent"
+            }
+        },
+        "notificationsv2": {
+            "name": "Notification V2"
+        },
+        "notifications": {
+            "name": "Notification",
+            "notificationStatus": {
+                "ALL_STATUS": "All |||| All (%{count})",
+                "NOTIFICATION_STATUS_NONE": "None",
+                "NOTIFICATION_STATUS_DRAFT": "Draft |||| Draft (%{count})",
+                "NOTIFICATION_STATUS_SCHEDULED": "Scheduled |||| Scheduled (%{count})",
+                "NOTIFICATION_STATUS_SENT": "Sent |||| Sent (%{count})",
+                "NOTIFICATION_STATUS_DISCARD": "Discard |||| Discard (%{count})"
+            },
+            "questionnaireStatus": {
+                "USER_NOTIFICATION_QUESTIONNAIRE_STATUS_ANSWERED": "Submitted",
+                "USER_NOTIFICATION_QUESTIONNAIRE_STATUS_UNANSWERED": "Not Submitted"
+            },
+            "label": {
+                "recipientGroup": "Recipient Group",
+                "individualRecipient": "individual",
+                "grades": "grade",
+                "courses": "course",
+                "userType": "type",
+                "to": "To",
+                "title": "Title",
+                "content": "Content",
+                "attachment": "Attach",
+                "recipient": "Recipient List |||| Recipient",
+                "recipientName": "Recipient Name",
+                "audience": "Audience Type",
+                "composer": "Composer",
+                "lastUpdated": "Last Updated",
+                "sentDate": "Sent Date",
+                "status": "Status",
+                "parent": "Parent |||| Parents",
+                "student": "Student |||| Students",
+                "parentOfStudent": "%{parentName} (Student: %{studentName})",
+                "all": "All",
+                "allCourses": "All Courses",
+                "allGrades": "All Grades",
+                "read": "Read",
+                "unRead": "Unread",
+                "target": "Target",
+                "deliveryOption": "Delivery Option",
+                "now": "Now",
+                "schedule": "Schedule",
+                "uploadYourFile": "Tải ảnh lên",
+                "notificationDate": "Notification Date",
+                "question": "Question",
+                "placeholder": {
+                    "selectCourse": "Select Course",
+                    "selectCourses": "Select Courses",
+                    "selectGrade": "Select Grade",
+                    "selectIndividualRecipient": "Individual Recipient",
+                    "notificationTitle": "Title",
+                    "selectContent": "Enter your message here",
+                    "selectTime": "Time",
+                    "question": "Question",
+                    "answer": "Answer",
+                    "tags": "Tags",
+                    "searchByNotificationTitles": "Search by Notification Title"
+                },
+                "questionnaire": "Questionnaire",
+                "allowResubmission": "Allow Resubmission",
+                "questionType": "Question Type",
+                "requiredQuestion": "Required",
+                "expirationDate": "Expiration Date",
+                "expirationTime": "Expiration Time",
+                "importantNotification": "Important Notification",
+                "timeStamp": "Timestamp",
+                "responderName": "Responder Name",
+                "listQuestion": "List Question",
+                "tags": "Tags",
+                "filters": "Filters",
+                "tag": "Tag",
+                "votes": "1 Vote |||| %{numberOfVotes} Votes",
+                "numberOfRespondents": "Number of respondents"
+            },
+            "message": {
+                "reloadPage": "Notification items have been updated. Please reload the page."
+            },
+            "title": {
+                "generalInfo": "General Info",
+                "composeMessage": "Compose",
+                "editMessage": "Edit",
+                "notification": "Notification",
+                "notificationCenter": "Notification Center",
+                "questionnaireResult": "Questionnaire Result",
+                "addTag": "Add Tag"
+            },
+            "button": {
+                "notifyUnread": "Notify Unread",
+                "compose": "Compose",
+                "clone": "Clone",
+                "addInlineLink": "Add",
+                "addQuestion": "Add Question",
+                "addAnswer": "Add Answer",
+                "viewLess": "View Less",
+                "viewMore": "View More",
+                "clearAll": "Clear All"
+            },
+            "userNotificationStatus": {
+                "USER_NOTIFICATION_STATUS_NEW": "Unread",
+                "USER_NOTIFICATION_STATUS_SEEN": "Read",
+                "USER_NOTIFICATION_STATUS_NONE": "None",
+                "USER_NOTIFICATION_STATUS_READ": "Read",
+                "USER_NOTIFICATION_STATUS_FAILED": "Failed"
+            },
+            "targetGroupSelect": {
+                "NOTIFICATION_TARGET_GROUP_SELECT_NONE": "None",
+                "NOTIFICATION_TARGET_GROUP_SELECT_ALL": "All"
+            },
+            "image": "Ảnh",
+            "heading": "Mở đầu",
+            "orderList": "Order List",
+            "ul": "Danh sách",
+            "bold": "In đậm",
+            "color": "Color",
+            "italic": "In nghiêng",
+            "insertLink": "Insert Link",
+            "underline": "Gạch chân",
+            "choices": {
+                "questionType": {
+                    "QUESTION_TYPE_MULTIPLE_CHOICE": "Multiple Choice",
+                    "QUESTION_TYPE_FREE_TEXT": "Short Answer",
+                    "QUESTION_TYPE_CHECK_BOX": "Checkbox"
+                }
+            },
+            "filters": {
+                "fromDate": "From Date",
+                "toDate": "To Date",
+                "fromTime": "From Time",
+                "toTime": "To Time",
+                "tags": "Tags"
+            }
+        }
+    }
+}

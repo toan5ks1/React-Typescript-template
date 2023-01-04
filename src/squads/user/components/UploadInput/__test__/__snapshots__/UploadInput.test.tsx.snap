@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UploadInput /> UI should match snapshot 1`] = `
+.emotion-0 {
+  width: 100%;
+  min-height: 82px;
+  border: 1px dashed rgba(33, 150, 243, 0.5);
+  border-radius: 4px;
+  background: rgba(33, 150, 243, 0.08);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-0:focus {
+  outline: unset;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  margin-right: 16px;
+  color: #90CAF9;
+}
+
+.emotion-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  font-size: 3.125rem;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  color: #757575;
+}
+
+.emotion-5 {
+  color: #42A5F5;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+  display: inline-block;
+  padding-top: 8px;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="UploadInput"
+    role="button"
+    tabindex="0"
+  >
+    <input
+      accept="image/png"
+      autocomplete="off"
+      data-testid="UploadInput__inputFile"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <div
+        class="MuiBox-root emotion-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-3"
+          data-testid="CloudUploadOutlinedIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3zM8 13h2.55v3h2.9v-3H16l-4-4z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 emotion-4"
+      >
+        Drag & drop your files or
+         
+        <span
+          class="MuiBox-root emotion-5"
+        >
+          browse
+        </span>
+      </p>
+    </div>
+  </div>
+  <span
+    class="MuiTypography-root MuiTypography-caption emotion-6"
+    data-testid="UploadInput__description"
+  >
+    DESCRIPTION
+  </span>
+  <div
+    data-testid="UploadInput__shower"
+  >
+    SHOWER
+  </div>
+</div>
+`;
+
+exports[`<UploadInput /> handler should call exactly the callback 1`] = `
+.emotion-0 {
+  width: 100%;
+  min-height: 82px;
+  border: 1px dashed rgba(33, 150, 243, 0.5);
+  border-radius: 4px;
+  background: rgba(33, 150, 243, 0.08);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-0:focus {
+  outline: unset;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  margin-right: 16px;
+  color: #90CAF9;
+}
+
+.emotion-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  font-size: 3.125rem;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  color: #757575;
+}
+
+.emotion-5 {
+  color: #42A5F5;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="UploadInput"
+    role="button"
+    tabindex="0"
+  >
+    <input
+      accept="image/png"
+      autocomplete="off"
+      data-testid="UploadInput__inputFile"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <div
+        class="MuiBox-root emotion-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-3"
+          data-testid="CloudUploadOutlinedIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3zM8 13h2.55v3h2.9v-3H16l-4-4z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 emotion-4"
+      >
+        Drag & drop your files or
+         
+        <span
+          class="MuiBox-root emotion-5"
+        >
+          browse
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    data-testid="UploadInput__shower"
+  >
+    SHOWER
+  </div>
+</div>
+`;

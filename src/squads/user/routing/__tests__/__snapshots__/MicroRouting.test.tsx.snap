@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MicroRouting /> should render /user path 1`] = `
+<div>
+  <div>
+    UserRouter
+  </div>
+</div>
+`;

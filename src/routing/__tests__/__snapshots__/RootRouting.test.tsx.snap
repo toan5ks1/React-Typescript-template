@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RootRouting /> should render /timesheet path 1`] = `
+<div>
+  <div>
+    /timesheet
+  </div>
+</div>
+`;
+
+exports[`<RootRouting /> should render /user path 1`] = `
+<div>
+  <div>
+    /user
+  </div>
+</div>
+`;

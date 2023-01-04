@@ -1,0 +1,70 @@
+- name: allowed-queries
+  definition:
+    queries:
+      - name: EntryExit_StudentQrCodeByStudentIdsV2
+        query: |
+          query EntryExit_StudentQrCodeByStudentIdsV2($student_ids: [String!] =
+          []) {
+            student_qr(where: {student_id: {_in: $student_ids}}) {
+              qr_url
+              qr_id
+              student_id
+              version
+            }
+          }
+      - name: StudentQRCodeByStudentIds
+        query: |
+          query StudentQRCodeByStudentIds($student_ids: [String!] = []) {
+            student_qr(where: {student_id: {_in: $student_ids}}) {
+              qr_url
+              qr_id
+              student_id
+            }
+          }
+      - name: EntryExit_StudentEntryExitRecordsWithAggregateByStudentId
+        query: >
+          query
+          EntryExit_StudentEntryExitRecordsWithAggregateByStudentId($student_id:
+          String!, $limit: Int = 10, $offset: Int = 0) {
+            student_entryexit_records(
+              where: {student_id: {_eq: $student_id}}
+              limit: $limit
+              offset: $offset
+              order_by: {entry_at: desc}
+            ) {
+              entry_at
+              entryexit_id
+              exit_at
+              student_id
+            }
+            student_entryexit_records_aggregate(where: {student_id: {_eq: $student_id}}) {
+              aggregate {
+                count
+              }
+            }
+          }
+      - name: EntryExit_StudentEntryExitRecordsWithAggregateByStudentIdV2
+        query: >
+          query
+          EntryExit_StudentEntryExitRecordsWithAggregateByStudentIdV2($student_id:
+          String!, $limit: Int = 10, $offset: Int = 0, $start_date: timestamptz,
+          $end_date: timestamptz) {
+            student_entryexit_records(
+              where: {student_id: {_eq: $student_id}, entry_at: {_gte: $start_date, _lte: $end_date}}
+              limit: $limit
+              offset: $offset
+              order_by: {entry_at: desc}
+            ) {
+              entry_at
+              entryexit_id
+              exit_at
+              student_id
+            }
+            student_entryexit_records_aggregate(
+              where: {student_id: {_eq: $student_id}, entry_at: {_gte: $start_date, _lte: $end_date}}
+            ) {
+              aggregate {
+                count
+              }
+            }
+          }

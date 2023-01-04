@@ -1,0 +1,14 @@
+{
+  "createdValues": [],
+  "editedValues": [
+    {
+      "kind": "E",
+      "path": [
+        "EntryExit_StudentEntryExitRecordsWithAggregateByStudentIdV2"
+      ],
+      "lhs": "query EntryExit_StudentEntryExitRecordsWithAggregateByStudentIdV2($student_id: String!, $limit: Int = 10, $offset: Int = 0, $start_date: timestamptz, $end_date: timestamptz) {\n  student_entryexit_records(\n    where: {student_id: {_eq: $student_id}, _and: {entry_at: {_gte: $start_date, _lte: $end_date}}}\n    limit: $limit\n    offset: $offset\n    order_by: {entry_at: desc}\n  ) {\n    entry_at\n    entryexit_id\n    exit_at\n    student_id\n  }\n  student_entryexit_records_aggregate(\n    where: {student_id: {_eq: $student_id}, _and: {entry_at: {_gte: $start_date, _lte: $end_date}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n",
+      "rhs": "query EntryExit_StudentEntryExitRecordsWithAggregateByStudentIdV2($student_id: String!, $limit: Int = 10, $offset: Int = 0, $start_date: timestamptz, $end_date: timestamptz) {\n  student_entryexit_records(\n    where: {student_id: {_eq: $student_id}, entry_at: {_gte: $start_date, _lte: $end_date}}\n    limit: $limit\n    offset: $offset\n    order_by: {entry_at: desc}\n  ) {\n    entry_at\n    entryexit_id\n    exit_at\n    student_id\n  }\n  student_entryexit_records_aggregate(\n    where: {student_id: {_eq: $student_id}, entry_at: {_gte: $start_date, _lte: $end_date}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    }
+  ],
+  "deletedValues": []
+}

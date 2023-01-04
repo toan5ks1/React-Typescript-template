@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WrapperDividerSection /> should match snapshot 1`] = `
+.emotion-0 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div />
+  </div>
+</div>
+`;

@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PdfStudentQrCodes /> for QR Code Sheet should match snapshot 1`] = `
+Object {
+  "container": Object {
+    "document": Object {
+      "box": Object {},
+      "children": Array [
+        Object {
+          "box": Object {},
+          "children": Array [
+            Object {
+              "box": Object {},
+              "children": Array [
+                Object {
+                  "box": Object {},
+                  "children": Array [
+                    Object {
+                      "box": Object {},
+                      "children": Array [],
+                      "props": Object {
+                        "src": "qrurl01",
+                      },
+                      "style": Object {
+                        "height": "100%",
+                      },
+                      "type": "IMAGE",
+                    },
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "type": "TEXT_INSTANCE",
+                          "value": "Student 01",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "fontFamily": "MPlus",
+                        "fontSize": "5px",
+                        "fontWeight": 500,
+                        "maxLines": 1,
+                        "textAlign": "center",
+                        "wordWrap": "break-all",
+                      },
+                      "type": "TEXT",
+                    },
+                  ],
+                  "props": Object {
+                    "data-testid": "QrCode__Student",
+                    "wrap": false,
+                  },
+                  "style": Object {
+                    "height": "89px",
+                    "marginBottom": "10.5px",
+                    "marginRight": "10.5px",
+                    "paddingBottom": 5,
+                    "paddingHorizontal": 5,
+                    "width": "89px",
+                  },
+                  "type": "VIEW",
+                },
+                Object {
+                  "box": Object {},
+                  "children": Array [
+                    Object {
+                      "box": Object {},
+                      "children": Array [],
+                      "props": Object {
+                        "src": "qrurl02",
+                      },
+                      "style": Object {
+                        "height": "100%",
+                      },
+                      "type": "IMAGE",
+                    },
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "type": "TEXT_INSTANCE",
+                          "value": "Student 02",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "fontFamily": "MPlus",
+                        "fontSize": "5px",
+                        "fontWeight": 500,
+                        "maxLines": 1,
+                        "textAlign": "center",
+                        "wordWrap": "break-all",
+                      },
+                      "type": "TEXT",
+                    },
+                  ],
+                  "props": Object {
+                    "data-testid": "QrCode__Student",
+                    "wrap": false,
+                  },
+                  "style": Object {
+                    "height": "89px",
+                    "marginBottom": "10.5px",
+                    "marginRight": "10.5px",
+                    "paddingBottom": 5,
+                    "paddingHorizontal": 5,
+                    "width": "89px",
+                  },
+                  "type": "VIEW",
+                },
+              ],
+              "props": Object {},
+              "style": Object {
+                "alignItems": "flex-start",
+                "display": "flex",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "paddingLeft": "37px",
+                "paddingTop": "11px",
+              },
+              "type": "VIEW",
+            },
+          ],
+          "props": Object {
+            "size": "A4",
+            "wrap": true,
+          },
+          "style": Object {
+            "padding": "20px",
+          },
+          "type": "PAGE",
+        },
+      ],
+      "props": Object {},
+      "style": Object {},
+      "type": "DOCUMENT",
+    },
+    "type": "ROOT",
+  },
+  "on": [Function],
+  "removeListener": [Function],
+  "toBlob": [Function],
+  "toBuffer": [Function],
+  "toString": [Function],
+  "updateContainer": [Function],
+}
+`;
+
+exports[`<PdfStudentQrCodes /> for Student Card should match snapshot 1`] = `
+Object {
+  "container": Object {
+    "document": Object {
+      "box": Object {},
+      "children": Array [
+        Object {
+          "box": Object {},
+          "children": Array [
+            Object {
+              "box": Object {},
+              "children": Array [
+                Object {
+                  "box": Object {},
+                  "children": Array [
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "box": Object {},
+                          "children": Array [],
+                          "props": Object {
+                            "src": "qrurl01",
+                          },
+                          "style": Object {},
+                          "type": "IMAGE",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "width": "60%",
+                      },
+                      "type": "VIEW",
+                    },
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "box": Object {},
+                          "children": Array [
+                            Object {
+                              "type": "TEXT_INSTANCE",
+                              "value": "Student 01",
+                            },
+                          ],
+                          "props": Object {},
+                          "style": Object {
+                            "fontFamily": "MPlus",
+                            "fontSize": "10px",
+                            "textAlign": "left",
+                            "top": "45%",
+                            "wordWrap": "break-all",
+                          },
+                          "type": "TEXT",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "width": "40%",
+                      },
+                      "type": "VIEW",
+                    },
+                  ],
+                  "props": Object {
+                    "data-testid": "StudentCard__Student",
+                    "wrap": false,
+                  },
+                  "style": Object {
+                    "flexDirection": "row",
+                    "height": "160px",
+                    "width": "262.5px",
+                  },
+                  "type": "VIEW",
+                },
+                Object {
+                  "box": Object {},
+                  "children": Array [
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "box": Object {},
+                          "children": Array [],
+                          "props": Object {
+                            "src": "qrurl02",
+                          },
+                          "style": Object {},
+                          "type": "IMAGE",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "width": "60%",
+                      },
+                      "type": "VIEW",
+                    },
+                    Object {
+                      "box": Object {},
+                      "children": Array [
+                        Object {
+                          "box": Object {},
+                          "children": Array [
+                            Object {
+                              "type": "TEXT_INSTANCE",
+                              "value": "Student 02",
+                            },
+                          ],
+                          "props": Object {},
+                          "style": Object {
+                            "fontFamily": "MPlus",
+                            "fontSize": "10px",
+                            "textAlign": "left",
+                            "top": "45%",
+                            "wordWrap": "break-all",
+                          },
+                          "type": "TEXT",
+                        },
+                      ],
+                      "props": Object {},
+                      "style": Object {
+                        "width": "40%",
+                      },
+                      "type": "VIEW",
+                    },
+                  ],
+                  "props": Object {
+                    "data-testid": "StudentCard__Student",
+                    "wrap": false,
+                  },
+                  "style": Object {
+                    "flexDirection": "row",
+                    "height": "160px",
+                    "width": "262.5px",
+                  },
+                  "type": "VIEW",
+                },
+              ],
+              "props": Object {},
+              "style": Object {
+                "alignItems": "flex-start",
+                "display": "flex",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "paddingLeft": "15px",
+              },
+              "type": "VIEW",
+            },
+          ],
+          "props": Object {
+            "size": "A4",
+            "wrap": true,
+          },
+          "style": Object {
+            "padding": "20px",
+          },
+          "type": "PAGE",
+        },
+      ],
+      "props": Object {},
+      "style": Object {},
+      "type": "DOCUMENT",
+    },
+    "type": "ROOT",
+  },
+  "on": [Function],
+  "removeListener": [Function],
+  "toBlob": [Function],
+  "toBuffer": [Function],
+  "toString": [Function],
+  "updateContainer": [Function],
+}
+`;

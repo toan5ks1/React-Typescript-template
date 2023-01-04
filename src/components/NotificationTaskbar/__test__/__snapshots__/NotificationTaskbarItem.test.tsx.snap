@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationTaskbarItem /> should match snapshot 1`] = `
+.emotion-0 {
+  width: 224px;
+  height: 67px;
+  padding: 24px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #E6E8EF;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.emotion-0:not(:first-of-type) {
+  margin-left: 4px;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="NotificationTaskbarItem__root"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+      data-content="lesson 01"
+      data-testid="NotificationTaskbarItem__name"
+    >
+      lesson 01
+    </div>
+  </div>
+</div>
+`;

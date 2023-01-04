@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyPageTitle/> should match snapshot 1`] = `
+.emotion-0 {
+  padding-bottom: 24px;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <h6
+      aria-label="title"
+      class="MuiTypography-root MuiTypography-h6 emotion-1"
+      data-testid="TypographyPageTitle__root"
+    >
+      Test
+    </h6>
+  </div>
+</div>
+`;

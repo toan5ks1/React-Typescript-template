@@ -1,0 +1,51 @@
+import { TestContext } from "ra-test";
+import { toShortenStr } from "src/common/utils/other";
+
+import BreadcrumbItem from "../BreadcrumbItem";
+
+import { render, screen } from "@testing-library/react";
+
+afterAll(() => {
+    jest.resetAllMocks();
+});
+
+const mockName =
+    "Breadcrumb name name name. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters";
+
+jest.mock("react-admin", () => {
+    const originalModule = jest.requireActual("react-admin");
+    return {
+        _esModule: true,
+        ...originalModule,
+        useQuery: () => ({
+            data: {
+                mockName,
+            },
+        }),
+    };
+});
+
+describe("<BreadcrumbItem />", () => {
+    it("should match snapshot", () => {
+        const { container } = render(
+            <TestContext>
+                <BreadcrumbItem name={mockName} to="" />
+            </TestContext>
+        );
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it("should be limited characters number", () => {
+        render(
+            <TestContext>
+                <BreadcrumbItem name={mockName} to="" />
+            </TestContext>
+        );
+
+        expect(screen.getByTestId("BreadcrumbItem").textContent).toEqual(
+            toShortenStr(mockName, 30)
+        );
+        expect(screen.getByTestId("TypographyShortenStr")).toHaveAttribute("title", mockName);
+    });
+});

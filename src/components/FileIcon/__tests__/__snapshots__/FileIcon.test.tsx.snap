@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FileIcon /> should match snapshot 1`] = `
+.emotion-0 {
+  min-width: 28px;
+  min-height: 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="FileIcon"
+  >
+    <svg
+      data-testid="FileIcon__file"
+      height="28"
+      width="28"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <image
+        height="100%"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfmBBMPOinXog2mAAAA30lEQVRIx2NgoBJghLNEGOwZdIjQ0YhfWofhNcN/oiABMJ9IY3AaxAKl IxgYGBgYGigPo/9oIUYyYCJfK3avoQMHBnssojcYVhIyEDkgTRgu4wzqfFIMOo3DkN/EGIVsEC7X BBNjFDEGMRBjFHEGEWEUsQYRNIp4gwgYRYpBeI0izSCEUeEwAXKzyFqGCIY/DAwMGjABFhI04y2L qJZpRw2io0Gw6G+glkGNFJlCTa+NMIP+kKD/Cz6DNpBg0FF8kjYM34lsmUxHaMLebNBh8GbgIOCW HwwrGR6QE5oEAADy5/IIXX8MJwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNC0xOVQxMjo1ODo0 MSswMzowMD4idSYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDQtMTlUMTI6NTg6NDErMDM6MDBP f82aAAAAAElFTkSuQmCC"
+        width="100%"
+      />
+    </svg>
+  </div>
+</div>
+`;

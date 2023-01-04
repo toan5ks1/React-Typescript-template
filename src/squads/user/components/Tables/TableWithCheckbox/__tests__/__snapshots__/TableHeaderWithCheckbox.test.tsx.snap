@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableHeaderWithCheckbox /> should match snapshot 1`] = `
+.emotion-0 {
+  display: table-header-group;
+}
+
+.emotion-1 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-1.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-1.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-1.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-2 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+
+.emotion-4 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: none;
+}
+
+<div>
+  <table>
+    <thead
+      class="MuiTableHead-root emotion-0"
+      data-testid="TableBase__header"
+    >
+      <tr
+        class="MuiTableRow-root MuiTableRow-head emotion-1"
+      >
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-2"
+          scope="col"
+          style="width: 60%;"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-3"
+            data-testid="TableHeaderWithCheckbox__cellHeader"
+          >
+            title 1
+          </h6>
+        </th>
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
+          scope="col"
+          style="width: 40%;"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-3"
+            data-testid="TableHeaderWithCheckbox__cellHeader"
+          >
+            title 2
+          </h6>
+        </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+`;

@@ -1,0 +1,63 @@
+fragment BrandAttrs on brands {
+    brand_id
+    name
+    owner
+}
+query BrandsList($limit: Int, $offset: Int) {
+    brands(limit: $limit, offset: $offset) {
+        ...BrandAttrs
+    }
+}
+fragment CenterAttrs on centers {
+    center_id
+    name
+    owner
+}
+query CentersList($limit: Int, $offset: Int) {
+    centers(limit: $limit, offset: $offset) {
+        ...CenterAttrs
+    }
+}
+fragment ScheduleItemAttrs on scheduler_items {
+    scheduler_item_id
+    start_time
+    end_time
+    meta_data
+    brand_id
+    center_id
+    scheduler_pattern {
+        repeat_option_data
+    }
+}
+query OpenTimeBrandList(
+    $brand_id: String!
+    $start_time: timestamptz!
+    $end_time: timestamptz!
+    $scheduler_type: String!
+) {
+    scheduler_items(
+        where: {
+            brand_id: { _eq: $brand_id }
+            start_time: { _gte: $start_time, _lte: $end_time }
+            scheduler_pattern: { scheduler_type: { _eq: $scheduler_type } }
+        }
+    ) {
+        ...ScheduleItemAttrs
+    }
+}
+query OpenTimeCenterList(
+    $center_id: String
+    $start_time: timestamptz!
+    $end_time: timestamptz!
+    $scheduler_type: String!
+) {
+    scheduler_items(
+        where: {
+            center_id: { _eq: $center_id }
+            start_time: { _gte: $start_time, _lte: $end_time }
+            scheduler_pattern: { scheduler_type: { _eq: $scheduler_type } }
+        }
+    ) {
+        ...ScheduleItemAttrs
+    }
+}

@@ -1,0 +1,257 @@
+query Lesson_ClassListByCourseID($course_id: String!, $limit: Int = 5, $offset: Int = 0) {
+    class(
+        where: { course: { course_id: { _eq: $course_id } } }
+        limit: $limit
+        offset: $offset
+    ) {
+        class_id
+        name
+        location {
+            location_id
+            name
+        }
+    }
+    class_aggregate(where: { course: { course_id: { _eq: $course_id } } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Lesson_ClassListByCourseIdV2($course_id: String!, $limit: Int = 5, $offset: Int = 0) {
+    class(where: { course_id: { _eq: $course_id } }, limit: $limit, offset: $offset) {
+        class_id
+        name
+        location {
+            location_id
+            name
+        }
+    }
+    class_aggregate(where: { course_id: { _eq: $course_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Lesson_ClassListByCourseIdV3(
+    $course_id: String!
+    $limit: Int = 5
+    $offset: Int = 0
+    $order_by: [class_order_by!] = { name: asc }
+) {
+    class(
+        where: { course_id: { _eq: $course_id } }
+        limit: $limit
+        offset: $offset
+        order_by: $order_by
+    ) {
+        class_id
+        name
+        location {
+            location_id
+            name
+        }
+    }
+    class_aggregate(where: { course_id: { _eq: $course_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Lesson_ClassAssociationByClassId($class_id: String!) {
+    class_member_aggregate(where: { class_id: { _eq: $class_id } }, limit: 1) {
+        aggregate {
+            count
+        }
+    }
+    lessons_aggregate(where: { class_id: { _eq: $class_id } }, limit: 1) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment CourseAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+}
+fragment Lesson_CoursesAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+    teaching_method
+}
+fragment Lesson_CourseAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+    teaching_method
+}
+query CoursesOne($course_id: String!) {
+    courses(where: { course_id: { _eq: $course_id } }) {
+        ...CourseAttrs
+        course_books {
+            book_id
+            books {
+                book_chapters {
+                    chapter_id
+                }
+            }
+        }
+    }
+}
+query Lesson_CoursesOne($course_id: String!) {
+    courses(where: { course_id: { _eq: $course_id } }) {
+        ...Lesson_CourseAttrs
+        course_books {
+            book_id
+            books {
+                book_chapters {
+                    chapter_id
+                }
+            }
+        }
+    }
+}
+query CoursesList(
+    $name: String
+    $course_id: [String!]
+    $course_type: String
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    courses(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc, display_order: asc, name: asc, course_id: asc }
+        where: {
+            name: { _ilike: $name }
+            course_id: { _in: $course_id }
+            course_type: { _eq: $course_type }
+        }
+    ) {
+        ...CourseAttrs
+    }
+    courses_aggregate(
+        where: {
+            name: { _ilike: $name }
+            course_id: { _in: $course_id }
+            course_type: { _eq: $course_type }
+        }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+query CourseTitle($course_id: String!) {
+    courses(where: { course_id: { _eq: $course_id } }) {
+        name
+    }
+}
+query Lesson_CoursesList(
+    $name: String
+    $course_id: [String!]
+    $course_type: String
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    courses(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc, display_order: asc, name: asc, course_id: asc }
+        where: {
+            name: { _ilike: $name }
+            course_id: { _in: $course_id }
+            course_type: { _eq: $course_type }
+        }
+    ) {
+        ...Lesson_CoursesAttrs
+    }
+    courses_aggregate(
+        where: {
+            name: { _ilike: $name }
+            course_id: { _in: $course_id }
+            course_type: { _eq: $course_type }
+        }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment LessonGroupAttrs on lesson_groups {
+    media_ids
+    lesson_group_id
+}
+query Lesson_LessonGroupsListByLessonGroupIdsAndCourseId(
+    $lesson_group_ids: [String!]!
+    $course_id: String
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    lesson_groups(
+        limit: $limit
+        offset: $offset
+        order_by: { lesson_group_id: asc }
+        where: { lesson_group_id: { _in: $lesson_group_ids }, course_id: { _eq: $course_id } }
+    ) {
+        ...LessonGroupAttrs
+    }
+}
+query LessonsByCourseId($course_id: String!) {
+    lessons(where: { course_id: { _eq: $course_id }, deleted_at: { _is_null: true } }) {
+        name
+        lesson_group_id
+    }
+}
+query LocationListByIds($location_ids: [String!] = []) {
+    locations(where: { location_id: { _in: $location_ids } }) {
+        name
+        location_id
+    }
+}
+query Lesson_LocationIdsByCourseIdV2($course: String = "") {
+    get_locations_active_by_course_id(args: { course: $course }) {
+        location_id
+    }
+}
+fragment MediaAttrs on media {
+    media_id
+    resource
+    type
+    name
+}
+query MediasMany($media_id: [String!] = []) {
+    media(where: { media_id: { _in: $media_id } }) {
+        ...MediaAttrs
+        conversion_tasks(order_by: { created_at: desc }, limit: 1) {
+            status
+        }
+    }
+}
+fragment StudentUserAttrs on users {
+    user_id
+    name
+    email
+    avatar
+}
+query StudentsMany($user_ids: [String!] = []) {
+    users(where: { user_group: { _eq: "USER_GROUP_STUDENT" }, user_id: { _in: $user_ids } }) {
+        ...StudentUserAttrs
+    }
+}

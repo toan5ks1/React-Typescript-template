@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/components/SvgIcons/LogoIcon/ManabieIcon.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/SvgIcons/LogoIcon</a> ManabieIcon.tsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>7/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>7/7</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import get from "lodash/get";
+&nbsp;
+import { useTheme } from "@mui/material/styles";
+&nbsp;
+import { LogoIconProps } from "./logo-icon-types";
+&nbsp;
+const variants = {
+    primary: {
+        main: "primary.main",
+        sub: "secondary.main",
+    },
+    secondary: {
+        main: "common.white",
+        sub: "secondary.main",
+    },
+};
+&nbsp;
+const ManabieIcon = ({ variant = <span class="branch-0 cbranch-no" title="branch not covered" >"primary",</span> ...rest }: LogoIconProps) =&gt; {
+    const theme = useTheme();
+    const v = variants[variant];
+    const mainColor = get(theme.palette, v.main);
+    const subColor = get(theme.palette, v.sub);
+&nbsp;
+    return (
+        &lt;svg
+            width="120"
+            height="26"
+            viewBox="0 0 120 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...rest}
+        &gt;
+            &lt;g clipPath="url(#clip0)"&gt;
+                &lt;path
+                    d="M99.2335 5.41605C100.629 5.41605 101.76 4.20362 101.76 2.70802C101.76 1.21242 100.629 0 99.2335 0C97.8379 0 96.7065 1.21242 96.7065 2.70802C96.7065 4.20362 97.8379 5.41605 99.2335 5.41605Z"
+                    fill={subColor}
+                /&gt;
+&nbsp;
+                &lt;path
+                    d="M14.491 8.73047C12.4072 8.73047 10.7305 9.7492 10.0239 11.3869C9.31736 9.73631 7.64072 8.73047 5.55689 8.73047C2.28743 8.73047 0 11.4256 0 15.2813V25.4171H3.47305V15.3071C3.47305 13.6307 4.41916 12.4572 5.77245 12.4572C7.42515 12.4572 8.28742 13.6049 8.28742 15.7584V25.4042H11.7605V15.7584C11.7605 13.592 12.6347 12.4572 14.2754 12.4572C15.6287 12.4572 16.5748 13.6307 16.5748 15.3071V25.4171H20.0479V15.2813C20.0479 11.4256 17.7605 8.73047 14.491 8.73047Z"
+                    fill={mainColor}
+                /&gt;
+&nbsp;
+                &lt;path
+                    d="M35.2577 10.8711C34.2757 9.52998 32.5751 8.73047 30.623 8.73047C25.8566 8.73047 22.647 13.1536 22.647 17.2801C22.647 21.484 25.5691 25.8297 30.4673 25.8297C32.3715 25.8297 34.1679 25.0044 35.2458 23.6633V25.4042H38.7188V9.15602H35.2458V10.8711H35.2577ZM35.3775 17.293C35.3775 20.0139 33.3176 22.3093 30.8745 22.3093C28.3595 22.3093 26.3116 20.0526 26.3116 17.293C26.3116 14.5334 28.3595 12.2767 30.8745 12.2767C33.3176 12.2767 35.3775 14.5721 35.3775 17.293Z"
+                    fill={mainColor}
+                /&gt;
+&nbsp;
+                &lt;path
+                    d="M50.3952 8.73047C48.5269 8.73047 46.9341 9.52998 45.9521 10.9227V9.16891H42.479V25.4171H45.9521V16.3387C45.9521 13.9918 47.3293 12.4701 49.4491 12.4701C51.6886 12.4701 52.8263 13.7983 52.8263 16.4032V25.4171H56.2994V15.6424C56.2874 11.7738 53.7006 8.73047 50.3952 8.73047Z"
+                    fill={mainColor}
+                /&gt;
+&nbsp;
+                &lt;path
+                    d="M71.5448 10.8711C70.5628 9.52998 68.8622 8.73047 66.9101 8.73047C62.1437 8.73047 58.9341 13.1536 58.9341 17.2801C58.9341 21.484 61.8562 25.8297 66.7544 25.8297C68.6586 25.8297 70.455 25.0044 71.5329 23.6633V25.4042H75.0059V9.15602H71.5329V10.8711H71.5448ZM71.6766 17.293C71.6766 20.0139 69.6167 22.3093 67.1736 22.3093C64.6586 22.3093 62.6107 20.0526 62.6107 17.293C62.6107 14.5334 64.6586 12.2767 67.1736 12.2767C69.6047 12.2767 71.6766 14.5721 71.6766 17.293Z"
+                    fill={mainColor}
+                /&gt;
+&nbsp;
+                &lt;path
+                    d="M86.9941 8.7299C85.1019 8.7299 83.1738 9.60678 82.2397 10.8705V4.42285H78.7666V25.4165H82.2397V23.7143C83.1618 24.9651 85.0899 25.8549 86.9941 25.8549C90.8025 25.8549 94.8504 22.8503 94.8504 17.3053C94.8504 11.7603 90.8025 8.7299 86.9941 8.7299ZM91.1977 17.2924C91.1977 20.1939 89.3175 22.3087 86.7187 22.3087C84.1199 22.3087 82.2397 20.1939 82.2397 17.2924C82.2397 14.391 84.1199 12.2761 86.7187 12.2761C89.3055 12.2761 91.1977 14.3781 91.1977 17.2924Z"
+                    fill={mainColor}
+                /&gt;
+&nbsp;
+                &lt;path d="M100.97 10.5225H97.4971V25.3392H100.97V10.5225Z" fill={mainColor} /&gt;
+&nbsp;
+                &lt;path
+                    d="M111.94 8.73047C106.539 8.73047 103.628 13.1407 103.628 17.2801C103.628 21.4195 106.539 25.8297 111.94 25.8297C114.598 25.791 117.078 24.3983 118.934 21.8837L119.042 21.7419L116.084 19.9881L116.012 20.0913C114.91 21.6645 113.473 22.5027 111.844 22.5027C109.616 22.5027 107.724 20.8134 107.473 18.6212H119.76V17.8475C119.76 11.5674 115.185 8.73047 111.94 8.73047ZM111.509 12.0704C113.473 12.0704 115.03 13.347 115.688 15.4876H107.497C108.036 13.3728 109.557 12.0704 111.509 12.0704Z"
+                    fill={mainColor}
+                /&gt;
+            &lt;/g&gt;
+&nbsp;
+            &lt;defs&gt;
+                &lt;clipPath id="clip0"&gt;
+                    &lt;rect width="119.76" height="25.8423" fill="white" /&gt;
+                &lt;/clipPath&gt;
+            &lt;/defs&gt;
+        &lt;/svg&gt;
+    );
+};
+&nbsp;
+export default ManabieIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Mon Jun 13 2022 10:20:30 GMT+0000 (Coordinated Universal Time)
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

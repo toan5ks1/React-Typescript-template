@@ -1,0 +1,363 @@
+{
+    "resources": {
+        "languages": {
+            "en": "English",
+            "vi": "Vietnamese",
+            "ja": "Japan"
+        },
+        "configs": {
+            "config_title": "Config",
+            "apply": "Apply",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "Global",
+                    "COUNTRY_VN": "Vietnam",
+                    "COUNTRY_ID": "Indonesia",
+                    "COUNTRY_SG": "Singapore",
+                    "COUNTRY_JP": "Japan"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "Monday",
+                "tuesday": "Tuesday",
+                "wednesday": "Wednesday",
+                "thursday": "Thursday",
+                "friday": "Friday",
+                "saturday": "Saturday",
+                "sunday": "Sunday"
+            },
+            "name": "Name",
+            "city": "City",
+            "district": "District",
+            "school": "School (%{smart_count})",
+            "just_show_system_school": "Just show verified schools",
+            "teacher": "Teacher (%{smart_count})",
+            "config": "Config",
+            "material": "Material",
+            "removeMaterial": "Remove material",
+            "removeMaterialConfirmText": "Are you sure you want to remove this material? |||| You're about to remove the file named “%{name}” for %{week}.",
+            "doYouWantToDoThis": "Do you want to do this?",
+            "viewDetail": "View details",
+            "accountInfo": "Account information",
+            "account": "Account",
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "noResultSearch": "Please use try again with different keywords",
+            "studyItem": "Study Item",
+            "students": "Students",
+            "parents": "Parents",
+            "youFilterBy": "You filter by",
+            "all": "All",
+            "deleteDialogTitle": "Delete item |||| Delete %{smart_count}",
+            "deleteConfirmText": "All |||| content will be deleted, do you want to proceed?",
+            "youAreOffline": "Please try again, your network is down",
+            "createdFail": "Created failed",
+            "updatedFail": "Updated failed",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "somethingWentWrong": "Something went wrong",
+            "pleaseHelpUsReport": "Please help us report this issue by sending our staff the error message below",
+            "back": "Go Back",
+            "details": "Details",
+            "netWorkUnstable": "Your internet connection is unstable, Please refresh the page or try again"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "limitLength": "%{field} must not exceed %{length} characters",
+                "dateMustComeAfter": "%{endDate} must come after %{startDate}",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}",
+                "fieldCannotBeBlank": "%{field} cannot be blank!"
+            },
+            "dropFileHere": "Drop your file here",
+            "pleaseUploadFileSizeLessThan": "Please, upload file size less than %{maxSize}MB",
+            "dragAndDropFileHere": "Drag & drop your files or",
+            "dragAndDropCSVFileHere": "Drag and drop or select a CSV files to upload",
+            "uploading": "Uploading...",
+            "cannotUpload": "Upload failed",
+            "pasteVideoLink": "Paste video link",
+            "chooseFilesToUpload": "Choose files to upload",
+            "browse": "browse",
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller"
+        },
+        "button": {
+            "audio": "Audio",
+            "image": "Image",
+            "blank": "Blank",
+            "advanced": "Advanced",
+            "clearAll": "Clear All"
+        },
+        "from_to": "From %{from} to %{to}",
+        "choices": {
+            "grades": {
+                "0": "Others",
+                "1": "Grade 1",
+                "2": "Grade 2",
+                "3": "Grade 3",
+                "4": "Grade 4",
+                "5": "Grade 5",
+                "6": "Grade 6",
+                "7": "Grade 7",
+                "8": "Grade 8",
+                "9": "Grade 9",
+                "10": "Grade 10",
+                "11": "Grade 11",
+                "12": "Grade 12",
+                "13": "University 1",
+                "14": "University 2",
+                "15": "University 3",
+                "16": "University 4"
+            },
+            "subjects": {
+                "SUBJECT_NONE": "",
+                "SUBJECT_MATHS": "Math",
+                "SUBJECT_BIOLOGY": "Biology",
+                "SUBJECT_PHYSICS": "Physics",
+                "SUBJECT_CHEMISTRY": "Chemistry",
+                "SUBJECT_GEOGRAPHY": "Geography",
+                "SUBJECT_ENGLISH": "English",
+                "SUBJECT_ENGLISH_2": "English 2",
+                "SUBJECT_JAPANESE": "Japanese",
+                "SUBJECT_SCIENCE": "Science",
+                "SUBJECT_SOCIAL_STUDIES": "Social studies",
+                "SUBJECT_LITERATURE": "Literature"
+            },
+            "plan_privileges": {
+                "CAN_ACCESS_LEARNING_TOPICS": "Can access learning topics",
+                "CAN_ACCESS_PRACTICE_TOPICS": "Can access practive topics",
+                "CAN_ACCESS_MOCK_EXAMS": "Can access mock exams",
+                "CAN_ACCESS_ALL_LOS": "Can access all learning objectives",
+                "CAN_ACCESS_SOME_LOS": "Can access some learning objectives",
+                "CAN_WATCH_VIDEOS": "Can watch videos",
+                "CAN_READ_STUDY_GUIDES": "Can read study guides",
+                "CAN_SKIP_VIDEOS": "Can skip videos",
+                "CAN_CHAT_WITH_TEACHER": "Can chat with teacher"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Admin",
+                "USER_GROUP_SCHOOL_ADMIN": "School Admin |||| School Admin of %{smart_count}",
+                "USER_GROUP_STUDENT": "Student",
+                "USER_GROUP_TEACHER": "Teacher",
+                "USER_GROUP_PARENT": "Parent"
+            },
+            "topic_types": {
+                "TOPIC_TYPE_LEARNING": "Learning",
+                "TOPIC_TYPE_PRACTICAL": "Practical",
+                "TOPIC_TYPE_EXAM": "Exam",
+                "TOPIC_TYPE_ASSIGNMENT": "Assignment",
+                "TOPIC_TYPE_LIVE_LESSON": "Live lesson"
+            },
+            "topic_statuses": {
+                "TOPIC_STATUS_NONE": "None",
+                "TOPIC_STATUS_DRAFT": "Draft",
+                "TOPIC_STATUS_PUBLISHED": "Published"
+            },
+            "quizTypes": {
+                "0": "Multiple choice",
+                "1": "Fill in the blank",
+                "2": "Pair of words",
+                "3": "Term and definition",
+                "4": "Manual input",
+                "5": "Multiple answer"
+            },
+            "listTypes": {
+                "NUMBER": "1, 2, 3...",
+                "TEXT": "a, b, c...",
+                "TEXT_UPPERCASE": "A, B, C...",
+                "CUSTOM": "Custom"
+            },
+            "answerConfigs": {
+                "0": "Ignore case sensitivity",
+                "1": "Partial credits"
+            },
+            "languages": {
+                "en": "English",
+                "vi": "Tiếng việt",
+                "ja": "日本語"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "Monday",
+                "DATE_OF_WEEK_TUESDAY": "Tuesday",
+                "DATE_OF_WEEK_WEDNESDAY": "Wednesday",
+                "DATE_OF_WEEK_THURSDAY": "Thursday",
+                "DATE_OF_WEEK_FRIDAY": "Friday",
+                "DATE_OF_WEEK_SATURDAY": "Saturday",
+                "DATE_OF_WEEK_SUNDAY": "Sunday"
+            }
+        },
+        "action": {
+            "add_filter": "Add filter",
+            "add": "Add",
+            "back": "Go Back",
+            "bulk_actions": "1 item selected |||| %{smart_count} items selected",
+            "cancel": "Cancel",
+            "clear_input_value": "Clear value",
+            "clone": "Clone",
+            "confirm": "Confirm",
+            "create": "Create",
+            "create_item": "Create %{item}",
+            "delete": "Delete",
+            "discard": "Discard",
+            "edit": "Edit",
+            "export": "Export",
+            "list": "List",
+            "refresh": "Refresh",
+            "remove_filter": "Remove this filter",
+            "remove": "Remove",
+            "save": "Save",
+            "search": "Search",
+            "show": "Show",
+            "sort": "Sort",
+            "undo": "Undo",
+            "unselect": "Unselect",
+            "expand": "Expand",
+            "close": "Close",
+            "open_menu": "Open menu",
+            "close_menu": "Close menu",
+            "copy": "Copy",
+            "leave": "Leave",
+            "addMore": "Add More",
+            "moveUp": "Move up",
+            "moveDown": "Move down",
+            "detail": "Detail",
+            "duplicate": "Duplicate",
+            "moreAction": "More Action",
+            "warning": "Warning",
+            "OK": "OK",
+            "resend": "Resend",
+            "download": "Download |||| Download %{extension}",
+            "update": "Update",
+            "uploadFile": "Upload file",
+            "addCourse": "Add course",
+            "upload": "Upload",
+            "reset": "Reset",
+            "apply": "Apply",
+            "rename": "Rename",
+            "selectAllItems": "Select all items",
+            "filter": "Filter",
+            "archive": "Archive",
+            "unarchive": "Unarchive",
+            "activate": "Activate",
+            "reIssuePassword": "Re-Issue password",
+            "printAsStudentCard": "Print as Student Card",
+            "printAsQrCodeSheet": "Print as QR code sheet",
+            "createNewOrder": "Create Order",
+            "createEnrollmentOrder": "Create Enrollment Request",
+            "createBulkOrder": "Create Order",
+            "downloadStudentQrUrls": "Download QR URLs",
+            "importParents": "Import Parents",
+            "createCustomBillingOrder": "Create Custom Billing"
+        },
+        "message": {
+            "about": "About",
+            "are_you_sure": "Are you sure?",
+            "bulk_delete_content": "Are you sure you want to delete this %{name}? |||| Are you sure you want to delete these %{smart_count} items?",
+            "bulk_delete_title": "Delete the %{name} |||| Delete %{smart_count} %{name}",
+            "delete_content": "Are you sure you want to delete this item?",
+            "delete_title": "Delete %{name} #%{id}",
+            "details": "Details",
+            "error": "A client error occurred and your request couldn't be completed.",
+            "invalid_form": "The form is not valid. Please check for errors",
+            "loading": "The page is loading, just a moment please",
+            "no": "No",
+            "not_found": "Either you typed a wrong URL, or you followed a bad link.",
+            "yes": "Yes",
+            "unsaved_changes": "Some of your changes weren't saved. Are you sure you want to ignore them?",
+            "schoolDontHaveTeacherPleaseCreateTeacherBeforeCreateClass": "This school doesn't have any teachers. Please create teacher accounts before creating classes.",
+            "just_show_verified_schools": "This list only contains verified schools",
+            "please_select_member_before_update": "Please select members to edit",
+            "please_select_teacher_before_add": "Please select teachers to add",
+            "this_school_dont_have_specify_config": "This school doesn't have separate configuration.",
+            "this_is_default_config": "This is a default configuration.",
+            "pls_select_time_duration_or_expired_at": "Please input time to expired",
+            "pleaseSearchByTeacherEmail": "Please, search by teacher's email",
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "noDataMessage": "There is no data for %{name}",
+            "noData": "No data",
+            "noDataInformation": "No Information",
+            "canNotRemoveBooksFromCourse": "Can not remove books from course",
+            "downloadBookSuccess": "You have download book successfully",
+            "downloadBookFail": "Download book failed",
+            "downloadStudyPlanSuccess": "You have download study plan successfully",
+            "duplicateBookSuccess": "You have duplicated book successfully",
+            "duplicateBookFail": "Duplicate book failed",
+            "mustBeAValidPhoneNumber": "Must be a valid phone number",
+            "moveSuccess": "You have moved item successfully",
+            "moveFail": "Move item failed",
+            "uploadBrightcoveLinkFail": "Video link is not supported, please try another link!",
+            "brightcoveVideoLinkHasExisted": "Brightcove video link has existed, please try another link!",
+            "unableToLoadData": "Unable to load data, please try again!",
+            "unexpected": "An unexpected error occurred. Please log in again",
+            "invalidSearchQueryReturningAllItems": "Invalid search query - returning all items",
+            "linkLOsSuccess": "You have linked learning objectives successfully",
+            "youAreOffline": "Please try again, your network is down",
+            "youAreRestoredNetwork": "Restored your network",
+            "unknown": "We meet an unknown error. Please try again or contact with Staff."
+        },
+        "timesheet_management": {
+            "name": "Timesheet Management",
+            "titles": {
+                "timesheetManagement": "Timesheet Management",
+                "generalInfo": "General Info",
+                "createTimesheet": "Create Timesheet",
+                "editTimesheet": "Edit Timesheet",
+                "remarks": "Remarks",
+                "remark": "Remark",
+                "otherWorkingHours": "Other Working Hours",
+                "lessonHours": "Lesson Hours"
+            },
+            "labels": {
+                "date": "Date",
+                "location": "Location",
+                "staff": "Staff",
+                "staffName": "Name",
+                "staffEmail": "Email",
+                "workingType": "Working Type",
+                "timeRange": "Time Range",
+                "totalHours": "Total Hours",
+                "remarks": "Remarks",
+                "otherWorkingHours": "Other Working Hours",
+                "start": "Start",
+                "end": "End",
+                "status": "Status",
+                "type": "Type",
+                "numberOfLessons": "Number of Lessons",
+                "lessonHours": "Lesson Hours"
+            },
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "Published",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "Completed",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "Canceled"
+            },
+            "lessonType": {
+                "LESSON_TEACHING_METHOD_INDIVIDUAL": "Individual",
+                "LESSON_TEACHING_METHOD_GROUP": "Group"
+            },
+            "timesheetStatus": {
+                "TIMESHEET_STATUS_ALL": "All",
+                "TIMESHEET_STATUS_DRAFT": "Draft",
+                "TIMESHEET_STATUS_SUBMITTED": "Submitted",
+                "TIMESHEET_STATUS_REJECTED": "Rejected",
+                "TIMESHEET_STATUS_APPROVED": "Approved",
+                "TIMESHEET_STATUS_CONFIRMED": "Confirmed"
+            },
+            "timesheetDetail": "Timesheet Detail",
+            "messages": {
+                "success": {
+                    "addTimesheet": "You have created the timesheet successfully!",
+                    "updateTimesheet": "You have edited the timesheet successfully!"
+                },
+                "error": {
+                    "timesheetAlreadyExists": "Timesheet for the date selected is already created."
+                },
+                "validation": {
+                    "requiredField": "This field is required!",
+                    "invalidTimeRange": "Start Time must come before End Time"
+                }
+            }
+        }
+    }
+}

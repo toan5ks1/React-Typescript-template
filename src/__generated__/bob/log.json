@@ -1,0 +1,1301 @@
+{
+  "createdValues": [],
+  "editedValues": [],
+  "deletedValues": [
+    {
+      "kind": "D",
+      "path": [
+        "queryVideoIdByTypeForTest"
+      ],
+      "lhs": "query queryVideoIdByTypeForTest($type: String!) {\n  media(where: {type: {_eq: $type}}, limit: 2) {\n    media_id\n    name\n    resource\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "queryStudentIdByStudentEmailForTest"
+      ],
+      "lhs": "query queryStudentIdByStudentEmailForTest($email: String!) {\n  students(where: {user: {email: {_eq: $email}}}, limit: 1) {\n    student_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksChaptersListByChapterIdsAndBookIds"
+      ],
+      "lhs": "query BooksChaptersListByChapterIdsAndBookIds($book_id: [String!] = [], $chapter_id: [String!]) {\n  books_chapters(\n    where: {book_id: {_in: $book_id}, chapter_id: {_in: $chapter_id}}\n    order_by: {chapter: {display_order: asc}}\n  ) {\n    ...BookChapterAttrs\n  }\n}\n\nfragment BookChapterAttrs on books_chapters {\n  chapter_id\n  book_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksTitle"
+      ],
+      "lhs": "query BooksTitle($book_id: String!) {\n  books(where: {book_id: {_eq: $book_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksOne"
+      ],
+      "lhs": "query BooksOne($book_id: String!) {\n  books(where: {book_id: {_eq: $book_id}}) {\n    ...BookAttrs\n    book_chapters(order_by: {chapter: {display_order: desc}}) {\n      chapter {\n        display_order\n      }\n      chapter_id\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksMany"
+      ],
+      "lhs": "query BooksMany($book_id: [String!] = []) {\n  books(where: {book_id: {_in: $book_id}}) {\n    ...BookAttrs\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksManyReference"
+      ],
+      "lhs": "query BooksManyReference($name: String, $limit: Int = 30, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {name: asc, created_at: desc, book_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    name\n    book_id\n  }\n  books_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksListByCourseId"
+      ],
+      "lhs": "query BooksListByCourseId($course_id: String, $limit: Int = 10, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n    where: {course_books: {course_id: {_eq: $course_id}}}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate(where: {course_books: {course_id: {_eq: $course_id}}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksListNotInCourseId"
+      ],
+      "lhs": "query BooksListNotInCourseId($course_id: String, $limit: Int = 10, $offset: Int = 0, $name: String) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n    where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate(\n    where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersTitle"
+      ],
+      "lhs": "query ChaptersTitle($chapter_id: String!) {\n  chapters(where: {chapter_id: {_eq: $chapter_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersFull"
+      ],
+      "lhs": "query ChaptersFull($book_id: [String!] = []) {\n  chapters(\n    order_by: {display_order: asc}\n    where: {book_chapters: {book_id: {_in: $book_id}}}\n  ) {\n    chapter_id\n    name\n    topics(order_by: {display_order: asc}) {\n      name\n      topic_id\n      learning_objectives(order_by: {display_order: asc}) {\n        name\n        lo_id\n        display_order\n        type\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersByBookId"
+      ],
+      "lhs": "query ChaptersByBookId($book_id: String!) {\n  chapters(\n    order_by: {name: asc, chapter_id: asc}\n    where: {book_chapters: {book_id: {_eq: $book_id}}}\n  ) {\n    name\n    chapter_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CityOne"
+      ],
+      "lhs": "query CityOne($city_id: Int = 0) {\n  cities(where: {city_id: {_eq: $city_id}}) {\n    ...CityAttrs\n  }\n}\n\nfragment CityAttrs on cities {\n  city_id\n  country\n  display_order\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CityMany"
+      ],
+      "lhs": "query CityMany($country: String, $city_id: Int, $name: String) {\n  cities(\n    where: {country: {_eq: $country}, city_id: {_eq: $city_id}, name: {_ilike: $name}}\n  ) {\n    ...CityAttrs\n  }\n}\n\nfragment CityAttrs on cities {\n  city_id\n  country\n  display_order\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ClassTitle"
+      ],
+      "lhs": "query ClassTitle($class_id: Int!) {\n  classes(where: {class_id: {_eq: $class_id}}) {\n    class_id\n    name\n    class_code\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ClassOne"
+      ],
+      "lhs": "query ClassOne($class_id: Int!) {\n  classes(where: {class_id: {_eq: $class_id}}) {\n    ...ClassAttrs\n    avatar\n    status\n    subjects\n    grades\n    class_members(\n      order_by: {is_owner: asc}\n      where: {status: {_eq: \"CLASS_MEMBER_STATUS_ACTIVE\"}}\n    ) {\n      class_member_id\n      user_id\n      status\n      is_owner\n    }\n    class_members_aggregate(\n      where: {status: {_eq: \"CLASS_MEMBER_STATUS_ACTIVE\"}, is_owner: {_eq: false}}\n    ) {\n      aggregate {\n        count\n      }\n    }\n  }\n}\n\nfragment ClassAttrs on classes {\n  class_id\n  class_code\n  name\n  school_id\n  created_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ClassMany"
+      ],
+      "lhs": "query ClassMany($class_id: [Int!] = []) {\n  classes(where: {class_id: {_in: $class_id}}) {\n    ...ClassAttrs\n  }\n}\n\nfragment ClassAttrs on classes {\n  class_id\n  class_code\n  name\n  school_id\n  created_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ClassList"
+      ],
+      "lhs": "query ClassList($subjects: _text, $name: String, $grades: _int4, $school_name: String, $school_id: Int, $limit: Int = 30, $offset: Int = 0) {\n  classes(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, class_id: desc}\n    where: {subjects: {_eq: $subjects}, name: {_ilike: $name}, grades: {_eq: $grades}, school: {name: {_ilike: $school_name}, school_id: {_eq: $school_id}}}\n  ) {\n    ...ClassAttrs\n    school {\n      name\n    }\n  }\n  classes_aggregate(\n    where: {subjects: {_eq: $subjects}, name: {_ilike: $name}, grades: {_eq: $grades}, school: {name: {_ilike: $school_name}, school_id: {_eq: $school_id}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment ClassAttrs on classes {\n  class_id\n  class_code\n  name\n  school_id\n  created_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CourseBooksList"
+      ],
+      "lhs": "query CourseBooksList($course_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  courses_books(\n    limit: $limit\n    offset: $offset\n    order_by: {updated_at: desc, created_at: desc, book_id: desc}\n    where: {course_id: {_eq: $course_id}}\n  ) {\n    ...CourseBookAttrs\n  }\n  courses_books_aggregate(where: {course_id: {_eq: $course_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseBookAttrs on courses_books {\n  course_id\n  book_id\n  books {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "DistrictOne"
+      ],
+      "lhs": "query DistrictOne($district_id: Int = 0) {\n  districts(where: {district_id: {_eq: $district_id}}) {\n    ...DistrictAttrs\n  }\n}\n\nfragment DistrictAttrs on districts {\n  district_id\n  country\n  city_id\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "DistrictMany"
+      ],
+      "lhs": "query DistrictMany($country: String, $district_id: Int, $name: String, $city_id: Int) {\n  districts(\n    where: {country: {_eq: $country}, city_id: {_eq: $city_id}, district_id: {_eq: $district_id}, name: {_ilike: $name}}\n  ) {\n    ...DistrictAttrs\n  }\n}\n\nfragment DistrictAttrs on districts {\n  district_id\n  country\n  city_id\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationMsgsOne"
+      ],
+      "lhs": "query InfoNotificationMsgsOne($notification_msg_id: String!) {\n  info_notification_msgs(\n    where: {notification_msg_id: {_eq: $notification_msg_id}}\n  ) {\n    ...InfoNotificationMsgsAttrs\n  }\n}\n\nfragment InfoNotificationMsgsAttrs on info_notification_msgs {\n  notification_msg_id\n  title\n  content\n  media_ids\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationMsgsTitles"
+      ],
+      "lhs": "query InfoNotificationMsgsTitles($notification_msg_id: [String!] = []) {\n  info_notification_msgs(\n    where: {notification_msg_id: {_in: $notification_msg_id}}\n  ) {\n    notification_msg_id\n    title\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationsCountRead"
+      ],
+      "lhs": "query InfoNotificationsCountRead($notification_id: [String!] = []) {\n  info_notifications(\n    order_by: {updated_at: desc}\n    where: {notification_id: {_in: $notification_id}}\n  ) {\n    notification_id\n    all_receiver_aggregate: users_info_notifications_aggregate {\n      aggregate {\n        count\n      }\n    }\n    read_aggregate: users_info_notifications_aggregate(\n      where: {status: {_eq: \"USER_NOTIFICATION_STATUS_READ\"}}\n    ) {\n      aggregate {\n        count\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationCountsByStatus"
+      ],
+      "lhs": "query InfoNotificationCountsByStatus {\n  draft: info_notifications_aggregate(\n    where: {status: {_eq: \"NOTIFICATION_STATUS_DRAFT\"}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n  sent: info_notifications_aggregate(\n    where: {status: {_eq: \"NOTIFICATION_STATUS_SENT\"}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonGroupsList"
+      ],
+      "lhs": "query LessonGroupsList($course_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  lesson_groups(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {course_id: {_eq: $course_id}}\n  ) {\n    ...LessonGroupAttrs\n  }\n  lesson_groups_aggregate(where: {course_id: {_eq: $course_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment LessonGroupAttrs on lesson_groups {\n  media_ids\n  lesson_group_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonGroupById"
+      ],
+      "lhs": "query LessonGroupById($lesson_group_id: String!) {\n  lesson_groups(where: {lesson_group_id: {_eq: $lesson_group_id}}) {\n    ...LessonGroupAttrs\n  }\n}\n\nfragment LessonGroupAttrs on lesson_groups {\n  media_ids\n  lesson_group_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "MediasOne"
+      ],
+      "lhs": "query MediasOne($media_id: String = \"\") {\n  media(where: {media_id: {_eq: $media_id}}) {\n    ...MediaAttrs\n  }\n}\n\nfragment MediaAttrs on media {\n  media_id\n  resource\n  type\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "MediasList"
+      ],
+      "lhs": "query MediasList($limit: Int = 10, $offset: Int = 0, $media_id: [String!], $resource: String, $type: String, $converted_images: Boolean, $comments: jsonb) {\n  media(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {resource: {_eq: $resource}, type: {_eq: $type}, media_id: {_in: $media_id}, converted_images: {_is_null: $converted_images}, comments: {_contains: $comments}}\n  ) {\n    ...MediaAttrs\n  }\n  media_aggregate(\n    where: {resource: {_eq: $resource}, type: {_eq: $type}, media_id: {_in: $media_id}, converted_images: {_is_null: $converted_images}, comments: {_contains: $comments}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment MediaAttrs on media {\n  media_id\n  resource\n  type\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ParentsMany"
+      ],
+      "lhs": "query ParentsMany($student_ids: [String!]!) {\n  student_parents(where: {student_id: {_in: $student_ids}}) {\n    ...StudentParentAttrs\n    parent_user {\n      name\n      email\n      phone_number\n      country\n    }\n  }\n}\n\nfragment StudentParentAttrs on student_parents {\n  parent_id\n  student_id\n  relationship\n  parent_user {\n    name\n    email\n    phone_number\n    country\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PlansMany"
+      ],
+      "lhs": "query PlansMany($country: String!, $plan_id: [String!]) {\n  plans(\n    order_by: {plan_id: asc, created_at: desc}\n    where: {country: {_eq: $country}, plan_id: {_in: $plan_id}}\n  ) {\n    ...PlansAttrs\n  }\n}\n\nfragment PlansAttrs on plans {\n  plan_id\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesByExternalId"
+      ],
+      "lhs": "query QuizzesByExternalId($external_id: String = \"\") {\n  quizzes(where: {external_id: {_eq: $external_id}}) {\n    external_id\n    quiz_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesOne"
+      ],
+      "lhs": "query QuizzesOne($quiz_id: String = \"\") {\n  quizzes(where: {quiz_id: {_eq: $quiz_id}}) {\n    ...QuizzesAttrs\n  }\n}\n\nfragment QuizzesAttrs on quizzes {\n  approved_by\n  country\n  difficulty_level\n  explanation\n  external_id\n  kind\n  options\n  question\n  quiz_id\n  school_id\n  tagged_los\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesList"
+      ],
+      "lhs": "query QuizzesList($limit: Int = 10, $offset: Int = 0, $order_by: quizzes_order_by! = {created_at: desc, quiz_id: desc}, $question: jsonb) {\n  quizzes(\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n    where: {question: {_contains: $question}}\n  ) {\n    ...QuizzesAttrs\n  }\n  quizzes_aggregate(where: {question: {_contains: $question}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment QuizzesAttrs on quizzes {\n  approved_by\n  country\n  difficulty_level\n  explanation\n  external_id\n  kind\n  options\n  question\n  quiz_id\n  school_id\n  tagged_los\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesManyByLearningObjectId"
+      ],
+      "lhs": "query QuizzesManyByLearningObjectId($lo_id: String) {\n  find_quiz_by_lo_id(args: {id: $lo_id}) {\n    ...QuizzesAttrs\n  }\n}\n\nfragment QuizzesAttrs on quizzes {\n  approved_by\n  country\n  difficulty_level\n  explanation\n  external_id\n  kind\n  options\n  question\n  quiz_id\n  school_id\n  tagged_los\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolAdminsTitle"
+      ],
+      "lhs": "query SchoolAdminsTitle($school_admin_id: String = \"\") {\n  school_admins(where: {school_admin_id: {_eq: $school_admin_id}}) {\n    ...SchoolAdminAttrs\n  }\n}\n\nfragment SchoolAdminAttrs on school_admins {\n  users {\n    ...UserAttrs\n  }\n  school_admin_id\n  school_admin_id\n  created_at\n  updated_at\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolAdminsOne"
+      ],
+      "lhs": "query SchoolAdminsOne($school_admin_id: String = \"\") {\n  school_admins(where: {school_admin_id: {_eq: $school_admin_id}}) {\n    ...SchoolAdminAttrs\n  }\n}\n\nfragment SchoolAdminAttrs on school_admins {\n  users {\n    ...UserAttrs\n  }\n  school_admin_id\n  school_admin_id\n  created_at\n  updated_at\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolAdminsList"
+      ],
+      "lhs": "query SchoolAdminsList($limit: Int = 10, $offset: Int = 0, $school_admin_id: [String!], $school_id: [Int!], $name: String) {\n  school_admins(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, school_admin_id: desc}\n    where: {school_id: {_in: $school_id}, school_admin_id: {_in: $school_admin_id}, users: {name: {_ilike: $name}}}\n  ) {\n    ...SchoolAdminAttrs\n  }\n  school_admins_aggregate(\n    where: {school_id: {_in: $school_id}, school_admin_id: {_in: $school_admin_id}, users: {name: {_ilike: $name}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment SchoolAdminAttrs on school_admins {\n  users {\n    ...UserAttrs\n  }\n  school_admin_id\n  school_admin_id\n  created_at\n  updated_at\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolAdminsMany"
+      ],
+      "lhs": "query SchoolAdminsMany($school_admin_id: [String!] = []) {\n  school_admins(where: {school_admin_id: {_in: $school_admin_id}}) {\n    ...SchoolAdminAttrs\n  }\n}\n\nfragment SchoolAdminAttrs on school_admins {\n  users {\n    ...UserAttrs\n  }\n  school_admin_id\n  school_admin_id\n  created_at\n  updated_at\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolAdminsManyReference"
+      ],
+      "lhs": "query SchoolAdminsManyReference($limit: Int = 30, $offset: Int = 0, $school_id: [Int!] = []) {\n  school_admins(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {school_id: {_in: $school_id}}\n  ) {\n    ...SchoolAdminAttrs\n  }\n  school_admins_aggregate(where: {school_id: {_in: $school_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment SchoolAdminAttrs on school_admins {\n  users {\n    ...UserAttrs\n  }\n  school_admin_id\n  school_admin_id\n  created_at\n  updated_at\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolConfigsOne"
+      ],
+      "lhs": "query SchoolConfigsOne($school_id: Int = 0) {\n  school_configs(where: {school_id: {_eq: $school_id}}) {\n    ...SchoolConfigAttrs\n  }\n}\n\nfragment SchoolConfigAttrs on school_configs {\n  country\n  created_at\n  plan_duration\n  plan_expired_at\n  plan_id\n  privileges\n  school_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolConfigsList"
+      ],
+      "lhs": "query SchoolConfigsList($limit: Int = 10, $offset: Int = 0, $school_id: [Int!]) {\n  school_configs(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, school_id: desc}\n    where: {school_id: {_in: $school_id}}\n  ) {\n    ...SchoolConfigAttrs\n  }\n  school_configs_aggregate(where: {school_id: {_in: $school_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment SchoolConfigAttrs on school_configs {\n  country\n  created_at\n  plan_duration\n  plan_expired_at\n  plan_id\n  privileges\n  school_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolConfigsMany"
+      ],
+      "lhs": "query SchoolConfigsMany($school_id: [Int!] = []) {\n  school_configs(where: {school_id: {_in: $school_id}}) {\n    ...SchoolConfigAttrs\n  }\n}\n\nfragment SchoolConfigAttrs on school_configs {\n  country\n  created_at\n  plan_duration\n  plan_expired_at\n  plan_id\n  privileges\n  school_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsTitle"
+      ],
+      "lhs": "query SchoolsTitle($school_id: Int = 0) {\n  schools(where: {school_id: {_eq: $school_id}}) {\n    school_id\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsOne"
+      ],
+      "lhs": "query SchoolsOne($school_id: Int = 0) {\n  schools(where: {school_id: {_eq: $school_id}}) {\n    ...SchoolAttrs\n    point\n    classes_aggregate {\n      aggregate {\n        count\n      }\n    }\n  }\n}\n\nfragment SchoolAttrs on schools {\n  school_id\n  city_id\n  district_id\n  name\n  country\n  phone_number\n  point\n  is_system_school\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsListOld"
+      ],
+      "lhs": "query SchoolsList($limit: Int = 10, $offset: Int = 0, $name: String, $phone_number: String, $school_id: [Int!]) {\n  schools(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {name: {_ilike: $name}, phone_number: {_ilike: $phone_number}, school_id: {_in: $school_id}}\n  ) {\n    ...SchoolAttrs\n  }\n  schools_aggregate(\n    where: {name: {_ilike: $name}, phone_number: {_ilike: $phone_number}, school_id: {_in: $school_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment SchoolAttrs on schools {\n  school_id\n  city_id\n  district_id\n  name\n  country\n  phone_number\n  point\n  is_system_school\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsList"
+      ],
+      "lhs": "query SchoolsList($limit: Int = 10, $offset: Int = 0, $name: String, $phone_number: String, $school_id: [Int!], $is_system_school: Boolean) {\n  schools(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {_or: [{name: {_ilike: $name}}, {phone_number: {_ilike: $phone_number}}], school_id: {_in: $school_id}, is_system_school: {_eq: $is_system_school}}\n  ) {\n    ...SchoolAttrs\n  }\n  schools_aggregate(\n    where: {_or: [{name: {_ilike: $name}}, {phone_number: {_ilike: $phone_number}}], school_id: {_in: $school_id}, is_system_school: {_eq: $is_system_school}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment SchoolAttrs on schools {\n  school_id\n  city_id\n  district_id\n  name\n  country\n  phone_number\n  point\n  is_system_school\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsMany"
+      ],
+      "lhs": "query SchoolsMany($school_id: [Int!] = []) {\n  schools(where: {school_id: {_in: $school_id}}) {\n    school_id\n    name\n    country\n    city {\n      name\n    }\n    district {\n      city_id\n      name\n    }\n    point\n    phone_number\n    is_system_school\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "SchoolsManyReference"
+      ],
+      "lhs": "query SchoolsManyReference($name: String, $phone_number: String, $limit: Int = 30, $offset: Int = 0) {\n  schools(\n    limit: $limit\n    offset: $offset\n    order_by: {name: asc, created_at: desc}\n    where: {name: {_ilike: $name}, phone_number: {_ilike: $phone_number}}\n  ) {\n    school_id\n    name\n    country\n    city {\n      name\n    }\n    district {\n      city_id\n      name\n    }\n    point\n    phone_number\n    is_system_school\n  }\n  schools_aggregate(\n    where: {name: {_ilike: $name}, phone_number: {_ilike: $phone_number}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "GradesOfStudent"
+      ],
+      "lhs": "query GradesOfStudent($school_id: Int!) {\n  students(\n    distinct_on: current_grade\n    where: {current_grade: {_is_null: false}, school_id: {_eq: $school_id}}\n    order_by: {current_grade: asc}\n  ) {\n    current_grade\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListWithFilter"
+      ],
+      "lhs": "query StudentsListWithFilter($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: students_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!]) {\n  students(\n    where: {user: {name: {_ilike: $name}, email: {_ilike: $email}}, student_id: {_in: $student_ids}, current_grade: {_in: $grades}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentFrg\n  }\n  students_aggregate(\n    where: {user: {name: {_ilike: $name}, email: {_ilike: $email}}, student_id: {_in: $student_ids}, current_grade: {_in: $grades}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsManyWithSchool"
+      ],
+      "lhs": "query StudentsManyWithSchool($student_id: [String!] = []) {\n  students(where: {student_id: {_in: $student_id}}, order_by: {created_at: desc}) {\n    user {\n      name\n      user_id\n    }\n    school {\n      name\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherTitle"
+      ],
+      "lhs": "query TeacherTitle($teacher_id: String!) {\n  teachers(where: {teacher_id: {_eq: $teacher_id}}) {\n    users {\n      name\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherOne"
+      ],
+      "lhs": "query TeacherOne($teacher_id: String!) {\n  teachers(where: {teacher_id: {_eq: $teacher_id}}) {\n    teacher_by_school_ids {\n      school_id\n    }\n    ...TeacherAttrs\n  }\n}\n\nfragment TeacherAttrs on teachers {\n  users {\n    name\n    email\n    avatar\n    phone_number\n    user_group\n    country\n  }\n  teacher_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherList"
+      ],
+      "lhs": "query TeacherList($limit: Int = 10, $offset: Int = 0, $user_name: String, $user_email: String, $school_id: Int! = 0) {\n  find_teacher_by_school_id(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    name\n    email\n    user_id\n  }\n  find_teacher_by_school_id_aggregate(\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherListWithoutTeacherIds"
+      ],
+      "lhs": "query TeacherListWithoutTeacherIds($limit: Int = 10, $offset: Int = 0, $user_name: String, $user_email: String, $user_id: [String!] = [], $school_id: Int = 0) {\n  find_teacher_by_school_id(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}, user_id: {_nin: $user_id}}\n  ) {\n    name\n    email\n    user_id\n    avatar\n  }\n  find_teacher_by_school_id_aggregate(\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}, user_id: {_nin: $user_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherMany"
+      ],
+      "lhs": "query TeacherMany($user_id: [String!] = [], $school_id: Int = 0) {\n  find_teacher_by_school_id(\n    args: {school_id: $school_id}\n    where: {user_id: {_in: $user_id}}\n  ) {\n    name\n    email\n    user_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicsManyByChapterIds"
+      ],
+      "lhs": "query TopicsManyByChapterIds($chapter_ids: [String!] = []) {\n  topics(\n    order_by: {name: asc, topic_id: asc}\n    where: {chapter_id: {_in: $chapter_ids}}\n  ) {\n    name\n    topic_id\n    chapter_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicTitle"
+      ],
+      "lhs": "query TopicTitle($topic_id: String = \"\") {\n  topics(where: {topic_id: {_eq: $topic_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UsersTitle"
+      ],
+      "lhs": "query UsersTitle($user_id: String!) {\n  users(where: {user_id: {_eq: $user_id}}) {\n    ...UserAttrs\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UserNameByIds"
+      ],
+      "lhs": "query UserNameByIds($user_id: [String!] = []) {\n  users(where: {user_id: {_in: $user_id}}) {\n    user_id\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UsersMany"
+      ],
+      "lhs": "query UsersMany($user_id: [String!] = []) {\n  users(where: {user_id: {_in: $user_id}}) {\n    ...UserAttrs\n  }\n  users_aggregate(where: {user_id: {_in: $user_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UserByEmail"
+      ],
+      "lhs": "query UserByEmail($email: String, $phone_number: String, $user_id: String) {\n  users(\n    where: {email: {_eq: $email}, phone_number: {_eq: $phone_number}, user_id: {_neq: $user_id}}\n  ) {\n    ...UserAttrs\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UsersInfoNotificationsList"
+      ],
+      "lhs": "query UsersInfoNotificationsList($notification_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  users_info_notifications(\n    where: {notification_id: {_eq: $notification_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {student_id: asc, user_group: desc}\n  ) {\n    ...UsersInfoNotificationsAttrs\n    student_id\n    parent_id\n  }\n  users_info_notifications_aggregate(\n    where: {notification_id: {_eq: $notification_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment UsersInfoNotificationsAttrs on users_info_notifications {\n  user_id\n  user_notification_id\n  notification_id\n  current_grade\n  course_ids\n  status\n  user_group\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "getBooksChapterByChapterIdForTest"
+      ],
+      "lhs": "query getBooksChapterByChapterIdForTest($chapter_id: String!) {\n  books_chapters(where: {chapter_id: {_eq: $chapter_id}}, limit: 1) {\n    chapter_id\n    book_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "getChapterContentForTest"
+      ],
+      "lhs": "query getChapterContentForTest($school_id: Int!, $limit: Int = 10) {\n  chapters(\n    where: {topics: {total_los: {_lte: 10}, topic_id: {_is_null: false}, learning_objectives: {lo_id: {_is_null: false}}}, school_id: {_eq: $school_id}}\n    distinct_on: created_at\n    order_by: {created_at: desc, topics_aggregate: {max: {created_at: desc}}}\n    limit: $limit\n  ) {\n    chapter_id\n    name\n    topics(\n      where: {learning_objectives: {lo_id: {_is_null: false}}}\n      order_by: {created_at: desc}\n      distinct_on: created_at\n    ) {\n      name\n      topic_id\n      learning_objectives(order_by: {created_at: desc}) {\n        name\n        lo_id\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsManyReference"
+      ],
+      "lhs": "query StudentsManyReference($user_ids: [String!], $name: String, $email: String, $limit: Int = 30, $offset: Int = 0) {\n  users(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, user_id: {_in: $user_ids}, name: {_ilike: $name}, email: {_ilike: $email}}\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n  ) {\n    ...StudentUserAttrs\n  }\n}\n\nfragment StudentUserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListWithNoneFilter"
+      ],
+      "lhs": "query StudentsListByStudentIdsWithoutGrade($limit: Int = 10, $offset: Int = 0, $student_ids: [String!], $order_by: users_order_by! = {created_at: desc}) {\n  users(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, user_id: {_in: $student_ids}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n  users_aggregate(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, user_id: {_in: $student_ids}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListWithFilterOptimize"
+      ],
+      "lhs": "query StudentsListByFiltersWithoutGrade($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!]) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, student: {current_grade: {_in: $grades}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n  users_aggregate(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, student: {current_grade: {_in: $grades}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ParentsList"
+      ],
+      "lhs": "query ParentsList($email: String, $name: String, $limit: Int = 30, $offset: Int = 0) {\n  parents(\n    limit: $limit\n    offset: $offset\n    where: {user: {_or: [{email: {_ilike: $email}}, {name: {_ilike: $name}}]}}\n  ) {\n    ...ParentAttrs\n  }\n}\n\nfragment ParentAttrs on parents {\n  user {\n    user_id\n    name\n    email\n    phone_number\n    country\n  }\n  student_parents {\n    relationship\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ParentsManyReference"
+      ],
+      "lhs": "query ParentsManyReference($email: String, $name: String, $limit: Int = 10, $offset: Int = 0) {\n  users(\n    limit: $limit\n    offset: $offset\n    where: {_and: [{user_group: {_eq: \"USER_GROUP_PARENT\"}}, {_or: [{email: {_ilike: $email}}, {name: {_ilike: $name}}]}]}\n  ) {\n    ...ParentAttrs\n  }\n}\n\nfragment ParentAttrs on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ParentRelationshipsByUserId"
+      ],
+      "lhs": "query ParentRelationshipsByUserId($userId: String, $limit: Int = 1) {\n  student_parents(limit: $limit, where: {parent_id: {_eq: $userId}}) {\n    relationship\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "getOneTeacher"
+      ],
+      "lhs": "query TeacherOne($teacher_id: String!) {\n  teachers(where: {teacher_id: {_eq: $teacher_id}}) {\n    teacher_by_school_ids {\n      school_id\n    }\n    ...TeacherAttrs\n  }\n}\n\nfragment TeacherAttrs on teachers {\n  users {\n    name\n    email\n    avatar\n    phone_number\n    user_group\n    country\n  }\n  teacher_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsList"
+      ],
+      "lhs": "query StudentsList($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: students_order_by! = {created_at: desc}, $student_ids: [String!]) {\n  students(\n    where: {user: {name: {_ilike: $name}, email: {_ilike: $email}}, student_id: {_in: $student_ids}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentFrg\n  }\n  students_aggregate(\n    where: {user: {name: {_ilike: $name}, email: {_ilike: $email}}, student_id: {_in: $student_ids}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n    last_login_date\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "GradesOfStudentsList"
+      ],
+      "lhs": "query GradesOfStudentsList($student_ids: [String!] = []) {\n  students(where: {student_id: {_in: $student_ids}}) {\n    student_id\n    current_grade\n    enrollment_status\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonGroupsListByIdsOld"
+      ],
+      "lhs": "query LessonGroupsListByIds($lesson_group_ids: [String!]!, $limit: Int = 10, $offset: Int = 0) {\n  lesson_groups(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {lesson_group_id: {_in: $lesson_group_ids}}\n  ) {\n    ...LessonGroupAttrs\n  }\n}\n\nfragment LessonGroupAttrs on lesson_groups {\n  media_ids\n  lesson_group_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonByLessonId"
+      ],
+      "lhs": "query LessonByLessonId($lesson_id: String!) {\n  lessons(where: {lesson_id: {_eq: $lesson_id}}) {\n    lesson_id\n    lessons_courses {\n      course {\n        name\n        course_id\n      }\n    }\n    status\n    end_time\n    start_time\n    name\n    lessons_teachers {\n      teacher {\n        users {\n          name\n          user_id\n          email\n        }\n      }\n    }\n    lesson_members {\n      user {\n        user_id\n        name\n        email\n        last_login_date\n        student {\n          student_id\n          current_grade\n          enrollment_status\n        }\n      }\n    }\n    lesson_group_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "OldChaptersList"
+      ],
+      "lhs": "query ChaptersList($grade: smallint, $subject: String, $country: String, $limit: Int = 10, $offset: Int = 0) {\n  chapters(\n    limit: $limit\n    offset: $offset\n    order_by: {display_order: asc, created_at: desc, name: asc, chapter_id: asc}\n    where: {grade: {_eq: $grade}, subject: {_eq: $subject}, country: {_eq: $country}}\n  ) {\n    ...ChapterAttrs\n  }\n  chapters_aggregate(\n    where: {grade: {_eq: $grade}, subject: {_eq: $subject}, country: {_eq: $country}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment ChapterAttrs on chapters {\n  chapter_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersList"
+      ],
+      "lhs": "query ChaptersList($grade: smallint, $subject: String, $country: String) {\n  chapters(\n    order_by: {display_order: asc, created_at: desc, name: asc, chapter_id: asc}\n    where: {grade: {_eq: $grade}, subject: {_eq: $subject}, country: {_eq: $country}}\n  ) {\n    ...ChapterAttrs\n  }\n}\n\nfragment ChapterAttrs on chapters {\n  chapter_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "OldChapterDisplayOrder"
+      ],
+      "lhs": "query ChapterDisplayOrder($book_id: String) {\n  chapters(\n    where: {book_chapters: {book_id: {_eq: $book_id}}}\n    order_by: {display_order: desc}\n    limit: 1\n  ) {\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChapterDisplayOrder"
+      ],
+      "lhs": "query ChapterDisplayOrder($book_id: String!) {\n  chapters(\n    where: {book_chapters: {book_id: {_eq: $book_id}}}\n    order_by: {display_order: desc}\n    limit: 1\n  ) {\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicDisplayOrder"
+      ],
+      "lhs": "query TopicDisplayOrder($chapter_id: String!) {\n  topics(\n    where: {chapter_id: {_eq: $chapter_id}}\n    order_by: {display_order: desc}\n    limit: 1\n  ) {\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectiveDisplayOrder"
+      ],
+      "lhs": "query LearningObjectiveDisplayOrder($topic_id: String!) {\n  learning_objectives(\n    where: {topic_id: {_eq: $topic_id}}\n    order_by: {display_order: desc}\n    limit: 1\n  ) {\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TeacherManyReference"
+      ],
+      "lhs": "query TeacherManyReference($limit: Int = 10, $offset: Int = 0, $email: String, $name: String, $school_id: Int! = 0) {\n  find_teacher_by_school_id(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    args: {school_id: $school_id}\n    where: {_or: [{name: {_ilike: $name}}, {email: {_ilike: $email}}]}\n  ) {\n    name\n    email\n    user_id\n    avatar\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "getMediaConvertedImageForTest"
+      ],
+      "lhs": "query getMediaConvertedImageForTest($id: String) {\n  media(where: {media_id: {_eq: $id}}) {\n    converted_images\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "getLOsByTopicIdsForTest"
+      ],
+      "lhs": "query getLOsByTopicIdsForTest($topic_ids: [String!]) {\n  learning_objectives(\n    where: {topic_id: {_in: $topic_ids}}\n    order_by: {display_order: asc}\n  ) {\n    lo_id\n    type\n    name\n    display_order\n    topic_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListByStudentIdsWithoutGrade"
+      ],
+      "lhs": "query StudentsListByStudentIdsWithoutGrade($limit: Int = 10, $offset: Int = 0, $student_ids: [String!], $order_by: users_order_by! = {created_at: desc}, $enrollment_status: String) {\n  users(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, user_id: {_in: $student_ids}, student: {enrollment_status: {_eq: $enrollment_status}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n  users_aggregate(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, user_id: {_in: $student_ids}, student: {enrollment_status: {_eq: $enrollment_status}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksListOld"
+      ],
+      "lhs": "query BooksList($limit: Int = 10, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksList"
+      ],
+      "lhs": "query BooksList($name: String, $limit: Int = 10, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsOne"
+      ],
+      "lhs": "query StudentsOne($id: String!) {\n  students(where: {student_id: {_eq: $id}}) {\n    enrollment_status\n    student_external_id\n    student_note\n    ...StudentFrg\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n    last_login_date\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsOneV2"
+      ],
+      "lhs": "query StudentsOne($id: String!) {\n  students(where: {student_id: {_eq: $id}}) {\n    enrollment_status\n    student_external_id\n    student_note\n    ...StudentFrg\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n    last_login_date\n    gender\n    birthday\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListByFiltersWithoutGrade"
+      ],
+      "lhs": "query StudentsListByFiltersWithoutGrade($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n  users_aggregate(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LOsByTopicIds"
+      ],
+      "lhs": "query LOsByTopicIds($topic_id: [String!] = [], $order_by: learning_objectives_order_by! = {display_order: asc, name: asc, lo_id: asc}) {\n  learning_objectives(order_by: [$order_by], where: {topic_id: {_in: $topic_id}}) {\n    ...LearningObjectiveAttrs\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesManyReference"
+      ],
+      "lhs": "query LearningObjectivesManyReference($name: String, $limit: Int = 10, $offset: Int = 0) {\n  learning_objectives(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, lo_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    ...LearningObjectiveAttrs\n  }\n  learning_objectives_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicsList"
+      ],
+      "lhs": "query TopicsList($topic_id: [String!], $name: String, $grade: smallint, $subject: String, $country: String, $chapter_id: String, $limit: Int = 10, $offset: Int = 0, $order_by: topics_order_by! = {display_order: asc, created_at: desc, topic_id: desc}) {\n  topics(\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n    where: {chapter_id: {_eq: $chapter_id}, grade: {_eq: $grade}, subject: {_eq: $subject}, country: {_eq: $country}, name: {_ilike: $name}, topic_id: {_in: $topic_id}}\n  ) {\n    ...TopicAttrs\n  }\n  topics_aggregate(\n    where: {grade: {_eq: $grade}, subject: {_eq: $subject}, country: {_eq: $country}, name: {_ilike: $name}, topic_id: {_in: $topic_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment TopicAttrs on topics {\n  topic_id\n  name\n  school_id\n  grade\n  display_order\n  topic_type\n  status\n  chapter_id\n  school_id\n  instruction\n  icon_url\n  essay_required\n  created_at\n  updated_at\n  country\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersMany"
+      ],
+      "lhs": "query ChaptersMany($chapter_ids: [String!] = []) {\n  chapters(\n    order_by: {display_order: asc, chapter_id: asc}\n    where: {chapter_id: {_in: $chapter_ids}}\n  ) {\n    ...ChapterAttrs\n  }\n}\n\nfragment ChapterAttrs on chapters {\n  chapter_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicsMany"
+      ],
+      "lhs": "query TopicsMany($topic_id: [String!], $chapter_id: String) {\n  topics(\n    order_by: {display_order: asc, created_at: desc, topic_id: desc}\n    where: {chapter_id: {_eq: $chapter_id}, topic_id: {_in: $topic_id}}\n  ) {\n    ...TopicAttrs\n  }\n}\n\nfragment TopicAttrs on topics {\n  topic_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n  topic_type\n  status\n  chapter_id\n  school_id\n  instruction\n  icon_url\n  essay_required\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CoursesMany"
+      ],
+      "lhs": "query CoursesMany($course_id: [String!] = []) {\n  courses(where: {course_id: {_in: $course_id}}) {\n    ...CourseAttrs\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicLearningObjectiveMany"
+      ],
+      "lhs": "query TopicLearningObjectiveMany($topic_id: String!) {\n  topics_learning_objectives(\n    where: {topic_id: {_eq: $topic_id}}\n    order_by: {display_order: desc}\n  ) {\n    display_order\n    learning_objective {\n      ...LearningObjectiveAttrs\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesOne"
+      ],
+      "lhs": "query LearningObjectivesOne($lo_id: String!) {\n  learning_objectives(where: {lo_id: {_eq: $lo_id}}) {\n    ...LearningObjectiveAttrs\n    quiz_sets {\n      quiz_external_ids\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CoursesManyReferenceOld"
+      ],
+      "lhs": "query CoursesManyReference($name: String, $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    ...CourseAttrs\n  }\n  courses_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CoursesManyReference"
+      ],
+      "lhs": "query CoursesManyReference($name: String, $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    ...CourseAttrs\n  }\n  courses_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CoursesListForTest"
+      ],
+      "lhs": "query CoursesList($name: String, $course_id: [String!], $course_type: String, $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}, course_id: {_in: $course_id}, course_type: {_eq: $course_type}}\n  ) {\n    ...CourseAttrs\n  }\n  courses_aggregate(\n    where: {course_id: {_in: $course_id}, course_type: {_eq: $course_type}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CoursesListOld"
+      ],
+      "lhs": "query CoursesList($name: String, $course_id: [String!], $course_type: String, $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}, course_id: {_in: $course_id}, course_type: {_eq: $course_type}}\n  ) {\n    ...CourseAttrs\n  }\n  courses_aggregate(\n    where: {course_id: {_in: $course_id}, course_type: {_eq: $course_type}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesMany"
+      ],
+      "lhs": "query LearningObjectivesMany($lo_id: [String!] = []) {\n  learning_objectives(\n    order_by: {display_order: asc}\n    where: {lo_id: {_in: $lo_id}}\n  ) {\n    ...LearningObjectiveAttrs\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicOne"
+      ],
+      "lhs": "query TopicOne($topic_id: String = \"\") {\n  topics(where: {topic_id: {_eq: $topic_id}}) {\n    ...TopicAttrs\n  }\n}\n\nfragment TopicAttrs on topics {\n  topic_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n  topic_type\n  status\n  chapter_id\n  school_id\n  instruction\n  icon_url\n  essay_required\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesList"
+      ],
+      "lhs": "query LearningObjectivesList($name: String, $lo_id: [String!], $type: [String!], $country: String, $grade: smallint, $subject: String, $topic_id: String, $limit: Int = 10, $offset: Int = 0, $order_by: learning_objectives_order_by! = {display_order: asc, name: asc, lo_id: asc}) {\n  learning_objectives(\n    limit: $limit\n    offset: $offset\n    where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}\n    order_by: [$order_by]\n  ) {\n    ...LearningObjectiveAttrs\n  }\n  learning_objectives_aggregate(\n    where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListByFiltersWithoutGradeAndAggregate"
+      ],
+      "lhs": "query StudentsListByFiltersWithoutGradeAndAggregate($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String, $last_login_date: Boolean) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n  last_login_date\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CountStudentWithFilter"
+      ],
+      "lhs": "query CountStudentWithFilter($name: String, $email: String, $grades: [smallint!], $student_ids: [String!], $enrollment_status: String, $last_login_date: Boolean) {\n  users_aggregate(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsListByFiltersWithoutGradeAndAggregateForTest"
+      ],
+      "lhs": "query StudentsListByFiltersWithoutGradeAndAggregate($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String, $last_login_date: Boolean) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n  last_login_date\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonByLessonIdForTest"
+      ],
+      "lhs": "query LessonByLessonId($lesson_id: String!) {\n  lessons(where: {lesson_id: {_eq: $lesson_id}}) {\n    lesson_id\n    lessons_courses {\n      course {\n        name\n        course_id\n      }\n    }\n    status\n    end_time\n    start_time\n    name\n    lessons_teachers {\n      teacher {\n        users {\n          name\n          user_id\n          email\n        }\n      }\n    }\n    lesson_members {\n      user {\n        user_id\n        name\n        email\n        last_login_date\n        student {\n          student_id\n          current_grade\n          enrollment_status\n        }\n      }\n    }\n    lesson_group_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsOneForTest"
+      ],
+      "lhs": "query StudentsOne($id: String!) {\n  students(where: {student_id: {_eq: $id}}) {\n    enrollment_status\n    student_external_id\n    student_note\n    ...StudentFrg\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n    last_login_date\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CountStudentWithFilterForTest"
+      ],
+      "lhs": "query CountStudentWithFilter($name: String, $email: String, $grades: [smallint!], $student_ids: [String!], $enrollment_status: String, $last_login_date: Boolean) {\n  users_aggregate(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PartnerFormConfigsOne"
+      ],
+      "lhs": "query PartnerFormConfigsOne($feature_name: String, $school_id: Int) {\n  partner_form_configs(\n    where: {_and: [{feature_name: {_eq: $feature_name}, partner_id: {_eq: $school_id}}]}\n    order_by: {created_at: desc}\n    limit: 1\n  ) {\n    form_config_id\n    form_config_data\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonByLessonIdForLessonReport"
+      ],
+      "lhs": "query LessonByLessonIdForLessonReport($lesson_id: String!) {\n  lessons_by_pk(lesson_id: $lesson_id) {\n    lesson_id\n    lesson_type\n    start_time\n    end_time\n    teaching_model\n    lessons_teachers {\n      teacher {\n        users {\n          user_id\n          name\n          email\n        }\n      }\n    }\n    lesson_members {\n      attendance_remark\n      attendance_status\n      user {\n        user_id\n        name\n        email\n      }\n      course {\n        course_id\n        name\n        subject\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonReportByLessonId"
+      ],
+      "lhs": "query LessonReportByLessonId($lesson_id: String!) {\n  lesson_reports(where: {lesson_id: {_eq: $lesson_id}}) {\n    lesson_id\n    lesson_report_id\n    report_submitting_status\n    partner_form_config {\n      form_config_id\n      feature_name\n      form_config_data\n    }\n    lesson_report_details {\n      lesson_report_detail_id\n      student {\n        student_id\n      }\n      partner_dynamic_form_field_values {\n        dynamic_form_field_value_id\n        value_type\n        int_value\n        int_set_value\n        int_array_value\n        string_value\n        string_set_value\n        string_array_value\n        bool_value\n        field_render_guide\n        field_id\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonGroupsListByIds"
+      ],
+      "lhs": "query LessonGroupsListByIds($lesson_group_ids: [String!]!, $course_id: String, $limit: Int = 10, $offset: Int = 0) {\n  lesson_groups(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {lesson_group_id: {_in: $lesson_group_ids}, course_id: {_eq: $course_id}}\n  ) {\n    ...LessonGroupAttrs\n  }\n}\n\nfragment LessonGroupAttrs on lesson_groups {\n  media_ids\n  lesson_group_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonReportDetailByLessonReportId"
+      ],
+      "lhs": "query LessonReportDetailByLessonReportId($lesson_report_id: String!) {\n  lesson_report_details(where: {lesson_report_id: {_eq: $lesson_report_id}}) {\n    lesson_report_id\n    course {\n      course_id\n    }\n    student {\n      student_id\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationsGetStatusByID"
+      ],
+      "lhs": "query InfoNotificationsGetStatusByID($notification_id: String!) {\n  info_notifications(where: {notification_id: {_eq: $notification_id}}) {\n    status\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "InfoNotificationCountsByStatusV2"
+      ],
+      "lhs": "query InfoNotificationCountsByStatusV2 {\n  draft: info_notifications_aggregate(\n    where: {status: {_eq: \"NOTIFICATION_STATUS_DRAFT\"}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n  sent: info_notifications_aggregate(\n    where: {status: {_eq: \"NOTIFICATION_STATUS_SENT\"}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n  schedule: info_notifications_aggregate(\n    where: {status: {_eq: \"NOTIFICATION_STATUS_SCHEDULED\"}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PreviousLessonReportByCourseIdAndStudentIdAndId"
+      ],
+      "lhs": "query PreviousLessonReportByCourseIdAndStudentIdAndId($user_id: String!, $report_course_id: String!, $report_id: String) {\n  get_previous_report_of_student(\n    args: {report_course_id: $report_course_id, user_id: $user_id, report_id: $report_id}\n  ) {\n    form_config_id\n    lesson_report_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PartnerFormConfigById"
+      ],
+      "lhs": "query PartnerFormConfigById($form_config_id: String!) {\n  partner_form_configs(where: {form_config_id: {_eq: $form_config_id}}) {\n    form_config_data\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PartnerDynamicFormFieldValuesByLessonReportDetailsIdAndStudentId"
+      ],
+      "lhs": "query PartnerDynamicFormFieldValuesByLessonReportDetailsIdAndStudentId($user_id: String!, $report_id: String!) {\n  get_partner_dynamic_form_field_values_by_student(\n    args: {report_id: $report_id, user_id: $user_id}\n  ) {\n    value_type\n    string_value\n    string_set_value\n    string_array_value\n    int_set_value\n    int_array_value\n    field_id\n    bool_value\n    int_value\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CountSchoolAdminsWithFilter"
+      ],
+      "lhs": "query CountSchoolAdminsWithFilter($school_id: Int!, $filterValue: String) {\n  users_aggregate(\n    where: {_and: [{school_admin: {school_id: {_eq: $school_id}}}, {_or: [{email: {_ilike: $filterValue}}, {name: {_ilike: $filterValue}}]}]}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "GetSchoolAdminsBySchoolId"
+      ],
+      "lhs": "query GetSchoolAdminsBySchoolId($limit: Int = 10, $offset: Int = 0, $school_id: Int!, $filterValue: String) {\n  users(\n    where: {_and: [{school_admin: {school_id: {_eq: $school_id}}}, {_or: [{email: {_ilike: $filterValue}}, {name: {_ilike: $filterValue}}]}]}\n    offset: $offset\n    order_by: {created_at: desc, user_id: desc}\n    limit: $limit\n  ) {\n    user_id\n    name\n    email\n    phone_number\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonMemberByUserIdAndCourseIdAndLessonId"
+      ],
+      "lhs": "query LessonMemberByUserIdAndCourseIdAndLessonId($user_id: String!, $course_id: String!, $lesson_id: String) {\n  lesson_members(\n    where: {user_id: {_eq: $user_id}, course_id: {_eq: $course_id}, lesson_id: {_eq: $lesson_id}}\n  ) {\n    attendance_remark\n    attendance_status\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonReportByCourseIdAndStudentIdAndReportId"
+      ],
+      "lhs": "query LessonReportByCourseIdAndStudentIdAndReportId($user_id: String!, $report_course_id: String!, $report_id: String) {\n  get_previous_report_of_student(\n    args: {report_course_id: $report_course_id, user_id: $user_id, report_id: $report_id}\n  ) {\n    form_config_id\n    lesson_report_id\n    lesson_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonMemberByUserIdAndCourseIdAndLessonIdV2"
+      ],
+      "lhs": "query LessonMemberByUserIdAndCourseIdAndLessonIdV2($user_id: String!, $course_id: String!, $lesson_id: String!) {\n  lesson_members(\n    where: {user_id: {_eq: $user_id}, course_id: {_eq: $course_id}, lesson_id: {_eq: $lesson_id}}\n  ) {\n    attendance_remark\n    attendance_status\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PartnerFormConfigByIdV2"
+      ],
+      "lhs": "query PartnerFormConfigByIdV2($form_config_id: String!) {\n  partner_form_configs_by_pk(form_config_id: $form_config_id) {\n    form_config_data\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LocationListByName"
+      ],
+      "lhs": "query LocationListByName($limit: Int = 10, $offset: Int = 0, $name: String!) {\n  locations(\n    order_by: {created_at: desc}\n    limit: $limit\n    offset: $offset\n    where: {name: {_ilike: $name}}\n  ) {\n    name\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LocationListByNameV2"
+      ],
+      "lhs": "query LocationListByNameV2($limit: Int = 10, $offset: Int = 0, $name: String) {\n  locations(\n    order_by: {created_at: desc}\n    limit: $limit\n    offset: $offset\n    where: {name: {_ilike: $name}}\n  ) {\n    name\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LocationListByIds"
+      ],
+      "lhs": "query LocationListByIds($location_ids: [String!] = []) {\n  locations(where: {location_id: {_in: $location_ids}}) {\n    name\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonByLessonIdForLessonReportV2"
+      ],
+      "lhs": "query LessonByLessonIdForLessonReportV2($lesson_id: String!) {\n  lessons_by_pk(lesson_id: $lesson_id) {\n    lesson_id\n    center_id\n    lesson_group_id\n    teaching_medium\n    teaching_method\n    lesson_type\n    teaching_model\n    scheduling_status\n    start_time\n    end_time\n    lessons_teachers {\n      teacher {\n        users {\n          user_id\n          name\n          email\n        }\n      }\n    }\n    lesson_members {\n      attendance_remark\n      attendance_status\n      course {\n        course_id\n        name\n        subject\n      }\n      user {\n        user_id\n        name\n        email\n        student {\n          current_grade\n        }\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LocationByLocationId"
+      ],
+      "lhs": "query LocationByLocationId($location_id: String!) {\n  locations(where: {location_id: {_eq: $location_id}}) {\n    location_id\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LessonByLessonIdForLessonManagement"
+      ],
+      "lhs": "query LessonByLessonIdForLessonManagement($lesson_id: String!) {\n  lessons(where: {lesson_id: {_eq: $lesson_id}}) {\n    lesson_id\n    center_id\n    lesson_group_id\n    teaching_medium\n    teaching_method\n    lesson_type\n    scheduling_status\n    start_time\n    end_time\n    lessons_teachers {\n      teacher {\n        users {\n          user_id\n          name\n          email\n        }\n      }\n    }\n    lesson_members {\n      attendance_remark\n      attendance_status\n      course {\n        course_id\n        name\n        subject\n      }\n      user {\n        user_id\n        name\n        email\n        student {\n          current_grade\n        }\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "OrganizationsManyReference"
+      ],
+      "lhs": "query OrganizationsManyReference($name: String, $limit: Int = 10, $offset: Int = 0) {\n  organizations(limit: $limit, offset: $offset, where: {name: {_ilike: $name}}) {\n    ...OrganizationsAttrs\n  }\n}\n\nfragment OrganizationsAttrs on organizations {\n  tenant_id\n  name\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentQRCodeByStudentIds"
+      ],
+      "lhs": "query StudentQRCodeByStudentIds($student_ids: [String!] = []) {\n  student_qr(where: {student_id: {_in: $student_ids}}) {\n    qr_url\n    qr_id\n    student_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PreviousLessonReportByCourseIdAndStudentIdAndIdAndLessonId"
+      ],
+      "lhs": "query PreviousLessonReportByCourseIdAndStudentIdAndIdAndLessonId($user_id: String!, $report_course_id: String!, $report_id: String, $report_lesson_id: String) {\n  get_previous_report_of_student_v2(\n    args: {report_course_id: $report_course_id, user_id: $user_id, report_id: $report_id, report_lesson_id: $report_lesson_id}\n  ) {\n    form_config_id\n    lesson_report_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PreviousLessonReportByCourseIdAndStudentIdAndReportIdAndLessonId"
+      ],
+      "lhs": "query PreviousLessonReportByCourseIdAndStudentIdAndReportIdAndLessonId($user_id: String!, $report_course_id: String!, $report_id: String, $report_lesson_id: String) {\n  get_previous_report_of_student_v2(\n    args: {report_course_id: $report_course_id, user_id: $user_id, report_id: $report_id, report_lesson_id: $report_lesson_id}\n  ) {\n    form_config_id\n    lesson_report_id\n    lesson_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsManyReferenceByNameAndEmail"
+      ],
+      "lhs": "query StudentsManyReferenceByNameAndEmail($keyword: String, $limit: Int = 30, $offset: Int = 0) {\n  users(\n    where: {user_group: {_eq: \"USER_GROUP_STUDENT\"}, _or: [{email: {_ilike: $keyword}}, {name: {_ilike: $keyword}}]}\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n  ) {\n    ...StudentUserAttrs\n  }\n}\n\nfragment StudentUserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "PreviousLessonReportByCourseIdAndStudentIdAndReportIdAndLessonIdV2"
+      ],
+      "lhs": "query PreviousLessonReportByCourseIdAndStudentIdAndReportIdAndLessonIdV2($report_user_id: String!, $report_course_id: String!, $report_id: String, $report_lesson_id: String) {\n  get_previous_report_of_student_v3(\n    args: {report_course_id: $report_course_id, report_user_id: $report_user_id, report_id: $report_id, report_lesson_id: $report_lesson_id}\n  ) {\n    form_config_id\n    lesson_report_id\n    lesson_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentsOneV3"
+      ],
+      "lhs": "query StudentsOneV3($id: String!) {\n  students(where: {student_id: {_eq: $id}}) {\n    enrollment_status\n    student_external_id\n    student_note\n    ...StudentFrg\n  }\n}\n\nfragment StudentFrg on students {\n  student_id\n  current_grade\n  user {\n    ...UserAttrs\n    last_login_date\n    gender\n    birthday\n  }\n}\n\nfragment UserAttrs on users {\n  user_id\n  name\n  email\n  avatar\n  phone_number\n  user_group\n  country\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LocationsListByNameLowestLevel"
+      ],
+      "lhs": "query LocationsListByNameLowestLevel($limit: Int = 10, $offset: Int = 0, $name: String = \"\") {\n  get_locations_lowest_level(\n    args: {location_limit: $limit, location_offset: $offset, location_search_name: $name}\n  ) {\n    name\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentEntryExitRecordsByStudentId"
+      ],
+      "lhs": "query StudentEntryExitRecordsByStudentId($student_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  student_entryexit_records(\n    where: {student_id: {_eq: $student_id}}\n    limit: $limit\n    offset: $offset\n  ) {\n    entry_at\n    entryexit_id\n    exit_at\n    student_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "UserAccessPathWithFilter"
+      ],
+      "lhs": "query User_UserAccessPathWithFilter($user_id: String!) {\n  user_access_paths(where: {user_id: {_eq: $user_id}}) {\n    location {\n      location_id\n      name\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StudentsListByFiltersWithoutGradeAndAggregateV2"
+      ],
+      "lhs": "query User_StudentsListByFiltersWithoutGradeAndAggregateV2($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String, $last_login_date: Boolean, $location_ids: [String!]) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}, user_access_paths: {location_id: {_in: $location_ids}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n  last_login_date\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CountStudentWithFilterV2"
+      ],
+      "lhs": "query User_CountStudentWithFilterV2($name: String, $email: String, $grades: [smallint!], $student_ids: [String!], $enrollment_status: String, $last_login_date: Boolean, $location_ids: [String!]) {\n  users_aggregate(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}, user_access_paths: {location_id: {_in: $location_ids}}}\n  ) {\n    aggregate {\n      count(columns: user_id)\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserAccessPathWithFilterV2"
+      ],
+      "lhs": "query User_UserAccessPathWithFilterV2($user_id: String!) {\n  user_access_paths(where: {user_id: {_eq: $user_id}}) {\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "EntryExit_StudentEntryExitRecordsWithAggregateByStudentId"
+      ],
+      "lhs": "query EntryExit_StudentEntryExitRecordsWithAggregateByStudentId($student_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  student_entryexit_records(\n    where: {student_id: {_eq: $student_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {entry_at: desc}\n  ) {\n    entry_at\n    entryexit_id\n    exit_at\n    student_id\n  }\n  student_entryexit_records_aggregate(where: {student_id: {_eq: $student_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Lesson_LocationIdsByCourseId"
+      ],
+      "lhs": "query Lesson_LocationIdsByCourseId($course_id: String!) {\n  course_access_paths(where: {course_id: {_eq: $course_id}}) {\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Lesson_LocationIdsByCourseIdV2"
+      ],
+      "lhs": "query Lesson_LocationIdsByCourseIdV2($course: String = \"\") {\n  get_locations_active_by_course_id(args: {course: $course}) {\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "EntryExit_StudentEntryExitRecordsByStudentId"
+      ],
+      "lhs": "query EntryExit_StudentEntryExitRecordsByStudentId($student_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  student_entryexit_records(\n    where: {student_id: {_eq: $student_id}, deleted_at: {_is_null: true}}\n    limit: $limit\n    offset: $offset\n    order_by: {entry_at: desc}\n  ) {\n    entry_at\n    entryexit_id\n    exit_at\n    student_id\n    deleted_at\n  }\n  student_entryexit_records_aggregate(\n    where: {student_id: {_eq: $student_id}, deleted_at: {_is_null: true}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserAccessPathByUserIds"
+      ],
+      "lhs": "query User_UserAccessPathByUserIds($user_ids: [String!] = []) {\n  user_access_paths(where: {user_id: {_in: $user_ids}}) {\n    user_id\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Users_OrganizationsManyReference"
+      ],
+      "lhs": "query Users_OrganizationsManyReference($domain_name: String) {\n  organizations(where: {domain_name: {_eq: $domain_name}}) {\n    tenant_id\n    domain_name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Users_OrganizationsManyReferenceV2"
+      ],
+      "lhs": "query Users_OrganizationsManyReferenceV2($domain_name: String) {\n  organizations(where: {domain_name: {_eq: $domain_name}}) {\n    tenant_id\n    domain_name\n    logo_url\n    organization_id\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CoursesManyWithLocation"
+      ],
+      "lhs": "query User_CoursesManyWithLocation($course_id: [String!] = []) {\n  courses(where: {course_id: {_in: $course_id}}) {\n    ...User_CourseWithLocationAttrs\n  }\n}\n\nfragment User_CourseWithLocationAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n  course_access_paths {\n    location {\n      name\n      location_type\n      location_id\n      parent_location_id\n      access_path\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CoursesManyReferenceWithLocation"
+      ],
+      "lhs": "query User_CoursesManyReferenceWithLocation($name: String, $location_ids: [String!], $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}, course_access_paths: {location_id: {_in: $location_ids}}}\n  ) {\n    ...User_CourseWithLocationAttrs\n  }\n  courses_aggregate(\n    where: {name: {_ilike: $name}, course_access_paths: {location_id: {_in: $location_ids}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment User_CourseWithLocationAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n  course_access_paths {\n    location {\n      name\n      location_type\n      location_id\n      parent_location_id\n      access_path\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CourseLocationsByIds"
+      ],
+      "lhs": "query User_CourseLocationsByIds($course_ids: [String!] = []) {\n  course_access_paths(where: {course_id: {_in: $course_ids}}) {\n    course_id\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_LocationListByIds"
+      ],
+      "lhs": "query User_LocationListByIds($location_ids: [String!] = []) {\n  locations(where: {location_id: {_in: $location_ids}}) {\n    location_id\n    name\n    access_path\n    location_type\n    parent_location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_OneCourseByCourseIdAndLocationId"
+      ],
+      "lhs": "query User_OneCourseByCourseIdAndLocationId($course_id: String!, $location_id: String!) {\n  course_access_paths(\n    where: {course_id: {_eq: $course_id}, location_id: {_eq: $location_id}}\n  ) {\n    location_id\n    course_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_OneUserByUserIdAndLocationId"
+      ],
+      "lhs": "query User_OneUserByUserIdAndLocationId($location_id: String!, $user_id: String!) {\n  user_access_paths(\n    where: {location_id: {_eq: $location_id}, user_id: {_eq: $user_id}}\n  ) {\n    user_id\n    location_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserAccessPathWithFilterV3"
+      ],
+      "lhs": "query User_UserAccessPathWithFilterV3($user_id: String!) {\n  user_access_paths(where: {user_id: {_eq: $user_id}}) {\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n      is_archived\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserAccessPathByUserIdsV2"
+      ],
+      "lhs": "query User_UserAccessPathByUserIdsV2($user_ids: [String!] = []) {\n  user_access_paths(where: {user_id: {_in: $user_ids}}) {\n    user_id\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n      is_archived\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_LocationTypesByParentName"
+      ],
+      "lhs": "query Payment_LocationTypesByParentName($parentName: String) {\n  location_types(where: {parent_name: {_eq: $parentName}}) {\n    location_type_id\n    display_name\n    name\n    parent_name\n    parent_location_type_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Payment_Eibanam_GetLowestLocationTypes"
+      ],
+      "lhs": "query Payment_Eibanam_GetLowestLocationTypes {\n  get_lowest_location_types {\n    location_type_id\n    display_name\n    name\n    parent_name\n    parent_location_type_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StaffList"
+      ],
+      "lhs": "query User_StaffList($limit: Int = 10, $offset: Int = 0, $user_name: String, $user_email: String, $school_id: Int! = 0) {\n  find_teacher_by_school_id(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    name\n    email\n    user_id\n  }\n  find_teacher_by_school_id_aggregate(\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StaffOne"
+      ],
+      "lhs": "query User_StaffOne($teacher_id: String!) {\n  teachers(where: {teacher_id: {_eq: $teacher_id}}) {\n    teacher_by_school_ids {\n      school_id\n    }\n    ...User_StaffAttrs\n  }\n}\n\nfragment User_StaffAttrs on teachers {\n  users {\n    name\n    email\n    avatar\n    phone_number\n    user_group\n    country\n  }\n  teacher_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserGroupList"
+      ],
+      "lhs": "query User_UserGroupList($limit: Int = 10, $offset: Int = 0) {\n  user_group(limit: $limit, offset: $offset, order_by: {created_at: desc}) {\n    user_group_id\n    user_group_name\n  }\n  user_group_aggregate {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_Eibanam_InfoNotificationsGetStatusAndCountReadByNotificationId"
+      ],
+      "lhs": "query Communication_Eibanam_InfoNotificationsGetStatusAndCountReadByNotificationId($notification_id: String!) {\n  info_notifications(where: {notification_id: {_eq: $notification_id}}) {\n    status\n    all_receiver_aggregate: users_info_notifications_aggregate {\n      aggregate {\n        count\n      }\n    }\n    read_aggregate: users_info_notifications_aggregate(\n      where: {status: {_eq: \"USER_NOTIFICATION_STATUS_READ\"}}\n    ) {\n      aggregate {\n        count\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CoursesManyReferenceWithLocationV2"
+      ],
+      "lhs": "query User_CoursesManyReferenceWithLocationV2($name: String, $location_ids: [String!], $limit: Int = 10, $offset: Int = 0) {\n  courses(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, display_order: asc, name: asc, course_id: asc}\n    where: {name: {_ilike: $name}, course_access_paths: {location_id: {_in: $location_ids}}}\n  ) {\n    ...CourseAttrs\n  }\n}\n\nfragment CourseAttrs on courses {\n  course_id\n  name\n  icon\n  grade\n  subject\n  country\n  school_id\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_CourseLocationsByCourseId"
+      ],
+      "lhs": "query User_CourseLocationsByCourseId($course_id: String!) {\n  course_access_paths(where: {course_id: {_eq: $course_id}}) {\n    location {\n      location_id\n      name\n      access_path\n      location_type\n      parent_location_id\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_GetListInfoNotifications"
+      ],
+      "lhs": "query Communication_GetListInfoNotifications($status: String, $limit: Int, $offset: Int) {\n  info_notifications(\n    limit: $limit\n    offset: $offset\n    order_by: {updated_at: desc}\n    where: {status: {_eq: $status}}\n  ) {\n    ...InfoNotificationsAttrs\n  }\n}\n\nfragment InfoNotificationsAttrs on info_notifications {\n  notification_id\n  notification_msg_id\n  sent_at\n  receiver_ids\n  status\n  type\n  target_groups\n  updated_at\n  created_at\n  editor_id\n  event\n  scheduled_at\n  is_important\n  questionnaire_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_GetInfoNotificationByNotificationId"
+      ],
+      "lhs": "query Communication_GetInfoNotificationByNotificationId($notification_id: String!) {\n  info_notifications(where: {notification_id: {_eq: $notification_id}}) {\n    ...InfoNotificationsAttrs\n  }\n}\n\nfragment InfoNotificationsAttrs on info_notifications {\n  notification_id\n  notification_msg_id\n  sent_at\n  receiver_ids\n  status\n  type\n  target_groups\n  updated_at\n  created_at\n  editor_id\n  event\n  scheduled_at\n  is_important\n  questionnaire_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_GetQuestionnaireQuestionsByQuestionnaireId"
+      ],
+      "lhs": "query Communication_GetQuestionnaireQuestionsByQuestionnaireId($questionnaire_id: String) {\n  questionnaire_questions(where: {questionnaire_id: {_eq: $questionnaire_id}}) {\n    ...QuestionnaireQuestionsAttrs\n  }\n}\n\nfragment QuestionnaireQuestionsAttrs on questionnaire_questions {\n  questionnaire_question_id\n  questionnaire_id\n  order_index\n  type\n  title\n  choices\n  is_required\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_GetQuestionnaireByQuestionnaireId"
+      ],
+      "lhs": "query Communication_GetQuestionnaireByQuestionnaireId($questionnaire_id: String) {\n  questionnaires(where: {questionnaire_id: {_eq: $questionnaire_id}}) {\n    ...QuestionnaireAttrs\n  }\n}\n\nfragment QuestionnaireAttrs on questionnaires {\n  questionnaire_id\n  resubmit_allowed\n  expiration_date\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_UserGroupOne"
+      ],
+      "lhs": "query User_UserGroupOne($user_group_id: String!) {\n  user_group(where: {user_group_id: {_eq: $user_group_id}}) {\n    user_group_id\n    user_group_name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_GrantedRoleList"
+      ],
+      "lhs": "query User_GrantedRoleList($user_group_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  granted_role(\n    where: {user_group_id: {_eq: $user_group_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n  ) {\n    granted_role_id\n    role {\n      role_id\n      role_name\n    }\n  }\n  granted_role_aggregate(where: {user_group_id: {_eq: $user_group_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_GrantedRoleAccessPathByGrantedRoleIds"
+      ],
+      "lhs": "query User_GrantedRoleAccessPathByGrantedRoleIds($granted_role_ids: [String!] = []) {\n  granted_role_access_path(where: {granted_role_id: {_in: $granted_role_ids}}) {\n    granted_role_id\n    location {\n      location_id\n      name\n      parent_location_id\n      access_path\n      location_type\n      is_archived\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_Eibanam_InfoNotificationMsgsGetNotificationIdByTitle"
+      ],
+      "lhs": "query Communication_Eibanam_InfoNotificationMsgsGetNotificationIdByTitle($notificationTitle: String!) {\n  info_notification_msgs(where: {title: {_eq: $notificationTitle}}) {\n    info_notifications {\n      notification_id\n    }\n    notification_msg_id\n    title\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Lesson_ClassAssociationByClassId"
+      ],
+      "lhs": "query Lesson_ClassAssociationByClassId($class_id: String!) {\n  class_member_aggregate(where: {class_id: {_eq: $class_id}}, limit: 1) {\n    aggregate {\n      count\n    }\n  }\n  lessons_aggregate(where: {class_id: {_eq: $class_id}}, limit: 1) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StudentsListByFiltersWithoutGradeAndAggregateV3"
+      ],
+      "lhs": "query User_StudentsListByFiltersWithoutGradeAndAggregateV3($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String, $last_login_date: Boolean) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n  last_login_date\n  resource_path\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StudentsListByFiltersWithoutGradeAndAggregateV4"
+      ],
+      "lhs": "query User_StudentsListByFiltersWithoutGradeAndAggregateV4($name: String, $email: String, $limit: Int = 10, $offset: Int = 0, $order_by: users_order_by! = {created_at: desc}, $student_ids: [String!], $grades: [smallint!], $enrollment_status: String, $last_login_date: Boolean, $location_ids: [String!]) {\n  users(\n    where: {name: {_ilike: $name}, email: {_ilike: $email}, user_id: {_in: $student_ids}, user_group: {_eq: \"USER_GROUP_STUDENT\"}, last_login_date: {_is_null: $last_login_date}, student: {current_grade: {_in: $grades}, enrollment_status: {_eq: $enrollment_status}}, user_access_paths: {location_id: {_in: $location_ids}}}\n    limit: $limit\n    offset: $offset\n    order_by: [$order_by]\n  ) {\n    ...StudentWithoutGradeFrg\n  }\n}\n\nfragment StudentWithoutGradeFrg on users {\n  user_id\n  name\n  email\n  phone_number\n  country\n  last_login_date\n  resource_path\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_StaffListV2"
+      ],
+      "lhs": "query User_StaffListV2($limit: Int = 10, $offset: Int = 0, $user_name: String, $user_email: String, $school_id: Int! = 0) {\n  find_teacher_by_school_id(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    name\n    email\n    user_id\n    resource_path\n  }\n  find_teacher_by_school_id_aggregate(\n    args: {school_id: $school_id}\n    where: {name: {_ilike: $user_name}, email: {_ilike: $user_email}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "User_RoleList"
+      ],
+      "lhs": "query User_RoleList {\n  role {\n    role_id\n    role_name\n  }\n  role_aggregate {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "Communication_UsersInfoNotificationsList"
+      ],
+      "lhs": "query Communication_UsersInfoNotificationsList($notification_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  users_info_notifications(\n    where: {notification_id: {_eq: $notification_id}}\n    limit: $limit\n    offset: $offset\n    order_by: {student_id: asc, user_group: desc}\n  ) {\n    ...UsersInfoNotificationsWithQnStatusAttrs\n    student_id\n    parent_id\n  }\n  users_info_notifications_aggregate(\n    where: {notification_id: {_eq: $notification_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment UsersInfoNotificationsWithQnStatusAttrs on users_info_notifications {\n  user_id\n  user_notification_id\n  notification_id\n  current_grade\n  course_ids\n  status\n  user_group\n  qn_status\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormPropsProvider /> should have correct context value 1`] = `
+<div>
+  <div>
+    {"readOnly":true}
+  </div>
+</div>
+`;

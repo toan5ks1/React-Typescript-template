@@ -1,0 +1,50 @@
+@startuml
+start
+:Go to Individual Study Plan;
+repeat
+:call query **CourseStudentsListV2**($course_id);
+note right
+  order_by: {created_at:desc}
+  ====
+  * Return 
+    -courseStudentIds: string[]
+end note
+  fork
+    :call query **StudentsMany**(courseStudentIds);
+    note left
+    * Return 
+      -studentList: StudentsManyQuery["users"]
+    end note
+  fork again
+    :call query **StudentStudyPlansMany**(courseStudentIds, $course_id);
+  note right
+    order_by: {created_at:desc}
+    ====
+    * Return 
+      -studyPlanList: StudentStudyPlansManyQuery["student_study_plans"]
+  end note
+  end fork
+:use hook **groupStudyPlanByStudent**(studentList, studyPlanList);
+note right
+    * Map study plans to each student
+    * Return 
+      -studyPlanListByStudent: [{
+         studentId: string;
+         studentName: string;
+         studyPlanList: StudentStudyPlanInfo[];
+       }]
+end note
+if (**studyPlanListByStudent.length** !== 0) then (true)
+    if (**studyPlanListByStudent[n].studyPlanList.length** !== 0) then (true)
+       #palegreen: Return student's study plan table;
+    else (false)
+       #palegreen: Return student without study plan table;
+    endif
+else (false)
+    #palegreen: Return empty table;
+    stop;
+endif
+repeat while (Click on next page in the table?) is (yes)
+->no;
+stop
+@enduml

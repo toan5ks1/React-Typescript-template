@@ -1,0 +1,3290 @@
+schema {
+  query: query_root
+  mutation: mutation_root
+  subscription: subscription_root
+}
+
+"""
+expression to compare columns of type Boolean. All fields are combined with logical 'AND'.
+"""
+input Boolean_comparison_exp {
+  _eq: Boolean
+  _gt: Boolean
+  _gte: Boolean
+  _in: [Boolean!]
+  _is_null: Boolean
+  _lt: Boolean
+  _lte: Boolean
+  _neq: Boolean
+  _nin: [Boolean!]
+}
+
+"""
+expression to compare columns of type Int. All fields are combined with logical 'AND'.
+"""
+input Int_comparison_exp {
+  _eq: Int
+  _gt: Int
+  _gte: Int
+  _in: [Int!]
+  _is_null: Boolean
+  _lt: Int
+  _lte: Int
+  _neq: Int
+  _nin: [Int!]
+}
+
+"""
+expression to compare columns of type String. All fields are combined with logical 'AND'.
+"""
+input String_comparison_exp {
+  _eq: String
+  _gt: String
+  _gte: String
+  _ilike: String
+  _in: [String!]
+  _is_null: Boolean
+  _like: String
+  _lt: String
+  _lte: String
+  _neq: String
+  _nilike: String
+  _nin: [String!]
+  _nlike: String
+  _nsimilar: String
+  _similar: String
+}
+
+scalar _text
+
+"""
+expression to compare columns of type _text. All fields are combined with logical 'AND'.
+"""
+input _text_comparison_exp {
+  _eq: _text
+  _gt: _text
+  _gte: _text
+  _in: [_text!]
+  _is_null: Boolean
+  _lt: _text
+  _lte: _text
+  _neq: _text
+  _nin: [_text!]
+}
+
+scalar jsonb
+
+"""
+expression to compare columns of type jsonb. All fields are combined with logical 'AND'.
+"""
+input jsonb_comparison_exp {
+  """is the column contained in the given json value"""
+  _contained_in: jsonb
+
+  """does the column contain the given json value at the top level"""
+  _contains: jsonb
+  _eq: jsonb
+  _gt: jsonb
+  _gte: jsonb
+
+  """does the string exist as a top-level key in the column"""
+  _has_key: String
+
+  """do all of these strings exist as top-level keys in the column"""
+  _has_keys_all: [String!]
+
+  """do any of these strings exist as top-level keys in the column"""
+  _has_keys_any: [String!]
+  _in: [jsonb!]
+  _is_null: Boolean
+  _lt: jsonb
+  _lte: jsonb
+  _neq: jsonb
+  _nin: [jsonb!]
+}
+
+"""
+columns and relationships of "lessons"
+"""
+type lessons {
+  center_id: String
+  class_id: String
+  control_settings(
+    """JSON select path"""
+    path: String
+  ): jsonb
+  course_id: String
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  end_at: timestamptz
+  end_time: timestamptz
+  is_locked: Boolean!
+  learner_ids: _text!
+  lesson_group_id: String
+  lesson_id: String!
+  lesson_type: String
+  name: String
+  resource_path: String
+  room_id: String
+  room_state(
+    """JSON select path"""
+    path: String
+  ): jsonb
+  scheduler_id: String
+  scheduling_status: String
+  start_time: timestamptz
+  status: String
+  stream_learner_counter: Int!
+  teacher_id: String
+  teaching_medium: String
+  teaching_method: String
+  teaching_model: String
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "lessons"
+"""
+type lessons_aggregate {
+  aggregate: lessons_aggregate_fields
+  nodes: [lessons!]!
+}
+
+"""
+aggregate fields of "lessons"
+"""
+type lessons_aggregate_fields {
+  avg: lessons_avg_fields
+  count(columns: [lessons_select_column!], distinct: Boolean): Int
+  max: lessons_max_fields
+  min: lessons_min_fields
+  stddev: lessons_stddev_fields
+  stddev_pop: lessons_stddev_pop_fields
+  stddev_samp: lessons_stddev_samp_fields
+  sum: lessons_sum_fields
+  var_pop: lessons_var_pop_fields
+  var_samp: lessons_var_samp_fields
+  variance: lessons_variance_fields
+}
+
+"""
+order by aggregate values of table "lessons"
+"""
+input lessons_aggregate_order_by {
+  avg: lessons_avg_order_by
+  count: order_by
+  max: lessons_max_order_by
+  min: lessons_min_order_by
+  stddev: lessons_stddev_order_by
+  stddev_pop: lessons_stddev_pop_order_by
+  stddev_samp: lessons_stddev_samp_order_by
+  sum: lessons_sum_order_by
+  var_pop: lessons_var_pop_order_by
+  var_samp: lessons_var_samp_order_by
+  variance: lessons_variance_order_by
+}
+
+"""append existing jsonb value of filtered columns with new jsonb value"""
+input lessons_append_input {
+  control_settings: jsonb
+  room_state: jsonb
+}
+
+"""
+input type for inserting array relation for remote table "lessons"
+"""
+input lessons_arr_rel_insert_input {
+  data: [lessons_insert_input!]!
+  on_conflict: lessons_on_conflict
+}
+
+"""aggregate avg on columns"""
+type lessons_avg_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by avg() on columns of table "lessons"
+"""
+input lessons_avg_order_by {
+  stream_learner_counter: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "lessons". All fields are combined with a logical 'AND'.
+"""
+input lessons_bool_exp {
+  _and: [lessons_bool_exp]
+  _not: lessons_bool_exp
+  _or: [lessons_bool_exp]
+  center_id: String_comparison_exp
+  class_id: String_comparison_exp
+  control_settings: jsonb_comparison_exp
+  course_id: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  end_at: timestamptz_comparison_exp
+  end_time: timestamptz_comparison_exp
+  is_locked: Boolean_comparison_exp
+  learner_ids: _text_comparison_exp
+  lesson_group_id: String_comparison_exp
+  lesson_id: String_comparison_exp
+  lesson_type: String_comparison_exp
+  name: String_comparison_exp
+  resource_path: String_comparison_exp
+  room_id: String_comparison_exp
+  room_state: jsonb_comparison_exp
+  scheduler_id: String_comparison_exp
+  scheduling_status: String_comparison_exp
+  start_time: timestamptz_comparison_exp
+  status: String_comparison_exp
+  stream_learner_counter: Int_comparison_exp
+  teacher_id: String_comparison_exp
+  teaching_medium: String_comparison_exp
+  teaching_method: String_comparison_exp
+  teaching_model: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "lessons"
+"""
+enum lessons_constraint {
+  """unique or primary key constraint"""
+  lessons_pk
+}
+
+"""
+delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+"""
+input lessons_delete_at_path_input {
+  control_settings: [String]
+  room_state: [String]
+}
+
+"""
+delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+"""
+input lessons_delete_elem_input {
+  control_settings: Int
+  room_state: Int
+}
+
+"""
+delete key/value pair or string element. key/value pairs are matched based on their key value
+"""
+input lessons_delete_key_input {
+  control_settings: String
+  room_state: String
+}
+
+"""
+input type for incrementing integer column in table "lessons"
+"""
+input lessons_inc_input {
+  stream_learner_counter: Int
+}
+
+"""
+input type for inserting data into table "lessons"
+"""
+input lessons_insert_input {
+  center_id: String
+  class_id: String
+  control_settings: jsonb
+  course_id: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_at: timestamptz
+  end_time: timestamptz
+  is_locked: Boolean
+  learner_ids: _text
+  lesson_group_id: String
+  lesson_id: String
+  lesson_type: String
+  name: String
+  resource_path: String
+  room_id: String
+  room_state: jsonb
+  scheduler_id: String
+  scheduling_status: String
+  start_time: timestamptz
+  status: String
+  stream_learner_counter: Int
+  teacher_id: String
+  teaching_medium: String
+  teaching_method: String
+  teaching_model: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type lessons_max_fields {
+  center_id: String
+  class_id: String
+  course_id: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_at: timestamptz
+  end_time: timestamptz
+  lesson_group_id: String
+  lesson_id: String
+  lesson_type: String
+  name: String
+  resource_path: String
+  room_id: String
+  scheduler_id: String
+  scheduling_status: String
+  start_time: timestamptz
+  status: String
+  stream_learner_counter: Int
+  teacher_id: String
+  teaching_medium: String
+  teaching_method: String
+  teaching_model: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "lessons"
+"""
+input lessons_max_order_by {
+  center_id: order_by
+  class_id: order_by
+  course_id: order_by
+  created_at: order_by
+  deleted_at: order_by
+  end_at: order_by
+  end_time: order_by
+  lesson_group_id: order_by
+  lesson_id: order_by
+  lesson_type: order_by
+  name: order_by
+  resource_path: order_by
+  room_id: order_by
+  scheduler_id: order_by
+  scheduling_status: order_by
+  start_time: order_by
+  status: order_by
+  stream_learner_counter: order_by
+  teacher_id: order_by
+  teaching_medium: order_by
+  teaching_method: order_by
+  teaching_model: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type lessons_min_fields {
+  center_id: String
+  class_id: String
+  course_id: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_at: timestamptz
+  end_time: timestamptz
+  lesson_group_id: String
+  lesson_id: String
+  lesson_type: String
+  name: String
+  resource_path: String
+  room_id: String
+  scheduler_id: String
+  scheduling_status: String
+  start_time: timestamptz
+  status: String
+  stream_learner_counter: Int
+  teacher_id: String
+  teaching_medium: String
+  teaching_method: String
+  teaching_model: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "lessons"
+"""
+input lessons_min_order_by {
+  center_id: order_by
+  class_id: order_by
+  course_id: order_by
+  created_at: order_by
+  deleted_at: order_by
+  end_at: order_by
+  end_time: order_by
+  lesson_group_id: order_by
+  lesson_id: order_by
+  lesson_type: order_by
+  name: order_by
+  resource_path: order_by
+  room_id: order_by
+  scheduler_id: order_by
+  scheduling_status: order_by
+  start_time: order_by
+  status: order_by
+  stream_learner_counter: order_by
+  teacher_id: order_by
+  teaching_medium: order_by
+  teaching_method: order_by
+  teaching_model: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "lessons"
+"""
+type lessons_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [lessons!]!
+}
+
+"""
+input type for inserting object relation for remote table "lessons"
+"""
+input lessons_obj_rel_insert_input {
+  data: lessons_insert_input!
+  on_conflict: lessons_on_conflict
+}
+
+"""
+on conflict condition type for table "lessons"
+"""
+input lessons_on_conflict {
+  constraint: lessons_constraint!
+  update_columns: [lessons_update_column!]!
+  where: lessons_bool_exp
+}
+
+"""
+ordering options when selecting data from "lessons"
+"""
+input lessons_order_by {
+  center_id: order_by
+  class_id: order_by
+  control_settings: order_by
+  course_id: order_by
+  created_at: order_by
+  deleted_at: order_by
+  end_at: order_by
+  end_time: order_by
+  is_locked: order_by
+  learner_ids: order_by
+  lesson_group_id: order_by
+  lesson_id: order_by
+  lesson_type: order_by
+  name: order_by
+  resource_path: order_by
+  room_id: order_by
+  room_state: order_by
+  scheduler_id: order_by
+  scheduling_status: order_by
+  start_time: order_by
+  status: order_by
+  stream_learner_counter: order_by
+  teacher_id: order_by
+  teaching_medium: order_by
+  teaching_method: order_by
+  teaching_model: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "lessons"
+"""
+input lessons_pk_columns_input {
+  lesson_id: String!
+}
+
+"""prepend existing jsonb value of filtered columns with new jsonb value"""
+input lessons_prepend_input {
+  control_settings: jsonb
+  room_state: jsonb
+}
+
+"""
+select columns of table "lessons"
+"""
+enum lessons_select_column {
+  """column name"""
+  center_id
+
+  """column name"""
+  class_id
+
+  """column name"""
+  control_settings
+
+  """column name"""
+  course_id
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  end_at
+
+  """column name"""
+  end_time
+
+  """column name"""
+  is_locked
+
+  """column name"""
+  learner_ids
+
+  """column name"""
+  lesson_group_id
+
+  """column name"""
+  lesson_id
+
+  """column name"""
+  lesson_type
+
+  """column name"""
+  name
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  room_id
+
+  """column name"""
+  room_state
+
+  """column name"""
+  scheduler_id
+
+  """column name"""
+  scheduling_status
+
+  """column name"""
+  start_time
+
+  """column name"""
+  status
+
+  """column name"""
+  stream_learner_counter
+
+  """column name"""
+  teacher_id
+
+  """column name"""
+  teaching_medium
+
+  """column name"""
+  teaching_method
+
+  """column name"""
+  teaching_model
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "lessons"
+"""
+input lessons_set_input {
+  center_id: String
+  class_id: String
+  control_settings: jsonb
+  course_id: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_at: timestamptz
+  end_time: timestamptz
+  is_locked: Boolean
+  learner_ids: _text
+  lesson_group_id: String
+  lesson_id: String
+  lesson_type: String
+  name: String
+  resource_path: String
+  room_id: String
+  room_state: jsonb
+  scheduler_id: String
+  scheduling_status: String
+  start_time: timestamptz
+  status: String
+  stream_learner_counter: Int
+  teacher_id: String
+  teaching_medium: String
+  teaching_method: String
+  teaching_model: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type lessons_stddev_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by stddev() on columns of table "lessons"
+"""
+input lessons_stddev_order_by {
+  stream_learner_counter: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type lessons_stddev_pop_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by stddev_pop() on columns of table "lessons"
+"""
+input lessons_stddev_pop_order_by {
+  stream_learner_counter: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type lessons_stddev_samp_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by stddev_samp() on columns of table "lessons"
+"""
+input lessons_stddev_samp_order_by {
+  stream_learner_counter: order_by
+}
+
+"""aggregate sum on columns"""
+type lessons_sum_fields {
+  stream_learner_counter: Int
+}
+
+"""
+order by sum() on columns of table "lessons"
+"""
+input lessons_sum_order_by {
+  stream_learner_counter: order_by
+}
+
+"""
+update columns of table "lessons"
+"""
+enum lessons_update_column {
+  """column name"""
+  center_id
+
+  """column name"""
+  class_id
+
+  """column name"""
+  control_settings
+
+  """column name"""
+  course_id
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  end_at
+
+  """column name"""
+  end_time
+
+  """column name"""
+  is_locked
+
+  """column name"""
+  learner_ids
+
+  """column name"""
+  lesson_group_id
+
+  """column name"""
+  lesson_id
+
+  """column name"""
+  lesson_type
+
+  """column name"""
+  name
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  room_id
+
+  """column name"""
+  room_state
+
+  """column name"""
+  scheduler_id
+
+  """column name"""
+  scheduling_status
+
+  """column name"""
+  start_time
+
+  """column name"""
+  status
+
+  """column name"""
+  stream_learner_counter
+
+  """column name"""
+  teacher_id
+
+  """column name"""
+  teaching_medium
+
+  """column name"""
+  teaching_method
+
+  """column name"""
+  teaching_model
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type lessons_var_pop_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by var_pop() on columns of table "lessons"
+"""
+input lessons_var_pop_order_by {
+  stream_learner_counter: order_by
+}
+
+"""aggregate var_samp on columns"""
+type lessons_var_samp_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by var_samp() on columns of table "lessons"
+"""
+input lessons_var_samp_order_by {
+  stream_learner_counter: order_by
+}
+
+"""aggregate variance on columns"""
+type lessons_variance_fields {
+  stream_learner_counter: Float
+}
+
+"""
+order by variance() on columns of table "lessons"
+"""
+input lessons_variance_order_by {
+  stream_learner_counter: order_by
+}
+
+"""
+columns and relationships of "locations"
+"""
+type locations {
+  access_path: String
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  is_archived: Boolean!
+  location_id: String!
+  location_type: String
+  name: String!
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "locations"
+"""
+type locations_aggregate {
+  aggregate: locations_aggregate_fields
+  nodes: [locations!]!
+}
+
+"""
+aggregate fields of "locations"
+"""
+type locations_aggregate_fields {
+  count(columns: [locations_select_column!], distinct: Boolean): Int
+  max: locations_max_fields
+  min: locations_min_fields
+}
+
+"""
+order by aggregate values of table "locations"
+"""
+input locations_aggregate_order_by {
+  count: order_by
+  max: locations_max_order_by
+  min: locations_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "locations"
+"""
+input locations_arr_rel_insert_input {
+  data: [locations_insert_input!]!
+  on_conflict: locations_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "locations". All fields are combined with a logical 'AND'.
+"""
+input locations_bool_exp {
+  _and: [locations_bool_exp]
+  _not: locations_bool_exp
+  _or: [locations_bool_exp]
+  access_path: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  is_archived: Boolean_comparison_exp
+  location_id: String_comparison_exp
+  location_type: String_comparison_exp
+  name: String_comparison_exp
+  parent_location_id: String_comparison_exp
+  partner_internal_id: String_comparison_exp
+  partner_internal_parent_id: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "locations"
+"""
+enum locations_constraint {
+  """unique or primary key constraint"""
+  locations_pkey
+}
+
+"""
+input type for inserting data into table "locations"
+"""
+input locations_insert_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type locations_max_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "locations"
+"""
+input locations_max_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type locations_min_fields {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "locations"
+"""
+input locations_min_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "locations"
+"""
+type locations_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [locations!]!
+}
+
+"""
+input type for inserting object relation for remote table "locations"
+"""
+input locations_obj_rel_insert_input {
+  data: locations_insert_input!
+  on_conflict: locations_on_conflict
+}
+
+"""
+on conflict condition type for table "locations"
+"""
+input locations_on_conflict {
+  constraint: locations_constraint!
+  update_columns: [locations_update_column!]!
+  where: locations_bool_exp
+}
+
+"""
+ordering options when selecting data from "locations"
+"""
+input locations_order_by {
+  access_path: order_by
+  created_at: order_by
+  deleted_at: order_by
+  is_archived: order_by
+  location_id: order_by
+  location_type: order_by
+  name: order_by
+  parent_location_id: order_by
+  partner_internal_id: order_by
+  partner_internal_parent_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "locations"
+"""
+input locations_pk_columns_input {
+  location_id: String!
+}
+
+"""
+select columns of table "locations"
+"""
+enum locations_select_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_type
+
+  """column name"""
+  name
+
+  """column name"""
+  parent_location_id
+
+  """column name"""
+  partner_internal_id
+
+  """column name"""
+  partner_internal_parent_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "locations"
+"""
+input locations_set_input {
+  access_path: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  location_id: String
+  location_type: String
+  name: String
+  parent_location_id: String
+  partner_internal_id: String
+  partner_internal_parent_id: String
+  resource_path: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "locations"
+"""
+enum locations_update_column {
+  """column name"""
+  access_path
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_type
+
+  """column name"""
+  name
+
+  """column name"""
+  parent_location_id
+
+  """column name"""
+  partner_internal_id
+
+  """column name"""
+  partner_internal_parent_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+}
+
+"""mutation root"""
+type mutation_root {
+  """
+  delete data from the table: "lessons"
+  """
+  delete_lessons(
+    """filter the rows which have to be deleted"""
+    where: lessons_bool_exp!
+  ): lessons_mutation_response
+
+  """
+  delete single row from the table: "lessons"
+  """
+  delete_lessons_by_pk(lesson_id: String!): lessons
+
+  """
+  delete data from the table: "locations"
+  """
+  delete_locations(
+    """filter the rows which have to be deleted"""
+    where: locations_bool_exp!
+  ): locations_mutation_response
+
+  """
+  delete single row from the table: "locations"
+  """
+  delete_locations_by_pk(location_id: String!): locations
+
+  """
+  delete data from the table: "other_working_hours"
+  """
+  delete_other_working_hours(
+    """filter the rows which have to be deleted"""
+    where: other_working_hours_bool_exp!
+  ): other_working_hours_mutation_response
+
+  """
+  delete single row from the table: "other_working_hours"
+  """
+  delete_other_working_hours_by_pk(other_working_hours_id: String!): other_working_hours
+
+  """
+  delete data from the table: "timesheet"
+  """
+  delete_timesheet(
+    """filter the rows which have to be deleted"""
+    where: timesheet_bool_exp!
+  ): timesheet_mutation_response
+
+  """
+  delete single row from the table: "timesheet"
+  """
+  delete_timesheet_by_pk(timesheet_id: String!): timesheet
+
+  """
+  delete data from the table: "timesheet_config"
+  """
+  delete_timesheet_config(
+    """filter the rows which have to be deleted"""
+    where: timesheet_config_bool_exp!
+  ): timesheet_config_mutation_response
+
+  """
+  delete single row from the table: "timesheet_config"
+  """
+  delete_timesheet_config_by_pk(timesheet_config_id: String!): timesheet_config
+
+  """
+  delete data from the table: "timesheet_lesson_hours"
+  """
+  delete_timesheet_lesson_hours(
+    """filter the rows which have to be deleted"""
+    where: timesheet_lesson_hours_bool_exp!
+  ): timesheet_lesson_hours_mutation_response
+
+  """
+  delete single row from the table: "timesheet_lesson_hours"
+  """
+  delete_timesheet_lesson_hours_by_pk(lesson_id: String!, timesheet_id: String!): timesheet_lesson_hours
+
+  """
+  insert data into the table: "lessons"
+  """
+  insert_lessons(
+    """the rows to be inserted"""
+    objects: [lessons_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: lessons_on_conflict
+  ): lessons_mutation_response
+
+  """
+  insert a single row into the table: "lessons"
+  """
+  insert_lessons_one(
+    """the row to be inserted"""
+    object: lessons_insert_input!
+
+    """on conflict condition"""
+    on_conflict: lessons_on_conflict
+  ): lessons
+
+  """
+  insert data into the table: "locations"
+  """
+  insert_locations(
+    """the rows to be inserted"""
+    objects: [locations_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: locations_on_conflict
+  ): locations_mutation_response
+
+  """
+  insert a single row into the table: "locations"
+  """
+  insert_locations_one(
+    """the row to be inserted"""
+    object: locations_insert_input!
+
+    """on conflict condition"""
+    on_conflict: locations_on_conflict
+  ): locations
+
+  """
+  insert data into the table: "other_working_hours"
+  """
+  insert_other_working_hours(
+    """the rows to be inserted"""
+    objects: [other_working_hours_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: other_working_hours_on_conflict
+  ): other_working_hours_mutation_response
+
+  """
+  insert a single row into the table: "other_working_hours"
+  """
+  insert_other_working_hours_one(
+    """the row to be inserted"""
+    object: other_working_hours_insert_input!
+
+    """on conflict condition"""
+    on_conflict: other_working_hours_on_conflict
+  ): other_working_hours
+
+  """
+  insert data into the table: "timesheet"
+  """
+  insert_timesheet(
+    """the rows to be inserted"""
+    objects: [timesheet_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: timesheet_on_conflict
+  ): timesheet_mutation_response
+
+  """
+  insert data into the table: "timesheet_config"
+  """
+  insert_timesheet_config(
+    """the rows to be inserted"""
+    objects: [timesheet_config_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: timesheet_config_on_conflict
+  ): timesheet_config_mutation_response
+
+  """
+  insert a single row into the table: "timesheet_config"
+  """
+  insert_timesheet_config_one(
+    """the row to be inserted"""
+    object: timesheet_config_insert_input!
+
+    """on conflict condition"""
+    on_conflict: timesheet_config_on_conflict
+  ): timesheet_config
+
+  """
+  insert data into the table: "timesheet_lesson_hours"
+  """
+  insert_timesheet_lesson_hours(
+    """the rows to be inserted"""
+    objects: [timesheet_lesson_hours_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: timesheet_lesson_hours_on_conflict
+  ): timesheet_lesson_hours_mutation_response
+
+  """
+  insert a single row into the table: "timesheet_lesson_hours"
+  """
+  insert_timesheet_lesson_hours_one(
+    """the row to be inserted"""
+    object: timesheet_lesson_hours_insert_input!
+
+    """on conflict condition"""
+    on_conflict: timesheet_lesson_hours_on_conflict
+  ): timesheet_lesson_hours
+
+  """
+  insert a single row into the table: "timesheet"
+  """
+  insert_timesheet_one(
+    """the row to be inserted"""
+    object: timesheet_insert_input!
+
+    """on conflict condition"""
+    on_conflict: timesheet_on_conflict
+  ): timesheet
+
+  """
+  update data of the table: "lessons"
+  """
+  update_lessons(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: lessons_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: lessons_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: lessons_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: lessons_delete_key_input
+
+    """increments the integer columns with given value of the filtered values"""
+    _inc: lessons_inc_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: lessons_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: lessons_set_input
+
+    """filter the rows which have to be updated"""
+    where: lessons_bool_exp!
+  ): lessons_mutation_response
+
+  """
+  update single row of the table: "lessons"
+  """
+  update_lessons_by_pk(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: lessons_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: lessons_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: lessons_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: lessons_delete_key_input
+
+    """increments the integer columns with given value of the filtered values"""
+    _inc: lessons_inc_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: lessons_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: lessons_set_input
+    pk_columns: lessons_pk_columns_input!
+  ): lessons
+
+  """
+  update data of the table: "locations"
+  """
+  update_locations(
+    """sets the columns of the filtered rows to the given values"""
+    _set: locations_set_input
+
+    """filter the rows which have to be updated"""
+    where: locations_bool_exp!
+  ): locations_mutation_response
+
+  """
+  update single row of the table: "locations"
+  """
+  update_locations_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: locations_set_input
+    pk_columns: locations_pk_columns_input!
+  ): locations
+
+  """
+  update data of the table: "other_working_hours"
+  """
+  update_other_working_hours(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: other_working_hours_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: other_working_hours_set_input
+
+    """filter the rows which have to be updated"""
+    where: other_working_hours_bool_exp!
+  ): other_working_hours_mutation_response
+
+  """
+  update single row of the table: "other_working_hours"
+  """
+  update_other_working_hours_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: other_working_hours_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: other_working_hours_set_input
+    pk_columns: other_working_hours_pk_columns_input!
+  ): other_working_hours
+
+  """
+  update data of the table: "timesheet"
+  """
+  update_timesheet(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_set_input
+
+    """filter the rows which have to be updated"""
+    where: timesheet_bool_exp!
+  ): timesheet_mutation_response
+
+  """
+  update single row of the table: "timesheet"
+  """
+  update_timesheet_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_set_input
+    pk_columns: timesheet_pk_columns_input!
+  ): timesheet
+
+  """
+  update data of the table: "timesheet_config"
+  """
+  update_timesheet_config(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_config_set_input
+
+    """filter the rows which have to be updated"""
+    where: timesheet_config_bool_exp!
+  ): timesheet_config_mutation_response
+
+  """
+  update single row of the table: "timesheet_config"
+  """
+  update_timesheet_config_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_config_set_input
+    pk_columns: timesheet_config_pk_columns_input!
+  ): timesheet_config
+
+  """
+  update data of the table: "timesheet_lesson_hours"
+  """
+  update_timesheet_lesson_hours(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_lesson_hours_set_input
+
+    """filter the rows which have to be updated"""
+    where: timesheet_lesson_hours_bool_exp!
+  ): timesheet_lesson_hours_mutation_response
+
+  """
+  update single row of the table: "timesheet_lesson_hours"
+  """
+  update_timesheet_lesson_hours_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: timesheet_lesson_hours_set_input
+    pk_columns: timesheet_lesson_hours_pk_columns_input!
+  ): timesheet_lesson_hours
+}
+
+"""column ordering options"""
+enum order_by {
+  """in the ascending order, nulls last"""
+  asc
+
+  """in the ascending order, nulls first"""
+  asc_nulls_first
+
+  """in the ascending order, nulls last"""
+  asc_nulls_last
+
+  """in the descending order, nulls first"""
+  desc
+
+  """in the descending order, nulls first"""
+  desc_nulls_first
+
+  """in the descending order, nulls last"""
+  desc_nulls_last
+}
+
+"""
+columns and relationships of "other_working_hours"
+"""
+type other_working_hours {
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  end_time: timestamptz!
+  other_working_hours_id: String!
+  remarks: String
+  resource_path: String
+  start_time: timestamptz!
+  timesheet_config_id: String!
+  timesheet_id: String!
+  total_hour: smallint!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "other_working_hours"
+"""
+type other_working_hours_aggregate {
+  aggregate: other_working_hours_aggregate_fields
+  nodes: [other_working_hours!]!
+}
+
+"""
+aggregate fields of "other_working_hours"
+"""
+type other_working_hours_aggregate_fields {
+  avg: other_working_hours_avg_fields
+  count(columns: [other_working_hours_select_column!], distinct: Boolean): Int
+  max: other_working_hours_max_fields
+  min: other_working_hours_min_fields
+  stddev: other_working_hours_stddev_fields
+  stddev_pop: other_working_hours_stddev_pop_fields
+  stddev_samp: other_working_hours_stddev_samp_fields
+  sum: other_working_hours_sum_fields
+  var_pop: other_working_hours_var_pop_fields
+  var_samp: other_working_hours_var_samp_fields
+  variance: other_working_hours_variance_fields
+}
+
+"""
+order by aggregate values of table "other_working_hours"
+"""
+input other_working_hours_aggregate_order_by {
+  avg: other_working_hours_avg_order_by
+  count: order_by
+  max: other_working_hours_max_order_by
+  min: other_working_hours_min_order_by
+  stddev: other_working_hours_stddev_order_by
+  stddev_pop: other_working_hours_stddev_pop_order_by
+  stddev_samp: other_working_hours_stddev_samp_order_by
+  sum: other_working_hours_sum_order_by
+  var_pop: other_working_hours_var_pop_order_by
+  var_samp: other_working_hours_var_samp_order_by
+  variance: other_working_hours_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "other_working_hours"
+"""
+input other_working_hours_arr_rel_insert_input {
+  data: [other_working_hours_insert_input!]!
+  on_conflict: other_working_hours_on_conflict
+}
+
+"""aggregate avg on columns"""
+type other_working_hours_avg_fields {
+  total_hour: Float
+}
+
+"""
+order by avg() on columns of table "other_working_hours"
+"""
+input other_working_hours_avg_order_by {
+  total_hour: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "other_working_hours". All fields are combined with a logical 'AND'.
+"""
+input other_working_hours_bool_exp {
+  _and: [other_working_hours_bool_exp]
+  _not: other_working_hours_bool_exp
+  _or: [other_working_hours_bool_exp]
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  end_time: timestamptz_comparison_exp
+  other_working_hours_id: String_comparison_exp
+  remarks: String_comparison_exp
+  resource_path: String_comparison_exp
+  start_time: timestamptz_comparison_exp
+  timesheet_config_id: String_comparison_exp
+  timesheet_id: String_comparison_exp
+  total_hour: smallint_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "other_working_hours"
+"""
+enum other_working_hours_constraint {
+  """unique or primary key constraint"""
+  other_working_hours__pk
+}
+
+"""
+input type for incrementing integer column in table "other_working_hours"
+"""
+input other_working_hours_inc_input {
+  total_hour: smallint
+}
+
+"""
+input type for inserting data into table "other_working_hours"
+"""
+input other_working_hours_insert_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_time: timestamptz
+  other_working_hours_id: String
+  remarks: String
+  resource_path: String
+  start_time: timestamptz
+  timesheet_config_id: String
+  timesheet_id: String
+  total_hour: smallint
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type other_working_hours_max_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_time: timestamptz
+  other_working_hours_id: String
+  remarks: String
+  resource_path: String
+  start_time: timestamptz
+  timesheet_config_id: String
+  timesheet_id: String
+  total_hour: smallint
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "other_working_hours"
+"""
+input other_working_hours_max_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  end_time: order_by
+  other_working_hours_id: order_by
+  remarks: order_by
+  resource_path: order_by
+  start_time: order_by
+  timesheet_config_id: order_by
+  timesheet_id: order_by
+  total_hour: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type other_working_hours_min_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_time: timestamptz
+  other_working_hours_id: String
+  remarks: String
+  resource_path: String
+  start_time: timestamptz
+  timesheet_config_id: String
+  timesheet_id: String
+  total_hour: smallint
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "other_working_hours"
+"""
+input other_working_hours_min_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  end_time: order_by
+  other_working_hours_id: order_by
+  remarks: order_by
+  resource_path: order_by
+  start_time: order_by
+  timesheet_config_id: order_by
+  timesheet_id: order_by
+  total_hour: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "other_working_hours"
+"""
+type other_working_hours_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [other_working_hours!]!
+}
+
+"""
+input type for inserting object relation for remote table "other_working_hours"
+"""
+input other_working_hours_obj_rel_insert_input {
+  data: other_working_hours_insert_input!
+  on_conflict: other_working_hours_on_conflict
+}
+
+"""
+on conflict condition type for table "other_working_hours"
+"""
+input other_working_hours_on_conflict {
+  constraint: other_working_hours_constraint!
+  update_columns: [other_working_hours_update_column!]!
+  where: other_working_hours_bool_exp
+}
+
+"""
+ordering options when selecting data from "other_working_hours"
+"""
+input other_working_hours_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  end_time: order_by
+  other_working_hours_id: order_by
+  remarks: order_by
+  resource_path: order_by
+  start_time: order_by
+  timesheet_config_id: order_by
+  timesheet_id: order_by
+  total_hour: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "other_working_hours"
+"""
+input other_working_hours_pk_columns_input {
+  other_working_hours_id: String!
+}
+
+"""
+select columns of table "other_working_hours"
+"""
+enum other_working_hours_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  end_time
+
+  """column name"""
+  other_working_hours_id
+
+  """column name"""
+  remarks
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  start_time
+
+  """column name"""
+  timesheet_config_id
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  total_hour
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "other_working_hours"
+"""
+input other_working_hours_set_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  end_time: timestamptz
+  other_working_hours_id: String
+  remarks: String
+  resource_path: String
+  start_time: timestamptz
+  timesheet_config_id: String
+  timesheet_id: String
+  total_hour: smallint
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type other_working_hours_stddev_fields {
+  total_hour: Float
+}
+
+"""
+order by stddev() on columns of table "other_working_hours"
+"""
+input other_working_hours_stddev_order_by {
+  total_hour: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type other_working_hours_stddev_pop_fields {
+  total_hour: Float
+}
+
+"""
+order by stddev_pop() on columns of table "other_working_hours"
+"""
+input other_working_hours_stddev_pop_order_by {
+  total_hour: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type other_working_hours_stddev_samp_fields {
+  total_hour: Float
+}
+
+"""
+order by stddev_samp() on columns of table "other_working_hours"
+"""
+input other_working_hours_stddev_samp_order_by {
+  total_hour: order_by
+}
+
+"""aggregate sum on columns"""
+type other_working_hours_sum_fields {
+  total_hour: smallint
+}
+
+"""
+order by sum() on columns of table "other_working_hours"
+"""
+input other_working_hours_sum_order_by {
+  total_hour: order_by
+}
+
+"""
+update columns of table "other_working_hours"
+"""
+enum other_working_hours_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  end_time
+
+  """column name"""
+  other_working_hours_id
+
+  """column name"""
+  remarks
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  start_time
+
+  """column name"""
+  timesheet_config_id
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  total_hour
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type other_working_hours_var_pop_fields {
+  total_hour: Float
+}
+
+"""
+order by var_pop() on columns of table "other_working_hours"
+"""
+input other_working_hours_var_pop_order_by {
+  total_hour: order_by
+}
+
+"""aggregate var_samp on columns"""
+type other_working_hours_var_samp_fields {
+  total_hour: Float
+}
+
+"""
+order by var_samp() on columns of table "other_working_hours"
+"""
+input other_working_hours_var_samp_order_by {
+  total_hour: order_by
+}
+
+"""aggregate variance on columns"""
+type other_working_hours_variance_fields {
+  total_hour: Float
+}
+
+"""
+order by variance() on columns of table "other_working_hours"
+"""
+input other_working_hours_variance_order_by {
+  total_hour: order_by
+}
+
+"""query root"""
+type query_root {
+  """
+  fetch data from the table: "lessons"
+  """
+  lessons(
+    """distinct select on columns"""
+    distinct_on: [lessons_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [lessons_order_by!]
+
+    """filter the rows returned"""
+    where: lessons_bool_exp
+  ): [lessons!]!
+
+  """
+  fetch aggregated fields from the table: "lessons"
+  """
+  lessons_aggregate(
+    """distinct select on columns"""
+    distinct_on: [lessons_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [lessons_order_by!]
+
+    """filter the rows returned"""
+    where: lessons_bool_exp
+  ): lessons_aggregate!
+
+  """fetch data from the table: "lessons" using primary key columns"""
+  lessons_by_pk(lesson_id: String!): lessons
+
+  """
+  fetch data from the table: "locations"
+  """
+  locations(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): [locations!]!
+
+  """
+  fetch aggregated fields from the table: "locations"
+  """
+  locations_aggregate(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): locations_aggregate!
+
+  """fetch data from the table: "locations" using primary key columns"""
+  locations_by_pk(location_id: String!): locations
+
+  """
+  fetch data from the table: "other_working_hours"
+  """
+  other_working_hours(
+    """distinct select on columns"""
+    distinct_on: [other_working_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [other_working_hours_order_by!]
+
+    """filter the rows returned"""
+    where: other_working_hours_bool_exp
+  ): [other_working_hours!]!
+
+  """
+  fetch aggregated fields from the table: "other_working_hours"
+  """
+  other_working_hours_aggregate(
+    """distinct select on columns"""
+    distinct_on: [other_working_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [other_working_hours_order_by!]
+
+    """filter the rows returned"""
+    where: other_working_hours_bool_exp
+  ): other_working_hours_aggregate!
+
+  """
+  fetch data from the table: "other_working_hours" using primary key columns
+  """
+  other_working_hours_by_pk(other_working_hours_id: String!): other_working_hours
+
+  """
+  fetch data from the table: "timesheet"
+  """
+  timesheet(
+    """distinct select on columns"""
+    distinct_on: [timesheet_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_bool_exp
+  ): [timesheet!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet"
+  """
+  timesheet_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_bool_exp
+  ): timesheet_aggregate!
+
+  """fetch data from the table: "timesheet" using primary key columns"""
+  timesheet_by_pk(timesheet_id: String!): timesheet
+
+  """
+  fetch data from the table: "timesheet_config"
+  """
+  timesheet_config(
+    """distinct select on columns"""
+    distinct_on: [timesheet_config_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_config_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_config_bool_exp
+  ): [timesheet_config!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet_config"
+  """
+  timesheet_config_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_config_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_config_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_config_bool_exp
+  ): timesheet_config_aggregate!
+
+  """
+  fetch data from the table: "timesheet_config" using primary key columns
+  """
+  timesheet_config_by_pk(timesheet_config_id: String!): timesheet_config
+
+  """
+  fetch data from the table: "timesheet_lesson_hours"
+  """
+  timesheet_lesson_hours(
+    """distinct select on columns"""
+    distinct_on: [timesheet_lesson_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_lesson_hours_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_lesson_hours_bool_exp
+  ): [timesheet_lesson_hours!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet_lesson_hours"
+  """
+  timesheet_lesson_hours_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_lesson_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_lesson_hours_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_lesson_hours_bool_exp
+  ): timesheet_lesson_hours_aggregate!
+
+  """
+  fetch data from the table: "timesheet_lesson_hours" using primary key columns
+  """
+  timesheet_lesson_hours_by_pk(lesson_id: String!, timesheet_id: String!): timesheet_lesson_hours
+}
+
+scalar smallint
+
+"""
+expression to compare columns of type smallint. All fields are combined with logical 'AND'.
+"""
+input smallint_comparison_exp {
+  _eq: smallint
+  _gt: smallint
+  _gte: smallint
+  _in: [smallint!]
+  _is_null: Boolean
+  _lt: smallint
+  _lte: smallint
+  _neq: smallint
+  _nin: [smallint!]
+}
+
+"""subscription root"""
+type subscription_root {
+  """
+  fetch data from the table: "lessons"
+  """
+  lessons(
+    """distinct select on columns"""
+    distinct_on: [lessons_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [lessons_order_by!]
+
+    """filter the rows returned"""
+    where: lessons_bool_exp
+  ): [lessons!]!
+
+  """
+  fetch aggregated fields from the table: "lessons"
+  """
+  lessons_aggregate(
+    """distinct select on columns"""
+    distinct_on: [lessons_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [lessons_order_by!]
+
+    """filter the rows returned"""
+    where: lessons_bool_exp
+  ): lessons_aggregate!
+
+  """fetch data from the table: "lessons" using primary key columns"""
+  lessons_by_pk(lesson_id: String!): lessons
+
+  """
+  fetch data from the table: "locations"
+  """
+  locations(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): [locations!]!
+
+  """
+  fetch aggregated fields from the table: "locations"
+  """
+  locations_aggregate(
+    """distinct select on columns"""
+    distinct_on: [locations_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [locations_order_by!]
+
+    """filter the rows returned"""
+    where: locations_bool_exp
+  ): locations_aggregate!
+
+  """fetch data from the table: "locations" using primary key columns"""
+  locations_by_pk(location_id: String!): locations
+
+  """
+  fetch data from the table: "other_working_hours"
+  """
+  other_working_hours(
+    """distinct select on columns"""
+    distinct_on: [other_working_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [other_working_hours_order_by!]
+
+    """filter the rows returned"""
+    where: other_working_hours_bool_exp
+  ): [other_working_hours!]!
+
+  """
+  fetch aggregated fields from the table: "other_working_hours"
+  """
+  other_working_hours_aggregate(
+    """distinct select on columns"""
+    distinct_on: [other_working_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [other_working_hours_order_by!]
+
+    """filter the rows returned"""
+    where: other_working_hours_bool_exp
+  ): other_working_hours_aggregate!
+
+  """
+  fetch data from the table: "other_working_hours" using primary key columns
+  """
+  other_working_hours_by_pk(other_working_hours_id: String!): other_working_hours
+
+  """
+  fetch data from the table: "timesheet"
+  """
+  timesheet(
+    """distinct select on columns"""
+    distinct_on: [timesheet_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_bool_exp
+  ): [timesheet!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet"
+  """
+  timesheet_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_bool_exp
+  ): timesheet_aggregate!
+
+  """fetch data from the table: "timesheet" using primary key columns"""
+  timesheet_by_pk(timesheet_id: String!): timesheet
+
+  """
+  fetch data from the table: "timesheet_config"
+  """
+  timesheet_config(
+    """distinct select on columns"""
+    distinct_on: [timesheet_config_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_config_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_config_bool_exp
+  ): [timesheet_config!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet_config"
+  """
+  timesheet_config_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_config_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_config_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_config_bool_exp
+  ): timesheet_config_aggregate!
+
+  """
+  fetch data from the table: "timesheet_config" using primary key columns
+  """
+  timesheet_config_by_pk(timesheet_config_id: String!): timesheet_config
+
+  """
+  fetch data from the table: "timesheet_lesson_hours"
+  """
+  timesheet_lesson_hours(
+    """distinct select on columns"""
+    distinct_on: [timesheet_lesson_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_lesson_hours_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_lesson_hours_bool_exp
+  ): [timesheet_lesson_hours!]!
+
+  """
+  fetch aggregated fields from the table: "timesheet_lesson_hours"
+  """
+  timesheet_lesson_hours_aggregate(
+    """distinct select on columns"""
+    distinct_on: [timesheet_lesson_hours_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [timesheet_lesson_hours_order_by!]
+
+    """filter the rows returned"""
+    where: timesheet_lesson_hours_bool_exp
+  ): timesheet_lesson_hours_aggregate!
+
+  """
+  fetch data from the table: "timesheet_lesson_hours" using primary key columns
+  """
+  timesheet_lesson_hours_by_pk(lesson_id: String!, timesheet_id: String!): timesheet_lesson_hours
+}
+
+"""
+columns and relationships of "timesheet"
+"""
+type timesheet {
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  location_id: String!
+  remark: String
+  resource_path: String
+  staff_id: String!
+  time_sheet_status: String!
+  timesheet_date: timestamptz!
+  timesheet_id: String!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "timesheet"
+"""
+type timesheet_aggregate {
+  aggregate: timesheet_aggregate_fields
+  nodes: [timesheet!]!
+}
+
+"""
+aggregate fields of "timesheet"
+"""
+type timesheet_aggregate_fields {
+  count(columns: [timesheet_select_column!], distinct: Boolean): Int
+  max: timesheet_max_fields
+  min: timesheet_min_fields
+}
+
+"""
+order by aggregate values of table "timesheet"
+"""
+input timesheet_aggregate_order_by {
+  count: order_by
+  max: timesheet_max_order_by
+  min: timesheet_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "timesheet"
+"""
+input timesheet_arr_rel_insert_input {
+  data: [timesheet_insert_input!]!
+  on_conflict: timesheet_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "timesheet". All fields are combined with a logical 'AND'.
+"""
+input timesheet_bool_exp {
+  _and: [timesheet_bool_exp]
+  _not: timesheet_bool_exp
+  _or: [timesheet_bool_exp]
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  location_id: String_comparison_exp
+  remark: String_comparison_exp
+  resource_path: String_comparison_exp
+  staff_id: String_comparison_exp
+  time_sheet_status: String_comparison_exp
+  timesheet_date: timestamptz_comparison_exp
+  timesheet_id: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+columns and relationships of "timesheet_config"
+"""
+type timesheet_config {
+  config_type: String!
+  config_value: String!
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  is_archived: Boolean!
+  resource_path: String
+  timesheet_config_id: String!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "timesheet_config"
+"""
+type timesheet_config_aggregate {
+  aggregate: timesheet_config_aggregate_fields
+  nodes: [timesheet_config!]!
+}
+
+"""
+aggregate fields of "timesheet_config"
+"""
+type timesheet_config_aggregate_fields {
+  count(columns: [timesheet_config_select_column!], distinct: Boolean): Int
+  max: timesheet_config_max_fields
+  min: timesheet_config_min_fields
+}
+
+"""
+order by aggregate values of table "timesheet_config"
+"""
+input timesheet_config_aggregate_order_by {
+  count: order_by
+  max: timesheet_config_max_order_by
+  min: timesheet_config_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "timesheet_config"
+"""
+input timesheet_config_arr_rel_insert_input {
+  data: [timesheet_config_insert_input!]!
+  on_conflict: timesheet_config_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "timesheet_config". All fields are combined with a logical 'AND'.
+"""
+input timesheet_config_bool_exp {
+  _and: [timesheet_config_bool_exp]
+  _not: timesheet_config_bool_exp
+  _or: [timesheet_config_bool_exp]
+  config_type: String_comparison_exp
+  config_value: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  is_archived: Boolean_comparison_exp
+  resource_path: String_comparison_exp
+  timesheet_config_id: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "timesheet_config"
+"""
+enum timesheet_config_constraint {
+  """unique or primary key constraint"""
+  timesheet_config__pk
+}
+
+"""
+input type for inserting data into table "timesheet_config"
+"""
+input timesheet_config_insert_input {
+  config_type: String
+  config_value: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  resource_path: String
+  timesheet_config_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type timesheet_config_max_fields {
+  config_type: String
+  config_value: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  resource_path: String
+  timesheet_config_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "timesheet_config"
+"""
+input timesheet_config_max_order_by {
+  config_type: order_by
+  config_value: order_by
+  created_at: order_by
+  deleted_at: order_by
+  resource_path: order_by
+  timesheet_config_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type timesheet_config_min_fields {
+  config_type: String
+  config_value: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  resource_path: String
+  timesheet_config_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "timesheet_config"
+"""
+input timesheet_config_min_order_by {
+  config_type: order_by
+  config_value: order_by
+  created_at: order_by
+  deleted_at: order_by
+  resource_path: order_by
+  timesheet_config_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "timesheet_config"
+"""
+type timesheet_config_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [timesheet_config!]!
+}
+
+"""
+input type for inserting object relation for remote table "timesheet_config"
+"""
+input timesheet_config_obj_rel_insert_input {
+  data: timesheet_config_insert_input!
+  on_conflict: timesheet_config_on_conflict
+}
+
+"""
+on conflict condition type for table "timesheet_config"
+"""
+input timesheet_config_on_conflict {
+  constraint: timesheet_config_constraint!
+  update_columns: [timesheet_config_update_column!]!
+  where: timesheet_config_bool_exp
+}
+
+"""
+ordering options when selecting data from "timesheet_config"
+"""
+input timesheet_config_order_by {
+  config_type: order_by
+  config_value: order_by
+  created_at: order_by
+  deleted_at: order_by
+  is_archived: order_by
+  resource_path: order_by
+  timesheet_config_id: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "timesheet_config"
+"""
+input timesheet_config_pk_columns_input {
+  timesheet_config_id: String!
+}
+
+"""
+select columns of table "timesheet_config"
+"""
+enum timesheet_config_select_column {
+  """column name"""
+  config_type
+
+  """column name"""
+  config_value
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  timesheet_config_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "timesheet_config"
+"""
+input timesheet_config_set_input {
+  config_type: String
+  config_value: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  is_archived: Boolean
+  resource_path: String
+  timesheet_config_id: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "timesheet_config"
+"""
+enum timesheet_config_update_column {
+  """column name"""
+  config_type
+
+  """column name"""
+  config_value
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  is_archived
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  timesheet_config_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+unique or primary key constraints on table "timesheet"
+"""
+enum timesheet_constraint {
+  """unique or primary key constraint"""
+  idx__staff_id_location_id_timesheet_date
+
+  """unique or primary key constraint"""
+  timesheet__pk
+}
+
+"""
+input type for inserting data into table "timesheet"
+"""
+input timesheet_insert_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  remark: String
+  resource_path: String
+  staff_id: String
+  time_sheet_status: String
+  timesheet_date: timestamptz
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+columns and relationships of "timesheet_lesson_hours"
+"""
+type timesheet_lesson_hours {
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  lesson_id: String!
+  resource_path: String
+  timesheet_id: String!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "timesheet_lesson_hours"
+"""
+type timesheet_lesson_hours_aggregate {
+  aggregate: timesheet_lesson_hours_aggregate_fields
+  nodes: [timesheet_lesson_hours!]!
+}
+
+"""
+aggregate fields of "timesheet_lesson_hours"
+"""
+type timesheet_lesson_hours_aggregate_fields {
+  count(columns: [timesheet_lesson_hours_select_column!], distinct: Boolean): Int
+  max: timesheet_lesson_hours_max_fields
+  min: timesheet_lesson_hours_min_fields
+}
+
+"""
+order by aggregate values of table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_aggregate_order_by {
+  count: order_by
+  max: timesheet_lesson_hours_max_order_by
+  min: timesheet_lesson_hours_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_arr_rel_insert_input {
+  data: [timesheet_lesson_hours_insert_input!]!
+  on_conflict: timesheet_lesson_hours_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "timesheet_lesson_hours". All fields are combined with a logical 'AND'.
+"""
+input timesheet_lesson_hours_bool_exp {
+  _and: [timesheet_lesson_hours_bool_exp]
+  _not: timesheet_lesson_hours_bool_exp
+  _or: [timesheet_lesson_hours_bool_exp]
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  lesson_id: String_comparison_exp
+  resource_path: String_comparison_exp
+  timesheet_id: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "timesheet_lesson_hours"
+"""
+enum timesheet_lesson_hours_constraint {
+  """unique or primary key constraint"""
+  timesheet_lesson_hours_pk
+}
+
+"""
+input type for inserting data into table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_insert_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  lesson_id: String
+  resource_path: String
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type timesheet_lesson_hours_max_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  lesson_id: String
+  resource_path: String
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_max_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  lesson_id: order_by
+  resource_path: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type timesheet_lesson_hours_min_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  lesson_id: String
+  resource_path: String
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_min_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  lesson_id: order_by
+  resource_path: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "timesheet_lesson_hours"
+"""
+type timesheet_lesson_hours_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [timesheet_lesson_hours!]!
+}
+
+"""
+input type for inserting object relation for remote table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_obj_rel_insert_input {
+  data: timesheet_lesson_hours_insert_input!
+  on_conflict: timesheet_lesson_hours_on_conflict
+}
+
+"""
+on conflict condition type for table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_on_conflict {
+  constraint: timesheet_lesson_hours_constraint!
+  update_columns: [timesheet_lesson_hours_update_column!]!
+  where: timesheet_lesson_hours_bool_exp
+}
+
+"""
+ordering options when selecting data from "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  lesson_id: order_by
+  resource_path: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_pk_columns_input {
+  lesson_id: String!
+  timesheet_id: String!
+}
+
+"""
+select columns of table "timesheet_lesson_hours"
+"""
+enum timesheet_lesson_hours_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  lesson_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "timesheet_lesson_hours"
+"""
+input timesheet_lesson_hours_set_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  lesson_id: String
+  resource_path: String
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "timesheet_lesson_hours"
+"""
+enum timesheet_lesson_hours_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  lesson_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate max on columns"""
+type timesheet_max_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  remark: String
+  resource_path: String
+  staff_id: String
+  time_sheet_status: String
+  timesheet_date: timestamptz
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "timesheet"
+"""
+input timesheet_max_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  remark: order_by
+  resource_path: order_by
+  staff_id: order_by
+  time_sheet_status: order_by
+  timesheet_date: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type timesheet_min_fields {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  remark: String
+  resource_path: String
+  staff_id: String
+  time_sheet_status: String
+  timesheet_date: timestamptz
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "timesheet"
+"""
+input timesheet_min_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  remark: order_by
+  resource_path: order_by
+  staff_id: order_by
+  time_sheet_status: order_by
+  timesheet_date: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "timesheet"
+"""
+type timesheet_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [timesheet!]!
+}
+
+"""
+input type for inserting object relation for remote table "timesheet"
+"""
+input timesheet_obj_rel_insert_input {
+  data: timesheet_insert_input!
+  on_conflict: timesheet_on_conflict
+}
+
+"""
+on conflict condition type for table "timesheet"
+"""
+input timesheet_on_conflict {
+  constraint: timesheet_constraint!
+  update_columns: [timesheet_update_column!]!
+  where: timesheet_bool_exp
+}
+
+"""
+ordering options when selecting data from "timesheet"
+"""
+input timesheet_order_by {
+  created_at: order_by
+  deleted_at: order_by
+  location_id: order_by
+  remark: order_by
+  resource_path: order_by
+  staff_id: order_by
+  time_sheet_status: order_by
+  timesheet_date: order_by
+  timesheet_id: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "timesheet"
+"""
+input timesheet_pk_columns_input {
+  timesheet_id: String!
+}
+
+"""
+select columns of table "timesheet"
+"""
+enum timesheet_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  location_id
+
+  """column name"""
+  remark
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  staff_id
+
+  """column name"""
+  time_sheet_status
+
+  """column name"""
+  timesheet_date
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "timesheet"
+"""
+input timesheet_set_input {
+  created_at: timestamptz
+  deleted_at: timestamptz
+  location_id: String
+  remark: String
+  resource_path: String
+  staff_id: String
+  time_sheet_status: String
+  timesheet_date: timestamptz
+  timesheet_id: String
+  updated_at: timestamptz
+}
+
+"""
+update columns of table "timesheet"
+"""
+enum timesheet_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  location_id
+
+  """column name"""
+  remark
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  staff_id
+
+  """column name"""
+  time_sheet_status
+
+  """column name"""
+  timesheet_date
+
+  """column name"""
+  timesheet_id
+
+  """column name"""
+  updated_at
+}
+
+scalar timestamptz
+
+"""
+expression to compare columns of type timestamptz. All fields are combined with logical 'AND'.
+"""
+input timestamptz_comparison_exp {
+  _eq: timestamptz
+  _gt: timestamptz
+  _gte: timestamptz
+  _in: [timestamptz!]
+  _is_null: Boolean
+  _lt: timestamptz
+  _lte: timestamptz
+  _neq: timestamptz
+  _nin: [timestamptz!]
+}

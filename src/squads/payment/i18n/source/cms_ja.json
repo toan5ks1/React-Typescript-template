@@ -1,0 +1,351 @@
+{
+    "ra": {
+        "message": {
+            "maxFileSizeIs": "ファイルサイズは最大で%{fileSize}%{fileUnit}です",
+            "invalidSearchQueryReturningAllItems": "無効な検索項目です",
+            "noDataInformation": "表示項目なし",
+            "unableToLoadData": "データの読み込みに失敗しました。もう一度お試しください。",
+            "notImplementedYet": "Not implemented yet"
+        },
+        "common": {
+            "action": {
+                "cancel": "キャンセル",
+                "submit": "送信",
+                "create": "新規作成",
+                "filter": "フィルター",
+                "uploadFile": "ファイルをアップロードする",
+                "addRow": "追加",
+                "deleteRow": "削除",
+                "close": "閉じる",
+                "leave": "破棄",
+                "downloadFile": "ダウンロード",
+                "update": "更新する",
+                "next": "次",
+                "back": "戻る",
+                "restore": "元に戻す",
+                "save": "保存",
+                "confirm": "確定",
+                "submitAll": "すべてを提出"
+            },
+            "title": {
+                "cancelDialogTitle": "編集内容を破棄",
+                "previousDialogTitle": "前のページへ戻る"
+            }
+        },
+        "validation": {
+            "requiredAll": "必須フィールドを空白にすることはできません"
+        },
+        "manabie-error": {
+            "specified": {
+                "orderMismatch": "提出前に商品マスタが更新されたため、正常な処理が行われませんでした。お手数ですが、もう一度お試しください。",
+                "csvFileIsEmpty": "CSVファイルにデータがありません",
+                "getBrightcoveProfileFail": "Brightcoveアカウント情報の取得に失敗しました"
+            },
+            "unknown": "原因不明のエラーが発生しました。再度お試しいただくか、マナビースタッフにお問い合わせください。",
+            "invalid_params": "入力した情報に誤りがあります。データを確認してください!"
+        }
+    },
+    "resources": {
+        "common": {
+            "day": {
+                "monday": "月曜日",
+                "tuesday": "火曜日",
+                "wednesday": "水曜日",
+                "thursday": "木曜日",
+                "friday": "金曜日",
+                "saturday": "土曜日",
+                "sunday": "日曜日"
+            },
+            "name": "名前",
+            "city": "市",
+            "district": "地区",
+            "school": "校舎 (%{smart_count})",
+            "just_show_system_school": "有効な校舎のみ表示",
+            "teacher": "講師 (%{smart_count})",
+            "config": "コンフィグ",
+            "material": "資料",
+            "removeMaterial": "教材を削除",
+            "removeMaterialConfirmText": "本当にこのファイルを削除しますか？ |||| ファイル「%{name}」( %{week} ) を削除しようとしています",
+            "doYouWantToDoThis": "本当に実行しますか？",
+            "viewDetail": "詳細を見る",
+            "accountInfo": "アカウント情報",
+            "account": "アカウント",
+            "enterYourKeyword": "キーワードを入力",
+            "noResult": "検索結果はありませんでした",
+            "noResultSearchAndFilter": "他のキーワード、またはフィルターをお試しください",
+            "noResultSearch": "他のキーワードで検索してください",
+            "studyItem": "学習アイテム",
+            "students": "生徒",
+            "parents": "保護者",
+            "youFilterBy": "適応中のフィルター",
+            "all": "すべて",
+            "action": "アクション",
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "cannotLoadPage": "読み込みに失敗しました。通信環境の良い状態で再度お試しください",
+            "somethingWentWrong": "エラーが発生しました",
+            "pleaseHelpUsReport": "下記よりエラー報告にご協力ください",
+            "back": "戻る",
+            "details": "詳細",
+            "netWorkUnstable": "インターネット接続が不安定です。ページを更新するか、再度お試しください"
+        },
+        "input": {
+            "error": {
+                "required": "*必須項目です",
+                "limitLength": "%{length} 文字以下で入力してください",
+                "dateMustComeAfter": "%{endDate} は %{startDate}の後に設定する必要があります",
+                "timeMustComeBefore": "%{startTime} は %{endTime}より前に設定してください",
+                "fieldCannotBeBlank": "%{field} は必須項目です"
+            },
+            "dropFileHere": "ここにファイルをドロップしてください",
+            "pleaseUploadFileSizeLessThan": "サイズが %{maxSize}MB以下のファイルをアップロードしてください",
+            "dragAndDropFileHere": "ファイルをドラッグ＆ドロップ または",
+            "dragAndDropCSVFileHere": "CSVファイルをドラッグ＆ドロップまたは選択してアップロードしてください",
+            "uploading": "アップロード中です",
+            "cannotUpload": "アップロードできませんでした",
+            "pasteVideoLink": "動画リンク",
+            "chooseFilesToUpload": "ファイルを選択",
+            "browse": "ファイルを選択",
+            "pleaseUploadFileSizeSmaller": "ファイルサイズが規定値を超えています"
+        },
+        "button": {
+            "audio": "音声",
+            "image": "画像",
+            "blank": "空欄",
+            "advanced": "絞り込み",
+            "clearAll": "リセット",
+            "addCourse": "受講コース追加",
+            "addAssociatedProducts": "付随商品追加",
+            "viewEnrollmentForm": "入塾確認書閲覧"
+        },
+        "masters": {
+            "name": "マスター管理",
+            "title": {
+                "import": "データのインポート"
+            },
+            "button": {
+                "import": "データのインポート"
+            },
+            "placeholder": {
+                "masterData": "マスターデータ"
+            },
+            "choices": {
+                "masterData": {
+                    "grades": "学年",
+                    "accountingCategory": "会計区分",
+                    "location": "所属",
+                    "locationType": "所属カテゴリ",
+                    "billingSchedule": "請求スケジュール",
+                    "billingSchedulePeriod": "請求スケジュール期間",
+                    "discount": "割引",
+                    "tax": "税",
+                    "package": "パッケージ",
+                    "material": "材料",
+                    "fee": "手数料",
+                    "productGrade": "製品-グレード",
+                    "productCourse": "製品-コース",
+                    "productAccountingCategory": "製品-会計カテゴリ",
+                    "productLocation": "製品-場所",
+                    "productPrice": "商品-料金",
+                    "billingRatio": "請求割合",
+                    "leavingReason": "休塾理由",
+                    "class": "クラス",
+                    "packageQuantityTypeMapping": "コース商品価格計算方法",
+                    "packageCourseFee": "コース付随諸費用",
+                    "packageCourseMaterial": "コース付随教材",
+                    "schoolLevel": "学年区分",
+                    "school": "学校",
+                    "schoolCourse": "学校コース",
+                    "schoolLevelGrade": "学年区分_学年",
+                    "userTag": "ユーザー属性",
+                    "bank": "銀行",
+                    "bankBranch": "銀行支店",
+                    "timesheetConfig": "勤怠設定",
+                    "invoiceSchedule": "請求書予約"
+                }
+            },
+            "status": {
+                "fileConverting": "%{fileName} アップロード中です ...",
+                "fileUploading": "アップロード中 %{fileName} ..."
+            },
+            "message": {
+                "importedSuccess": "データのインポートが完了しました！",
+                "importedFailure": "入力した情報に誤りがあります。データを確認してください!"
+            }
+        },
+        "orders": {
+            "name": "オーダー管理",
+            "enterStudentName": "生徒名を入力",
+            "currentFilters": "適応中のフィルター",
+            "title": {
+                "request": "申請",
+                "generalInfo": "一般情報",
+                "productList": "商品リスト",
+                "billingItem": "請求項目",
+                "actionLog": "アクションログ",
+                "studentInfo": "生徒情報",
+                "createOrder": "新規オーダー",
+                "createEnrollment": "入塾申請作成",
+                "createBulkOrder": "新規オーダー",
+                "upcomingBilling": "次回の請求項目",
+                "filters": "フィルター",
+                "billedAtOrder": "オーダー時の請求項目",
+                "viewComment": "コメント閲覧",
+                "billingInfo": "オーダー情報",
+                "course": "コース",
+                "associatedProducts": "付随商品",
+                "billingItems": "請求項目名",
+                "orders": "オーダー履歴",
+                "previewTheForm": "入塾申請作成",
+                "enrollmentForm": "入塾確認書",
+                "updateProducts": "商品情報の更新",
+                "afterUpdateInfo": "変更前情報",
+                "beforeUpdateInfo": "変更後情報",
+                "totalSlotsSelected": "選択されているコマ",
+                "createCustomBilling": "請求項目作成",
+                "studentList": "生徒リスト",
+                "voidOrder": "オーダー取消"
+            },
+            "column": {
+                "id": "ID",
+                "name": "名前",
+                "status": "ステータス",
+                "price": "価格",
+                "content": "本文",
+                "detail": "詳細",
+                "comment": "コメント",
+                "product": "商品",
+                "amount": "金額",
+                "studentName": "生徒名",
+                "approvalStatus": "ステータス",
+                "orderType": "オータータイプ",
+                "requestedDate": "申請日",
+                "userName": "ユーザー名",
+                "updatedTime": "更新日時",
+                "billedDate": "作成日",
+                "billingPeriod": "請求期間",
+                "action": "アクション",
+                "orderNumber": "オーダー番号",
+                "orderStatus": "ステータス",
+                "createdDate": "作成日",
+                "productDetails": "商品詳細",
+                "billingNumber": "請求項目名",
+                "billingDate": "請求項目作成日",
+                "location": "所属",
+                "duration": "期間",
+                "upcomingBillingDate": "次回請求項目作成日",
+                "billingItem": "請求項目",
+                "tax": "税"
+            },
+            "label": {
+                "requestedDate": "申請日",
+                "orderType": "オータータイプ",
+                "orderId": "オーダーID",
+                "studentName": "生徒名",
+                "invoiceMethod": "請求方法",
+                "center": "教室",
+                "createdDate": "作成日",
+                "createBulkOrder": "一括オーダー",
+                "createRegularCourse": "通常商品、講習商品登録",
+                "createNextYearCourse": "次年度商品登録",
+                "view": "閲覧",
+                "courseAssociation": "コース",
+                "discount": "割引",
+                "slot": "コマ",
+                "slotWeek": "コマ/週",
+                "wk": "週",
+                "slots": "コマ",
+                "endDate": "終了日",
+                "viewPreviousVersion": "以前のバージョンを表示",
+                "comment": "コメント",
+                "billingDate": "請求項目作成日",
+                "orderNumber": "オーダー番号",
+                "location": "所属",
+                "name": "名前",
+                "productName": "商品名",
+                "startDate": "開始日",
+                "subTotal": "小計",
+                "total": "合計",
+                "tax": "税",
+                "incl": "内税",
+                "cancelled": "キャンセル済",
+                "effectiveDate": "変更日",
+                "void": "取消",
+                "updateScheduled": "変更予約済",
+                "billingRatio": "請求割合"
+            },
+            "tooltip": {
+                "deleteMandatoryCourse": "必須のコースは取り外せません",
+                "atLeastOneCourseSelected": "1つ以上のコースを選択してください",
+                "courseLimitReached": "最大のコース数に達したため、これ以上コースを追加できません",
+                "associatedProductsLimitReached": "上限に達したため、これ以上付随商品は追加できません"
+            },
+            "dialog": {
+                "voidDialogMessage": "オーダーに含まれる商品、請求項目の変更は全て取り消されます。",
+                "previousDialogMessage": "前のページへ戻る場合、このページでの変更は全て失われます。よろしいですか？"
+            },
+            "tag": {
+                "adjustment": "金額調整分"
+            },
+            "choices": {
+                "orderType": {
+                    "ORDER_TYPE_NEW": "新規",
+                    "ORDER_TYPE_ENROLLMENT": "入塾",
+                    "ORDER_TYPE_UPDATE": "変更",
+                    "ORDER_TYPE_CANCEL": "キャンセル済",
+                    "ORDER_TYPE_WITHDRAWAL": "退塾",
+                    "ORDER_TYPE_LOA": "休塾",
+                    "ORDER_TYPE_CUSTOM_BILLING": "請求項目作成",
+                    "ORDER_TYPE_PAUSE": "一時停止",
+                    "ORDER_TYPE_GRADUATE": "卒塾"
+                },
+                "orderStatus": {
+                    "ORDER_STATUS_ALL": "すべて |||| すべて (%{count})",
+                    "ORDER_STATUS_SUBMITTED": "提出済 |||| 提出済 (%{count})",
+                    "ORDER_STATUS_PENDING": "承認待 |||| 承認待 (%{count})",
+                    "ORDER_STATUS_REJECTED": "却下済 |||| 却下済 (%{count})",
+                    "ORDER_STATUS_VOIDED": "削除済 |||| 削除済 (%{count})",
+                    "ORDER_STATUS_INVOICED": "請求書発行済 |||| 請求書発行済 (%{count})"
+                },
+                "orderBillingStatus": {
+                    "BILLING_STATUS_WAITING_APPROVAL": "承認待 |||| 承認待 (%{count})",
+                    "BILLING_STATUS_PENDING": "仮作成 |||| 仮作成 (%{count})",
+                    "BILLING_STATUS_BILLED": "作成済 |||| 作成済 (%{count})",
+                    "BILLING_STATUS_INVOICED": "請求書発行済 |||| 請求書発行済 (%{count})",
+                    "BILLING_STATUS_CANCELLED": "キャンセル済 |||| キャンセル済 (%{count})"
+                },
+                "orderActionLogStatus": {
+                    "ORDER_ACTION_SUBMITTED": "提出済",
+                    "ORDER_ACTION_VOIDED": "削除済"
+                },
+                "orderProductListStatus": {
+                    "PENDING": "承認待",
+                    "ORDERED": "オーダー済",
+                    "CANCELLED": "キャンセル済"
+                }
+            },
+            "message": {
+                "success": {
+                    "createOrder": "オーダーを正常に作成しました",
+                    "createCustomBillingOrder": "請求項目を作成しました",
+                    "voidOrder": "オーダーを取り消しました"
+                },
+                "error": {
+                    "commonProductError": "「商品の内容を確認してください」",
+                    "requiredSection": "この項目は必須です",
+                    "invalidProduct": "商品の価格が定義されていません。商品詳細を確認してください。",
+                    "invalidProductUpdate": "「オーダー済」ステータスの商品に対してのみ、変更が可能です",
+                    "withdrawalOrGraduationProductUpdate": "既に退塾/卒塾によるキャンセルが予約されている商品のため、変更はできません",
+                    "noUpdatedField": "「商品の情報が変更されていないため、提出できません」",
+                    "incorrectFormatField": "入力の内容に誤りがあります",
+                    "updateScheduledError": "既に変更予約済の商品のため、変更はできません"
+                }
+            },
+            "filters": {
+                "createdFrom": "作成開始日",
+                "createdTo": "作成終了日",
+                "orderType": "オータータイプ",
+                "product": "商品"
+            }
+        }
+    }
+}

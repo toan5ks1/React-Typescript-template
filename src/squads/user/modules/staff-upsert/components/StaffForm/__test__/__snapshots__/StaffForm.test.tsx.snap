@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaffForm /> should match snapshot 1`] = `
+<div
+  aria-hidden="true"
+>
+  <form
+    novalidate=""
+  >
+    <input
+      data-testid="TextFieldHF__submit"
+      type="submit"
+    />
+  </form>
+</div>
+`;

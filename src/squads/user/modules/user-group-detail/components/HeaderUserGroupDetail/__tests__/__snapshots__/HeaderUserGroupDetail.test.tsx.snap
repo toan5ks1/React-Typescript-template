@@ -1,0 +1,379 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderUserGroupDetail /> User Group Header detail should be to match snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #757575;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.emotion-4 {
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #212121;
+}
+
+.emotion-8 {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  padding-bottom: 0px;
+}
+
+.emotion-11 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.6;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-14 .IconButtonWithAnchorMenu-sizeSmall {
+  padding: 10px;
+}
+
+.emotion-14.IconButtonWithAnchorMenu-root:hover {
+  color: #2196F3;
+}
+
+.emotion-14 .IconButtonWithAnchorMenu-iconButton {
+  border-radius: 8px;
+  background-color: #EEEEEE;
+}
+
+.emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  padding: 12px;
+  font-size: 1.75rem;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-15::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-15.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-15 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-15:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-15:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-15.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.25rem;
+}
+
+.emotion-17 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-18 {
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+.emotion-19 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #E0E0E0;
+  border-bottom-width: thin;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="UserGroupDetail__Header"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root emotion-2"
+      >
+        <ol
+          class="MuiBreadcrumbs-ol emotion-3"
+        >
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <a
+              class="emotion-4"
+              data-testid="BreadcrumbItem"
+              href="/user_group"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption emotion-5"
+              >
+                resources.user_group.title
+              </span>
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="MuiBreadcrumbs-separator emotion-6"
+          >
+            /
+          </li>
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+              data-testid="Breadcrumbs__entityName"
+            >
+              user-group-name
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div
+      class="MuiBox-root emotion-8"
+      data-testid="WrapperPageHeader__root"
+    >
+      <div
+        class="MuiBox-root emotion-9"
+      >
+        <div
+          class="MuiBox-root emotion-10"
+        >
+          <h6
+            aria-label="title"
+            class="MuiTypography-root MuiTypography-h6 emotion-11"
+          >
+            user-group-name
+          </h6>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root emotion-0"
+      >
+        <div
+          class="MuiBox-root emotion-13"
+          data-testid="ActionPanel__root"
+        >
+          <div
+            class="IconButtonWithAnchorMenu-root emotion-14"
+          >
+            <button
+              aria-haspopup="menu"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge IconButtonWithAnchorMenu-iconButton IconButtonWithAnchorMenu-root emotion-15"
+              data-testid="ActionPanel__trigger"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall emotion-16"
+                data-testid="MoreHorizIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-17"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-18"
+    >
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth emotion-19"
+      />
+    </div>
+  </div>
+</div>
+`;

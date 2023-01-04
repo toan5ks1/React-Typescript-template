@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Communication /> should render communication application without crash 1`] = `
+.emotion-0.SnackbarContainer-root {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  position: fixed;
+  z-index: 1400;
+  height: auto;
+  width: auto;
+  -webkit-transition: top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,margin 300ms ease 0ms,max-width 300ms ease 0ms;
+  transition: top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,margin 300ms ease 0ms,max-width 300ms ease 0ms;
+  max-width: calc(100% - 40px);
+}
+
+@media (max-width:599.95px) {
+  .emotion-0.SnackbarContainer-root {
+    width: 100%;
+    max-width: calc(100% - 32px);
+  }
+}
+
+.emotion-0.SnackbarContainer-bottom {
+  bottom: 14px;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.emotion-0.SnackbarContainer-left {
+  left: 20px;
+}
+
+@media (min-width:600px) {
+  .emotion-0.SnackbarContainer-left {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:599.95px) {
+  .emotion-0.SnackbarContainer-left {
+    left: 16px;
+  }
+}
+
+<div>
+  Hello Communication
+  <div
+    class="SnackbarContainer-left SnackbarContainer-bottom SnackbarContainer-root emotion-0"
+  />
+</div>
+`;

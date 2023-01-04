@@ -1,0 +1,17 @@
+fragment CourseStudentAttrs on course_students {
+    student_id
+    course_id
+}
+query CourseStudentsListByCourseIds($course_ids: [String!]) {
+    course_students(
+        order_by: { created_at: desc }
+        where: { course_id: { _in: $course_ids } }
+    ) {
+        ...CourseStudentAttrs
+    }
+    course_students_aggregate(where: { course_id: { _in: $course_ids } }) {
+        aggregate {
+            count
+        }
+    }
+}

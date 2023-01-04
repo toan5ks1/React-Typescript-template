@@ -1,0 +1,15 @@
+- function:
+    schema: public
+    name: find_assignment_by_topic_id
+- function:
+    schema: public
+    name: find_quiz_by_lo_id
+- function:
+    schema: public
+    name: get_list_course_student_study_plans_by_filter
+- function:
+    schema: public
+    name: get_list_course_study_plan_by_filter
+- function:
+    schema: public
+    name: get_student_study_plans_by_filter

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChipFileDescriptionRetryConversion /> component should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-0>span {
+  font-size: 0.75rem;
+}
+
+.emotion-0>svg {
+  margin-left: 3.4px;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ChipFileDescriptionRetryConversion__root"
+  >
+    <span>
+      resources.courses.lessonConvert.tryAgain
+    </span>
+    <svg
+      fill="none"
+      height="12"
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.244 2.881a4.5 4.5 0 101.198 3.836C10.506 6.324 10.177 6 9.78 6h-.028c-.382 0-.684.314-.77.686A3.06 3.06 0 118.225 3.9l-.798.798a.25.25 0 00.176.427h2.647a.25.25 0 00.25-.25V2.229a.25.25 0 00-.427-.177l-.83.83z"
+        fill="#395AD2"
+      />
+    </svg>
+  </div>
+</div>
+`;

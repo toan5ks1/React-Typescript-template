@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReferenceReviewField component should match snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      Learning objectives
+    </div>
+    <div
+      class="MuiBox-root emotion-0"
+    >
+      LO name
+    </div>
+  </div>
+</div>
+`;

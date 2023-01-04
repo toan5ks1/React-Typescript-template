@@ -1,0 +1,351 @@
+{
+    "ra": {
+        "message": {
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "invalidSearchQueryReturningAllItems": "Invalid search query - returning all items",
+            "noDataInformation": "No Information",
+            "unableToLoadData": "Unable to load data, please try again!",
+            "notImplementedYet": "Not implemented yet"
+        },
+        "common": {
+            "action": {
+                "cancel": "Cancel",
+                "submit": "Submit",
+                "create": "Create",
+                "filter": "Filter",
+                "uploadFile": "Upload file",
+                "addRow": "Add",
+                "deleteRow": "Delete",
+                "close": "Close",
+                "leave": "Leave",
+                "downloadFile": "Download File",
+                "update": "Update",
+                "next": "Next",
+                "back": "Back",
+                "restore": "Restore",
+                "save": "Save",
+                "confirm": "Confirm",
+                "submitAll": "Submit All"
+            },
+            "title": {
+                "cancelDialogTitle": "Leave the page",
+                "previousDialogTitle": "Go Back to previous page"
+            }
+        },
+        "validation": {
+            "requiredAll": "Required fields cannot be blank!"
+        },
+        "manabie-error": {
+            "specified": {
+                "orderMismatch": "Order was not submitted because product details have been changed. Please submit a new order again!",
+                "csvFileIsEmpty": "CSV file is empty",
+                "getBrightcoveProfileFail": "Failed to get Brightcove account information"
+            },
+            "unknown": "We meet an unknown error. Please try again or contact with Staff.",
+            "invalid_params": "There is something wrong please check your data!"
+        }
+    },
+    "resources": {
+        "common": {
+            "day": {
+                "monday": "Monday",
+                "tuesday": "Tuesday",
+                "wednesday": "Wednesday",
+                "thursday": "Thursday",
+                "friday": "Friday",
+                "saturday": "Saturday",
+                "sunday": "Sunday"
+            },
+            "name": "Name",
+            "city": "City",
+            "district": "District",
+            "school": "School (%{smart_count})",
+            "just_show_system_school": "Just show verified schools",
+            "teacher": "Teacher (%{smart_count})",
+            "config": "Config",
+            "material": "Material",
+            "removeMaterial": "Remove material",
+            "removeMaterialConfirmText": "Are you sure you want to remove this material? |||| You're about to remove the file named “%{name}” for %{week}.",
+            "doYouWantToDoThis": "Do you want to do this?",
+            "viewDetail": "View details",
+            "accountInfo": "Account information",
+            "account": "Account",
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "noResultSearch": "Please use try again with different keywords",
+            "studyItem": "Study Item",
+            "students": "Students",
+            "parents": "Parents",
+            "youFilterBy": "You filter by",
+            "all": "All",
+            "action": "Action",
+            "youAreOffline": "Please try again, your network is down",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "somethingWentWrong": "Something went wrong",
+            "pleaseHelpUsReport": "Please help us report this issue by sending our staff the error message below",
+            "back": "Go Back",
+            "details": "Details",
+            "netWorkUnstable": "Your internet connection is unstable, Please refresh the page or try again"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "limitLength": "%{field} must not exceed %{length} characters",
+                "dateMustComeAfter": "%{endDate} must come after %{startDate}",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}",
+                "fieldCannotBeBlank": "%{field} cannot be blank!"
+            },
+            "dropFileHere": "Drop your file here",
+            "pleaseUploadFileSizeLessThan": "Please, upload file size less than %{maxSize}MB",
+            "dragAndDropFileHere": "Drag & drop your files or",
+            "dragAndDropCSVFileHere": "Drag and drop or select a CSV files to upload",
+            "uploading": "Uploading...",
+            "cannotUpload": "Upload failed",
+            "pasteVideoLink": "Paste video link",
+            "chooseFilesToUpload": "Choose files to upload",
+            "browse": "browse",
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller"
+        },
+        "button": {
+            "audio": "Audio",
+            "image": "Image",
+            "blank": "Blank",
+            "advanced": "Advanced",
+            "clearAll": "Clear All",
+            "addCourse": "Add course",
+            "addAssociatedProducts": "Add Associated Products",
+            "viewEnrollmentForm": "View Enrollment Form"
+        },
+        "masters": {
+            "name": "Master Management",
+            "title": {
+                "import": "Import Data"
+            },
+            "button": {
+                "import": "Import Data"
+            },
+            "placeholder": {
+                "masterData": "Master Data"
+            },
+            "choices": {
+                "masterData": {
+                    "grades": "Grades",
+                    "accountingCategory": "Accounting Category",
+                    "location": "Location",
+                    "locationType": "Location Type",
+                    "billingSchedule": "Billing Schedule",
+                    "billingSchedulePeriod": "Billing Schedule Period",
+                    "discount": "Discount",
+                    "tax": "Tax",
+                    "package": "Package",
+                    "material": "Material",
+                    "fee": "Fee",
+                    "productGrade": "Product - grade",
+                    "productCourse": "Product - course",
+                    "productAccountingCategory": "Product - accounting category",
+                    "productLocation": "Product - location",
+                    "productPrice": "Product - price",
+                    "billingRatio": "Billing Ratio",
+                    "leavingReason": "Leaving Reason",
+                    "class": "Class",
+                    "packageQuantityTypeMapping": "Package Quantity Type Mapping",
+                    "packageCourseFee": "Package Course Fee",
+                    "packageCourseMaterial": "Package Course Material",
+                    "schoolLevel": "School Level",
+                    "school": "School",
+                    "schoolCourse": "School Course",
+                    "schoolLevelGrade": "School Level Grade",
+                    "userTag": "User Tag",
+                    "bank": "Bank",
+                    "bankBranch": "Bank Branch",
+                    "timesheetConfig": "Timesheet Config",
+                    "invoiceSchedule": "Invoice Schedule"
+                }
+            },
+            "status": {
+                "fileConverting": "%{fileName} converting ...",
+                "fileUploading": "Uploading %{fileName} ..."
+            },
+            "message": {
+                "importedSuccess": "The records are imported successfully!",
+                "importedFailure": "There is something wrong please check your data!"
+            }
+        },
+        "orders": {
+            "name": "Order Management",
+            "enterStudentName": "Enter student name",
+            "currentFilters": "Current filters",
+            "title": {
+                "request": "Request",
+                "generalInfo": "General Info",
+                "productList": "Product List",
+                "billingItem": "Billing Item",
+                "actionLog": "Action Log",
+                "studentInfo": "Student Info",
+                "createOrder": "Create Order",
+                "createEnrollment": "Create Enrollment Request",
+                "createBulkOrder": "Create Order",
+                "upcomingBilling": "Upcoming Billing",
+                "filters": "Filters",
+                "billedAtOrder": "Billed at order",
+                "viewComment": "View Comment",
+                "billingInfo": "Billing Info",
+                "course": "Course",
+                "associatedProducts": "Associated Products",
+                "billingItems": "Billing Items",
+                "orders": "Orders History",
+                "previewTheForm": "Preview the Form",
+                "enrollmentForm": "Enrollment Form",
+                "updateProducts": "Update Products",
+                "afterUpdateInfo": "After Update Info",
+                "beforeUpdateInfo": "Before Update Info",
+                "totalSlotsSelected": "Total slots selected",
+                "createCustomBilling": "Create Custom Billing",
+                "studentList": "Student List",
+                "voidOrder": "Void Order"
+            },
+            "column": {
+                "id": "ID",
+                "name": "Name",
+                "status": "Status",
+                "price": "Price",
+                "content": "Content",
+                "detail": "Detail",
+                "comment": "Comment",
+                "product": "Product",
+                "amount": "Amount",
+                "studentName": "Student Name",
+                "approvalStatus": "Approval Status",
+                "orderType": "Order Type",
+                "requestedDate": "Requested Date",
+                "userName": "User Name",
+                "updatedTime": "Updated Time",
+                "billedDate": "Billed Date",
+                "billingPeriod": "Billing Period",
+                "action": "Action",
+                "orderNumber": "Order No",
+                "orderStatus": "Order Status",
+                "createdDate": "Created Date",
+                "productDetails": "Product Details",
+                "billingNumber": "Billing No",
+                "billingDate": "Billing Date",
+                "location": "Location",
+                "duration": "Duration",
+                "upcomingBillingDate": "Upcoming Billing Date",
+                "billingItem": "Billing Item",
+                "tax": "Tax"
+            },
+            "label": {
+                "requestedDate": "Requested Date",
+                "orderType": "Order Type",
+                "orderId": "Order ID",
+                "studentName": "Student Name",
+                "invoiceMethod": "Invoice Method",
+                "center": "Center",
+                "createdDate": "Created Date",
+                "createBulkOrder": "Create Bulk Order",
+                "createRegularCourse": "Create Regular/Seasonal course",
+                "createNextYearCourse": "Create Next Year Course",
+                "view": "View",
+                "courseAssociation": "Course Association",
+                "discount": "Discount",
+                "slot": "Slot",
+                "slotWeek": "Slot/wk",
+                "wk": "wk",
+                "slots": "Slots",
+                "endDate": "End Date",
+                "viewPreviousVersion": "View Previous Version",
+                "comment": "Comment",
+                "billingDate": "Billing Date",
+                "orderNumber": "Order No.",
+                "location": "Location",
+                "name": "Name",
+                "productName": "Product Name",
+                "startDate": "Start Date",
+                "subTotal": "Sub-total",
+                "total": "Total",
+                "tax": "Tax",
+                "incl": "incl",
+                "cancelled": "Cancelled",
+                "effectiveDate": "Effective Date",
+                "void": "Void",
+                "updateScheduled": "Update Scheduled",
+                "billingRatio": "billing ratio"
+            },
+            "tooltip": {
+                "deleteMandatoryCourse": "Can't delete mandatory course",
+                "atLeastOneCourseSelected": "At least one course must be selected",
+                "courseLimitReached": "Can’t add more courses because maximum course reached",
+                "associatedProductsLimitReached": "Can't add more associated products because maximum associated products reached"
+            },
+            "dialog": {
+                "voidDialogMessage": "All updates to products and billing items in this order will be voided.",
+                "previousDialogMessage": "All changes will be lost if you return to previous page. Are you sure?"
+            },
+            "tag": {
+                "adjustment": "Adjustment"
+            },
+            "choices": {
+                "orderType": {
+                    "ORDER_TYPE_NEW": "New",
+                    "ORDER_TYPE_ENROLLMENT": "Enrollment",
+                    "ORDER_TYPE_UPDATE": "Update",
+                    "ORDER_TYPE_CANCEL": "Cancel",
+                    "ORDER_TYPE_WITHDRAWAL": "Withdrawal",
+                    "ORDER_TYPE_LOA": "LOA",
+                    "ORDER_TYPE_CUSTOM_BILLING": "Custom Billing",
+                    "ORDER_TYPE_PAUSE": "Pause",
+                    "ORDER_TYPE_GRADUATE": "Graduate"
+                },
+                "orderStatus": {
+                    "ORDER_STATUS_ALL": "All |||| All (%{count})",
+                    "ORDER_STATUS_SUBMITTED": "Submitted |||| Submitted (%{count})",
+                    "ORDER_STATUS_PENDING": "Pending |||| Pending (%{count})",
+                    "ORDER_STATUS_REJECTED": "Rejected |||| Rejected (%{count})",
+                    "ORDER_STATUS_VOIDED": "Voided |||| Voided (%{count})",
+                    "ORDER_STATUS_INVOICED": "Invoiced |||| Invoiced (%{count})"
+                },
+                "orderBillingStatus": {
+                    "BILLING_STATUS_WAITING_APPROVAL": "Waiting Approval |||| Waiting Approval (%{count})",
+                    "BILLING_STATUS_PENDING": "Pending |||| Pending (%{count})",
+                    "BILLING_STATUS_BILLED": "Billed |||| Billed (%{count})",
+                    "BILLING_STATUS_INVOICED": "Invoiced |||| Invoiced (%{count})",
+                    "BILLING_STATUS_CANCELLED": "Cancelled |||| Cancelled (%{count})"
+                },
+                "orderActionLogStatus": {
+                    "ORDER_ACTION_SUBMITTED": "Submitted",
+                    "ORDER_ACTION_VOIDED": "Voided"
+                },
+                "orderProductListStatus": {
+                    "PENDING": "Pending",
+                    "ORDERED": "Ordered",
+                    "CANCELLED": "Cancelled"
+                }
+            },
+            "message": {
+                "success": {
+                    "createOrder": "You have created the order successfully!",
+                    "createCustomBillingOrder": "You have created custom billing successfully",
+                    "voidOrder": "You have voided the order successfully!"
+                },
+                "error": {
+                    "commonProductError": "Please check product details",
+                    "requiredSection": "This section is required",
+                    "invalidProduct": "Invalid product price. Please check details of products highlighted below.",
+                    "invalidProductUpdate": "Only able to update products with status ordered.",
+                    "withdrawalOrGraduationProductUpdate": "Unable to update the product as it has a pending withdrawal/graduate order.",
+                    "noUpdatedField": "Order cannot be submitted. None of the field/s was updated.",
+                    "incorrectFormatField": "Format of the field is not correct",
+                    "updateScheduledError": "Unable to update the product as it has an Update Scheduled tag."
+                }
+            },
+            "filters": {
+                "createdFrom": "Created From",
+                "createdTo": "Created To",
+                "orderType": "Order Type",
+                "product": "Product"
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+query getAssignmentsByTopicIdsForTest($topic_ids: _text!) {
+    find_assignment_by_topic_id(args: { ids: $topic_ids }) {
+        name
+        assignment_id
+        display_order
+        content(path: "topic_id")
+    }
+}
+
+query getStudyPlanItemsByIdsForTest($study_plan_item_ids: [String!]) {
+    study_plan_items(where: { study_plan_item_id: { _in: $study_plan_item_ids } }) {
+        study_plan_item_id
+        available_from
+        available_to
+        end_date
+        start_date
+    }
+}

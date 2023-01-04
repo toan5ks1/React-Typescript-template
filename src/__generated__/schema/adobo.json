@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/undefined",
+  "definitions": {
+    "IEvents": {
+      "type": "object",
+      "properties": {
+        "addSnackbar": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            },
+            "severity": {
+              "$ref": "#/definitions/AlertColor"
+            },
+            "options": {
+              "type": "object",
+              "properties": {
+                "persist": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "required": [
+            "message",
+            "severity"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "addSnackbar"
+      ],
+      "additionalProperties": false
+    },
+    "AlertColor": {
+      "type": "string",
+      "enum": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ]
+    }
+  }
+}

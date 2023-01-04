@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationTaskbar /> <MasterImportItem /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #586189;
+  margin: 0px 0px 0px 8px;
+  font-size: 1rem;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="MasterImportItem__text"
+  >
+    fileName converting ...
+  </p>
+</div>
+`;
+
+exports[`<NotificationTaskbar /> <MaterialItem /> should match snapshot 1`] = `
+.emotion-0 {
+  min-width: 28px;
+  min-height: 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 16px;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #586189;
+  margin: 0px 0px 0px 8px;
+  font-size: 1rem;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="FileIcon"
+  >
+    <svg
+      data-testid="FileIcon__PDF"
+      fill="none"
+      height="28"
+      viewBox="0 0 28 28"
+      width="28"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z"
+        fill="#F44336"
+      />
+      <path
+        d="M6.09238 14.798V17.4996H4.17285V9.53711H7.35019C7.95905 9.53711 8.49681 9.65013 8.96348 9.87617C9.43379 10.0986 9.79655 10.4176 10.0518 10.8332C10.3106 11.2452 10.44 11.7137 10.44 12.2387C10.44 13.0152 10.1611 13.6368 9.60332 14.1035C9.04915 14.5665 8.28717 14.798 7.31738 14.798H6.09238ZM6.09238 13.316H7.35019C7.72207 13.316 8.00462 13.223 8.19785 13.0371C8.39473 12.8512 8.49316 12.5887 8.49316 12.2496C8.49316 11.8777 8.3929 11.5806 8.19238 11.3582C7.99186 11.1358 7.71842 11.0228 7.37207 11.0191H6.09238V13.316Z"
+        fill="white"
+      />
+      <path
+        d="M11.5662 17.4996V9.53711H14.131C14.8347 9.53711 15.4672 9.69753 16.0287 10.0184C16.5901 10.3355 17.0276 10.7858 17.3412 11.3691C17.6583 11.9488 17.8188 12.5996 17.8224 13.3215V13.6879C17.8224 14.4171 17.6675 15.0715 17.3576 15.6512C17.0513 16.2272 16.6175 16.6793 16.056 17.0074C15.4982 17.3319 14.8748 17.496 14.1857 17.4996H11.5662ZM13.4857 11.0191V16.023H14.1529C14.7034 16.023 15.1263 15.828 15.4216 15.4379C15.7169 15.0441 15.8646 14.4608 15.8646 13.6879V13.3434C15.8646 12.5741 15.7169 11.9944 15.4216 11.6043C15.1263 11.2142 14.6961 11.0191 14.131 11.0191H13.4857Z"
+        fill="white"
+      />
+      <path
+        d="M23.9196 14.3277H20.8243V17.4996H18.9048V9.53711H24.2313V11.0191H20.8243V12.8512H23.9196V14.3277Z"
+        fill="white"
+      />
+    </svg>
+  </div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-1"
+    data-testid="NotificationTaskbarModal__name"
+  >
+    name 01 converting ...
+  </p>
+</div>
+`;
+
+exports[`<NotificationTaskbar /> should match snapshot 1`] = `
+<div
+  aria-hidden="true"
+/>
+`;

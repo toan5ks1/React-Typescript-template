@@ -1,0 +1,1842 @@
+{
+    "ra": {
+        "action": {
+            "add_filter": "Add filter",
+            "add": "Add",
+            "back": "Go Back",
+            "bulk_actions": "1 item selected |||| %{smart_count} items selected",
+            "cancel": "Cancel",
+            "clear_input_value": "Clear value",
+            "clone": "Clone",
+            "confirm": "Confirm",
+            "create": "Create",
+            "create_item": "Create %{item}",
+            "delete": "Delete",
+            "discard": "Discard",
+            "edit": "Edit",
+            "export": "Export",
+            "list": "List",
+            "refresh": "Refresh",
+            "remove_filter": "Remove this filter",
+            "remove": "Remove",
+            "save": "Save",
+            "search": "Search",
+            "show": "Show",
+            "sort": "Sort",
+            "undo": "Undo",
+            "unselect": "Unselect",
+            "expand": "Expand",
+            "close": "Close",
+            "open_menu": "Open menu",
+            "close_menu": "Close menu",
+            "copy": "Copy",
+            "leave": "Leave"
+        },
+        "boolean": {
+            "true": "Yes",
+            "false": "No",
+            "null": ""
+        },
+        "page": {
+            "create": "Create %{name}",
+            "dashboard": "Dashboard",
+            "edit": "%{name} #%{id}",
+            "error": "Something went wrong",
+            "list": "%{name}",
+            "loading": "Loading",
+            "not_found": "Not Found",
+            "show": "%{name} #%{id}",
+            "empty": "No %{name} yet.",
+            "invite": "Do you want to add one?"
+        },
+        "input": {
+            "file": {
+                "upload_several": "Drop some files to upload, or click to select one.",
+                "upload_single": "Drop a file to upload, or click to select it.",
+                "maxSize": "Max size: %{fileSize}%{fileUnit}"
+            },
+            "image": {
+                "upload_several": "Drop some pictures to upload, or click to select one.",
+                "upload_single": "Drop a picture to upload, or click to select it."
+            },
+            "references": {
+                "all_missing": "Unable to find references data.",
+                "many_missing": "At least one of the associated references no longer appears to be available.",
+                "single_missing": "Associated reference no longer appears to be available."
+            },
+            "password": {
+                "toggle_visible": "Hide password",
+                "toggle_hidden": "Show password"
+            }
+        },
+        "tempMessageFeatureToggle": {
+            "duplicationRow": "The row %{number} has duplicated information",
+            "alreadyRegisteredRow": "The row %{number} has already registered",
+            "notFollowTemplate": "You have failed to import the student list because of row %{number}"
+        },
+        "message": {
+            "about": "About",
+            "are_you_sure": "Are you sure?",
+            "bulk_delete_content": "Are you sure you want to delete this %{name}? |||| Are you sure you want to delete these %{smart_count} items?",
+            "bulk_delete_title": "Delete the %{name} |||| Delete %{smart_count} %{name}",
+            "delete_content": "Are you sure you want to delete this item?",
+            "delete_title": "Delete %{name} #%{id}",
+            "details": "Details",
+            "error": "A client error occurred and your request couldn't be completed.",
+            "invalid_form": "The form is not valid. Please check for errors",
+            "loading": "The page is loading, just a moment please",
+            "no": "No",
+            "not_found": "Either you typed a wrong URL, or you followed a bad link.",
+            "yes": "Yes",
+            "unsaved_changes": "Some of your changes weren't saved. Are you sure you want to ignore them?",
+            "schoolDontHaveTeacherPleaseCreateTeacherBeforeCreateClass": "This school doesn't have any teachers. Please create teacher accounts before creating classes.",
+            "just_show_verified_schools": "This list only contains verified schools",
+            "please_select_member_before_update": "Please select members to edit",
+            "please_select_teacher_before_add": "Please select teachers to add",
+            "this_school_dont_have_specify_config": "This school doesn't have separate configuration.",
+            "this_is_default_config": "This is a default configuration.",
+            "pls_select_time_duration_or_expired_at": "Please input time to expired",
+            "pleaseSearchByTeacherEmail": "Please, search by teacher's email",
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "noDataMessage": "There is no data for %{name}",
+            "noData": "No data",
+            "noDataInformation": "No Information",
+            "canNotRemoveBooksFromCourse": "Can not remove books from course",
+            "downloadBookSuccess": "You have download book successfully",
+            "downloadBookFail": "Download book failed",
+            "downloadStudyPlanSuccess": "You have download study plan successfully",
+            "duplicateBookSuccess": "You have duplicated book successfully",
+            "duplicateBookFail": "Duplicate book failed",
+            "mustBeAValidPhoneNumber": "Must be a valid phone number",
+            "moveSuccess": "You have moved item successfully",
+            "moveFail": "Move item failed",
+            "uploadBrightcoveLinkFail": "Video link is not supported, please try another link!",
+            "brightcoveVideoLinkHasExisted": "Brightcove video link has existed, please try another link!",
+            "unableToLoadData": "Unable to load data, please try again!",
+            "unexpected": "An unexpected error occurred. Please log in again",
+            "invalidSearchQueryReturningAllItems": "Invalid search query - returning all items",
+            "linkLOsSuccess": "You have linked learning objectives successfully",
+            "youAreOffline": "Please try again, your network is down",
+            "youAreRestoredNetwork": "Restored your network",
+            "areYouSureYouWantToDiscardWhatYouSelected": "Are you sure you want to discard what you selected?",
+            "youHaveAppliedLocationSuccessfully": "You have applied location setting successfully!",
+            "importStudentInProgress": "Student list import has been in progress",
+            "invalidNumberRow": "Invalid number of row. The maximum number of rows is 1000",
+            "duplicationRow": "%{headerName} is duplicated at row %{number}",
+            "alreadyRegisteredRow": "%{headerName} is already registered at row %{number}",
+            "notFollowTemplate": "%{headerName} is invalid at row %{number}",
+            "otherErrorImport": "Something went wrong. Please try again",
+            "invalidMaxSizeFile": "Invalid File type or File size is bigger than 5MB",
+            "emptyFile": "The file is empty",
+            "wrongTemplate": "The file header is invalid.",
+            "importedStudentsSuccessfully": "You have imported the student list successfully",
+            "importParentInProgress": "Parent list import has been in progress",
+            "importedParentsSuccessfully": "You have imported the parent list successfully",
+            "notFollowParentTemplate": "%{headerName} is invalid at row %{number}",
+            "missingMandatory": "%{headerName} is required at row %{number}",
+            "notMatchRelationshipAndEmailStudent": "No. of Email/s and No. of Relationship/s does not match at row %{number}",
+            "emptyLocation": "You have to select at least 1 location"
+        },
+        "navigation": {
+            "no_results": "No results found",
+            "no_more_results": "The page number %{page} is out of boundaries. Try the previous page.",
+            "page_out_of_boundaries": "Page number %{page} out of boundaries",
+            "page_out_from_end": "Cannot go after last page",
+            "page_out_from_begin": "Cannot go before page 1",
+            "page_range_info": "%{offsetBegin}-%{offsetEnd} of %{total}",
+            "page_rows_per_page": "Rows per page:",
+            "next": "Next",
+            "prev": "Prev",
+            "skip_nav": "Skip to content"
+        },
+        "sort": {
+            "sort_by": "Sort by %{field} %{order}",
+            "ASC": "ascending",
+            "DESC": "descending"
+        },
+        "auth": {
+            "auth_check_error": "Please login to continue",
+            "user_menu": "Profile",
+            "username": "Username",
+            "password": "Password",
+            "sign_in": "Sign in",
+            "sign_in_error": "Authentication failed, please retry",
+            "logout": "Logout",
+            "forgotPassword": "Forgot Password?",
+            "forgotPasswordWithOrganization": "Forgot Password With Organization",
+            "resetPassword": "Reset password",
+            "resetAccountWithAccountWhichWasProvidedByYourSchool": "Reset with account which was provided by your school.",
+            "theLinkToRenewPasswordWillBeSentToYourEmail": "The link to renew password will be sent to your email.",
+            "theLinkHasBeenSent": "The link has been sent",
+            "pleaseCheckYourEmailToRenewYourPassword": "Please check your email to renew your password",
+            "enterEmail": "Enter email",
+            "enterPassword": "Enter password",
+            "backToLogin": "Back to Sign In",
+            "checkingProfile": "Checking your identity",
+            "signingOut": "Signing out",
+            "cannotSignOut": "Cannot sign out",
+            "auth/wrong-password": "Account information is incorrect. Please check again or contact Manabie staff",
+            "auth/argument-error": "An argument error occurred. Please log in again",
+            "auth/invalid-email": "The email address is badly formatted.",
+            "auth/user-disabled": "User disabled",
+            "auth/user-not-found": "Account information is incorrect. Please check again or contact Manabie staff",
+            "auth/timeout": "An timeout error occurred. Please log in again",
+            "auth/cannot-sign-out": "Cannot sign out",
+            "auth/credential-expired": "Credential expired. Please log in again",
+            "auth/unauthorized": "An unauthorized error occurred. Please log in again",
+            "organization": "Organization",
+            "locationSetting": {
+                "title": "Location Setting",
+                "confirmRedirect": "Confirm",
+                "confirmApply": "Do you want to apply this setting?",
+                "confirmLeave": "After applying, you will be redirected to %{page}",
+                "unauthorizedLocation": "Unauthorized location"
+            },
+            "redirectToTenantLogin": "Redirect to tenant login"
+        },
+        "notification": {
+            "updated": "Element updated |||| %{smart_count} elements updated",
+            "created": "Element created",
+            "deleted": "Element deleted |||| %{smart_count} elements deleted",
+            "bad_item": "Incorrect element",
+            "item_doesnt_exist": "Element does not exist",
+            "http_error": "Server communication error",
+            "data_provider_error": "dataProvider error. Check the console for details.",
+            "i18n_error": "Cannot load the translations for the specified language",
+            "canceled": "Action cancelled",
+            "logged_out": "Your session has ended, please reconnect."
+        },
+        "validation": {
+            "required": "Required",
+            "requiredAll": "Required fields cannot be blank!",
+            "minLength": "Must be %{min} characters at least",
+            "maxLength": "Must be %{max} characters or less",
+            "minValue": "Must be at least %{min}",
+            "maxValue": "Must be %{max} or less",
+            "number": "Must be a number",
+            "email": "Must be a valid email",
+            "oneOf": "Must be one of: %{options}",
+            "regex": "Must match a specific format (regexp): %{pattern}"
+        },
+        "manabie-error": {
+            "specified": {
+                "cannot_create_chapter": "Cannot create chapter",
+                "already_join_this_class": "The user already join this class",
+                "email_is_exist_in_db": "Please try again with a different email or contact staff for support.",
+                "phone_is_exist_in_db": "Please try again with a different phone number or contact staff for support.",
+                "can_not_find_users": "This user was not found in our database.",
+                "can_not_find_class": "This class was not found in our database.",
+                "owner_must_be_teachers": "The class owner must be a teacher.",
+                "can_not_handle_class_other_school": "You cannot process data of another school.",
+                "user_not_found": "Account information is incorrect. Please check again or contact Manabie staff",
+                "school_not_found": "Sorry, we can't find your school in our database, please check again or contact staff for further support!",
+                "teacher_is_missing": "Please choose teacher",
+                "fileIsTooLarge": "File upload larger than max. Please, upload file size in the limit",
+                "fileExceedLimit": "%{file} exceed limit %{maxSize}MB",
+                "endTimeLessThanStartTime": "End time can not be smaller than start time",
+                "csvFileIsEmpty": "CSV file is empty",
+                "brightcoveVideoIsBeingProcessed": "Your video is being processed, please wait",
+                "cantDiscardDeletedNotification": "The notification has been deleted",
+                "cantEditSentNotification": "The notification has been sent, you can no longer edit this notification",
+                "cantDiscardSentNotification": "The notification has been sent, you can no longer discard this notification",
+                "cantSendSentNotification": "The notification has been sent",
+                "cantEditDiscardedNotification": "The notification has been deleted, you can no longer edit this notification",
+                "cantSendDiscardedNotification": "The notification has been deleted, you can no longer send this notification",
+                "cantSchedulePastTimeNotification": "You cannot schedule at a time in the past"
+            },
+            "invalid_params": "Invalid params. Please check your data",
+            "unknown": "We meet an unknown error. Please try again or contact with Staff.",
+            "not_found": "We could not find your data.",
+            "deadline_exceeded": "Deadline exceeded",
+            "already_exists": "Already exists",
+            "permission_denied": "You don't have permission. Your current role is not in allowed roles",
+            "teacher_jprep_permission_denied": "Can't login as teacher, logging out...",
+            "internals": "Internal",
+            "disconnect": "Disconnect",
+            "not_authenticated": "Not authenticated",
+            "jwt_invalid": "Token is invalid or expired",
+            "connection": "We encountered an error while trying to communicate with the server. Please try again or contact the Staff",
+            "allow_list_denied": "Your current query is not in allowed list. Please contact staff for further support!",
+            "token_expired": "Your session has ended, please reconnect.",
+            "query_timeout_exceeded": "Your current query timeout exceeded the limit. Please try again or contact Manabie staff for further support!",
+            "firebase": {
+                "invalid_email": "The email address is badly formatted.",
+                "user_disabled": "User disabled",
+                "user_not_found": "Account information is incorrect. Please check again or contact Manabie staff",
+                "wrong_password": "Account information is incorrect. Please check again or contact Manabie staff",
+                "missing_android_pkg_name": "Missing Android package name",
+                "missing_continue_uri": "Missing continue URI",
+                "missing_ios_bundle_id": "Missing IOS bundle ID",
+                "invalid_continue_uri": "Invalid continue URI",
+                "unauthorized_continue_uri": "Unauthorized continue URI",
+                "permission_denied": "Sorry, this account don't have permission to login",
+                "too_many_request": "Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.",
+                "quota_exceeded": "Too many login attempts. Please try again in a few minutes"
+            },
+            "token_not_exist": "Token doesn't exist",
+            "claim_token_invalid": "Claim token is not valid. Please contact staff for support!",
+            "noCourse": "Course not exist",
+            "noChapter": "Chapter not exist",
+            "noTopic": "Topic not exist",
+            "cannotPickLowerThanNow": "Can not pick time lower than now",
+            "receivedMessageLargerThanMax": "File upload larger than max. Please, upload file size less than %{maxSize}MB",
+            "timeIsPassed": "Time is passed",
+            "endTimeLowerThanStartTime": "End time must larger than start time",
+            "screenshotFailed": "Screenshot failed",
+            "cannotUpload": "Cannot upload file",
+            "videoCannotLoad": "Cannot load the video, or video is processing, please wait",
+            "quiz": {
+                "missingQuizId": "Missing quiz id",
+                "missingQuestionContent": "Question cannot be empty",
+                "missingExplanationContent": "Explanation cannot be empty",
+                "missingAnswers": "Must have at least 1 answer",
+                "thereIsNoCorrectAnswer": "Must have at least 1 answer marked as CORRECT",
+                "missingTaggedLOs": "Must have at least 1 tagged learning objective",
+                "missingDefinition": "Definition cannot be empty",
+                "missingAnswerPrefix": "Answer prefix cannot be empty"
+            },
+            "customFileSizeReached": "Max file size reached: %{smart_count} bytes",
+            "canNotExtractFromPdf": "Cannot extract from the PDF file",
+            "uploadedFileIsInvalid": "%{fileType} file type is not allowed or File size is bigger than %{fileMaxSize}%{fileUnit}",
+            "multipleChoiceQuestionCanOnlyHave": "Multiple choice question can only have 4 answers",
+            "missingLOId": "Missing LO Id",
+            "missingQuizId": "Missing Quiz Id",
+            "cannotIdentifyYourCredentials": "Cannot read your identity, please try to login again",
+            "cannotGetParentsListOfAStudent": "Cannot get parents list of a student",
+            "mathJaxLoadTooLong": "Failed to load MathJax"
+        },
+        "common": {
+            "action": {
+                "add": "Add",
+                "addMore": "Add More",
+                "edit": "Edit",
+                "create": "Create",
+                "delete": "Delete",
+                "moveUp": "Move up",
+                "moveDown": "Move down",
+                "detail": "Detail",
+                "duplicate": "Duplicate",
+                "moreAction": "More Action",
+                "warning": "Warning",
+                "OK": "OK",
+                "cancel": "Cancel",
+                "discard": "Discard",
+                "remove": "Remove",
+                "resend": "Resend",
+                "show": "Show",
+                "download": "Download |||| Download %{extension}",
+                "update": "Update",
+                "uploadFile": "Upload file",
+                "addCourse": "Add course",
+                "confirm": "Confirm",
+                "search": "Search",
+                "upload": "Upload",
+                "save": "Save",
+                "reset": "Reset",
+                "apply": "Apply",
+                "rename": "Rename",
+                "selectAllItems": "Select all items",
+                "filter": "Filter",
+                "archive": "Archive",
+                "unarchive": "Unarchive",
+                "activate": "Activate",
+                "reIssuePassword": "Re-Issue password",
+                "printAsStudentCard": "Print as Student Card",
+                "printAsQrCodeSheet": "Print as QR code sheet",
+                "createNewOrder": "Create Order",
+                "createEnrollmentOrder": "Create Enrollment Request",
+                "createBulkOrder": "Create Order",
+                "downloadStudentQrUrls": "Download QR URLs",
+                "importParents": "Import Parents",
+                "createCustomBillingOrder": "Create Custom Billing"
+            },
+            "sent": "Sent",
+            "send": "Send",
+            "saveDraft": "Save Draft",
+            "saveSchedule": "Save Schedule",
+            "discardChange": "Discard Change",
+            "selected": "Selected",
+            "draft": "Draft",
+            "warningTitle": "Warning",
+            "done": "Done",
+            "save": "Save",
+            "save_change": "Save changes",
+            "doYouWantToDelete": "Do you want to delete",
+            "createdAt": "Created Date",
+            "numberOrder": "No",
+            "total": "Total",
+            "more": "More",
+            "actions": "Actions",
+            "editedSuccess": "Edited successfully |||| You have edited the %{smart_count} successfully",
+            "editedFail": "Edited failed",
+            "sendSuccess": "Send successfully |||| You have sent the %{smart_count} successfully",
+            "sendFail": "Send failed",
+            "updatedSuccess": "Updated successfully |||| You have updated %{smart_count} successfully",
+            "updatedFail": "Updated failed",
+            "createdSuccess": "Created successfully |||| You have created a new %{smart_count} successfully",
+            "resendSuccess": "Notification send to unread user successfully",
+            "resendFail": "Oops! There is somthing wrong. Please wait a few minute and try again.",
+            "createdFail": "Created failed",
+            "addedSuccess": "Created successfully |||| You have added %{smart_count} successfully",
+            "addedFail": "Added failed",
+            "loadMore": "Load more",
+            "deleteSuccess": "Deleted successfully |||| You have deleted %{smart_count} successfully",
+            "deleteFail": "Delete failed",
+            "removeSuccess": "Removed successfully |||| You have removed %{name} successfully!",
+            "removeFail": "Removed failed!",
+            "convertingAllFilesSuccessfully": "Converting all files successfully!",
+            "failedToUploadFiles": "Failed to upload your files for %{name}",
+            "updatedAt": "Updated at",
+            "deleteConfirmText": "All |||| content will be deleted, do you want to proceed?",
+            "minute": "min |||| mins",
+            "back": "Back",
+            "someThingWentWrong": "Some thing went wrong",
+            "cannotLoadPage": "We cannot load the page data, may be the internet was disconnected, please try again",
+            "pleaseHelpUsReport": "Please help us report this issue by send our staff the error message below",
+            "invalid": "Invalid",
+            "language": "Language",
+            "thisPageIsNotFound": "This page is not found",
+            "backToHomePage": "Back to homepage",
+            "welcomeTo": "Welcome to",
+            "discardMessage": "Discard Message?",
+            "contentManagementSystem": "Content management system",
+            "signInWith": "Sign in with",
+            "cancelDialogTitle": "Leave the page",
+            "cancelDialogMessage": "Changes will be lost. Are you sure to leave?",
+            "editedInformationWillBeLostIfLeave": "Edited information will be lost if you leave.",
+            "yourInformationWillBeLostIfDelete": "Your information will be lost if you delete.",
+            "areYouSureWantToDiscardThisMessage": "Are you sure you want to discard this message? All the contents will be permanently deleted.",
+            "resendNotification": "Are you sure you want to resend this notification to unread users?",
+            "deleteDialogTitle": "Delete item |||| Delete %{smart_count}",
+            "unexpectedCreateError": "Could not create the %{smart_count}. Please contact your system admin."
+        },
+        "upload": {
+            "selectFile": "Select file",
+            "dragNDrop": "Drag and drop the file you want to upload. Limit file size is %{maxSize}MB.",
+            "upload_single": "Drop a file to upload, or click to select it.",
+            "upload_multiple": "Drop files to upload, or click to select them.",
+            "or": "Or",
+            "uploadImage": "Upload Image"
+        },
+        "pageNotFound": {
+            "title": "Page Not Found",
+            "backToHome": "Back to Homepage",
+            "pageLookingForDoesExist": "The page you are looking for does not exist."
+        }
+    },
+    "resources": {
+        "languages": {
+            "en": "English",
+            "vi": "Vietnamese",
+            "ja": "Japan"
+        },
+        "configs": {
+            "config_title": "Config",
+            "apply": "Apply",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "Global",
+                    "COUNTRY_VN": "Vietnam",
+                    "COUNTRY_ID": "Indonesia",
+                    "COUNTRY_SG": "Singapore",
+                    "COUNTRY_JP": "Japan"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "Monday",
+                "tuesday": "Tuesday",
+                "wednesday": "Wednesday",
+                "thursday": "Thursday",
+                "friday": "Friday",
+                "saturday": "Saturday",
+                "sunday": "Sunday"
+            },
+            "name": "Name",
+            "city": "City",
+            "district": "District",
+            "school": "School (%{smart_count})",
+            "just_show_system_school": "Just show verified schools",
+            "teacher": "Teacher (%{smart_count})",
+            "config": "Config",
+            "material": "Material",
+            "removeMaterial": "Remove material",
+            "removeMaterialConfirmText": "Are you sure you want to remove this material? |||| You're about to remove the file named “%{name}” for %{week}.",
+            "doYouWantToDoThis": "Do you want to do this?",
+            "viewDetail": "View details",
+            "accountInfo": "Account information",
+            "account": "Account",
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "noResultSearch": "Please use try again with different keywords",
+            "studyItem": "Study Item",
+            "students": "Students",
+            "parents": "Parents",
+            "youFilterBy": "You filter by",
+            "all": "All",
+            "noResultFound": "No results found",
+            "pleaseTryAgainWithDifferentKeywordsOrFilters": "Please try again with different keywords or filters",
+            "netWorkUnstable": "Your internet connection is unstable, Please refresh the page or try again"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "limitLength": "%{field} must not exceed %{length} characters",
+                "dateMustComeAfter": "%{endDate} must come after %{startDate}",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}",
+                "fieldCannotBeBlank": "%{field} cannot be blank!"
+            },
+            "dropFileHere": "Drop your file here",
+            "pleaseUploadFileSizeLessThan": "Please, upload file size less than %{maxSize}MB",
+            "dragAndDropFileHere": "Drag & drop your files or",
+            "dragAndDropCSVFileHere": "Drag and drop or select a CSV files to upload",
+            "uploading": "Uploading...",
+            "cannotUpload": "Upload failed",
+            "pasteVideoLink": "Paste video link",
+            "chooseFilesToUpload": "Choose files to upload",
+            "browse": "browse",
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller"
+        },
+        "button": {
+            "audio": "Audio",
+            "image": "Image",
+            "blank": "Blank",
+            "advanced": "Advanced",
+            "clearAll": "Clear All"
+        },
+        "from_to": "From %{from} to %{to}",
+        "choices": {
+            "grades": {
+                "0": "Others",
+                "1": "Grade 1",
+                "2": "Grade 2",
+                "3": "Grade 3",
+                "4": "Grade 4",
+                "5": "Grade 5",
+                "6": "Grade 6",
+                "7": "Grade 7",
+                "8": "Grade 8",
+                "9": "Grade 9",
+                "10": "Grade 10",
+                "11": "Grade 11",
+                "12": "Grade 12",
+                "13": "University 1",
+                "14": "University 2",
+                "15": "University 3",
+                "16": "University 4"
+            },
+            "subjects": {
+                "SUBJECT_NONE": "",
+                "SUBJECT_MATHS": "Math",
+                "SUBJECT_BIOLOGY": "Biology",
+                "SUBJECT_PHYSICS": "Physics",
+                "SUBJECT_CHEMISTRY": "Chemistry",
+                "SUBJECT_GEOGRAPHY": "Geography",
+                "SUBJECT_ENGLISH": "English",
+                "SUBJECT_ENGLISH_2": "English 2",
+                "SUBJECT_JAPANESE": "Japanese",
+                "SUBJECT_SCIENCE": "Science",
+                "SUBJECT_SOCIAL_STUDIES": "Social studies",
+                "SUBJECT_LITERATURE": "Literature"
+            },
+            "plan_privileges": {
+                "CAN_ACCESS_LEARNING_TOPICS": "Can access learning topics",
+                "CAN_ACCESS_PRACTICE_TOPICS": "Can access practive topics",
+                "CAN_ACCESS_MOCK_EXAMS": "Can access mock exams",
+                "CAN_ACCESS_ALL_LOS": "Can access all learning objectives",
+                "CAN_ACCESS_SOME_LOS": "Can access some learning objectives",
+                "CAN_WATCH_VIDEOS": "Can watch videos",
+                "CAN_READ_STUDY_GUIDES": "Can read study guides",
+                "CAN_SKIP_VIDEOS": "Can skip videos",
+                "CAN_CHAT_WITH_TEACHER": "Can chat with teacher"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Admin",
+                "USER_GROUP_SCHOOL_ADMIN": "School Admin |||| School Admin of %{smart_count}",
+                "USER_GROUP_STUDENT": "Student",
+                "USER_GROUP_TEACHER": "Teacher",
+                "USER_GROUP_PARENT": "Parent"
+            },
+            "topic_types": {
+                "TOPIC_TYPE_LEARNING": "Learning",
+                "TOPIC_TYPE_PRACTICAL": "Practical",
+                "TOPIC_TYPE_EXAM": "Exam",
+                "TOPIC_TYPE_ASSIGNMENT": "Assignment",
+                "TOPIC_TYPE_LIVE_LESSON": "Live lesson"
+            },
+            "topic_statuses": {
+                "TOPIC_STATUS_NONE": "None",
+                "TOPIC_STATUS_DRAFT": "Draft",
+                "TOPIC_STATUS_PUBLISHED": "Published"
+            },
+            "quizTypes": {
+                "0": "Multiple choice",
+                "1": "Fill in the blank",
+                "2": "Pair of words",
+                "3": "Term and definition",
+                "4": "Manual input",
+                "5": "Multiple answer"
+            },
+            "listTypes": {
+                "NUMBER": "1, 2, 3...",
+                "TEXT": "a, b, c...",
+                "TEXT_UPPERCASE": "A, B, C...",
+                "CUSTOM": "Custom"
+            },
+            "answerConfigs": {
+                "0": "Ignore case sensitivity",
+                "1": "Partial credits"
+            },
+            "languages": {
+                "en": "English",
+                "vi": "Tiếng việt",
+                "ja": "日本語"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "Monday",
+                "DATE_OF_WEEK_TUESDAY": "Tuesday",
+                "DATE_OF_WEEK_WEDNESDAY": "Wednesday",
+                "DATE_OF_WEEK_THURSDAY": "Thursday",
+                "DATE_OF_WEEK_FRIDAY": "Friday",
+                "DATE_OF_WEEK_SATURDAY": "Saturday",
+                "DATE_OF_WEEK_SUNDAY": "Sunday"
+            }
+        },
+        "schools": {
+            "name": "School",
+            "school_info": "School Information",
+            "list": {
+                "id": "ID",
+                "action": "Action",
+                "name": "Name",
+                "phone": "Phone",
+                "country": "Country",
+                "city": "City",
+                "district": "District",
+                "system": "System",
+                "latlng": "Latitude/Longitude",
+                "filter": {
+                    "name": "Name",
+                    "phone": "Phone",
+                    "system": "System"
+                }
+            },
+            "edit": {
+                "name": "Name",
+                "phone": "Phone",
+                "country": "Country",
+                "city": "City",
+                "district": "District",
+                "system": "System",
+                "school": "School",
+                "config": "Config",
+                "set_duration": "Set duration",
+                "privileges": "Privileges",
+                "plan_id": "Plan ID",
+                "plan_expired_at": "Expired at",
+                "plan_duration": "Duration"
+            },
+            "detail": {
+                "name": "Name",
+                "phone": "Phone",
+                "country": "Country",
+                "city": "City",
+                "district": "District",
+                "school_detail": "Information",
+                "school_config": "Config",
+                "privileges": "Privileges",
+                "plan_id": "Plan ID",
+                "plan_expired_at": "Expired at",
+                "plan_duration": "Duration",
+                "admin": {
+                    "title": "School Admin",
+                    "label": "Admin",
+                    "name": "Name",
+                    "phone": "Phone",
+                    "email": "Email"
+                },
+                "createAccount": {
+                    "title": "Create new account",
+                    "buttonName": "Add",
+                    "entityName": "Account"
+                }
+            },
+            "action": {
+                "classes": "Class (%{smart_count})"
+            }
+        },
+        "students": {
+            "name": "Students (V1)",
+            "title": "Student Management",
+            "addNewButton": "Add New Student",
+            "studentList": "Student List",
+            "colName": "Name",
+            "colEmail": "Email",
+            "colPhone": "Phone number",
+            "colGrade": "Grade",
+            "colCourse": "Course",
+            "noStudents": "No students",
+            "studentInfo": "Student Information",
+            "studentName": "Student name",
+            "createTitle": "Add a New Student",
+            "editTitle": "Edit student information",
+            "enterName": "Enter name",
+            "enterEmail": "Enter email",
+            "enterPhone": "Enter phone number",
+            "pleaseSelect": "Please select...",
+            "courseDetails": "Course Details",
+            "noCourses": "No courses",
+            "colCourseName": "Course",
+            "colCourseEndDate": "End Date",
+            "addCourseTitle": "Add Course",
+            "editCourseTitle": "Edit Course",
+            "courseName": "Course name",
+            "startDate": "Start date",
+            "expireDate": "Expire date",
+            "neverLoggedIn": "Never logged in"
+        },
+        "teachers": {
+            "name": "Teacher",
+            "detail": {
+                "teacher_detail": "Teacher",
+                "avatar": "Avatar",
+                "name": "Teacher Name",
+                "email": "Email",
+                "phone": "Phone",
+                "country": "Country",
+                "total_class": "Total Class",
+                "classes": "Classes",
+                "schools": "School",
+                "class": {
+                    "school": "School",
+                    "class_name": "Class Name",
+                    "subjects": "Subjects",
+                    "grades": "Grades",
+                    "status": "Status"
+                },
+                "school": {
+                    "id": "ID",
+                    "name": "Name",
+                    "country": "Country",
+                    "city": "City",
+                    "district": "District",
+                    "remove_from_school": "Remove from school",
+                    "join_school": "Join school",
+                    "add_teacher_to_school": "Add this teacher to school"
+                }
+            },
+            "create": {
+                "title": "Create new teacher",
+                "label": {
+                    "name": "Name",
+                    "phone": "Phone",
+                    "email": "Email"
+                }
+            },
+            "edit": {
+                "name": "Name"
+            },
+            "list": {
+                "class_owned": "Class Owned",
+                "school": "School",
+                "name": "Name",
+                "email": "Email",
+                "action": "Action",
+                "filter": {
+                    "name": "Name",
+                    "email": "Email",
+                    "school_name": "School"
+                }
+            },
+            "addNewButton": "Add New Teacher",
+            "title": "Teacher Management",
+            "teacherList": "Teacher List",
+            "colName": "Name",
+            "colEmail": "Email",
+            "noTeachers": "No teachers",
+            "teacherInfo": "Teacher Information",
+            "editTeacherInfo": "Edit Teacher Information"
+        },
+        "courses": {
+            "name": "Course",
+            "createTitle": "Add a New Course",
+            "editTitle": "Edit Course",
+            "courseName": "Course name",
+            "chapter": "Chapter |||| Chapter",
+            "grade": "Grade",
+            "subject": "Subject",
+            "country": "Country",
+            "updatedBy": "Updated by",
+            "system": "System",
+            "lesson": "Lesson",
+            "book": "Book",
+            "studyPlan": {
+                "editStudyplan": "Edit study plan general information",
+                "addStudyplan": "Add study plan",
+                "bookAssociation": "Book Association",
+                "studyPlanName": "Study Plan Name",
+                "trackSchoolProgressCheckbox": "Track school progress",
+                "name": "Name",
+                "title": "Study Plan",
+                "studyPlanList": "Study Plan List",
+                "master": "Master",
+                "individual": "Individual",
+                "studentName": "Student Name",
+                "courseMaster": "Course master",
+                "class": "Class",
+                "student": "Student",
+                "uploadMaterial": "Upload Material",
+                "uploadedDate": "Uploaded Date",
+                "action": "Action",
+                "uploading": "Uploading ... |||| %{studyPlanName} uploading for %{levelName}",
+                "uploadedFail": "Uploaded failed",
+                "dialogDeleteConfirm": "Are you sure to delete |||| of %{owner}?",
+                "courseUploadedSuccess": "You have saved file to %{studyPlanName} of %{courseName} successfully!",
+                "studentStudyPlanUploadedSuccess": "You have saved file to %{studyPlanName} of %{studentName} successfully!",
+                "multipleStudentStudyPlanUploadedSuccess": "You have saved file to selected study plan of %{studyPlanName} successfully!",
+                "courseUploadedFail": "Cannot save file to %{studyPlanName} of %{courseName}, please try again.",
+                "studentStudyPlanUploadedFail": "Cannot save file to %{studyPlanName} of %{studentName}, please try again.",
+                "multipleStudentStudyPlanUploadedFail": "Cannot save file to selected study plans of %{studentName}, please try again.",
+                "trackSchoolProgress": {
+                    "title": "Track School Progress",
+                    "true": "Yes",
+                    "false": "No"
+                },
+                "studyPlanContent": "Study Plan Content",
+                "displayHiddenItems": "Display hidden items",
+                "loName": "LO Name",
+                "availableFrom": "Available From",
+                "availableUntil": "Available Until",
+                "start": "Start",
+                "due": "Due",
+                "messages": {
+                    "success": {
+                        "addedStudyPlan": "You have added study plan successfully!",
+                        "editedStudyPlan": "You have edited study plan successfully!",
+                        "archivedStudyPlan": "You have archived study plan successfully!",
+                        "unarchivedStudyPlan": "You have unarchived study plan successfully!"
+                    },
+                    "error": {
+                        "addStudyPlan": "Failed to add study plan. Please try again",
+                        "editStudyPlan": "Failed to edit study plan. Please try again",
+                        "addBook": "Failed to add a book. Please try again",
+                        "archiveStudyPlan": "Failed to archive study plan. Please try again",
+                        "unarchiveStudyPlan": "Failed to unarchive study plan. Please try again"
+                    }
+                },
+                "error": {
+                    "dateFormatInvalidGeneric": "Date format is not correct or invalid. Please mouse over a cell to see the reason for the errors.",
+                    "dateFormatInvalid": "Date format is not correct or invalid",
+                    "availableFromLaterAvailableUntil": "Available From cannot be later than Available Until",
+                    "availableUntilEarlierAvailableFrom": "Available Until cannot be earlier than Available From",
+                    "startDateEarlierAvailableFrom": "Start Date cannot be earlier than Available From",
+                    "startDateLaterAvailableUntil": "Start Date cannot be later than Available Until",
+                    "startDateLaterDueDate": "Start Date cannot be later than Due Date",
+                    "dueDateEarlierAvailableFrom": "Due Date cannot be earlier than Available From",
+                    "dueDateLaterAvailableUntil": "Due Date cannot be later than Available Until",
+                    "dueDateEarlierStartDate": "Due Date cannot be earlier than Start Date"
+                },
+                "dialog": {
+                    "updateStudyPlanTitle": "Update Study Plan",
+                    "updateStudyPlanMessage": "All changes will be applied to all the students in this course. Are you sure to update?",
+                    "confirmPageMoveMessage": "Do you want to save the changes made to the page before moving?",
+                    "confirmRowSettingMessage": "Do you want to save the changes made to the page before applying the row setting?",
+                    "changesWillBeLostMessage": "Your changes will be lost if you don't save them."
+                },
+                "button": {
+                    "saveAndMove": "Save And Move",
+                    "moveWithoutSaving": "Move Without Saving",
+                    "saveAndApply": "Save And Apply",
+                    "applyWithoutSaving": "Apply Without Saving"
+                }
+            },
+            "settings": "Settings",
+            "addBookSuccess": "You have added book successfully!",
+            "updateCourseIconSuccess": "You have updated course icon successfully",
+            "addBook": "Add book",
+            "lessonConvert": {
+                "converting": "%{fileName} converting ...",
+                "tryAgain": "Try again",
+                "success": "Converting files successfully",
+                "failedUnknown": "Failed to upload your files. Please try again or contact with Staff."
+            }
+        },
+        "study_plans": {
+            "name": "Study Plan",
+            "grade": "Grade",
+            "studyPlanName": "Study Plan Name",
+            "master": "Master",
+            "individual": "Individual",
+            "studentName": "Student Name",
+            "showArchivedStudyPlan": "Show archived study plan",
+            "bookAssociationName": "Associate Book Name",
+            "bookAssociation": "Book Association",
+            "columns": {
+                "start": "Start",
+                "due": "Due"
+            }
+        },
+        "chapters": {
+            "name": "Chapters",
+            "editTitle": "Edit chapter",
+            "createTitle": "Create chapter",
+            "addTitle": "Add chapter",
+            "edit": "Edit chapter",
+            "chapterName": "Chapter name",
+            "chapter": "Chapter",
+            "grade": "Grade",
+            "subject": "Subject",
+            "country": "Country",
+            "createdAt": "Created Date",
+            "system": "System",
+            "topics": "Topic"
+        },
+        "topics": {
+            "name": "Topic",
+            "createTitle": "Create topic",
+            "addTitle": "Add topic",
+            "editTitle": "Edit topic",
+            "topicName": "Topic Name",
+            "topicType": "Topic type",
+            "instruction": "Instruction",
+            "status": "Status",
+            "chapter": "Chapter",
+            "grade": "Grade",
+            "subject": "Subject",
+            "country": "Country",
+            "createdAt": "Created Date",
+            "noTopic": "No topic for this chapter",
+            "learningObjective": "Learning Objective",
+            "assignment": "Assignment",
+            "flashCard": "Flash Card",
+            "offlineStudy": "Offline Study",
+            "AddTopicDialogHeader": "Add a new topic"
+        },
+        "learning_objectives": {
+            "name": "Learning objectives",
+            "lo": "Learning objective",
+            "shortenName": "LO",
+            "createTitle": "Create learning objective |||| Create %{title}",
+            "editTitle": "Edit learning objective |||| Edit %{title}",
+            "loName": "Name",
+            "chapter": "Chapter",
+            "studyGuide": "Study guide",
+            "video": "Video Lesson",
+            "grade": "Grade",
+            "subject": "Subject",
+            "country": "Country",
+            "createdAt": "Created Date",
+            "previewVideo": "Review video",
+            "prerequisites": "Prerequisites",
+            "noLO": "No learning objective",
+            "list": "Learning Objectives List",
+            "cardListing": "Card Listing",
+            "offlineStudyList": "Offline Studies List",
+            "viewCurrentVideo": "View current video",
+            "information": "Information",
+            "brightcoveVideoLink": "Brightcove Link",
+            "linkFrom": "Link From",
+            "addNew": "Add new",
+            "addLO": "Add LO",
+            "addLearningObjective": "Add a Learning Objective",
+            "selectLOsLinkToTopic": "You can select existing learning objectives to link to the topic",
+            "selectBook": "Select Book",
+            "selectChapter": "Select Chapter",
+            "selectLOsInstruction": "Select the LO type to add a new learning objective:",
+            "placeholder": {
+                "loName": "Enter LO Name",
+                "selectLOsType": "Select LO Type"
+            },
+            "choices": {
+                "LearningObjectiveType": {
+                    "ASSIGNMENT": "Assignment",
+                    "LEARNING_OBJECTIVE_TYPE_LEARNING": "Learning Objective",
+                    "LEARNING_OBJECTIVE_TYPE_FLASH_CARD": "Flash Card",
+                    "LEARNING_OBJECTIVE_TYPE_OFFLINE_LEARNING": "Offline Study",
+                    "LEARNING_OBJECTIVE_TYPE_EXAM_LO": "Exam",
+                    "TASK_ASSIGNMENT": "Task"
+                }
+            },
+            "noChaptersAvailable": "No chapters available"
+        },
+        "quizzes": {
+            "name": "Quiz",
+            "deleteTheAnswer": "Delete",
+            "removeTheAnswer": "Remove",
+            "question": "Question",
+            "questionDescription": "Question Description",
+            "questionList": "Question list",
+            "addQuestion": "Add question",
+            "addAnswer": "Add answer",
+            "answers": "Answers",
+            "explanation": "Explanation",
+            "explanationDescription": "Explanation Description",
+            "questionType": "Question type",
+            "difficultyLevel": "Difficulty level",
+            "removeMaterial": "Remove",
+            "preview": "Preview",
+            "correct": "Correct",
+            "listType": "List type",
+            "correctAnswer": "Correct answer",
+            "makeIntoList": "Made into list",
+            "uploadYourFile": "Upload Material",
+            "questionDetail": "Question detail",
+            "description": "Description",
+            "text": "Text",
+            "tex": "Tex",
+            "file": "File",
+            "color": "Color",
+            "insertLink": "Insert Link",
+            "orderList": "Order List",
+            "create": "Create",
+            "questionBank": "Question bank",
+            "confirmLeaving": "Leaving the page will make your lose current data, are you sure?",
+            "cannotFindRelatedLO": "Can not find related learning objective",
+            "loadingPdf": "PDF is loading.....",
+            "failedToLoadPdf": "Cannot load this PDF",
+            "saveQuestion": "Save question",
+            "attachVideo": "Attach video",
+            "attachStudyGuide": "Attach study guide",
+            "answerConfigs": "Answer configs",
+            "questionPreview": "Question preview",
+            "answer": "Answer",
+            "editQuestion": "Edit question",
+            "deleteQuestion": "Delete question",
+            "heading": "Heading",
+            "ul": "UnOrder list",
+            "audio": "Audio",
+            "image": "Image",
+            "bold": "Bold",
+            "italic": "Italic",
+            "underline": "Underline",
+            "blank": "Blank",
+            "changeQuizType": "Change quiz type",
+            "alertChangeQuizType": "Change quiz type will clear all current answers, are you sure?",
+            "taggedLO": "Tagged LO",
+            "term": "Term",
+            "definition": "Definition",
+            "duplicateExternalId": "Duplicate id! Please change other id",
+            "prefix": "Prefix",
+            "alternative": "Alternative",
+            "addAlternative": "Add Alternative",
+            "enterAlternativeVal": "Enter Alternative Value",
+            "paginationPageText": "Page",
+            "paginationOfText": "of",
+            "paginationOutOfRange": "Error page out of range",
+            "paginationInvalidPage": "Error invalid page",
+            "multipleChoice": "Multiple choice",
+            "fillInTheBlank": "Fill in the blank",
+            "mappedID": "Mapped ID",
+            "type": "Type",
+            "dialogDeleteConfirm": "Are you sure to delete this question?",
+            "mappedIdMustNotContainWhiteSpaces": "Mapped ID must not contain white spaces",
+            "flashcard": {
+                "deleteCard": "Delete Card",
+                "cardIndex": "Card %{index} ",
+                "definitionLanguage": "Definition Language",
+                "termLanguage": "Term Language",
+                "deleteSuccess": "You have deleted the card successfully!",
+                "addSuccess": "You have added the card successfully!"
+            },
+            "choices": {
+                "flashcardLanguage": {
+                    "1": "English",
+                    "2": "Japanese"
+                }
+            }
+        },
+        "books": {
+            "name": "Book",
+            "bookList": "Book list",
+            "questionBank": "Question bank",
+            "assignments": "Assignment",
+            "topics": "Topic",
+            "chapters": "Chapters",
+            "los": "LO",
+            "bookName": "Book Name",
+            "createTitle": "Create book",
+            "chapter": "Chapter",
+            "noChapter": "Do not have any chapters",
+            "editTitle": "Edit Book",
+            "addBook": "Add Book",
+            "noBook": "No books",
+            "dialog": {
+                "addTitle": "Add a new book",
+                "renameTitle": "Rename Book",
+                "editTitle": "Edit book"
+            }
+        },
+        "assignments": {
+            "assignment": "Assignment",
+            "list": "Assignments List",
+            "createTitle": "Create assignment",
+            "editTitle": "Update assignment",
+            "attachment": "Attachment",
+            "assignmentInfo": "Assignment info",
+            "name": "Name",
+            "gradingMethod": "Grading method",
+            "maxGrade": "Max grade",
+            "value": "Value",
+            "doesNotRequireGrading": "Doesn't require grading",
+            "requireTextNoteSubmission": "Require Text Note Submission",
+            "requireAttachmentSubmission": "Require Attachment Submission",
+            "requireRecordedVideoSubmission": "Require Recorded Video Submission",
+            "allowLateSubmission": "Allow Late Submission",
+            "allowResubmission": "Allow Resubmission",
+            "createdAt": "Created Date"
+        },
+        "notifications": {
+            "name": "Notification",
+            "notificationStatus": {
+                "NOTIFICATION_STATUS_NONE": "None",
+                "NOTIFICATION_STATUS_DRAFT": "Draft |||| Draft (%{count})",
+                "NOTIFICATION_STATUS_SCHEDULED": "Scheduled |||| Scheduled (%{count})",
+                "NOTIFICATION_STATUS_SENT": "Sent |||| Sent (%{count})",
+                "NOTIFICATION_STATUS_DISCARD": "Discard |||| Discard (%{count})"
+            },
+            "label": {
+                "name": "Name",
+                "recipientGroup": "Recipient Group",
+                "individualRecipient": "individual",
+                "grades": "grade",
+                "courses": "course",
+                "userType": "type",
+                "to": "To",
+                "title": "Title",
+                "content": "Content",
+                "attachment": "Attach",
+                "recipient": "Recipient List |||| Recipient",
+                "audience": "Audience Type",
+                "composer": "Composer",
+                "lastUpdated": "Last Updated",
+                "sentDate": "Sent Date",
+                "status": "Status",
+                "parent": "Parent |||| Parents",
+                "student": "Student |||| Students",
+                "parentOfStudent": "%{parentName} (Student: %{studentName})",
+                "all": "All",
+                "allCourses": "All Courses",
+                "allGrades": "All Grades",
+                "read": "Read",
+                "unRead": "Unread",
+                "target": "Target",
+                "deliveryDate": "Delivery Date",
+                "now": "Now",
+                "schedule": "Schedule",
+                "uploadYourFile": "Upload Material",
+                "placeholder": {
+                    "selectCourse": "Select Course",
+                    "selectCourses": "Select Courses",
+                    "selectGrade": "Select Grade",
+                    "selectIndividualRecipient": "Add individual recipients",
+                    "notificationTitle": "Title",
+                    "selectContent": "Enter your message here",
+                    "selectTime": "Time"
+                }
+            },
+            "title": {
+                "generalInfo": "General Info",
+                "composeMessage": "Compose",
+                "editMessage": "Edit",
+                "notification": "Notification",
+                "notificationCenter": "Notification Center"
+            },
+            "button": {
+                "notifyUnread": "Notify Unread",
+                "compose": "Compose",
+                "clone": "Clone",
+                "addInlineLink": "Add"
+            },
+            "userNotificationStatus": {
+                "USER_NOTIFICATION_STATUS_NEW": "Unread",
+                "USER_NOTIFICATION_STATUS_SEEN": "Read",
+                "USER_NOTIFICATION_STATUS_NONE": "None",
+                "USER_NOTIFICATION_STATUS_READ": "Read",
+                "USER_NOTIFICATION_STATUS_FAILED": "Failed"
+            },
+            "targetGroupSelect": {
+                "NOTIFICATION_TARGET_GROUP_SELECT_NONE": "None",
+                "NOTIFICATION_TARGET_GROUP_SELECT_ALL": "All"
+            }
+        },
+        "notificationsv2": {
+            "name": "Notification V2"
+        },
+        "schedule": {
+            "name": "Schedule",
+            "button": {
+                "today": "Today",
+                "releaseTime": "Release Time",
+                "releaseEvent": "Release Event",
+                "addEvent": "Add Event",
+                "openTime": "Open",
+                "setTime": "Set Time",
+                "moreEvent": "more",
+                "viewCenter": "View Centers"
+            },
+            "label": {
+                "scheduleTitle": "%{brand} Seminar Schedule",
+                "openingStatus": "Opening Status",
+                "repeatType": "Repeat Condition",
+                "openingHour": "Opening Hour",
+                "openingMinute": "Opening Minutes",
+                "endHour": "End Hour",
+                "endMinute": "End Minute",
+                "openingDate": "Opening Date",
+                "endDate": "End Date",
+                "date": "Date",
+                "brandName": "Brand Name",
+                "centerName": "Center Name",
+                "month": "Month",
+                "year": "Year",
+                "remark": "Remark",
+                "eventName": "Event name",
+                "tomorrow": "Tomorrow",
+                "lookingFor": "Looking for",
+                "schedule": "Schedule",
+                "lookingForSchedule": "Looking for Schedule",
+                "helperText": "Please use the filter to look for the specific Schedule"
+            },
+            "openingStatus": {
+                "0": "REGULAR",
+                "1": "IRREGULAR",
+                "2": "SPARE",
+                "3": "CLOSED"
+            },
+            "choices": {
+                "openingStatus": {
+                    "0": "Regular Class",
+                    "1": "Non Regular Class",
+                    "2": "Spare Class",
+                    "3": "Closed"
+                },
+                "repeatType": {
+                    "0": "Doesn't Repeat",
+                    "1": "Daily Until",
+                    "2": "Weekly Until",
+                    "3": "Monthly Until"
+                },
+                "scheduleSearchType": {
+                    "0": "Brand",
+                    "1": "Center"
+                },
+                "dayConditionType": {
+                    "0": "All day",
+                    "1": "Specific time"
+                }
+            },
+            "event": {
+                "addEventTitle": "Add Event",
+                "editEventTitle": "Edit Event",
+                "eventCentersApplied": "This event will be apply to %{centerNumber} centers",
+                "allDayEventDescription": "This is a all day event from %{openingDate} to %{closeDate}",
+                "specificTimeEventDescription": "This is a specific time event",
+                "missingName": "Event missing name",
+                "releaseEventTitle": "Release Event?",
+                "releaseEventMessage": "Events will be apply for selected center you chose."
+            },
+            "message": {
+                "success": {
+                    "releaseEvent": "You have released an event successfully!",
+                    "releaseTime": "You have released time successfully!",
+                    "addOpenningTime": "You have added an opening time successfully!"
+                }
+            },
+            "error": {
+                "eventName": {
+                    "required": "Event name is required"
+                },
+                "openingStatus": {
+                    "required": "Opening Status is required"
+                },
+                "openingHour": {
+                    "required": "Opening Hour is required"
+                },
+                "openingMinutes": {
+                    "required": "Opening Minutes is required"
+                },
+                "repeatOption": {
+                    "required": "Repeat Condition is required"
+                },
+                "date": {
+                    "required": "Date is required"
+                }
+            }
+        },
+        "live_lessons": {
+            "name": "Live Lessons",
+            "createTitle": "Add Lesson",
+            "editTitle": "Edit Lesson",
+            "status": {
+                "LESSON_STATUS_NONE": "None",
+                "LESSON_STATUS_IN_PROGRESS": "In-Progress",
+                "LESSON_STATUS_COMPLETED": "Completed",
+                "LESSON_STATUS_NOT_STARTED": "Not Started",
+                "LESSON_STATUS_DRAFT": "Draft"
+            },
+            "columns": {
+                "lessonName": "Lesson Name",
+                "teacherName": "Teacher",
+                "courseName": "Course Name",
+                "startDate": "Start Date",
+                "startTime": "Start Time",
+                "endDate": "End Date",
+                "endTime": "End Time",
+                "status": "Status"
+            },
+            "message": {
+                "success": {
+                    "addLesson": "You have created a lesson successfully!",
+                    "deleteLesson": "You have deleted the lesson successfully!",
+                    "editLesson": "You have edited the lesson successfully!"
+                },
+                "error": {
+                    "deleteLesson": "Delete failed",
+                    "convertFile": "Convert file fail for %{live_lesson_name}",
+                    "lessonMemberHasNoUserData": "One of lesson's members doesn't have user data",
+                    "noCourseInLesson": "There is no course in this lesson",
+                    "noMemberInLesson": "There is no member in this lesson",
+                    "noLessonGroupInLesson": "There is no lesson group in this lesson",
+                    "noMaterialInLesson": "There is no material in this lesson",
+                    "noTeacherInLesson": "There is no teacher in this lesson"
+                }
+            },
+            "label": {
+                "course": "Course",
+                "to": "To",
+                "from": "From",
+                "lessonStatus": "Lesson Status"
+            },
+            "courseSubTitle": "Course",
+            "studentSubTitle": "Student",
+            "generalInfo": "General Info",
+            "courseName": "Course Name",
+            "studentName": "Student Name",
+            "addCourseTitle": "Add Course",
+            "addCourseInfo": "You can add course from the list below:",
+            "addStudentTitle": "Add Student",
+            "addStudentInfo": "Please do not select students who have not enrolled in the chosen courses. They will not be able to attend the live lesson",
+            "material": "Materials Info",
+            "grade": "Grade",
+            "userName": "Username",
+            "email": "Email",
+            "lessonName": "Lesson Name",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "course": "Course",
+            "student": "Student",
+            "teacherName": "Teacher Name",
+            "lessonManagement": "Lesson Management",
+            "choices": {
+                "lessonStatus": {
+                    "LESSON_STATUS_NONE": "None",
+                    "LESSON_STATUS_IN_PROGRESS": "In-Progress",
+                    "LESSON_STATUS_COMPLETED": "Completed",
+                    "LESSON_STATUS_NOT_STARTED": "Not Started",
+                    "LESSON_STATUS_DRAFT": "Draft"
+                }
+            },
+            "lesson": "Lesson"
+        },
+        "lesson_reports": {
+            "name": "Lesson Reports",
+            "lessonReport": "Lesson Report",
+            "createReport": "Create Report",
+            "columns": {
+                "lessonDate": "Lesson Date",
+                "teacherName": "Teacher Name",
+                "studentName": "Student Name",
+                "startTime": "Start Time",
+                "endTime": "End Time"
+            },
+            "actions": {
+                "submitAll": "Submit All"
+            },
+            "labels": {
+                "student": "Student",
+                "teacher": "Teacher",
+                "to": "To",
+                "from": "From",
+                "completed": "Completed",
+                "incomplete": "Incomplete",
+                "optionA": "A",
+                "optionB": "B",
+                "optionC": "C",
+                "optionD": "D"
+            },
+            "messages": {
+                "needToFillInTheRequiredInformation": "You need to fill in the required information"
+            },
+            "generalInfo": "General Info",
+            "attendance": "Attendance",
+            "attendanceStatus": "Attendance Status",
+            "attendanceRemark": "Remark",
+            "homeworkSubmission": "Homework Submission",
+            "homeworkStatus": "Homework Status",
+            "completion": "Completion",
+            "score": "Score",
+            "attitude": "Attitude",
+            "lessonSpeed": "Lesson Speed",
+            "extraContent": "Extra Content",
+            "understanding": "Understanding",
+            "extraHomework": "Extra Homework",
+            "remarks": "Remarks",
+            "course": "Course",
+            "subject": "Subject",
+            "previousReport": "Previous Report",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "generalInformation": "General Information",
+            "viewStudyPlan": "View Study Plan",
+            "lesson": "Lesson",
+            "createIndividualReport": "Create Individual Report",
+            "studentsList": "Students List",
+            "lessonTitle": "Lesson",
+            "group": "Group",
+            "individual": "Individual",
+            "lessonReportInformation": "Lesson Report Information",
+            "enterStudentName": "Enter Student Name",
+            "STUDENT_ATTEND_STATUS_ATTEND": "Attend",
+            "STUDENT_ATTEND_STATUS_ABSENT": "Absent",
+            "STUDENT_ATTEND_STATUS_LATE": "Late",
+            "STUDENT_ATTEND_STATUS_LEAVE_EARLY": "Leave Early"
+        },
+        "lesson_management": {
+            "name": "Lesson Management",
+            "createTitle": "Add Lesson",
+            "editTitle": "Edit Lesson",
+            "generalInfo": "General Info",
+            "messages": {
+                "success": {
+                    "addLesson": "You have created a lesson successfully!",
+                    "deleteLesson": "You have deleted the lesson successfully!",
+                    "editLesson": "You have edited the lesson successfully!"
+                },
+                "needToFillInTheRequiredInformation": "You need to fill in the required information",
+                "bulkActionSuccessfully": "You have Bulk Action successfully",
+                "createdReportSuccessfully": "You have created individual report successfully",
+                "editedIndividualReportSuccessfully": "You have edited individual report successfully",
+                "submittedIndividualReportSuccessfully": "You have submitted individual report successfully",
+                "deletedIndividualReportSuccessfully": "You have deleted lesson report successfully",
+                "addedStudentsSuccessfully": "You have added students successfully!"
+            },
+            "actions": {
+                "submitAll": "Submit All",
+                "bulkAction": "Bulk Action",
+                "submit": "Submit"
+            },
+            "columns": {
+                "studentName": "Student Name",
+                "lessonTime": "Lesson Time",
+                "center": "Center",
+                "teachingMedium": "Teaching Medium",
+                "teachingMethod": "Teaching Method",
+                "teacher": "Teacher",
+                "lessonDate": "Lesson Date",
+                "teachingType": "Teaching Type",
+                "courseName": "Course Name",
+                "grade": "Grade"
+            },
+            "errors": {
+                "errorWhileFetchingFormConfig": "Error while fetching form config: %{message}",
+                "canNotGetPartnerFormConfig": "Unable to get form configuration.",
+                "unableToGetLessonReport": "Unable to get lesson report information",
+                "studentDoesNotBelongToAnyCourse": "This student doesn't belong to any course",
+                "unableToFindTeacher": "Unable to find the teachers of this lesson",
+                "unableToGetLessonId": "Unable to get lesson id",
+                "unableToFindLessonInfo": "Unable to find this lesson's information",
+                "unableToFetchTheLinkToThisStudentStudyPlan": "Unable to fetch the link to this student's study plan",
+                "unableToFetchLessonGroup": "Unable to fetch lesson group of this lesson",
+                "unableToFetchMedia": "Unable to fetch media of this lesson",
+                "unableToFetchCenter": "Unable to fetch center"
+            },
+            "status": {
+                "LESSON_REPORT_SUBMITTING_STATUS_SAVED": "Draft",
+                "LESSON_REPORT_SUBMITTING_STATUS_SUBMITTED": "Submitted"
+            },
+            "studentAttendanceStatus": {
+                "STUDENT_ATTEND_STATUS_ATTEND": "Attend",
+                "STUDENT_ATTEND_STATUS_ABSENT": "Absent",
+                "STUDENT_ATTEND_STATUS_LATE": "Late",
+                "STUDENT_ATTEND_STATUS_LEAVE_EARLY": "Leave Early",
+                "STUDENT_ATTEND_STATUS_INFORMED_ABSENT": "Absent (informed)",
+                "STUDENT_ATTEND_STATUS_INFORMED_LATE": "Late (informed)"
+            },
+            "filters": {
+                "fromDate": "Lesson Start Date",
+                "toDate": "Lesson End Date",
+                "dayOfTheWeekFilter": "Lesson day of the week",
+                "startTime": "Start Time",
+                "endTime": "End Time",
+                "teachers": "Teacher Name",
+                "centers": "Center",
+                "students": "Student Name",
+                "grades": "Grade",
+                "courses": "Course"
+            },
+            "lessonReport": "Lesson Report",
+            "attendance": "Attendance",
+            "attendanceStatus": "Attendance Status",
+            "attendanceRemark": "Remark",
+            "homeworkSubmission": "Homework Submission",
+            "homeworkStatus": "Homework Status",
+            "attitude": "Attitude",
+            "lessonSpeed": "Lesson Speed",
+            "understanding": "Understanding",
+            "course": "Course",
+            "subject": "Subject",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "generalInformation": "General Information",
+            "lesson": "Lesson",
+            "reportDetail": "Report Detail",
+            "completion": "Completion",
+            "score": "Score",
+            "extraContent": "Content",
+            "extraHomework": "Homework",
+            "remarks": "Remarks",
+            "previousReport": "Previous Report",
+            "viewStudyPlan": "View Study Plan",
+            "lessonTitle": "Lesson",
+            "bulkUpdateAttendance": "Bulk Update Attendance",
+            "lessonInfo": "Lesson Info",
+            "report": "Report",
+            "createIndividualReport": "Create Individual Report",
+            "editIndividualReport": "Edit Individual Report",
+            "missingTranslation": "Missing Translation",
+            "areYouSureSubmitLessonReport": "Are you sure want to submit this lesson report?",
+            "addStudent": "Add Student",
+            "enterStudentName": "Enter Student Name",
+            "lessonDetail": "Lesson Detail",
+            "studentInfo": "Student Info",
+            "materialInfo": "Material Info",
+            "dayOfTheWeek": "Day of the week",
+            "LESSON_TEACHING_METHOD_INDIVIDUAL": "Individual",
+            "LESSON_TEACHING_METHOD_GROUP": "Group",
+            "LESSON_TEACHING_MEDIUM_ONLINE": "Online",
+            "LESSON_TEACHING_MEDIUM_OFFLINE": "Offline",
+            "futureLessons": "Future Lessons",
+            "pastLessons": "Past Lessons",
+            "areYouSureYouWantToDeleteTheLessonReport": "Are you sure you want to delete the lesson report?",
+            "deleteLessonReport": "Delete Lesson Report",
+            "deleteLesson": "Delete Lesson",
+            "areYouSureDeleteTheLesson": "Are you sure you want to delete the lesson?",
+            "ifYouDeleteThisLesson": "If you delete this lesson, the lesson report of this lesson will also be deleted",
+            "studentDoesNotHavePreviousLessonReportForThisCourse": "Student does not have previous lesson report for this course"
+        },
+        "assigned_student_list": {
+            "name": "Assigned Student List"
+        },
+        "students_erp": {
+            "name": "Students",
+            "titles": {
+                "studentManagement": "Student Management",
+                "student": "Student",
+                "studyItem": "Study Item",
+                "addStudent": "Add Student",
+                "editStudent": "Edit Student",
+                "generalInfo": "General Info",
+                "course": "Course",
+                "courseDetail": "Course Detail",
+                "family": "Family",
+                "parent": "Parent",
+                "addFamily": "Add Parent",
+                "editFamily": "Edit Parent",
+                "addCourse": "Add course",
+                "editCourse": "Edit course",
+                "dialogStudentAccountInfo": "Student account information",
+                "dialogParentAccountInfo": "Parent account information",
+                "dialogAddConfirmCancel": "Do you want to cancel",
+                "dialogDeleteConfirmCancel": "Do you want to delete?",
+                "dialogConfirmReIssuePassword": "Re-Issue Password",
+                "dialogSearchParent": "Search for a parent",
+                "neverLoggedIn": "Never Logged In",
+                "detail": "Detail",
+                "familyInfo": "Family Info",
+                "addParent": "Add Parent",
+                "addExistingParent": "Add Existing Parent",
+                "addNewParent": "Add New Parent",
+                "detailInfo": "Detail Info",
+                "dialogEditParent": "Edit Parent",
+                "dialogAddNewParent": "Add New Parent",
+                "dialogAddExistingParent": "Add Existing Parent",
+                "dialogAccountInfo": "Account Information",
+                "dialogParentConfirmRemove": "Remove Parent",
+                "dialogSelectLocation": "Select Location"
+            },
+            "labels": {
+                "name": "Name",
+                "grade": "Grade",
+                "studentID": "Student ID",
+                "externalStudentID": "External Student ID",
+                "studentName": "Student Name",
+                "courseName": "Course Name",
+                "username": "Username",
+                "password": "Password",
+                "phoneNumber": "Phone Number",
+                "relationship": "Relationship",
+                "email": "Email",
+                "startDate": "Start Date",
+                "endDate": "End Date",
+                "action": "Action",
+                "emptyValue": "Empty value",
+                "reissue": "Reissue",
+                "reissuePassword": "Reissue Password",
+                "edit": "Edit",
+                "note": "Note",
+                "neverLoggedIn": "Never logged in",
+                "showNeverLoggedIn": "Show only never logged in students",
+                "gender": "Gender",
+                "male": "Male",
+                "female": "Female",
+                "birthday": "Birthday",
+                "selected": "Selected",
+                "location": "Location",
+                "selectLocation": "Select Location"
+            },
+            "descriptions": {
+                "email": "Email address",
+                "phoneNumber": "Phone number",
+                "search": "Enter your keyword",
+                "noInfo": "No Information",
+                "dialogStudentAccountInfo": "You can see username and password information as below:",
+                "dialogAddFamily": "You can add family by fill in the blank information below:",
+                "dialogEditFamily": "Please fill in information for member:",
+                "dialogAddCourse": "You can add course by fill in the blank information below:",
+                "dialogEditCourse": "You can edit course by edit in the information below:",
+                "dialogAddConfirmCancel": "Your information will be lost if you cancel.",
+                "dialogDeleteConfirmCancel": "Student name: %{studentName}",
+                "dialogConfirmReIssuePassword": "Are you sure you want to re-issue the new password for %{user}",
+                "dialogSearchParent": "You can search for a parent to add to family information",
+                "dialogParentConfirmRemove": "%{parent} will be remove from this student"
+            },
+            "placeholder": {
+                "inputSearchParent": "Enter name or email address"
+            },
+            "choices": {
+                "relationship": {
+                    "0": "Guardian",
+                    "1": "Father",
+                    "2": "Mother",
+                    "3": "Grandfather",
+                    "4": "Grandmother"
+                },
+                "studentsEnrollmentStatus": {
+                    "1": "Potential",
+                    "2": "Enrolled",
+                    "3": "Quit",
+                    "4": "Withdrawn",
+                    "5": "Graduated",
+                    "6": "LOA"
+                },
+                "addParent": {
+                    "1": "Add Existing Parent",
+                    "2": "Add New Parent"
+                },
+                "addStudent": {
+                    "1": "New Student",
+                    "2": "Import Student"
+                }
+            },
+            "status": {
+                "STUDENT_ENROLLMENT_STATUS_POTENTIAL": "Potential",
+                "STUDENT_ENROLLMENT_STATUS_ENROLLED": "Enrolled",
+                "STUDENT_ENROLLMENT_STATUS_QUIT": "Quit",
+                "STUDENT_ENROLLMENT_STATUS_WITHDRAWN": "Withdrawn",
+                "STUDENT_ENROLLMENT_STATUS_GRADUATED": "Graduated",
+                "STUDENT_ENROLLMENT_STATUS_LOA": "LOA"
+            },
+            "messages": {
+                "success": {
+                    "addStudent": "You have added the student successfully!",
+                    "updateStudent": "You have updated the student successfully!",
+                    "overrideUserPassword": "You have reissued the password successfully!",
+                    "addParent": "You have added the parent successfully!",
+                    "updateParent": "You have updated the parent successfully!",
+                    "reIssuePassword": "You have re-issue password successfully!",
+                    "updateCourse": "You have updated the courses successfully!",
+                    "removeParent": "You have removed the parent successfully!"
+                },
+                "error": {
+                    "overrideUserPassword": "You have failed to reissue the password. Please try again later!",
+                    "exited": "%{field} already exists",
+                    "hasInsertedOnGeneralInfo": "%{field} has already been inserted for a student",
+                    "hasInsertedOnListParents": "%{field} has already been inserted for a parent in the list",
+                    "invalid": "%{field} is not valid",
+                    "invalidLocations": "Unable to deselect the location. Please end the active student course under the location first",
+                    "studentPackage": {
+                        "0": "Required fields cannot be blank!",
+                        "1": "Please add the student course location back to student to activate student course",
+                        "2": "Please add the student course location back to course to activate student course"
+                    }
+                },
+                "warning": {
+                    "warningCurrentPasswordNoLongerBeValid": "The current password will no longer be valid."
+                }
+            },
+            "enrollmentStatus": "Enrollment Status"
+        },
+        "lesson_syllabus": {
+            "class": "Class",
+            "student": "Student",
+            "lessonProgress": "Lesson progress",
+            "teacher": "Teacher",
+            "duration": "Duration",
+            "startTime": "Start time",
+            "lesson": "Lesson |||| Lessons",
+            "createTitle": "Create lesson",
+            "statusCompleted": "Completed",
+            "statusInProgress": "In Progress",
+            "statusNotStarted": "Not Started",
+            "statusUnknown": "Unknown",
+            "status": "Status",
+            "lessonList": "Lesson list",
+            "lessonName": "Lesson name",
+            "noLesson": "No lesson for this course",
+            "teacherAssistant": "TA",
+            "teacherAssistantList": "Teacher assistant list",
+            "teacherList": "Teacher list",
+            "studentList": "Student list",
+            "classroomList": "Classroom list",
+            "uploadMaterials": "Upload materials",
+            "materialsList": "Materials List",
+            "week": "Week"
+        },
+        "masters": {
+            "name": "Master Management",
+            "title": {
+                "import": "Import Data"
+            },
+            "button": {
+                "import": "Import Data"
+            },
+            "placeholder": {
+                "masterData": "Master Data"
+            },
+            "choice": {
+                "masterData": {
+                    "grades": "Grades",
+                    "accountingCategory": "Accounting Category",
+                    "location": "Location",
+                    "locationType": "Location Type"
+                }
+            },
+            "status": {
+                "fileConverting": "%{fileName} converting ...",
+                "fileUploading": "Uploading %{fileName} ..."
+            },
+            "message": {
+                "importedSuccess": "The records are imported successfully!",
+                "importedFailure": "The records are imported failure!"
+            }
+        },
+        "orders": {
+            "name": "Order Management",
+            "title": {
+                "request": "Request",
+                "generalInfo": "General Info",
+                "productList": "Product List",
+                "billingItem": "Billing Item",
+                "actionLog": "Action Log"
+            },
+            "column": {
+                "id": "ID",
+                "name": "Name",
+                "status": "Status",
+                "price": "Price",
+                "content": "Content",
+                "detail": "Detail",
+                "comment": "Comment",
+                "product": "Product",
+                "amount": "Amount",
+                "studentName": "Student Name",
+                "approvalStatus": "Approval Status",
+                "orderType": "Order Type",
+                "requestedDate": "Requested Date",
+                "userName": "User Name",
+                "updatedTime": "Updated Time",
+                "billedDate": "Billed Date",
+                "billingPeriod": "Billing Period"
+            },
+            "label": {
+                "requestedDate": "Requested Date",
+                "orderType": "Order Type",
+                "orderId": "Order ID",
+                "studentName": "Student Name",
+                "invoiceMethod": "Invoice Method",
+                "center": "Center",
+                "createdDate": "Created Date",
+                "createBulkOrder": "Create Bulk Order",
+                "createRegularCourse": "Create Regular/Seasonal course",
+                "createNextYearCourse": "Create Next Year Course",
+                "view": "View",
+                "courseAssociation": "Course Association",
+                "discount": "Discount",
+                "slot": "Slot",
+                "endDate": "End Date",
+                "viewPreviousVersion": "View Previous Version"
+            },
+            "choices": {
+                "orderType": {
+                    "cancel": "Cancel",
+                    "change": "Change",
+                    "enrollment": "Enrollment",
+                    "loa": "LOA",
+                    "new": "New",
+                    "withdrawal": "Withdrawal",
+                    "pause": "Pause",
+                    "nextYear": "Next Year"
+                },
+                "orderStatus": {
+                    "all": "All |||| All (%{count})",
+                    "approved": "Approved |||| Approved (%{count})",
+                    "pending": "Pending |||| Pending (%{count})",
+                    "rejected": "Rejected |||| Rejected (%{count})"
+                },
+                "orderBillingStatus": {
+                    "billing": "Billing",
+                    "cancelled": "Cancelled"
+                },
+                "orderActionLogStatus": {
+                    "submitted": "Submitted",
+                    "rejected": "Rejected"
+                }
+            }
+        },
+        "entry_exit": {
+            "name": "QR Code Scanner",
+            "dismiss": "Dismiss",
+            "allowCameraHeader": "Allow access to your camera",
+            "allowCameraText": "Scanner needs access to your camera. Please grant permission for this action on your browser",
+            "message": {
+                "title": "Hover your QR code",
+                "welcome": "Welcome!",
+                "goodbye": "Goodbye!",
+                "exit": "You have exited the learning center",
+                "entry": "You have entered the learning center",
+                "scanLimit": "Oops! Please wait for 1 minute to scan again",
+                "invalid": "Oops! There is something wrong with your QR code",
+                "permissionFail": "Oops! You don't have permission to scan",
+                "error": "Something went wrong."
+            }
+        },
+        "staff": {
+            "name": "Staff Management",
+            "titles": {
+                "staffManagement": "Staff Management"
+            }
+        },
+        "user_group": {
+            "name": "User Group"
+        },
+        "invoice": {
+            "name": "Invoice Management"
+        },
+        "timesheet_management": {
+            "name": "Timesheet Management"
+        }
+    }
+}

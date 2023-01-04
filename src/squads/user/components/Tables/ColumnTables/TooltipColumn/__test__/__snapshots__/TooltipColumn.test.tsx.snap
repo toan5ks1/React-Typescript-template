@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipColumn/> should match snapshot and have props title with value 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 emotion-0"
+    data-testid="TooltipColumn__content"
+    title=""
+  >
+    Test
+  </p>
+</div>
+`;

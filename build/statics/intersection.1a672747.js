@@ -1,0 +1,1 @@
+import{bU as e}from"./index.7daee9ef.js";import{_ as t,a as s}from"./_castArrayLikeObject.2e9ca1e4.js";import{_ as i}from"./_baseRest.fb013a79.js";var n=e,o=t,c=i,p=s,b=c(function(r){var a=n(r,p);return a.length&&a[0]===r[0]?o(a):[]}),v=b;export{v as i};

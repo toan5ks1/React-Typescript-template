@@ -1,0 +1,1 @@
+import{ar as i,as as n}from"./index.7daee9ef.js";import{_ as t}from"./_flatRest.95d435ef.js";var e=i,c=n;function k(a,r){return e(a,r,function(_,s){return c(a,s)})}var u=k,f=u,p=t,v=p(function(a,r){return a==null?{}:f(a,r)}),o=v,m=o;export{m as p};

@@ -1,0 +1,322 @@
+{
+    "ra": {
+        "action": {
+            "add": "追加",
+            "delete": "削除",
+            "discard": "削除",
+            "edit": "編集",
+            "remove": "削除",
+            "close": "閉じる",
+            "leave": "破棄",
+            "save": "保存",
+            "apply": "適用"
+        },
+        "message": {
+            "noDataInformation": "表示情報がありません",
+            "unableToLoadData": "データの読み込みに失敗しました。もう一度お試しください。",
+            "invalidSearchQueryReturningAllItems": "無効な検索項目です",
+            "maxFileSizeIs": "ファイルサイズは最大で%{fileSize}%{fileUnit}です",
+            "uploadBrightcoveLinkFail": "リンクが識別できません"
+        },
+        "notification": {
+            "i18n_error": "この言語への訳が見つかりません"
+        },
+        "manabie-error": {
+            "specified": {
+                "getBrightcoveProfileFail": "Brightcoveアカウント情報の取得に失敗しました"
+            },
+            "unknown": "原因不明のエラーが発生しました。再度お試しいただくか、マナビースタッフにお問い合わせください。",
+            "invalid_params": "Paramsが有効ではありません。データを確認してください。"
+        },
+        "common": {
+            "action": {
+                "add": "追加",
+                "delete": "削除する",
+                "OK": "確認",
+                "cancel": "キャンセル",
+                "filter": "フィルター",
+                "upload": "アップロード"
+            },
+            "saveDraft": "下書き保存",
+            "convertingAllFilesSuccessfully": "ファイルを変換中"
+        }
+    },
+    "resources": {
+        "common": {
+            "enterYourKeyword": "キーワードを入力",
+            "noResult": "検索結果はありませんでした",
+            "noResultSearchAndFilter": "他のキーワード、またはフィルターをお試しください",
+            "youFilterBy": "適応中のフィルター",
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "cannotLoadPage": "読み込みに失敗しました。通信環境の良い状態で再度お試しください",
+            "somethingWentWrong": "エラーが発生しました",
+            "pleaseHelpUsReport": "下記よりエラー報告にご協力ください",
+            "back": "戻る",
+            "details": "詳細",
+            "netWorkUnstable": "インターネット接続が不安定です。ページを更新するか、再度お試しください",
+            "brightcoveVideoLink": "Brightcoveリンク"
+        },
+        "input": {
+            "error": {
+                "required": "*必須項目です",
+                "timeMustComeBefore": "%{startTime} は %{endTime}より前に設定してください"
+            },
+            "pleaseUploadFileSizeSmaller": "ファイルサイズが規定値を超えています",
+            "pasteVideoLink": "動画リンク"
+        },
+        "button": {
+            "clearAll": "リセット"
+        },
+        "choices": {
+            "grades": {
+                "0": "その他",
+                "1": "小学1年生",
+                "2": "小学2年生",
+                "3": "小学3年生",
+                "4": "小学4年生",
+                "5": "小学5年生",
+                "6": "小学6年生",
+                "7": "中学1年生",
+                "8": "中学2年生",
+                "9": "中学3年生",
+                "10": "高校1年生",
+                "11": "高校2年生",
+                "12": "高校3年生",
+                "13": "大学1年生",
+                "14": "大学2年生",
+                "15": "大学3年生",
+                "16": "大学4年生"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "月曜日",
+                "DATE_OF_WEEK_TUESDAY": "火曜日",
+                "DATE_OF_WEEK_WEDNESDAY": "水曜日",
+                "DATE_OF_WEEK_THURSDAY": "木曜日",
+                "DATE_OF_WEEK_FRIDAY": "金曜日",
+                "DATE_OF_WEEK_SATURDAY": "土曜日",
+                "DATE_OF_WEEK_SUNDAY": "日曜日"
+            },
+            "assignedStudentStatus": {
+                "STUDENT_ASSIGNED_STATUS_JUST_ASSIGNED": "差分なし",
+                "STUDENT_ASSIGNED_STATUS_UNDER_ASSIGNED": "未配置",
+                "STUDENT_ASSIGNED_STATUS_OVER_ASSIGNED": "過配置"
+            },
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_DRAFT": "下書き",
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "公開済",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "完了済",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "キャンセル済"
+            }
+        },
+        "lesson_reports": {
+            "actions": {
+                "submit": "提出"
+            },
+            "messages": {
+                "needToFillInTheRequiredInformation": "必須情報が入力されていません"
+            },
+            "generalInfo": "基本情報",
+            "course": "コース",
+            "subject": "教科",
+            "previousReport": "前回の指導簿",
+            "submitLessonReport": "提出",
+            "areYouSureSubmitLessonReport": "本当に指導簿を提出しますか？",
+            "submitLessonReportNote": "指導簿を提出すると、授業のステータスが自動的に「公開済」に変更になります。",
+            "internalOnly": "社内用",
+            "applyToBlankOnly": "空白セルのみに適用",
+            "addReport": "集団指導簿の作成",
+            "editReport": "集団指導簿の編集"
+        },
+        "lesson_management": {
+            "name": "授業管理",
+            "createTitle": "新規作成",
+            "editTitle": "授業の編集",
+            "lessonStatusSection": "ステータス",
+            "generalInfo": "基本情報",
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_DRAFT": "下書き",
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "公開済",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "完了済",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "キャンセル済"
+            },
+            "messages": {
+                "success": {
+                    "addLesson": "授業は正常に作成されました",
+                    "deleteLesson": "授業は正常に削除されました",
+                    "editLesson": "授業は正常に編集されました"
+                },
+                "needToFillInTheRequiredInformation": "必須情報が入力されていません",
+                "bulkActionSuccessfully": "出欠情報は正常に登録されました",
+                "createdReportSuccessfully": "指導簿は正常に作成されました",
+                "editedIndividualReportSuccessfully": "指導簿は正常に更新されました",
+                "submittedIndividualReportSuccessfully": "指導簿は正常に提出されました",
+                "deletedIndividualReportSuccessfully": "指導簿の削除指導簿は正常に削除されました",
+                "addedStudentsSuccessfully": "生徒が正常に追加されました",
+                "removedStudentsSuccessfully": "生徒を正常に削除しました",
+                "pleaseAddOnlyOneStudentCourse": "授業に登録する1人の生徒に対し、登録できるコースは1つまでです。"
+            },
+            "actions": {
+                "submitAll": "すべてを提出",
+                "bulkAction": "一括出席登録",
+                "submit": "提出",
+                "alert": "注意",
+                "publish": "公開"
+            },
+            "columns": {
+                "studentName": "生徒名",
+                "lessonTime": "授業時間",
+                "center": "教室",
+                "teachingMedium": "授業形態",
+                "teachingMethod": "コース指導法種別",
+                "teacher": "講師",
+                "lessonDate": "授業日",
+                "lessonStatus": "進捗",
+                "reportStatus": "指導簿",
+                "teachingType": "生徒比率",
+                "courseName": "コース名",
+                "grade": "学年",
+                "course": "コース",
+                "class": "クラス",
+                "location": "所属"
+            },
+            "errors": {
+                "errorWhileFetchingFormConfig": "フォームの読み込みに失敗しました: %{message}",
+                "canNotGetPartnerFormConfig": "フォームを読み込めません",
+                "unableToGetLessonReport": "指導簿データの取得ができません",
+                "studentDoesNotBelongToAnyCourse": "この生徒はあなたのコースに所属していません",
+                "unableToFindTeacher": "この授業には先生がいません",
+                "unableToGetLessonId": "授業IDがありません",
+                "unableToFindLessonInfo": "授業の詳細情報がありません",
+                "unableToFetchTheLinkToThisStudentStudyPlan": "この生徒のスタディプランへのリンクを取得できません",
+                "unableToFetchLessonGroup": "授業情報を取得できません",
+                "unableToFetchMedia": "授業のメディアを取得できません",
+                "unableToFetchCenter": "教室情報を取得できません",
+                "unableToFetchClass": "クラスを取得できませんでした",
+                "unableToFetchSchedule": "スケジュールを取得することができません",
+                "noCourseInLesson": "このレッスンにはコースがありません",
+                "errorDuringFileConversion": "%{mediaIds} の変換中にエラーが発生しました",
+                "startDateMustComeBeforeEndDate": "授業日は終了日以前で設定してください"
+            },
+            "status": {
+                "LESSON_REPORT_SUBMITTING_STATUS_SAVED": "下書き",
+                "LESSON_REPORT_SUBMITTING_STATUS_SUBMITTED": "提出済み"
+            },
+            "studentAttendanceStatus": {
+                "STUDENT_ATTEND_STATUS_ATTEND": "出席",
+                "STUDENT_ATTEND_STATUS_ABSENT": "欠席",
+                "STUDENT_ATTEND_STATUS_LATE": "遅刻",
+                "STUDENT_ATTEND_STATUS_LEAVE_EARLY": "早退",
+                "STUDENT_ATTEND_STATUS_INFORMED_ABSENT": "欠席 (事前連絡)",
+                "STUDENT_ATTEND_STATUS_INFORMED_LATE": "遅刻 (事前連絡)"
+            },
+            "filters": {
+                "lessonStatus": "進捗",
+                "fromDate": "開始日",
+                "toDate": "終了日",
+                "dayOfTheWeekFilter": "曜日",
+                "startTime": "開始時刻",
+                "endTime": "終了時刻",
+                "teachers": "講師名",
+                "centers": "教室",
+                "students": "生徒名",
+                "grades": "学年",
+                "courses": "コース",
+                "locations": "所属",
+                "classes": "クラス"
+            },
+            "recurringLesson": {
+                "oneTime": "繰り返さない",
+                "weeklyRecurring": "毎週繰り返す",
+                "recurringSettings": "繰り返し設定",
+                "pleaseSelectAnOptionToSave": "オプションを選択してください",
+                "editRecurringLessons": "繰り返し設定の編集",
+                "onlyThisLesson": "この授業",
+                "thisAndTheFollowingLessons": "この授業とそれ以降の授業",
+                "deleteRecurringLessons": "繰り返し授業の削除",
+                "titleWarningDeleteRecurringLessons": "繰り返し授業を削除しようとしています。この授業を削除すると、指導簿および割り当てられた生徒も削除されます",
+                "savingOption": "オプションを保存",
+                "repeatDuration": "繰り返しを続ける",
+                "repeatDurationTime": "%{endDate}まで毎週%{dayOfWeek}"
+            },
+            "lessonReport": "指導簿",
+            "attendance": "出席情報",
+            "attendanceStatus": "出欠",
+            "attendanceRemark": "備考",
+            "course": "コース",
+            "startTime": "開始時刻",
+            "endTime": "終了時刻",
+            "reportDetail": "指導簿詳細",
+            "previousReport": "前回の指導簿",
+            "viewStudyPlan": "学習計画を確認",
+            "bulkUpdateAttendance": "括出席登録",
+            "lessonInfo": "授業詳細",
+            "report": "指導簿",
+            "createIndividualReport": "個別指導簿の作成",
+            "editIndividualReport": "個別指導簿の編集",
+            "missingTranslation": "翻訳が見つかりません",
+            "areYouSureSubmitLessonReport": "この指導簿を提出してもよろしいですか？",
+            "addStudent": "生徒追加",
+            "enterStudentName": "生徒名",
+            "lessonDetail": "授業詳細",
+            "studentInfo": "生徒情報",
+            "materialInfo": "教材情報",
+            "dayOfTheWeek": "曜日",
+            "totalTime": "合計時間",
+            "minutes": "分",
+            "LESSON_TEACHING_METHOD_INDIVIDUAL": "個別",
+            "LESSON_TEACHING_METHOD_GROUP": "集団",
+            "LESSON_TEACHING_MEDIUM_ONLINE": "オンライン",
+            "LESSON_TEACHING_MEDIUM_OFFLINE": "対面",
+            "futureLessons": "本日以降の授業",
+            "pastLessons": "昨日以前の授業",
+            "areYouSureYouWantToDeleteTheLessonReport": "この指導簿を削除してもよろしいですか？",
+            "deleteLessonReport": "指導簿の削除",
+            "deleteLesson": "授業の削除",
+            "areYouSureDeleteTheLesson": "授業を削除してもよろしいですか？",
+            "ifYouDeleteThisLesson": "この授業の指導簿も同時に削除されます",
+            "ifYouDeleteThisLessonV2": "この授業を削除すると、指導簿および割り当てられた生徒も削除されます",
+            "studentDoesNotHavePreviousLessonReportForThisCourse": "この生徒には、このコースの「前回の授業」は存在しません",
+            "cannotSaveLessonPleaseAddStudentFromSameCenter": "この授業は保存できません。授業が実施される教室に所属する生徒を追加してください。",
+            "endDate": "終了日",
+            "cannotCreateLessonReportWhenLessonNoMember": "受講生の入力がない場合、指導簿を作成することはできません"
+        },
+        "assigned_student_list": {
+            "name": "配置生徒リスト",
+            "recurring": "継続",
+            "slot": "単発",
+            "enterStudentName": "生徒名",
+            "studentAssignedStatus": {
+                "STUDENT_ASSIGNED_STATUS_JUST_ASSIGNED": "差分なし",
+                "STUDENT_ASSIGNED_STATUS_UNDER_ASSIGNED": "未配置",
+                "STUDENT_ASSIGNED_STATUS_OVER_ASSIGNED": "過配置"
+            },
+            "columns": {
+                "colStudentName": "生徒",
+                "colCourseName": "コース",
+                "colLocation": "所属",
+                "colDuration": "コース期間",
+                "colWeek": "週",
+                "colPurchasedSlot": "購入コマ数",
+                "colAssignedSlot": "配置コマ数",
+                "colSlotGap": "コマ数差分",
+                "colStatus": "ステータス"
+            },
+            "filters": {
+                "assignedStudentStatus": "ステータス",
+                "students": "生徒",
+                "courses": "コース",
+                "startDate": "開始日",
+                "endDate": "終了日",
+                "locations": "所属"
+            }
+        },
+        "courses": {
+            "lessonConvert": {
+                "converting": "%{fileName} アップロード中です ...",
+                "tryAgain": "もう一度お試しください",
+                "success": "ファイルは正常にアップロードされました",
+                "failedUnknown": "ファイルのアップロードに失敗しました。もう一度お試しになるか、Manabieスタッフまでお問い合わせください。"
+            }
+        }
+    }
+}

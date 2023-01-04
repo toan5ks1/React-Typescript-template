@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReadCountColumn /> should match snapshot and text default value when notification status draft 1`] = `
+.emotion-0 {
+  color: #212121;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-1"
+    >
+      --
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<ReadCountColumn /> should match snapshot and text default value when notification status scheduled 1`] = `
+.emotion-0 {
+  color: #212121;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-1"
+    >
+      --
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<ReadCountColumn /> should match snapshot and text default value without notification status 1`] = `
+.emotion-0 {
+  color: #212121;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-1"
+    >
+      --
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<ReadCountColumn /> should match snapshot, text value and correct style, when readUsers < allReceivers with notification sent 1`] = `
+.emotion-0 {
+  color: #FF9800;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-subtitle2 emotion-1"
+    >
+      0/2
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`<ReadCountColumn /> should match snapshot, text value and correct style, when readUsers = allReceivers with notification sent 1`] = `
+.emotion-0 {
+  color: #212121;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-1"
+    >
+      2/2
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<ReadCountColumn /> should render snapshot 1`] = `
+.emotion-0 {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="ReadCountColumn__box"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-1"
+    >
+      --
+    </p>
+  </div>
+</div>
+`;

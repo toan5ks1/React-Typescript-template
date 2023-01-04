@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBaseRow /> should match snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`<TableBaseRow /> with render column should render correct cell props 1`] = `ShallowWrapper {}`;

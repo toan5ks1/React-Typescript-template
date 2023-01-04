@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Silent Renew Token for SpeEDI Cargo</title>
+</head>
+<body>
+<script src='oidc-client.min.js'></script>
+<script>
+  new Oidc.UserManager({
+    response_mode: 'query',
+    userStore: new Oidc.WebStorageStateStore({ store: window.localStorage, prefix: 'MANABIE_' })
+  }).signinSilentCallback().catch(() => {
+    console.error('Cannot renew token')
+  })
+</script>
+</body>
+</html>

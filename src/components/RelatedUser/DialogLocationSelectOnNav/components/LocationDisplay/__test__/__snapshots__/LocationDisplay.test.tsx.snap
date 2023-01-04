@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationsDisplay component should render list of selected locations is empty 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="LocationDisplay__LocationNames"
+  >
+    ra.common.selected
+    : 
+    
+  </p>
+</div>
+`;
+
+exports[`LocationsDisplay component should render list of selected locations when all locations are checked 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="LocationDisplay__LocationNames"
+  >
+    ra.common.selected
+    : 
+    Organization
+  </p>
+</div>
+`;
+
+exports[`LocationsDisplay component should render list of selected locations when some of locations are checked 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+    data-testid="LocationDisplay__LocationNames"
+  >
+    ra.common.selected
+    : 
+    Group Brand, Osaka prefecture, Location 1, Location 2
+  </p>
+</div>
+`;

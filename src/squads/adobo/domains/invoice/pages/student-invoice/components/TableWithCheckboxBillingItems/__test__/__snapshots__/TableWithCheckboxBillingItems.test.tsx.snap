@@ -1,0 +1,851 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableWithCheckboxBillingItems /> should match snapshot 1`] = `
+.emotion-0 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-0 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-1 {
+  display: table-header-group;
+}
+
+.emotion-2 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-2.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-2.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-2.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7 {
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: #757575;
+}
+
+.emotion-8::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-8.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-8 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-8:hover {
+  background-color: rgba(33, 150, 243, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-8:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-8.Mui-checked,
+.emotion-8.MuiCheckbox-indeterminate {
+  color: #2196F3;
+}
+
+.emotion-8.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-8.MuiCheckbox-indeterminate {
+  color: #757575;
+}
+
+.emotion-9 {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-10 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-11 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-19 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-21 {
+  display: table-row-group;
+}
+
+.emotion-22 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-22.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-22.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-22.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-22.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-23 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-36 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#4CAF50;
+  color: #3B873E;
+}
+
+.emotion-36.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-36 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-36 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-36 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-36 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-36 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-36 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-36 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-37 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.emotion-40 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-56 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#FF9800;
+  color: #C77700;
+}
+
+.emotion-56.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-56 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-56 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-56 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-56 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-56 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-56 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-56 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+<table
+  class="MuiTable-root emotion-0"
+  data-testid="TableWithCheckboxBillingItems__table"
+>
+  <thead
+    class="MuiTableHead-root emotion-1"
+    data-testid="TableBase__header"
+  >
+    <tr
+      class="MuiTableRow-root MuiTableRow-head emotion-2"
+    >
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-3"
+        scope="col"
+        style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="TableIndexCell__index"
+        />
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+        data-testid="StudentBillingItemsTableCell__columnBillingNo"
+        scope="col"
+      >
+        <div
+          class="MuiBox-root emotion-6"
+        >
+          <div
+            class="MuiBox-root emotion-7"
+          >
+            <span
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-8"
+              data-testid="TableHeaderWithCheckbox__checkboxHeader"
+              style="padding: 0px; width: 18px; height: 18px;"
+            >
+              <input
+                aria-label="ra.common.action.selectAllItems"
+                class="PrivateSwitchBase-input emotion-9"
+                data-indeterminate="false"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-10"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-11"
+              />
+            </span>
+          </div>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 emotion-12"
+            data-testid="TableHeaderWithCheckbox__cellHeader"
+          >
+            Billing No.
+          </h6>
+        </div>
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+        data-testid="StudentBillingItemsTableCell__columnBillingItem"
+        scope="col"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 emotion-12"
+          data-testid="TableHeaderWithCheckbox__cellHeader"
+        >
+          Billing Item
+        </h6>
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+        data-testid="StudentBillingItemsTableCell__columnStatus"
+        scope="col"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 emotion-12"
+          data-testid="TableHeaderWithCheckbox__cellHeader"
+        >
+          Status
+        </h6>
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+        data-testid="StudentBillingItemsTableCell__columnBillingDate"
+        scope="col"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 emotion-12"
+          data-testid="TableHeaderWithCheckbox__cellHeader"
+        >
+          Billing Date
+        </h6>
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-19"
+        data-testid="StudentBillingItemsTableCell__columnAmount"
+        scope="col"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 emotion-12"
+          data-testid="TableHeaderWithCheckbox__cellHeader"
+        >
+          Amount
+        </h6>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="MuiTableBody-root emotion-21"
+    data-testid="TableBaseBody__root"
+  >
+    <tr
+      class="MuiTableRow-root emotion-22"
+      data-testid="TableBase__row"
+      data-value="1"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        style="min-width: 60px;"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="TableIndexCell__index"
+        >
+          1
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingNo"
+      >
+        <div
+          class="MuiBox-root emotion-6"
+        >
+          <div
+            class="MuiBox-root emotion-7"
+          >
+            <span
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-8"
+              data-testid="TableRowWithCheckbox__checkboxRow"
+              style="padding: 0px; width: 18px; height: 18px;"
+            >
+              <input
+                class="PrivateSwitchBase-input emotion-9"
+                data-indeterminate="false"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-10"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-11"
+              />
+            </span>
+          </div>
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+            data-testid="StudentBillingItem__billingNo"
+          >
+            BI-
+            1
+          </p>
+        </div>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingItem"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__billingItem"
+        >
+          Textbook
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnStatus"
+      >
+        <div
+          class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-36"
+          data-testid="ChipBillingStatus__root"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall emotion-37"
+          >
+            Billed
+          </span>
+        </div>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingDate"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__billingDate"
+        >
+          2022/02/01
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-40"
+        data-testid="StudentBillingItemsTableCell__columnAmount"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__amount"
+        >
+          ￥1000
+        </p>
+      </td>
+    </tr>
+    <tr
+      class="MuiTableRow-root emotion-22"
+      data-testid="TableBase__row"
+      data-value="2"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        style="min-width: 60px;"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="TableIndexCell__index"
+        >
+          2
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingNo"
+      >
+        <div
+          class="MuiBox-root emotion-6"
+        >
+          <div
+            class="MuiBox-root emotion-7"
+          >
+            <span
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-8"
+              data-testid="TableRowWithCheckbox__checkboxRow"
+              style="padding: 0px; width: 18px; height: 18px;"
+            >
+              <input
+                class="PrivateSwitchBase-input emotion-9"
+                data-indeterminate="false"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-10"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-11"
+              />
+            </span>
+          </div>
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-4"
+            data-testid="StudentBillingItem__billingNo"
+          >
+            BI-
+            2
+          </p>
+        </div>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingItem"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__billingItem"
+        >
+          School Supplies
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnStatus"
+      >
+        <div
+          class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-56"
+          data-testid="ChipBillingStatus__root"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall emotion-37"
+          >
+            Pending
+          </span>
+        </div>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+        data-testid="StudentBillingItemsTableCell__columnBillingDate"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__billingDate"
+        >
+          2022/02/15
+        </p>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-40"
+        data-testid="StudentBillingItemsTableCell__columnAmount"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 emotion-4"
+          data-testid="StudentBillingItem__amount"
+        >
+          ￥3000
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

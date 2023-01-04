@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MicroRouting /> should render /payment path 1`] = `
+<div>
+  <div>
+    PaymentRouter
+  </div>
+</div>
+`;

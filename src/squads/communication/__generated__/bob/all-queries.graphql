@@ -1,0 +1,347 @@
+fragment CourseAttrs on courses {
+    course_id
+    name
+    icon
+    grade
+    subject
+    country
+    school_id
+    display_order
+}
+query CoursesMany($course_id: [String!] = []) {
+    courses(where: { course_id: { _in: $course_id } }) {
+        ...CourseAttrs
+    }
+}
+query CoursesManyReference($name: String, $limit: Int = 10, $offset: Int = 0) {
+    courses(
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc, display_order: asc, name: asc, course_id: asc }
+        where: { name: { _ilike: $name } }
+    ) {
+        ...CourseAttrs
+    }
+    courses_aggregate(where: { name: { _ilike: $name } }) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment InfoNotificationMsgsAttrs on info_notification_msgs {
+    notification_msg_id
+    title
+    content
+    media_ids
+    created_at
+    updated_at
+}
+query InfoNotificationMsgsOne($notification_msg_id: String!) {
+    info_notification_msgs(where: { notification_msg_id: { _eq: $notification_msg_id } }) {
+        ...InfoNotificationMsgsAttrs
+    }
+}
+query InfoNotificationMsgsTitles($notification_msg_id: [String!] = []) {
+    info_notification_msgs(where: { notification_msg_id: { _in: $notification_msg_id } }) {
+        notification_msg_id
+        title
+    }
+}
+fragment InfoNotificationsAttrs on info_notifications {
+    notification_id
+    notification_msg_id
+    sent_at
+    receiver_ids
+    status
+    type
+    target_groups
+    updated_at
+    created_at
+    editor_id
+    event
+    scheduled_at
+}
+fragment InfoNotificationsWithQuestionnaireAttrs on info_notifications {
+    notification_id
+    notification_msg_id
+    sent_at
+    receiver_ids
+    status
+    type
+    target_groups
+    updated_at
+    created_at
+    editor_id
+    event
+    scheduled_at
+    is_important
+    questionnaire_id
+}
+query Communication_GetListInfoNotifications($status: String, $limit: Int, $offset: Int) {
+    info_notifications(
+        limit: $limit
+        offset: $offset
+        order_by: { updated_at: desc }
+        where: { status: { _eq: $status } }
+    ) {
+        ...InfoNotificationsAttrs
+    }
+}
+query InfoNotificationsCountRead($notification_id: [String!] = []) {
+    info_notifications(
+        order_by: { updated_at: desc }
+        where: { notification_id: { _in: $notification_id } }
+    ) {
+        notification_id
+        all_receiver_aggregate: users_info_notifications_aggregate {
+            aggregate {
+                count
+            }
+        }
+        read_aggregate: users_info_notifications_aggregate(
+            where: { status: { _eq: "USER_NOTIFICATION_STATUS_READ" } }
+        ) {
+            aggregate {
+                count
+            }
+        }
+    }
+}
+query Communication_GetInfoNotificationByNotificationId($notification_id: String!) {
+    info_notifications(where: { notification_id: { _eq: $notification_id } }) {
+        ...InfoNotificationsAttrs
+    }
+}
+query Communication_GetInfoNotificationByNotificationIdV2($notification_id: String!) {
+    info_notifications(where: { notification_id: { _eq: $notification_id } }) {
+        ...InfoNotificationsWithQuestionnaireAttrs
+    }
+}
+query InfoNotificationsGetStatusByID($notification_id: String!) {
+    info_notifications(where: { notification_id: { _eq: $notification_id } }) {
+        status
+    }
+}
+query InfoNotificationCountsByStatusV2 {
+    draft: info_notifications_aggregate(
+        where: { status: { _eq: "NOTIFICATION_STATUS_DRAFT" } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+    sent: info_notifications_aggregate(where: { status: { _eq: "NOTIFICATION_STATUS_SENT" } }) {
+        aggregate {
+            count
+        }
+    }
+    schedule: info_notifications_aggregate(
+        where: { status: { _eq: "NOTIFICATION_STATUS_SCHEDULED" } }
+    ) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment MediaAttrs on media {
+    media_id
+    resource
+    type
+    name
+}
+query MediasMany($media_id: [String!] = []) {
+    media(where: { media_id: { _in: $media_id } }) {
+        ...MediaAttrs
+        conversion_tasks(order_by: { created_at: desc }, limit: 1) {
+            status
+        }
+    }
+}
+fragment QuestionnaireQuestionsAttrs on questionnaire_questions {
+    questionnaire_question_id
+    questionnaire_id
+    order_index
+    type
+    title
+    choices
+    is_required
+    created_at
+    updated_at
+}
+query Communication_GetQuestionnaireQuestionsByQuestionnaireIdAndSortByOrderIndex(
+    $questionnaire_id: String
+) {
+    questionnaire_questions(
+        where: { questionnaire_id: { _eq: $questionnaire_id } }
+        order_by: { order_index: asc }
+    ) {
+        ...QuestionnaireQuestionsAttrs
+    }
+}
+query Communication_GetUserAnswersByQuestionIds($questionIds: [String!] = []) {
+    questionnaire_user_answers(where: { questionnaire_question_id: { _in: $questionIds } }) {
+        answer
+        questionnaire_question_id
+        submitted_at
+        target_id
+        user_id
+        user_notification_id
+    }
+}
+fragment QuestionnaireAttrs on questionnaires {
+    questionnaire_id
+    resubmit_allowed
+    expiration_date
+    created_at
+    updated_at
+}
+query Communication_GetQuestionnaireByQuestionnaireId($questionnaire_id: String) {
+    questionnaires(where: { questionnaire_id: { _eq: $questionnaire_id } }) {
+        ...QuestionnaireAttrs
+    }
+}
+fragment TagAttrs on tags {
+    tag_id
+    name: tag_name
+    created_at
+    updated_at
+}
+fragment TagsSelectedAttrs on tags {
+    tag_id
+    tag_name
+    created_at
+    updated_at
+}
+query Communication_GetTagsManyReference($name: String, $limit: Int = 30, $offset: Int = 0) {
+    tags(
+        limit: $limit
+        offset: $offset
+        where: { tag_name: { _ilike: $name } }
+        order_by: { updated_at: desc }
+    ) {
+        ...TagAttrs
+    }
+    tags_aggregate(where: { tag_name: { _ilike: $name } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Communication_GetListTagNameByTagIds($tag_ids: [String!] = []) {
+    tags(where: { tag_id: { _in: $tag_ids } }) {
+        name: tag_name
+    }
+}
+query Communication_GetListTagsByTagIds($tag_ids: [String!] = []) {
+    tags(where: { tag_id: { _in: $tag_ids } }) {
+        ...TagsSelectedAttrs
+    }
+}
+fragment UsersInfoNotificationsAttrs on users_info_notifications {
+    user_id
+    user_notification_id
+    notification_id
+    current_grade
+    course_ids
+    status
+    user_group
+}
+fragment UsersInfoNotificationsWithQnStatusAttrs on users_info_notifications {
+    user_id
+    user_notification_id
+    notification_id
+    current_grade
+    course_ids
+    status
+    user_group
+    qn_status
+}
+query UsersInfoNotificationsList(
+    $notification_id: String!
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    users_info_notifications(
+        where: { notification_id: { _eq: $notification_id } }
+        limit: $limit
+        offset: $offset
+        order_by: { student_id: asc, user_group: desc }
+    ) {
+        ...UsersInfoNotificationsAttrs
+        student_id
+        parent_id
+    }
+    users_info_notifications_aggregate(where: { notification_id: { _eq: $notification_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+query Communication_UsersInfoNotificationsList(
+    $notification_id: String!
+    $limit: Int = 10
+    $offset: Int = 0
+) {
+    users_info_notifications(
+        where: { notification_id: { _eq: $notification_id } }
+        limit: $limit
+        offset: $offset
+        order_by: { student_id: asc, user_group: desc }
+    ) {
+        ...UsersInfoNotificationsWithQnStatusAttrs
+        student_id
+        parent_id
+    }
+    users_info_notifications_aggregate(where: { notification_id: { _eq: $notification_id } }) {
+        aggregate {
+            count
+        }
+    }
+}
+fragment UserAttrs on users {
+    user_id
+    name
+    email
+    avatar
+    phone_number
+    user_group
+    country
+}
+fragment StudentUserAttrs on users {
+    user_id
+    name
+    email
+    avatar
+}
+query UserNameByIds($user_id: [String!] = []) {
+    users(where: { user_id: { _in: $user_id } }) {
+        user_id
+        name
+    }
+}
+query StudentsMany($user_ids: [String!] = []) {
+    users(where: { user_group: { _eq: "USER_GROUP_STUDENT" }, user_id: { _in: $user_ids } }) {
+        ...StudentUserAttrs
+    }
+}
+query StudentsManyReference(
+    $user_ids: [String!]
+    $name: String
+    $email: String
+    $limit: Int = 30
+    $offset: Int = 0
+) {
+    users(
+        where: {
+            user_group: { _eq: "USER_GROUP_STUDENT" }
+            user_id: { _in: $user_ids }
+            name: { _ilike: $name }
+            email: { _ilike: $email }
+        }
+        limit: $limit
+        offset: $offset
+        order_by: { created_at: desc }
+    ) {
+        ...StudentUserAttrs
+    }
+}

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CalendarEventWrapper /> should match snapshot 1`] = `
+.emotion-0 .rbc-event {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 4px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #7BC67E;
+  background-color: #fff;
+  border: 1px solid #7BC67E;
+}
+
+.emotion-0 .rbc-event.rbc-selected {
+  background-color: #fff;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="CalendarEventWrapper__wrapper"
+  >
+    <div
+      class="rbc-event rbc-event-allday rbc-event-continues-after"
+      tabindex="0"
+    >
+      <div
+        class="rbc-event-content"
+        title="Tada"
+      >
+        Tada
+      </div>
+    </div>
+  </div>
+</div>
+`;

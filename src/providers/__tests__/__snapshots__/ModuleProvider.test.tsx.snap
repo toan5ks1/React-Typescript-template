@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModuleProvider /> should have correct context value 1`] = `
+<div>
+  <div>
+    [{"key":"books_chapters","name":"books_chapters"}]
+  </div>
+</div>
+`;

@@ -1,0 +1,475 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBodyWithCheckbox /> should match snapshot when loading=FALSE 1`] = `
+.emotion-0 {
+  display: table-row-group;
+}
+
+.emotion-1 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-1.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-1.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-1.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-2 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emotion-5::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-5.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-5 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-5:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-5:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-5.Mui-checked,
+.emotion-5.MuiCheckbox-indeterminate {
+  color: #1976d2;
+}
+
+.emotion-5.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.emotion-6 {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-7 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-8 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-9 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.emotion-10 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: none;
+}
+
+<div>
+  <table>
+    <tbody
+      class="MuiTableBody-root emotion-0"
+      data-testid="TableBaseBody__root"
+    >
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableBase__row"
+        data-value="1"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+          style="width: 60%;"
+        >
+          <div
+            class="MuiBox-root emotion-3"
+          >
+            <div
+              class="MuiBox-root emotion-4"
+            >
+              <span
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-5"
+                data-testid="TableRowWithCheckbox__checkboxRow"
+                style="padding: 0px; width: 18px; height: 18px;"
+              >
+                <input
+                  class="PrivateSwitchBase-input emotion-6"
+                  data-indeterminate="false"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-7"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root emotion-8"
+                />
+              </span>
+            </div>
+            <p
+              class="MuiTypography-root MuiTypography-body2 emotion-9"
+            >
+              Nam
+            </p>
+          </div>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-10"
+          style="width: 40%;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-9"
+          >
+            thanhnam@manabie.com
+          </p>
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableBase__row"
+        data-value="2"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+          style="width: 60%;"
+        >
+          <div
+            class="MuiBox-root emotion-3"
+          >
+            <div
+              class="MuiBox-root emotion-4"
+            >
+              <span
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-5"
+                data-testid="TableRowWithCheckbox__checkboxRow"
+                style="padding: 0px; width: 18px; height: 18px;"
+              >
+                <input
+                  class="PrivateSwitchBase-input emotion-6"
+                  data-indeterminate="false"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-7"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root emotion-8"
+                />
+              </span>
+            </div>
+            <p
+              class="MuiTypography-root MuiTypography-body2 emotion-9"
+            >
+              Nam 2
+            </p>
+          </div>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-10"
+          style="width: 40%;"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 emotion-9"
+          >
+            thanhnam2@manabie.com
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<TableBodyWithCheckbox /> should match snapshot when loading=TRUE 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.emotion-0 {
+  display: table-row-group;
+}
+
+.emotion-1 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-1.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-1.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.emotion-1.Mui-selected:hover {
+  background-color: rgba(25, 118, 210, 0.12);
+}
+
+.emotion-2 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+.emotion-3 {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.11);
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform-origin: 0 55%;
+  -webkit-transform: scale(1, 0.60);
+  -moz-transform: scale(1, 0.60);
+  -ms-transform: scale(1, 0.60);
+  transform: scale(1, 0.60);
+  border-radius: 4px/6.7px;
+  -webkit-animation: animation-0 1.5s ease-in-out 0.5s infinite;
+  animation: animation-0 1.5s ease-in-out 0.5s infinite;
+}
+
+.emotion-3:empty:before {
+  content: "\\00a0";
+}
+
+.emotion-4 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: none;
+}
+
+<div>
+  <table>
+    <tbody
+      class="MuiTableBody-root emotion-0"
+    >
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableSke__item"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-3"
+            style="width: 100%; height: 20px;"
+          />
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-4"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-3"
+            style="width: 100%; height: 20px;"
+          />
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root emotion-1"
+        data-testid="TableSke__item"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-2"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-3"
+            style="width: 100%; height: 20px;"
+          />
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-4"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-3"
+            style="width: 100%; height: 20px;"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,0 +1,1618 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AssignmentDetail should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #757575;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.emotion-4 {
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #212121;
+}
+
+.emotion-8 {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  padding-bottom: 0px;
+}
+
+.emotion-11 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.6;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-14 .IconButtonWithAnchorMenu-sizeSmall {
+  padding: 10px;
+}
+
+.emotion-14.IconButtonWithAnchorMenu-root:hover {
+  color: #2196F3;
+}
+
+.emotion-14 .IconButtonWithAnchorMenu-iconButton {
+  border-radius: 8px;
+  background-color: #EEEEEE;
+}
+
+.emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  padding: 12px;
+  font-size: 1.75rem;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-15::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-15.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-15 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-15:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-15:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-15.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.25rem;
+}
+
+.emotion-17 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: -24px;
+  width: calc(100% + 24px);
+  margin-left: -24px;
+}
+
+.emotion-18>.MuiGrid-item {
+  padding-top: 24px;
+}
+
+.emotion-18>.MuiGrid-item {
+  padding-left: 24px;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media (min-width:600px) {
+  .emotion-19 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-19 {
+    -webkit-flex-basis: 33.333333%;
+    -ms-flex-preferred-size: 33.333333%;
+    flex-basis: 33.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 33.333333%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-19 {
+    -webkit-flex-basis: 33.333333%;
+    -ms-flex-preferred-size: 33.333333%;
+    flex-basis: 33.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 33.333333%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-19 {
+    -webkit-flex-basis: 33.333333%;
+    -ms-flex-preferred-size: 33.333333%;
+    flex-basis: 33.333333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 33.333333%;
+  }
+}
+
+.emotion-20 {
+  background-color: #fff;
+  color: #212121;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px rgba(0, 0, 0, 0.14),0px 1px 5px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+}
+
+@media (min-width:960px) {
+  .emotion-20 {
+    padding: 32px;
+  }
+}
+
+.emotion-21 {
+  margin-bottom: 24px;
+}
+
+.emotion-23 {
+  margin: -4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-24 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 32px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #BDBDBD;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background-color: transparent;
+  margin: 4px 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 4px 2px 4px 2px;
+  height: 32px;
+  position: relative;
+}
+
+.emotion-24::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-24.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-24 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-24.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-24 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-24 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-24 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-24 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-24 .MuiChip-icon {
+  color: #616161;
+  margin-left: 5px;
+  margin-right: -6px;
+}
+
+.emotion-24 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+}
+
+.emotion-24 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-24.Mui-focusVisible {
+  background-color: rgba(235, 235, 235, 0.2);
+}
+
+.emotion-24.MuiChip-clickable:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-24.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.emotion-24 .MuiChip-avatar {
+  margin-left: 4px;
+}
+
+.emotion-24 .MuiChip-avatarSmall {
+  margin-left: 2px;
+}
+
+.emotion-24 .MuiChip-icon {
+  margin-left: 4px;
+}
+
+.emotion-24 .MuiChip-iconSmall {
+  margin-left: 2px;
+}
+
+.emotion-24 .MuiChip-deleteIcon {
+  margin-right: 5px;
+}
+
+.emotion-24 .MuiChip-deleteIconSmall {
+  margin-right: 3px;
+}
+
+.emotion-24 .MuiChip-deleteIcon {
+  width: inherit;
+}
+
+.emotion-24 .ChipFileDescription-retry {
+  background: #F44336;
+  border: 1px solid #EF5350;
+}
+
+.emotion-24 .ChipFileDescription-label {
+  padding-left: 4px;
+  padding-right: 14px;
+}
+
+.emotion-25 {
+  min-width: 28px;
+  min-height: 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-26 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+.emotion-28 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media (min-width:600px) {
+  .emotion-36 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-36 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-36 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-36 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media (min-width:600px) {
+  .emotion-41 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-41 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-41 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-41 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.emotion-43 {
+  margin-bottom: 8px;
+}
+
+.emotion-44 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.6;
+  color: #757575;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.emotion-45 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  color: #212121;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.emotion-51 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media (min-width:600px) {
+  .emotion-51 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-51 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-51 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-51 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+.emotion-56 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media (min-width:600px) {
+  .emotion-56 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-56 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-56 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-56 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+}
+
+.emotion-57 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+@media (min-width:600px) {
+  .emotion-57 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-57 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-57 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-57 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 50%;
+  }
+}
+
+.emotion-58 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -11px;
+  margin-right: 16px;
+}
+
+.emotion-58.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-58 .MuiFormControlLabel-label.Mui-disabled {
+  color: #9E9E9E;
+}
+
+.emotion-59 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: #757575;
+  color: #4CAF50!important;
+}
+
+.emotion-59::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-59.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-59 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-59:hover {
+  background-color: rgba(33, 150, 243, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-59:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-59.Mui-checked,
+.emotion-59.MuiCheckbox-indeterminate {
+  color: #2196F3;
+}
+
+.emotion-59.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-59.MuiCheckbox-indeterminate {
+  color: #757575;
+}
+
+.emotion-59.CheckboxBase-selector {
+  padding: 9px;
+}
+
+.emotion-59+span {
+  color: #212121!important;
+}
+
+.emotion-60 {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-61 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-62 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="AssignmentDetail__root"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root emotion-2"
+      >
+        <ol
+          class="MuiBreadcrumbs-ol emotion-3"
+        >
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <a
+              class="emotion-4"
+              data-testid="BreadcrumbItem"
+              href="/url"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption emotion-5"
+              >
+                Name
+              </span>
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="MuiBreadcrumbs-separator emotion-6"
+          >
+            /
+          </li>
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+              data-testid="Breadcrumbs__entityName"
+            >
+              assignment_name_getOne
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div
+      class="MuiBox-root emotion-8"
+      data-testid="WrapperPageHeader__root"
+    >
+      <div
+        class="MuiBox-root emotion-9"
+      >
+        <div
+          class="MuiBox-root emotion-10"
+        >
+          <h6
+            aria-label="title"
+            class="MuiTypography-root MuiTypography-h6 emotion-11"
+          >
+            assignment_name_getOne
+          </h6>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root emotion-12"
+      >
+        <div
+          class="MuiBox-root emotion-13"
+          data-testid="ActionPanel__root"
+        >
+          <div
+            class="IconButtonWithAnchorMenu-root emotion-14"
+          >
+            <button
+              aria-haspopup="menu"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge IconButtonWithAnchorMenu-iconButton IconButtonWithAnchorMenu-root emotion-15"
+              data-testid="ActionPanel__trigger"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall emotion-16"
+                data-testid="MoreHorizIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-17"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 emotion-18"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4 emotion-19"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 emotion-20"
+          >
+            <div
+              class="MuiBox-root emotion-21"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 emotion-11"
+              >
+                Attachment
+              </h6>
+            </div>
+            <div
+              class="MuiBox-root emotion-23"
+              data-testid="ListMediaChipsBase"
+            >
+              <div
+                class="MuiButtonBase-root ChipFileDescription-root MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-outlinedDefault emotion-24"
+                data-testid="ChipFileDescription"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiBox-root emotion-25"
+                  data-testid="FileIcon"
+                >
+                  <svg
+                    data-testid="FileIcon__file"
+                    height="28"
+                    width="28"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <image
+                      height="100%"
+                      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfmBBMPOinXog2mAAAA30lEQVRIx2NgoBJghLNEGOwZdIjQ0YhfWofhNcN/oiABMJ9IY3AaxAKl IxgYGBgYGigPo/9oIUYyYCJfK3avoQMHBnssojcYVhIyEDkgTRgu4wzqfFIMOo3DkN/EGIVsEC7X BBNjFDEGMRBjFHEGEWEUsQYRNIp4gwgYRYpBeI0izSCEUeEwAXKzyFqGCIY/DAwMGjABFhI04y2L qJZpRw2io0Gw6G+glkGNFJlCTa+NMIP+kKD/Cz6DNpBg0FF8kjYM34lsmUxHaMLebNBh8GbgIOCW HwwrGR6QE5oEAADy5/IIXX8MJwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNC0xOVQxMjo1ODo0 MSswMzowMD4idSYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDQtMTlUMTI6NTg6NDErMDM6MDBP f82aAAAAAElFTkSuQmCC"
+                      width="100%"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="ChipFileDescription-label MuiChip-label MuiChip-labelMedium emotion-26"
+                >
+                  <div
+                    class="MuiBox-root emotion-12"
+                    data-testid="ChipFileDescription__name"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-28"
+                    >
+                      Media 1
+                    </p>
+                  </div>
+                </span>
+                <div
+                  class="MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault MuiBox-root emotion-29"
+                />
+              </div>
+              <div
+                class="MuiButtonBase-root ChipFileDescription-root MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-outlinedDefault emotion-24"
+                data-testid="ChipFileDescription"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiBox-root emotion-25"
+                  data-testid="FileIcon"
+                >
+                  <svg
+                    data-testid="FileIcon__file"
+                    height="28"
+                    width="28"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <image
+                      height="100%"
+                      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfmBBMPOinXog2mAAAA30lEQVRIx2NgoBJghLNEGOwZdIjQ0YhfWofhNcN/oiABMJ9IY3AaxAKl IxgYGBgYGigPo/9oIUYyYCJfK3avoQMHBnssojcYVhIyEDkgTRgu4wzqfFIMOo3DkN/EGIVsEC7X BBNjFDEGMRBjFHEGEWEUsQYRNIp4gwgYRYpBeI0izSCEUeEwAXKzyFqGCIY/DAwMGjABFhI04y2L qJZpRw2io0Gw6G+glkGNFJlCTa+NMIP+kKD/Cz6DNpBg0FF8kjYM34lsmUxHaMLebNBh8GbgIOCW HwwrGR6QE5oEAADy5/IIXX8MJwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNC0xOVQxMjo1ODo0 MSswMzowMD4idSYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDQtMTlUMTI6NTg6NDErMDM6MDBP f82aAAAAAElFTkSuQmCC"
+                      width="100%"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="ChipFileDescription-label MuiChip-label MuiChip-labelMedium emotion-26"
+                >
+                  <div
+                    class="MuiBox-root emotion-12"
+                    data-testid="ChipFileDescription__name"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-28"
+                    >
+                      Media 2
+                    </p>
+                  </div>
+                </span>
+                <div
+                  class="MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault MuiBox-root emotion-29"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-8 emotion-36"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 emotion-20"
+          >
+            <div
+              class="MuiBox-root emotion-21"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 emotion-11"
+              >
+                Assignment info
+              </h6>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 emotion-18"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-41"
+              >
+                <div
+                  class="MuiBox-root emotion-42"
+                >
+                  <div
+                    class="MuiBox-root emotion-43"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 emotion-44"
+                    >
+                      Grading method
+                    </h6>
+                  </div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 emotion-45"
+                    data-testid="ShowAssignment__gradingMethod"
+                  >
+                    Value
+                  </p>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-41"
+              >
+                <div
+                  class="MuiBox-root emotion-42"
+                >
+                  <div
+                    class="MuiBox-root emotion-43"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 emotion-44"
+                    >
+                      Max grade
+                    </h6>
+                  </div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 emotion-45"
+                    data-testid="ShowAssignment__maxGrade"
+                  >
+                    10
+                  </p>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 emotion-51"
+              >
+                <div
+                  class="MuiBox-root emotion-42"
+                >
+                  <div
+                    class="MuiBox-root emotion-43"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 emotion-44"
+                    />
+                  </div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 emotion-45"
+                    data-testid="ShowAssignment__instruction"
+                  >
+                    assignment_instruction_getOne
+                  </p>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-sm-12 emotion-56"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-57"
+                >
+                  <label
+                    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd emotion-58"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked Mui-disabled  emotion-59"
+                      tabindex="-1"
+                    >
+                      <input
+                        checked=""
+                        class="PrivateSwitchBase-input emotion-60"
+                        data-indeterminate="false"
+                        disabled=""
+                        name="require_assignment_note"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-61"
+                        data-testid="CheckBoxIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled emotion-62"
+                    >
+                      Require Text Note Submission
+                    </span>
+                  </label>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-57"
+                >
+                  <label
+                    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd emotion-58"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked Mui-disabled  emotion-59"
+                      tabindex="-1"
+                    >
+                      <input
+                        checked=""
+                        class="PrivateSwitchBase-input emotion-60"
+                        data-indeterminate="false"
+                        disabled=""
+                        name="require_attachment"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-61"
+                        data-testid="CheckBoxIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled emotion-62"
+                    >
+                      Require Attachment Submission
+                    </span>
+                  </label>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-57"
+                >
+                  <label
+                    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd emotion-58"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked Mui-disabled  emotion-59"
+                      tabindex="-1"
+                    >
+                      <input
+                        checked=""
+                        class="PrivateSwitchBase-input emotion-60"
+                        data-indeterminate="false"
+                        disabled=""
+                        name="require_video_submission"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-61"
+                        data-testid="CheckBoxIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled emotion-62"
+                    >
+                      Require Recorded Video Submission
+                    </span>
+                  </label>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-57"
+                >
+                  <label
+                    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd emotion-58"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked Mui-disabled  emotion-59"
+                      tabindex="-1"
+                    >
+                      <input
+                        checked=""
+                        class="PrivateSwitchBase-input emotion-60"
+                        data-indeterminate="false"
+                        disabled=""
+                        name="allow_late_submission"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-61"
+                        data-testid="CheckBoxIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled emotion-62"
+                    >
+                      Allow Late Submission
+                    </span>
+                  </label>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 emotion-57"
+                >
+                  <label
+                    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd emotion-58"
+                  >
+                    <span
+                      aria-disabled="true"
+                      class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked Mui-disabled  emotion-59"
+                      tabindex="-1"
+                    >
+                      <input
+                        checked=""
+                        class="PrivateSwitchBase-input emotion-60"
+                        data-indeterminate="false"
+                        disabled=""
+                        name="allow_resubmission"
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-61"
+                        data-testid="CheckBoxIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled emotion-62"
+                    >
+                      Allow Resubmission
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

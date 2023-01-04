@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormControlLabelBase should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -11px;
+  margin-right: 16px;
+}
+
+.emotion-0.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-0 .MuiFormControlLabel-label.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+<div>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd emotion-0"
+  >
+    <input />
+    <span
+      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label emotion-1"
+    >
+      label
+    </span>
+  </label>
+</div>
+`;

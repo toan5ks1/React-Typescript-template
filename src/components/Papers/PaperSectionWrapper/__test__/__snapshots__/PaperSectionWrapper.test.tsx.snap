@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaperSectionWrapper /> should match snapshot 1`] = `
+.emotion-0 {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.emotion-1 {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.emotion-2 {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <div
+        class="MuiBox-root emotion-2"
+      >
+        <div>
+          Test
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

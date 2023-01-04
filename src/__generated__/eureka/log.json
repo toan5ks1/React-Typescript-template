@@ -1,0 +1,286 @@
+{
+  "createdValues": [],
+  "editedValues": [],
+  "deletedValues": [
+    {
+      "kind": "D",
+      "path": [
+        "AssignStudyPlanTasksMany"
+      ],
+      "lhs": "query AssignStudyPlanTasksMany($id: [String!] = []) {\n  assign_study_plan_tasks(where: {id: {_in: $id}}) {\n    ...AssignStudyPlanTaskAttr\n  }\n}\n\nfragment AssignStudyPlanTaskAttr on assign_study_plan_tasks {\n  id\n  course_id\n  status\n  study_plan_ids\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentsByTopicIds"
+      ],
+      "lhs": "query AssignmentsByTopicIds($topic_id: _text!, $order_by: assignments_order_by! = {name: asc, assignment_id: asc}) {\n  find_assignment_by_topic_id(args: {ids: $topic_id}, order_by: [$order_by]) {\n    name\n    assignment_id\n    content(path: \"topic_id\")\n    created_at\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentOne"
+      ],
+      "lhs": "query AssignmentOne($assignment_id: String) {\n  assignments(where: {assignment_id: {_eq: $assignment_id}}) {\n    ...AssignmentAttrs\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentsMany"
+      ],
+      "lhs": "query AssignmentsMany($assignment_id: [String!] = []) {\n  assignments(\n    order_by: {display_order: asc}\n    where: {assignment_id: {_in: $assignment_id}}\n  ) {\n    ...AssignmentAttrs\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentsManyByTopicId"
+      ],
+      "lhs": "query AssignmentsManyByTopicId($content: jsonb) {\n  assignments(\n    order_by: {display_order: asc}\n    where: {content: {_contains: $content}}\n  ) {\n    ...AssignmentAttrs\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CourseStudyPlansList"
+      ],
+      "lhs": "query CourseStudyPlansList($course_id: String, $limit: Int = 10, $offset: Int = 0) {\n  course_study_plans(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {course_id: {_eq: $course_id}}\n  ) {\n    ...CourseStudyPlanAttrs\n  }\n  course_study_plans_aggregate(where: {course_id: {_eq: $course_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseStudyPlanAttrs on course_study_plans {\n  course_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrs\n    created_at\n    master_study_plan_id\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CourseStudyPlansByCourseId"
+      ],
+      "lhs": "query CourseStudyPlansByCourseId($course_id: String = \"\", $study_plan_id: String) {\n  course_study_plans(\n    order_by: {created_at: desc}\n    where: {course_id: {_eq: $course_id}, study_plan_id: {_eq: $study_plan_id}}\n  ) {\n    ...CourseStudyPlanAttrs\n    study_plan {\n      ...StudyPlanAttrs\n      study_plan_items(order_by: {display_order: asc}) {\n        study_plan_item_id\n        lo_study_plan_item {\n          lo_id\n        }\n        assignment_study_plan_item {\n          assignment_id\n        }\n        content_structure\n        available_to\n        available_from\n        end_date\n        start_date\n        display_order\n      }\n    }\n  }\n}\n\nfragment CourseStudyPlanAttrs on course_study_plans {\n  course_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrs\n    created_at\n    master_study_plan_id\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentStudyPlansByCourseId"
+      ],
+      "lhs": "query StudentStudyPlansByCourseId($course_id: String!, $study_plan_id: String!) {\n  student_study_plans(\n    order_by: {created_at: desc}\n    where: {course_students: {course_id: {_eq: $course_id}}, study_plan_id: {_eq: $study_plan_id}}\n  ) {\n    ...StudentStudyPlanAttrs\n    study_plan {\n      ...StudyPlanAttrs\n      study_plan_items(order_by: {display_order: asc}) {\n        study_plan_item_id\n        lo_study_plan_item {\n          lo_id\n        }\n        assignment_study_plan_item {\n          assignment_id\n        }\n        content_structure\n        available_to\n        available_from\n        end_date\n        start_date\n        display_order\n      }\n    }\n  }\n}\n\nfragment StudentStudyPlanAttrs on student_study_plans {\n  student_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrs\n    created_at\n    master_study_plan_id\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudyPlanOne"
+      ],
+      "lhs": "query StudyPlanOne($study_plan_id: String!) {\n  study_plans(where: {study_plan_id: {_eq: $study_plan_id}}) {\n    ...StudyPlanAttrs\n    study_plan_type\n    course_id\n    study_plan_items {\n      ...StudyPlanItemAttrs\n    }\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n\nfragment StudyPlanItemAttrs on study_plan_items {\n  study_plan_item_id\n  available_from\n  available_to\n  content_structure\n  display_order\n  start_date\n  end_date\n  assignment_study_plan_item {\n    assignment_id\n  }\n  lo_study_plan_item {\n    lo_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentStudyPlansManyOld"
+      ],
+      "lhs": "query StudentStudyPlansMany($student_id: String!, $course_id: String!) {\n  student_study_plans(\n    where: {student_id: {_eq: $student_id}, study_plan: {course_id: {_eq: $course_id}}}\n  ) {\n    ...StudentStudyPlanAttrs\n  }\n}\n\nfragment StudentStudyPlanAttrs on student_study_plans {\n  student_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrs\n    created_at\n    master_study_plan_id\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentStudyPlansMany"
+      ],
+      "lhs": "query StudentStudyPlansMany($student_ids: [String!], $course_id: String!) {\n  student_study_plans(\n    order_by: {created_at: desc}\n    where: {student_id: {_in: $student_ids}, study_plan: {course_id: {_eq: $course_id}}}\n  ) {\n    ...StudentStudyPlanAttrs\n  }\n}\n\nfragment StudentStudyPlanAttrs on student_study_plans {\n  student_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrs\n    created_at\n    master_study_plan_id\n  }\n}\n\nfragment StudyPlanAttrs on study_plans {\n  name\n  study_plan_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "OldAssignmentsList"
+      ],
+      "lhs": "query AssignmentsList($limit: Int = 10, $offset: Int = 0, $assignment_id: [String!], $name: String, $order_by: assignments_order_by! = {display_order: asc}, $content: jsonb) {\n  assignments(\n    limit: $limit\n    offset: $offset\n    where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}\n    order_by: [$order_by]\n  ) {\n    ...AssignmentAttrs\n  }\n  assignments_aggregate(\n    where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentsList"
+      ],
+      "lhs": "query AssignmentsList($assignment_id: [String!], $name: String, $order_by: assignments_order_by! = {display_order: asc}, $content: jsonb) {\n  assignments(\n    where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}\n    order_by: [$order_by]\n  ) {\n    ...AssignmentAttrs\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "AssignmentDisplayOrder"
+      ],
+      "lhs": "query AssignmentDisplayOrder($topic_id: _text!) {\n  find_assignment_by_topic_id(\n    args: {ids: $topic_id}\n    order_by: {display_order: desc}\n    limit: 1\n  ) {\n    display_order\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicAssignmentMany"
+      ],
+      "lhs": "query TopicAssignmentMany($topic_id: String!) {\n  topics_assignments(\n    where: {topic_id: {_eq: $topic_id}}\n    order_by: {display_order: asc}\n  ) {\n    display_order\n    assignment {\n      ...AssignmentAttrs\n    }\n  }\n}\n\nfragment AssignmentAttrs on assignments {\n  assignment_id\n  instruction\n  content\n  check_list\n  attachment\n  type\n  name\n  max_grade\n  settings\n  is_required_grade\n  created_at\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CourseStudyPlansListV2"
+      ],
+      "lhs": "query CourseStudyPlansListV2($course_id: String!, $limit: Int = 10, $offset: Int = 0) {\n  course_study_plans(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n    where: {course_id: {_eq: $course_id}}\n  ) {\n    ...CourseStudyPlanAttrsV2\n  }\n  course_study_plans_aggregate(where: {course_id: {_eq: $course_id}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseStudyPlanAttrsV2 on course_study_plans {\n  course_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrsV2\n  }\n}\n\nfragment StudyPlanAttrsV2 on study_plans {\n  name\n  study_plan_id\n  created_at\n  master_study_plan_id\n  book_id\n  grades\n  status\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudyPlanOneV2"
+      ],
+      "lhs": "query StudyPlanOneV2($study_plan_id: String!) {\n  study_plans(where: {study_plan_id: {_eq: $study_plan_id}}) {\n    ...StudyPlanAttrsV2\n    study_plan_type\n    course_id\n    track_school_progress\n    study_plan_items {\n      ...StudyPlanItemAttrs\n    }\n  }\n}\n\nfragment StudyPlanAttrsV2 on study_plans {\n  name\n  study_plan_id\n  created_at\n  master_study_plan_id\n  book_id\n  grades\n  status\n}\n\nfragment StudyPlanItemAttrs on study_plan_items {\n  study_plan_item_id\n  available_from\n  available_to\n  content_structure\n  start_date\n  end_date\n  status\n  assignment_study_plan_item {\n    assignment_id\n  }\n  lo_study_plan_item {\n    lo_id\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "StudentStudyPlansManyV2"
+      ],
+      "lhs": "query StudentStudyPlansManyV2($student_ids: [String!], $course_id: String!, $status: String = \"STUDY_PLAN_STATUS_ACTIVE\") {\n  student_study_plans(\n    order_by: {created_at: desc}\n    where: {student_id: {_in: $student_ids}, study_plan: {course_id: {_eq: $course_id}, status: {_eq: $status}}}\n  ) {\n    ...StudentStudyPlanAttrsV2\n  }\n}\n\nfragment StudentStudyPlanAttrsV2 on student_study_plans {\n  student_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrsV2\n  }\n}\n\nfragment StudyPlanAttrsV2 on study_plans {\n  name\n  study_plan_id\n  created_at\n  master_study_plan_id\n  book_id\n  grades\n  status\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "GetManyStudentStudyPlansByFilter"
+      ],
+      "lhs": "query GetManyStudentStudyPlansByFilter($courseId: String!, $grades: _int4 = \"{}\", $search: String = \"\", $bookIds: _text = \"{}\", $status: String = \"STUDY_PLAN_STATUS_ACTIVE\", $studentIds: _text = \"{}\") {\n  get_student_study_plans_by_filter(\n    args: {_course_id: $courseId, _book_ids: $bookIds, _grades: $grades, _status: $status, search: $search, _student_ids: $studentIds}\n    order_by: {created_at: desc}\n  ) {\n    ...StudyPlanAttrsV3\n    student_study_plans {\n      student_id\n    }\n  }\n}\n\nfragment StudyPlanAttrsV3 on study_plans {\n  name\n  study_plan_id\n  created_at\n  master_study_plan_id\n  book_id\n  grades\n  status\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "CourseStudyPlansListByFilter"
+      ],
+      "lhs": "query CourseStudyPlansListByFilter($courseId: String!, $grades: _int4 = \"{}\", $limit: Int = 10, $search: String = \"\", $bookIds: _text = \"{}\", $status: _text = \"{}\", $offset: Int = 0) {\n  get_list_course_study_plan_by_filter(\n    args: {_course_id: $courseId, _grades: $grades, search: $search, _status: $status, _book_ids: $bookIds}\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc}\n  ) {\n    ...CourseStudyPlanAttrsV3\n  }\n  get_list_course_study_plan_by_filter_aggregate(\n    args: {_course_id: $courseId, _grades: $grades, search: $search, _status: $status, _book_ids: $bookIds}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment CourseStudyPlanAttrsV3 on course_study_plans {\n  course_id\n  study_plan_id\n  study_plan {\n    ...StudyPlanAttrsV3\n  }\n}\n\nfragment StudyPlanAttrsV3 on study_plans {\n  name\n  study_plan_id\n  created_at\n  master_study_plan_id\n  book_id\n  grades\n  status\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksList"
+      ],
+      "lhs": "query BooksList($name: String, $limit: Int = 10, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksTitle"
+      ],
+      "lhs": "query BooksTitle($book_id: String!) {\n  books(where: {book_id: {_eq: $book_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksMany"
+      ],
+      "lhs": "query BooksMany($book_id: [String!] = []) {\n  books(where: {book_id: {_in: $book_id}}) {\n    ...BookAttrs\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksManyReference"
+      ],
+      "lhs": "query BooksManyReference($name: String, $limit: Int = 30, $offset: Int = 0) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {name: asc, created_at: desc, book_id: asc}\n    where: {name: {_ilike: $name}}\n  ) {\n    name\n    book_id\n  }\n  books_aggregate(where: {name: {_ilike: $name}}) {\n    aggregate {\n      count\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksOne"
+      ],
+      "lhs": "query BooksOne($book_id: String!) {\n  books(where: {book_id: {_eq: $book_id}}) {\n    ...BookAttrs\n    book_chapters(order_by: {chapter: {display_order: desc}}) {\n      chapter {\n        display_order\n      }\n      chapter_id\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksListNotInCourseId"
+      ],
+      "lhs": "query BooksListNotInCourseId($course_id: String, $limit: Int = 10, $offset: Int = 0, $name: String) {\n  books(\n    limit: $limit\n    offset: $offset\n    order_by: {created_at: desc, name: asc, book_id: asc}\n    where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}\n  ) {\n    ...BookAttrs\n  }\n  books_aggregate(\n    where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment BookAttrs on books {\n  book_id\n  country\n  name\n  school_id\n  subject\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersMany"
+      ],
+      "lhs": "query ChaptersMany($chapter_ids: [String!] = []) {\n  chapters(\n    order_by: {display_order: asc, chapter_id: asc}\n    where: {chapter_id: {_in: $chapter_ids}}\n  ) {\n    ...ChapterAttrs\n  }\n}\n\nfragment ChapterAttrs on chapters {\n  chapter_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersTitle"
+      ],
+      "lhs": "query ChaptersTitle($chapter_id: String!) {\n  chapters(where: {chapter_id: {_eq: $chapter_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "ChaptersFull"
+      ],
+      "lhs": "query ChaptersFull($book_id: [String!] = []) {\n  chapters(\n    order_by: {display_order: asc}\n    where: {book_chapters: {book_id: {_in: $book_id}}}\n  ) {\n    chapter_id\n    name\n    topics(order_by: {display_order: asc}) {\n      name\n      topic_id\n      learning_objectives(order_by: {display_order: asc}) {\n        name\n        lo_id\n        display_order\n        type\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "BooksChaptersListByChapterIdsAndBookIds"
+      ],
+      "lhs": "query BooksChaptersListByChapterIdsAndBookIds($book_id: [String!] = [], $chapter_id: [String!]) {\n  books_chapters(\n    where: {book_id: {_in: $book_id}, chapter_id: {_in: $chapter_id}}\n    order_by: {chapter: {display_order: asc}}\n  ) {\n    ...BookChapterAttrs\n  }\n}\n\nfragment BookChapterAttrs on books_chapters {\n  chapter_id\n  book_id\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesOne"
+      ],
+      "lhs": "query LearningObjectivesOne($lo_id: String!) {\n  learning_objectives(where: {lo_id: {_eq: $lo_id}}) {\n    ...LearningObjectiveAttrs\n    quiz_sets {\n      quiz_external_ids\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesMany"
+      ],
+      "lhs": "query LearningObjectivesMany($lo_id: [String!] = []) {\n  learning_objectives(\n    order_by: {display_order: asc}\n    where: {lo_id: {_in: $lo_id}}\n  ) {\n    ...LearningObjectiveAttrs\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "LearningObjectivesList"
+      ],
+      "lhs": "query LearningObjectivesList($name: String, $lo_id: [String!], $type: [String!], $country: String, $grade: smallint, $subject: String, $topic_id: String, $limit: Int = 10, $offset: Int = 0, $order_by: learning_objectives_order_by! = {display_order: asc, name: asc, lo_id: asc}) {\n  learning_objectives(\n    limit: $limit\n    offset: $offset\n    where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}\n    order_by: [$order_by]\n  ) {\n    ...LearningObjectiveAttrs\n  }\n  learning_objectives_aggregate(\n    where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}\n  ) {\n    aggregate {\n      count\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicTitle"
+      ],
+      "lhs": "query TopicTitle($topic_id: String = \"\") {\n  topics(where: {topic_id: {_eq: $topic_id}}) {\n    name\n  }\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicsMany"
+      ],
+      "lhs": "query TopicsMany($topic_id: [String!], $chapter_id: String) {\n  topics(\n    order_by: {display_order: asc, created_at: desc, topic_id: desc}\n    where: {chapter_id: {_eq: $chapter_id}, topic_id: {_in: $topic_id}}\n  ) {\n    ...TopicAttrs\n  }\n}\n\nfragment TopicAttrs on topics {\n  topic_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n  topic_type\n  status\n  chapter_id\n  school_id\n  instruction\n  icon_url\n  essay_required\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicLearningObjectiveMany"
+      ],
+      "lhs": "query TopicLearningObjectiveMany($topic_id: String!) {\n  topics_learning_objectives(\n    where: {topic_id: {_eq: $topic_id}}\n    order_by: {display_order: desc}\n  ) {\n    display_order\n    learning_objective {\n      ...LearningObjectiveAttrs\n    }\n  }\n}\n\nfragment LearningObjectiveAttrs on learning_objectives {\n  lo_id\n  topic_id\n  name\n  video\n  country\n  study_guide\n  display_order\n  master_lo_id\n  prerequisites\n  video_script\n  school_id\n  subject\n  grade\n  type\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesOne"
+      ],
+      "lhs": "query QuizzesOne($quiz_id: String = \"\") {\n  quizzes(where: {quiz_id: {_eq: $quiz_id}}) {\n    ...QuizzesAttrs\n  }\n}\n\nfragment QuizzesAttrs on quizzes {\n  approved_by\n  country\n  difficulty_level\n  explanation\n  external_id\n  kind\n  options\n  question\n  quiz_id\n  school_id\n  tagged_los\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesManyByLearningObjectId"
+      ],
+      "lhs": "query QuizzesManyByLearningObjectId($lo_id: String) {\n  find_quiz_by_lo_id(args: {id: $lo_id}) {\n    ...QuizzesAttrs\n  }\n}\n\nfragment QuizzesAttrs on quizzes {\n  approved_by\n  country\n  difficulty_level\n  explanation\n  external_id\n  kind\n  options\n  question\n  quiz_id\n  school_id\n  tagged_los\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "TopicOne"
+      ],
+      "lhs": "query TopicOne($topic_id: String = \"\") {\n  topics(where: {topic_id: {_eq: $topic_id}}) {\n    ...TopicAttrs\n  }\n}\n\nfragment TopicAttrs on topics {\n  topic_id\n  name\n  country\n  school_id\n  subject\n  grade\n  display_order\n  topic_type\n  status\n  chapter_id\n  school_id\n  instruction\n  icon_url\n  essay_required\n  created_at\n  updated_at\n}\n"
+    },
+    {
+      "kind": "D",
+      "path": [
+        "QuizzesByExternalId"
+      ],
+      "lhs": "query QuizzesByExternalId($external_id: String = \"\") {\n  quizzes(where: {external_id: {_eq: $external_id}}) {\n    external_id\n    quiz_id\n  }\n}\n"
+    }
+  ]
+}

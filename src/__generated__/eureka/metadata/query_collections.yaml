@@ -1,0 +1,1073 @@
+- name: allowed-queries
+  definition:
+    queries:
+    - name: AssignStudyPlanTasksMany
+      query: |-
+        query AssignStudyPlanTasksMany($id: [String!] = []) {
+          assign_study_plan_tasks(where: {id: {_in: $id}}) {
+            ...AssignStudyPlanTaskAttr
+          }
+        }
+
+        fragment AssignStudyPlanTaskAttr on assign_study_plan_tasks {
+          id
+          course_id
+          status
+          study_plan_ids
+        }
+    - name: AssignmentsByTopicIds
+      query: |-
+        query AssignmentsByTopicIds($topic_id: _text!, $order_by: assignments_order_by! = {name: asc, assignment_id: asc}) {
+          find_assignment_by_topic_id(args: {ids: $topic_id}, order_by: [$order_by]) {
+            name
+            assignment_id
+            content(path: "topic_id")
+            created_at
+            display_order
+          }
+        }
+    - name: AssignmentOne
+      query: |-
+        query AssignmentOne($assignment_id: String) {
+          assignments(where: {assignment_id: {_eq: $assignment_id}}) {
+            ...AssignmentAttrs
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: AssignmentsMany
+      query: |-
+        query AssignmentsMany($assignment_id: [String!] = []) {
+          assignments(order_by: {display_order: asc}, where: {assignment_id: {_in: $assignment_id}}) {
+            ...AssignmentAttrs
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: AssignmentsManyByTopicId
+      query: |-
+        query AssignmentsManyByTopicId($content: jsonb) {
+          assignments(order_by: {display_order: asc}, where: {content: {_contains: $content}}) {
+            ...AssignmentAttrs
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: BrandsList
+      query: |-
+        query BrandsList($limit: Int, $offset: Int) {
+          brands(limit: $limit, offset: $offset) {
+            ...BrandAttrs
+          }
+        }
+
+        fragment BrandAttrs on brands {
+          brand_id
+          name
+          owner
+        }
+    - name: CentersList
+      query: |-
+        query CentersList($limit: Int, $offset: Int) {
+          centers(limit: $limit, offset: $offset) {
+            ...CenterAttrs
+          }
+        }
+
+        fragment CenterAttrs on centers {
+          center_id
+          name
+          owner
+        }
+    - name: CourseStudentsListByCourseIds
+      query: |-
+        query CourseStudentsListByCourseIds($course_ids: [String!]) {
+          course_students(order_by: {created_at: desc}, where: {course_id: {_in: $course_ids}}) {
+            ...CourseStudentAttrs
+          }
+          course_students_aggregate(where: {course_id: {_in: $course_ids}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment CourseStudentAttrs on course_students {
+          student_id
+          course_id
+        }
+    - name: CourseStudyPlansList
+      query: |-
+        query CourseStudyPlansList($course_id: String, $limit: Int = 10, $offset: Int = 0) {
+          course_study_plans(limit: $limit, offset: $offset, order_by: {created_at: desc}, where: {course_id: {_eq: $course_id}}) {
+            ...CourseStudyPlanAttrs
+          }
+          course_study_plans_aggregate(where: {course_id: {_eq: $course_id}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment CourseStudyPlanAttrs on course_study_plans {
+          course_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrs
+            created_at
+            master_study_plan_id
+          }
+        }
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+    - name: CourseStudyPlansByCourseId
+      query: |-
+        query CourseStudyPlansByCourseId($course_id: String = "", $study_plan_id: String) {
+          course_study_plans(order_by: {created_at: desc}, where: {course_id: {_eq: $course_id}, study_plan_id: {_eq: $study_plan_id}}) {
+            ...CourseStudyPlanAttrs
+            study_plan {
+              ...StudyPlanAttrs
+              study_plan_items(order_by: {display_order: asc}) {
+                study_plan_item_id
+                lo_study_plan_item {
+                  lo_id
+                }
+                assignment_study_plan_item {
+                  assignment_id
+                }
+                content_structure
+                available_to
+                available_from
+                end_date
+                start_date
+                display_order
+              }
+            }
+          }
+        }
+
+        fragment CourseStudyPlanAttrs on course_study_plans {
+          course_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrs
+            created_at
+            master_study_plan_id
+          }
+        }
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+    - name: OpenTimeBrandList
+      query: |-
+        query OpenTimeBrandList($brand_id: String!, $start_time: timestamptz!, $end_time: timestamptz!, $scheduler_type: String!) {
+          scheduler_items(where: {brand_id: {_eq: $brand_id}, start_time: {_gte: $start_time, _lte: $end_time}, scheduler_pattern: {scheduler_type: {_eq: $scheduler_type}}}) {
+            ...ScheduleItemAttrs
+          }
+        }
+
+        fragment ScheduleItemAttrs on scheduler_items {
+          scheduler_item_id
+          start_time
+          end_time
+          meta_data
+          brand_id
+          center_id
+          scheduler_pattern {
+            repeat_option_data
+          }
+        }
+    - name: OpenTimeCenterList
+      query: |-
+        query OpenTimeCenterList($center_id: String, $start_time: timestamptz!, $end_time: timestamptz!, $scheduler_type: String!) {
+          scheduler_items(where: {center_id: {_eq: $center_id}, start_time: {_gte: $start_time, _lte: $end_time}, scheduler_pattern: {scheduler_type: {_eq: $scheduler_type}}}) {
+            ...ScheduleItemAttrs
+          }
+        }
+
+        fragment ScheduleItemAttrs on scheduler_items {
+          scheduler_item_id
+          start_time
+          end_time
+          meta_data
+          brand_id
+          center_id
+          scheduler_pattern {
+            repeat_option_data
+          }
+        }
+    - name: StudentStudyPlansByCourseId
+      query: |-
+        query StudentStudyPlansByCourseId($course_id: String!, $study_plan_id: String!) {
+          student_study_plans(order_by: {created_at: desc}, where: {course_students: {course_id: {_eq: $course_id}}, study_plan_id: {_eq: $study_plan_id}}) {
+            ...StudentStudyPlanAttrs
+            study_plan {
+              ...StudyPlanAttrs
+              study_plan_items(order_by: {display_order: asc}) {
+                study_plan_item_id
+                lo_study_plan_item {
+                  lo_id
+                }
+                assignment_study_plan_item {
+                  assignment_id
+                }
+                content_structure
+                available_to
+                available_from
+                end_date
+                start_date
+                display_order
+              }
+            }
+          }
+        }
+
+        fragment StudentStudyPlanAttrs on student_study_plans {
+          student_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrs
+            created_at
+            master_study_plan_id
+          }
+        }
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+    - name: StudyPlanOne
+      query: |-
+        query StudyPlanOne($study_plan_id: String!) {
+          study_plans(where: {study_plan_id: {_eq: $study_plan_id}}) {
+            ...StudyPlanAttrs
+            study_plan_type
+            course_id
+            study_plan_items {
+              ...StudyPlanItemAttrs
+            }
+          }
+        }
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+
+        fragment StudyPlanItemAttrs on study_plan_items {
+          study_plan_item_id
+          available_from
+          available_to
+          content_structure
+          display_order
+          start_date
+          end_date
+          assignment_study_plan_item {
+            assignment_id
+          }
+          lo_study_plan_item {
+            lo_id
+          }
+        }
+    - name: getAssignmentsByTopicIdsForTest
+      query: |-
+        query getAssignmentsByTopicIdsForTest($topic_ids: _text!) {
+          find_assignment_by_topic_id(args: {ids: $topic_ids}) {
+            name
+            assignment_id
+            display_order
+            content(path: "topic_id")
+          }
+        }
+    - name: getStudyPlanItemsByIdsForTest
+      query: |-
+        query getStudyPlanItemsByIdsForTest($study_plan_item_ids: [String!]) {
+          study_plan_items(where: {study_plan_item_id: {_in: $study_plan_item_ids}}) {
+            study_plan_item_id
+            available_from
+            available_to
+            end_date
+            start_date
+          }
+        }
+    - name: CourseStudentsList
+      query: |-
+        query CourseStudentsList($course_id: String) {
+          course_students(order_by: {created_at: desc}, where: {course_id: {_eq: $course_id}}) {
+            ...CourseStudentAttrs
+          }
+        }
+
+        fragment CourseStudentAttrs on course_students {
+          student_id
+          course_id
+        }
+    - name: CourseStudentsListV2
+      query: |-
+        query CourseStudentsListV2($course_id: String, $limit: Int = 10, $offset: Int = 0) {
+          course_students(
+            order_by: { created_at: desc }
+            where: { course_id: { _eq: $course_id } }
+            limit: $limit
+            offset: $offset
+          ) {
+            ...CourseStudentAttrs
+          }
+          course_students_aggregate(where: { course_id: { _eq: $course_id } }) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment CourseStudentAttrs on course_students {
+          student_id
+          course_id
+        }
+    - name: StudentStudyPlansManyOld
+      query: |-
+        query StudentStudyPlansMany($student_id: String!, $course_id: String!) {
+          student_study_plans(where: {student_id: {_eq: $student_id}, study_plan: {course_id: {_eq: $course_id}}}) {
+            ...StudentStudyPlanAttrs
+          }
+        }
+
+        fragment StudentStudyPlanAttrs on student_study_plans {
+          student_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrs
+            created_at
+            master_study_plan_id
+          }
+        }
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+    - name: StudentStudyPlansMany
+      query: |-
+        query StudentStudyPlansMany($student_ids: [String!], $course_id: String!) {
+          student_study_plans(
+            order_by: { created_at: desc }
+            where: {
+              student_id: { _in: $student_ids }
+              study_plan: { course_id: { _eq: $course_id } }
+            }
+          ) {
+            ...StudentStudyPlanAttrs
+          }
+        }
+
+
+        fragment StudentStudyPlanAttrs on student_study_plans {
+          student_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrs
+            created_at
+            master_study_plan_id
+          }
+        }
+
+
+        fragment StudyPlanAttrs on study_plans {
+          name
+          study_plan_id
+        }
+    - name: OldAssignmentsList
+      query: |-
+        query AssignmentsList($limit: Int = 10, $offset: Int = 0, $assignment_id: [String!], $name: String, $order_by: assignments_order_by! = {display_order: asc}, $content: jsonb) {
+          assignments(limit: $limit, offset: $offset, where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}, order_by: [$order_by]) {
+            ...AssignmentAttrs
+          }
+          assignments_aggregate(where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: AssignmentsList
+      query: |-
+        query AssignmentsList($assignment_id: [String!], $name: String, $order_by: assignments_order_by! = {display_order: asc}, $content: jsonb) {
+          assignments(where: {content: {_contains: $content}, assignment_id: {_in: $assignment_id}, name: {_ilike: $name}}, order_by: [$order_by]) {
+            ...AssignmentAttrs
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: AssignmentDisplayOrder
+      query: |-
+        query AssignmentDisplayOrder($topic_id: _text!) {
+            find_assignment_by_topic_id(
+                args: { ids: $topic_id }
+                order_by: { display_order: desc }
+                limit: 1
+            ) {
+                display_order
+            }
+        }
+    - name: TopicAssignmentMany
+      query: |-
+        query TopicAssignmentMany($topic_id: String!) {
+          topics_assignments(where: {topic_id: {_eq: $topic_id}}, order_by: {display_order: asc}) {
+            display_order
+             assignment{
+              ...AssignmentAttrs
+            }
+          }
+        }
+
+        fragment AssignmentAttrs on assignments {
+          assignment_id
+          instruction
+          content
+          check_list
+          attachment
+          type
+          name
+          max_grade
+          settings
+          is_required_grade
+          created_at
+          display_order
+        }
+    - name: CourseStudyPlansListV2
+      query: |
+        query CourseStudyPlansListV2($course_id: String!, $limit: Int = 10, $offset: Int = 0) {
+          course_study_plans(limit: $limit, offset: $offset, order_by: {created_at: desc}, where: {course_id: {_eq: $course_id}}) {
+            ...CourseStudyPlanAttrsV2
+          }
+          course_study_plans_aggregate(where: {course_id: {_eq: $course_id}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment CourseStudyPlanAttrsV2 on course_study_plans {
+          course_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrsV2
+          }
+        }
+
+        fragment StudyPlanAttrsV2 on study_plans {
+          name
+          study_plan_id
+          created_at
+          master_study_plan_id
+          book_id
+          grades
+          status
+        }
+    - name: StudyPlanOneV2
+      query: |-
+        query StudyPlanOneV2($study_plan_id: String!) {
+          study_plans(where: {study_plan_id: {_eq: $study_plan_id}}) {
+            ...StudyPlanAttrsV2
+            study_plan_type
+            course_id
+            track_school_progress
+            study_plan_items {
+              ...StudyPlanItemAttrs
+            }
+          }
+        }
+
+        fragment StudyPlanAttrsV2 on study_plans {
+          name
+          study_plan_id
+          created_at
+          master_study_plan_id
+          book_id
+          grades
+          status
+        }
+
+        fragment StudyPlanItemAttrs on study_plan_items {
+          study_plan_item_id
+          available_from
+          available_to
+          content_structure
+          start_date
+          end_date
+          status
+          assignment_study_plan_item {
+            assignment_id
+          }
+          lo_study_plan_item {
+            lo_id
+          }
+        }
+    - name: StudentStudyPlansManyV2
+      query: |
+        query StudentStudyPlansManyV2($student_ids: [String!], $course_id: String!, $status: String = "STUDY_PLAN_STATUS_ACTIVE") {
+          student_study_plans(order_by: {created_at: desc}, where: {student_id: {_in: $student_ids}, study_plan: {course_id: {_eq: $course_id}, status: {_eq: $status}}}) {
+            ...StudentStudyPlanAttrsV2
+          }
+        }
+
+        fragment StudentStudyPlanAttrsV2 on student_study_plans {
+          student_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrsV2
+          }
+        }
+
+        fragment StudyPlanAttrsV2 on study_plans {
+          name
+          study_plan_id
+          created_at
+          master_study_plan_id
+          book_id
+          grades
+          status
+        }
+    - name: GetListCourseStudentStudyPlansByFilter
+      query: |-
+        query GetListCourseStudentStudyPlansByFilter(
+                $courseId: String!
+                $grades: _int4 = "{}"
+                $limit: Int = 10
+                $search: String = ""
+                $bookIds: _text = "{}"
+                $status: String = "STUDY_PLAN_STATUS_ACTIVE"
+                $offset: Int = 0
+            ) {
+                get_list_course_student_study_plans_by_filter(
+                    args: {
+                        _course_id: $courseId
+                        _grades: $grades
+                        search: $search
+                        _status: $status
+                        _book_ids: $bookIds
+                    }
+                    limit: $limit
+                    offset: $offset
+                    order_by: { created_at: desc }
+                ) {
+                    course_id
+                    student_id
+                }
+                get_list_course_student_study_plans_by_filter_aggregate(
+                    args: {
+                        _course_id: $courseId
+                        _grades: $grades
+                        search: $search
+                        _status: $status
+                        _book_ids: $bookIds
+                    }
+                ) {
+                    aggregate {
+                        count
+                    }
+                }
+            }
+    - name: GetManyStudentStudyPlansByFilter
+      query: |
+        query GetManyStudentStudyPlansByFilter($courseId: String!, $grades: _int4 = "{}", $search: String = "", $bookIds: _text = "{}", $status: String = "STUDY_PLAN_STATUS_ACTIVE", $studentIds: _text = "{}") {
+          get_student_study_plans_by_filter(args: {_course_id: $courseId, _book_ids: $bookIds, _grades: $grades, _status: $status, search: $search, _student_ids: $studentIds}, order_by: {created_at: desc}) {
+            ...StudyPlanAttrsV3
+            student_study_plans {
+              student_id
+            }
+          }
+        }
+
+        fragment StudyPlanAttrsV3 on study_plans {
+          name
+          study_plan_id
+          created_at
+          master_study_plan_id
+          book_id
+          grades
+          status
+        }
+    - name: CourseStudyPlansListByFilter
+      query: |
+        query CourseStudyPlansListByFilter($courseId: String!, $grades: _int4 = "{}", $limit: Int = 10, $search: String = "", $bookIds: _text = "{}", $status: _text = "{}", $offset: Int = 0) {
+          get_list_course_study_plan_by_filter(args: {_course_id: $courseId, _grades: $grades, search: $search, _status: $status, _book_ids: $bookIds}, limit: $limit, offset: $offset, order_by: {created_at: desc}) {
+            ...CourseStudyPlanAttrsV3
+          }
+          get_list_course_study_plan_by_filter_aggregate(args: {_course_id: $courseId, _grades: $grades, search: $search, _status: $status, _book_ids: $bookIds}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment CourseStudyPlanAttrsV3 on course_study_plans {
+          course_id
+          study_plan_id
+          study_plan {
+            ...StudyPlanAttrsV3
+          }
+        }
+
+        fragment StudyPlanAttrsV3 on study_plans {
+          name
+          study_plan_id
+          created_at
+          master_study_plan_id
+          book_id
+          grades
+          status
+        }
+    - name: BooksList
+      query: |2-
+         query BooksList($name: String, $limit: Int = 10, $offset: Int = 0) {
+            books(limit: $limit, offset: $offset, order_by: {created_at: desc, name: asc, book_id: asc}, where: { name: { _ilike: $name } }) {
+                ...BookAttrs
+            }
+            books_aggregate(where: { name: { _ilike: $name } }) {
+                aggregate {
+                    count
+                }
+            }
+        }
+
+        fragment BookAttrs on books {
+          book_id
+          country
+          name
+          school_id
+          subject
+        }
+    - name: BooksTitle
+      query: |-
+        query BooksTitle($book_id: String!) {
+          books(where: {book_id: {_eq: $book_id}}) {
+            name
+          }
+        }
+    - name: BooksMany
+      query: |-
+        query BooksMany($book_id: [String!] = []) {
+          books(where: {book_id: {_in: $book_id}}) {
+            ...BookAttrs
+          }
+        }
+
+        fragment BookAttrs on books {
+          book_id
+          country
+          name
+          school_id
+          subject
+        }
+    - name: BooksManyReference
+      query: |-
+        query BooksManyReference($name: String, $limit: Int = 30, $offset: Int = 0) {
+          books(limit: $limit, offset: $offset, order_by: {name: asc, created_at: desc, book_id: asc}, where: {name: {_ilike: $name}}) {
+            name
+            book_id
+          }
+          books_aggregate(where: {name: {_ilike: $name}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+    - name: BooksOne
+      query: |-
+        query BooksOne($book_id: String!) {
+          books(where: {book_id: {_eq: $book_id}}) {
+            ...BookAttrs
+            book_chapters(order_by: {chapter: {display_order: desc}}) {
+              chapter {
+                display_order
+              }
+              chapter_id
+            }
+          }
+        }
+
+        fragment BookAttrs on books {
+          book_id
+          country
+          name
+          school_id
+          subject
+        }
+    - name: BooksListNotInCourseId
+      query: |-
+        query BooksListNotInCourseId($course_id: String, $limit: Int = 10, $offset: Int = 0, $name: String) {
+          books(limit: $limit, offset: $offset, order_by: {created_at: desc, name: asc, book_id: asc}, where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}) {
+            ...BookAttrs
+          }
+          books_aggregate(where: {_and: {_not: {course_books: {course_id: {_eq: $course_id}}}, name: {_ilike: $name}}}) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment BookAttrs on books {
+          book_id
+          country
+          name
+          school_id
+          subject
+        }
+    - name: ChaptersMany
+      query: |-
+        query ChaptersMany($chapter_ids: [String!] = []) {
+          chapters(order_by: {display_order: asc, chapter_id: asc}, where: {chapter_id: {_in: $chapter_ids}}) {
+            ...ChapterAttrs
+          }
+        }
+
+        fragment ChapterAttrs on chapters {
+          chapter_id
+          name
+          country
+          school_id
+          subject
+          grade
+          display_order
+        }
+    - name: ChaptersTitle
+      query: |-
+        query ChaptersTitle($chapter_id: String!) {
+          chapters(where: {chapter_id: {_eq: $chapter_id}}) {
+            name
+          }
+        }
+    - name: ChaptersFull
+      query: |-
+        query ChaptersFull($book_id: [String!] = []) {
+          chapters(order_by: {display_order: asc}, where: {book_chapters: {book_id: {_in: $book_id}}}) {
+            chapter_id
+            name
+            topics(order_by: {display_order: asc}) {
+              name
+              topic_id
+              learning_objectives(order_by: {display_order: asc}) {
+                name
+                lo_id
+                display_order
+                type
+              }
+            }
+          }
+        }
+    - name: BooksChaptersListByChapterIdsAndBookIds
+      query: |-
+        query BooksChaptersListByChapterIdsAndBookIds($book_id: [String!] = [], $chapter_id: [String!]) {
+          books_chapters(where: {book_id: {_in: $book_id}, chapter_id: {_in: $chapter_id}}, order_by: {chapter: {display_order: asc}}) {
+            ...BookChapterAttrs
+          }
+        }
+
+        fragment BookChapterAttrs on books_chapters {
+          chapter_id
+          book_id
+        }
+    - name: LearningObjectivesOne
+      query: |-
+        query LearningObjectivesOne($lo_id: String!) {
+          learning_objectives(where: {lo_id: {_eq: $lo_id}}) {
+            ...LearningObjectiveAttrs
+            quiz_sets {
+              quiz_external_ids
+            }
+          }
+        }
+
+        fragment LearningObjectiveAttrs on learning_objectives {
+        lo_id
+                topic_id
+                name
+                video
+                country
+                study_guide
+                display_order
+                master_lo_id
+                prerequisites
+                video_script
+                school_id
+                subject
+                grade
+                type
+                created_at
+                updated_at
+        }
+    - name: LearningObjectivesMany
+      query: |-
+        query LearningObjectivesMany($lo_id: [String!] = []) {
+          learning_objectives(order_by: {display_order: asc}, where: {lo_id: {_in: $lo_id}}) {
+            ...LearningObjectiveAttrs
+          }
+        }
+
+        fragment LearningObjectiveAttrs on learning_objectives {
+          lo_id
+                topic_id
+                name
+                video
+                country
+                study_guide
+                display_order
+                master_lo_id
+                prerequisites
+                video_script
+                school_id
+                subject
+                grade
+                type
+                created_at
+                updated_at
+        }
+    - name: LearningObjectivesList
+      query: |
+        query LearningObjectivesList($name: String, $lo_id: [String!], $type: [String!], $country: String, $grade: smallint, $subject: String, $topic_id: String, $limit: Int = 10, $offset: Int = 0, $order_by: learning_objectives_order_by! = {display_order: asc, name: asc, lo_id: asc}) {
+          learning_objectives(
+            limit: $limit
+            offset: $offset
+            where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}
+            order_by: [$order_by]
+          ) {
+            ...LearningObjectiveAttrs
+          }
+          learning_objectives_aggregate(
+            where: {name: {_ilike: $name}, lo_id: {_in: $lo_id}, type: {_in: $type}, country: {_eq: $country}, grade: {_eq: $grade}, subject: {_eq: $subject}, topic_id: {_eq: $topic_id}}
+          ) {
+            aggregate {
+              count
+            }
+          }
+        }
+
+        fragment LearningObjectiveAttrs on learning_objectives {
+          lo_id
+          topic_id
+          name
+          video
+          country
+          study_guide
+          display_order
+          master_lo_id
+          prerequisites
+          video_script
+          school_id
+          subject
+          grade
+          type
+          created_at
+          updated_at
+        }
+    - name: TopicTitle
+      query: |-
+        query TopicTitle($topic_id: String = "") {
+          topics(where: {topic_id: {_eq: $topic_id}}) {
+            name
+          }
+        }
+    - name: TopicsMany
+      query: |-
+        query TopicsMany($topic_id: [String!], $chapter_id: String) {
+          topics(order_by: {display_order: asc, created_at: desc, topic_id: desc}, where: {chapter_id: {_eq: $chapter_id}, topic_id: {_in: $topic_id}}) {
+            ...TopicAttrs
+          }
+        }
+
+        fragment TopicAttrs on topics {
+          topic_id
+                name
+                country
+                school_id
+                subject
+                grade
+                display_order
+                topic_type
+                status
+                chapter_id
+                school_id
+                instruction
+                icon_url
+                essay_required
+                created_at
+                updated_at
+        }
+    - name: TopicLearningObjectiveMany
+      query: |2
+
+        query TopicLearningObjectiveMany($topic_id: String!) {
+          topics_learning_objectives(where: {topic_id: {_eq: $topic_id}}, order_by: {display_order: desc}) {
+            display_order
+            learning_objective {
+              ...LearningObjectiveAttrs
+            }
+          }
+        }
+
+        fragment LearningObjectiveAttrs on learning_objectives {
+           lo_id
+                topic_id
+                name
+                video
+                country
+                study_guide
+                display_order
+                master_lo_id
+                prerequisites
+                video_script
+                school_id
+                subject
+                grade
+                type
+                created_at
+                updated_at
+        }
+    - name: QuizzesOne
+      query: |-
+        query QuizzesOne($quiz_id: String = "") {
+          quizzes(where: {quiz_id: {_eq: $quiz_id}}) {
+            ...QuizzesAttrs
+          }
+        }
+
+        fragment QuizzesAttrs on quizzes {
+          approved_by
+          country
+          difficulty_level
+          explanation
+          external_id
+          kind
+          options
+          question
+          quiz_id
+          school_id
+          tagged_los
+        }
+    - name: QuizzesManyByLearningObjectId
+      query: |-
+        query QuizzesManyByLearningObjectId($lo_id: String) {
+          find_quiz_by_lo_id(args: {id: $lo_id}) {
+            ...QuizzesAttrs
+          }
+        }
+
+        fragment QuizzesAttrs on quizzes {
+          approved_by
+          country
+          difficulty_level
+          explanation
+          external_id
+          kind
+          options
+          question
+          quiz_id
+          school_id
+          tagged_los
+        }
+    - name: TopicOne
+      query: |-
+        query TopicOne($topic_id: String = "") {
+          topics(where: {topic_id: {_eq: $topic_id}}) {
+            ...TopicAttrs
+          }
+        }
+
+        fragment TopicAttrs on topics {
+          topic_id
+          name
+          country
+          school_id
+          subject
+          grade
+          display_order
+          topic_type
+          status
+          chapter_id
+          school_id
+          instruction
+          icon_url
+          essay_required
+          created_at
+          updated_at
+        }
+    - name: QuizzesByExternalId
+      query: |-
+        query QuizzesByExternalId($external_id: String = "") {
+          quizzes(where: {external_id: {_eq: $external_id}}) {
+            external_id
+            quiz_id
+          }
+        }

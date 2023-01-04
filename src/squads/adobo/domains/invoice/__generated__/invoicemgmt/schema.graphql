@@ -1,0 +1,4433 @@
+schema {
+  query: query_root
+  mutation: mutation_root
+  subscription: subscription_root
+}
+
+"""
+expression to compare columns of type Boolean. All fields are combined with logical 'AND'.
+"""
+input Boolean_comparison_exp {
+  _eq: Boolean
+  _gt: Boolean
+  _gte: Boolean
+  _in: [Boolean!]
+  _is_null: Boolean
+  _lt: Boolean
+  _lte: Boolean
+  _neq: Boolean
+  _nin: [Boolean!]
+}
+
+"""
+expression to compare columns of type Int. All fields are combined with logical 'AND'.
+"""
+input Int_comparison_exp {
+  _eq: Int
+  _gt: Int
+  _gte: Int
+  _in: [Int!]
+  _is_null: Boolean
+  _lt: Int
+  _lte: Int
+  _neq: Int
+  _nin: [Int!]
+}
+
+"""
+expression to compare columns of type String. All fields are combined with logical 'AND'.
+"""
+input String_comparison_exp {
+  _eq: String
+  _gt: String
+  _gte: String
+  _ilike: String
+  _in: [String!]
+  _is_null: Boolean
+  _like: String
+  _lt: String
+  _lte: String
+  _neq: String
+  _nilike: String
+  _nin: [String!]
+  _nlike: String
+  _nsimilar: String
+  _similar: String
+}
+
+"""
+columns and relationships of "bill_item"
+"""
+type bill_item {
+  bill_item_sequence_number: Int!
+  bill_type: String!
+  billing_approval_status: String
+  billing_date: timestamptz
+  billing_from: timestamptz
+  billing_item_description(
+    """JSON select path"""
+    path: String
+  ): jsonb
+  billing_schedule_period_id: String
+  billing_status: String!
+  billing_to: timestamptz
+  created_at: timestamptz!
+  discount_amount: numeric
+  discount_amount_type: String
+  discount_amount_value: numeric
+  final_price: numeric!
+  location_id: String!
+  location_name: String
+  order_id: String!
+  product_description: String!
+  product_pricing: Int
+  resource_path: String!
+  student_id: String!
+
+  """An object relationship"""
+  students: students!
+  tax_amount: numeric
+  tax_category: String
+  tax_id: String
+  tax_percentage: Int
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "bill_item"
+"""
+type bill_item_aggregate {
+  aggregate: bill_item_aggregate_fields
+  nodes: [bill_item!]!
+}
+
+"""
+aggregate fields of "bill_item"
+"""
+type bill_item_aggregate_fields {
+  avg: bill_item_avg_fields
+  count(columns: [bill_item_select_column!], distinct: Boolean): Int
+  max: bill_item_max_fields
+  min: bill_item_min_fields
+  stddev: bill_item_stddev_fields
+  stddev_pop: bill_item_stddev_pop_fields
+  stddev_samp: bill_item_stddev_samp_fields
+  sum: bill_item_sum_fields
+  var_pop: bill_item_var_pop_fields
+  var_samp: bill_item_var_samp_fields
+  variance: bill_item_variance_fields
+}
+
+"""
+order by aggregate values of table "bill_item"
+"""
+input bill_item_aggregate_order_by {
+  avg: bill_item_avg_order_by
+  count: order_by
+  max: bill_item_max_order_by
+  min: bill_item_min_order_by
+  stddev: bill_item_stddev_order_by
+  stddev_pop: bill_item_stddev_pop_order_by
+  stddev_samp: bill_item_stddev_samp_order_by
+  sum: bill_item_sum_order_by
+  var_pop: bill_item_var_pop_order_by
+  var_samp: bill_item_var_samp_order_by
+  variance: bill_item_variance_order_by
+}
+
+"""append existing jsonb value of filtered columns with new jsonb value"""
+input bill_item_append_input {
+  billing_item_description: jsonb
+}
+
+"""
+input type for inserting array relation for remote table "bill_item"
+"""
+input bill_item_arr_rel_insert_input {
+  data: [bill_item_insert_input!]!
+  on_conflict: bill_item_on_conflict
+}
+
+"""aggregate avg on columns"""
+type bill_item_avg_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by avg() on columns of table "bill_item"
+"""
+input bill_item_avg_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "bill_item". All fields are combined with a logical 'AND'.
+"""
+input bill_item_bool_exp {
+  _and: [bill_item_bool_exp]
+  _not: bill_item_bool_exp
+  _or: [bill_item_bool_exp]
+  bill_item_sequence_number: Int_comparison_exp
+  bill_type: String_comparison_exp
+  billing_approval_status: String_comparison_exp
+  billing_date: timestamptz_comparison_exp
+  billing_from: timestamptz_comparison_exp
+  billing_item_description: jsonb_comparison_exp
+  billing_schedule_period_id: String_comparison_exp
+  billing_status: String_comparison_exp
+  billing_to: timestamptz_comparison_exp
+  created_at: timestamptz_comparison_exp
+  discount_amount: numeric_comparison_exp
+  discount_amount_type: String_comparison_exp
+  discount_amount_value: numeric_comparison_exp
+  final_price: numeric_comparison_exp
+  location_id: String_comparison_exp
+  location_name: String_comparison_exp
+  order_id: String_comparison_exp
+  product_description: String_comparison_exp
+  product_pricing: Int_comparison_exp
+  resource_path: String_comparison_exp
+  student_id: String_comparison_exp
+  students: students_bool_exp
+  tax_amount: numeric_comparison_exp
+  tax_category: String_comparison_exp
+  tax_id: String_comparison_exp
+  tax_percentage: Int_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "bill_item"
+"""
+enum bill_item_constraint {
+  """unique or primary key constraint"""
+  bill_item_product_pk
+
+  """unique or primary key constraint"""
+  bill_item_sequence_number_resource_path_unique
+}
+
+"""
+delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+"""
+input bill_item_delete_at_path_input {
+  billing_item_description: [String]
+}
+
+"""
+delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+"""
+input bill_item_delete_elem_input {
+  billing_item_description: Int
+}
+
+"""
+delete key/value pair or string element. key/value pairs are matched based on their key value
+"""
+input bill_item_delete_key_input {
+  billing_item_description: String
+}
+
+"""
+input type for incrementing integer column in table "bill_item"
+"""
+input bill_item_inc_input {
+  bill_item_sequence_number: Int
+  discount_amount: numeric
+  discount_amount_value: numeric
+  final_price: numeric
+  product_pricing: Int
+  tax_amount: numeric
+  tax_percentage: Int
+}
+
+"""
+input type for inserting data into table "bill_item"
+"""
+input bill_item_insert_input {
+  bill_item_sequence_number: Int
+  bill_type: String
+  billing_approval_status: String
+  billing_date: timestamptz
+  billing_from: timestamptz
+  billing_item_description: jsonb
+  billing_schedule_period_id: String
+  billing_status: String
+  billing_to: timestamptz
+  created_at: timestamptz
+  discount_amount: numeric
+  discount_amount_type: String
+  discount_amount_value: numeric
+  final_price: numeric
+  location_id: String
+  location_name: String
+  order_id: String
+  product_description: String
+  product_pricing: Int
+  resource_path: String
+  student_id: String
+  students: students_obj_rel_insert_input
+  tax_amount: numeric
+  tax_category: String
+  tax_id: String
+  tax_percentage: Int
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type bill_item_max_fields {
+  bill_item_sequence_number: Int
+  bill_type: String
+  billing_approval_status: String
+  billing_date: timestamptz
+  billing_from: timestamptz
+  billing_schedule_period_id: String
+  billing_status: String
+  billing_to: timestamptz
+  created_at: timestamptz
+  discount_amount: numeric
+  discount_amount_type: String
+  discount_amount_value: numeric
+  final_price: numeric
+  location_id: String
+  location_name: String
+  order_id: String
+  product_description: String
+  product_pricing: Int
+  resource_path: String
+  student_id: String
+  tax_amount: numeric
+  tax_category: String
+  tax_id: String
+  tax_percentage: Int
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "bill_item"
+"""
+input bill_item_max_order_by {
+  bill_item_sequence_number: order_by
+  bill_type: order_by
+  billing_approval_status: order_by
+  billing_date: order_by
+  billing_from: order_by
+  billing_schedule_period_id: order_by
+  billing_status: order_by
+  billing_to: order_by
+  created_at: order_by
+  discount_amount: order_by
+  discount_amount_type: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  location_id: order_by
+  location_name: order_by
+  order_id: order_by
+  product_description: order_by
+  product_pricing: order_by
+  resource_path: order_by
+  student_id: order_by
+  tax_amount: order_by
+  tax_category: order_by
+  tax_id: order_by
+  tax_percentage: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type bill_item_min_fields {
+  bill_item_sequence_number: Int
+  bill_type: String
+  billing_approval_status: String
+  billing_date: timestamptz
+  billing_from: timestamptz
+  billing_schedule_period_id: String
+  billing_status: String
+  billing_to: timestamptz
+  created_at: timestamptz
+  discount_amount: numeric
+  discount_amount_type: String
+  discount_amount_value: numeric
+  final_price: numeric
+  location_id: String
+  location_name: String
+  order_id: String
+  product_description: String
+  product_pricing: Int
+  resource_path: String
+  student_id: String
+  tax_amount: numeric
+  tax_category: String
+  tax_id: String
+  tax_percentage: Int
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "bill_item"
+"""
+input bill_item_min_order_by {
+  bill_item_sequence_number: order_by
+  bill_type: order_by
+  billing_approval_status: order_by
+  billing_date: order_by
+  billing_from: order_by
+  billing_schedule_period_id: order_by
+  billing_status: order_by
+  billing_to: order_by
+  created_at: order_by
+  discount_amount: order_by
+  discount_amount_type: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  location_id: order_by
+  location_name: order_by
+  order_id: order_by
+  product_description: order_by
+  product_pricing: order_by
+  resource_path: order_by
+  student_id: order_by
+  tax_amount: order_by
+  tax_category: order_by
+  tax_id: order_by
+  tax_percentage: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "bill_item"
+"""
+type bill_item_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [bill_item!]!
+}
+
+"""
+input type for inserting object relation for remote table "bill_item"
+"""
+input bill_item_obj_rel_insert_input {
+  data: bill_item_insert_input!
+  on_conflict: bill_item_on_conflict
+}
+
+"""
+on conflict condition type for table "bill_item"
+"""
+input bill_item_on_conflict {
+  constraint: bill_item_constraint!
+  update_columns: [bill_item_update_column!]!
+  where: bill_item_bool_exp
+}
+
+"""
+ordering options when selecting data from "bill_item"
+"""
+input bill_item_order_by {
+  bill_item_sequence_number: order_by
+  bill_type: order_by
+  billing_approval_status: order_by
+  billing_date: order_by
+  billing_from: order_by
+  billing_item_description: order_by
+  billing_schedule_period_id: order_by
+  billing_status: order_by
+  billing_to: order_by
+  created_at: order_by
+  discount_amount: order_by
+  discount_amount_type: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  location_id: order_by
+  location_name: order_by
+  order_id: order_by
+  product_description: order_by
+  product_pricing: order_by
+  resource_path: order_by
+  student_id: order_by
+  students: students_order_by
+  tax_amount: order_by
+  tax_category: order_by
+  tax_id: order_by
+  tax_percentage: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "bill_item"
+"""
+input bill_item_pk_columns_input {
+  bill_item_sequence_number: Int!
+  order_id: String!
+}
+
+"""prepend existing jsonb value of filtered columns with new jsonb value"""
+input bill_item_prepend_input {
+  billing_item_description: jsonb
+}
+
+"""
+select columns of table "bill_item"
+"""
+enum bill_item_select_column {
+  """column name"""
+  bill_item_sequence_number
+
+  """column name"""
+  bill_type
+
+  """column name"""
+  billing_approval_status
+
+  """column name"""
+  billing_date
+
+  """column name"""
+  billing_from
+
+  """column name"""
+  billing_item_description
+
+  """column name"""
+  billing_schedule_period_id
+
+  """column name"""
+  billing_status
+
+  """column name"""
+  billing_to
+
+  """column name"""
+  created_at
+
+  """column name"""
+  discount_amount
+
+  """column name"""
+  discount_amount_type
+
+  """column name"""
+  discount_amount_value
+
+  """column name"""
+  final_price
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_name
+
+  """column name"""
+  order_id
+
+  """column name"""
+  product_description
+
+  """column name"""
+  product_pricing
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  tax_amount
+
+  """column name"""
+  tax_category
+
+  """column name"""
+  tax_id
+
+  """column name"""
+  tax_percentage
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "bill_item"
+"""
+input bill_item_set_input {
+  bill_item_sequence_number: Int
+  bill_type: String
+  billing_approval_status: String
+  billing_date: timestamptz
+  billing_from: timestamptz
+  billing_item_description: jsonb
+  billing_schedule_period_id: String
+  billing_status: String
+  billing_to: timestamptz
+  created_at: timestamptz
+  discount_amount: numeric
+  discount_amount_type: String
+  discount_amount_value: numeric
+  final_price: numeric
+  location_id: String
+  location_name: String
+  order_id: String
+  product_description: String
+  product_pricing: Int
+  resource_path: String
+  student_id: String
+  tax_amount: numeric
+  tax_category: String
+  tax_id: String
+  tax_percentage: Int
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type bill_item_stddev_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by stddev() on columns of table "bill_item"
+"""
+input bill_item_stddev_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type bill_item_stddev_pop_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by stddev_pop() on columns of table "bill_item"
+"""
+input bill_item_stddev_pop_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type bill_item_stddev_samp_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by stddev_samp() on columns of table "bill_item"
+"""
+input bill_item_stddev_samp_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""aggregate sum on columns"""
+type bill_item_sum_fields {
+  bill_item_sequence_number: Int
+  discount_amount: numeric
+  discount_amount_value: numeric
+  final_price: numeric
+  product_pricing: Int
+  tax_amount: numeric
+  tax_percentage: Int
+}
+
+"""
+order by sum() on columns of table "bill_item"
+"""
+input bill_item_sum_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""
+update columns of table "bill_item"
+"""
+enum bill_item_update_column {
+  """column name"""
+  bill_item_sequence_number
+
+  """column name"""
+  bill_type
+
+  """column name"""
+  billing_approval_status
+
+  """column name"""
+  billing_date
+
+  """column name"""
+  billing_from
+
+  """column name"""
+  billing_item_description
+
+  """column name"""
+  billing_schedule_period_id
+
+  """column name"""
+  billing_status
+
+  """column name"""
+  billing_to
+
+  """column name"""
+  created_at
+
+  """column name"""
+  discount_amount
+
+  """column name"""
+  discount_amount_type
+
+  """column name"""
+  discount_amount_value
+
+  """column name"""
+  final_price
+
+  """column name"""
+  location_id
+
+  """column name"""
+  location_name
+
+  """column name"""
+  order_id
+
+  """column name"""
+  product_description
+
+  """column name"""
+  product_pricing
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  tax_amount
+
+  """column name"""
+  tax_category
+
+  """column name"""
+  tax_id
+
+  """column name"""
+  tax_percentage
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type bill_item_var_pop_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by var_pop() on columns of table "bill_item"
+"""
+input bill_item_var_pop_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""aggregate var_samp on columns"""
+type bill_item_var_samp_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by var_samp() on columns of table "bill_item"
+"""
+input bill_item_var_samp_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+"""aggregate variance on columns"""
+type bill_item_variance_fields {
+  bill_item_sequence_number: Float
+  discount_amount: Float
+  discount_amount_value: Float
+  final_price: Float
+  product_pricing: Float
+  tax_amount: Float
+  tax_percentage: Float
+}
+
+"""
+order by variance() on columns of table "bill_item"
+"""
+input bill_item_variance_order_by {
+  bill_item_sequence_number: order_by
+  discount_amount: order_by
+  discount_amount_value: order_by
+  final_price: order_by
+  product_pricing: order_by
+  tax_amount: order_by
+  tax_percentage: order_by
+}
+
+scalar date
+
+"""
+expression to compare columns of type date. All fields are combined with logical 'AND'.
+"""
+input date_comparison_exp {
+  _eq: date
+  _gt: date
+  _gte: date
+  _in: [date!]
+  _is_null: Boolean
+  _lt: date
+  _lte: date
+  _neq: date
+  _nin: [date!]
+}
+
+"""
+columns and relationships of "invoice"
+"""
+type invoice {
+  created_at: timestamptz!
+  invoice_id: String!
+  invoice_sequence_number: Int
+  resource_path: String
+  status: String!
+  student_id: String!
+  sub_total: numeric!
+  total: numeric!
+  type: String!
+  updated_at: timestamptz!
+}
+
+"""
+columns and relationships of "invoice_action_log"
+"""
+type invoice_action_log {
+  action: String!
+  action_comment: String!
+  action_detail: String!
+  created_at: timestamptz!
+  invoice_action_id: String!
+  invoice_id: String!
+  resource_path: String
+  updated_at: timestamptz!
+  user_id: String!
+}
+
+"""
+aggregated selection of "invoice_action_log"
+"""
+type invoice_action_log_aggregate {
+  aggregate: invoice_action_log_aggregate_fields
+  nodes: [invoice_action_log!]!
+}
+
+"""
+aggregate fields of "invoice_action_log"
+"""
+type invoice_action_log_aggregate_fields {
+  count(columns: [invoice_action_log_select_column!], distinct: Boolean): Int
+  max: invoice_action_log_max_fields
+  min: invoice_action_log_min_fields
+}
+
+"""
+order by aggregate values of table "invoice_action_log"
+"""
+input invoice_action_log_aggregate_order_by {
+  count: order_by
+  max: invoice_action_log_max_order_by
+  min: invoice_action_log_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "invoice_action_log"
+"""
+input invoice_action_log_arr_rel_insert_input {
+  data: [invoice_action_log_insert_input!]!
+  on_conflict: invoice_action_log_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "invoice_action_log". All fields are combined with a logical 'AND'.
+"""
+input invoice_action_log_bool_exp {
+  _and: [invoice_action_log_bool_exp]
+  _not: invoice_action_log_bool_exp
+  _or: [invoice_action_log_bool_exp]
+  action: String_comparison_exp
+  action_comment: String_comparison_exp
+  action_detail: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  invoice_action_id: String_comparison_exp
+  invoice_id: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+  user_id: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "invoice_action_log"
+"""
+enum invoice_action_log_constraint {
+  """unique or primary key constraint"""
+  invoice_action_log_pk
+}
+
+"""
+input type for inserting data into table "invoice_action_log"
+"""
+input invoice_action_log_insert_input {
+  action: String
+  action_comment: String
+  action_detail: String
+  created_at: timestamptz
+  invoice_action_id: String
+  invoice_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""aggregate max on columns"""
+type invoice_action_log_max_fields {
+  action: String
+  action_comment: String
+  action_detail: String
+  created_at: timestamptz
+  invoice_action_id: String
+  invoice_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+order by max() on columns of table "invoice_action_log"
+"""
+input invoice_action_log_max_order_by {
+  action: order_by
+  action_comment: order_by
+  action_detail: order_by
+  created_at: order_by
+  invoice_action_id: order_by
+  invoice_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_id: order_by
+}
+
+"""aggregate min on columns"""
+type invoice_action_log_min_fields {
+  action: String
+  action_comment: String
+  action_detail: String
+  created_at: timestamptz
+  invoice_action_id: String
+  invoice_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+order by min() on columns of table "invoice_action_log"
+"""
+input invoice_action_log_min_order_by {
+  action: order_by
+  action_comment: order_by
+  action_detail: order_by
+  created_at: order_by
+  invoice_action_id: order_by
+  invoice_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_id: order_by
+}
+
+"""
+response of any mutation on the table "invoice_action_log"
+"""
+type invoice_action_log_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [invoice_action_log!]!
+}
+
+"""
+input type for inserting object relation for remote table "invoice_action_log"
+"""
+input invoice_action_log_obj_rel_insert_input {
+  data: invoice_action_log_insert_input!
+  on_conflict: invoice_action_log_on_conflict
+}
+
+"""
+on conflict condition type for table "invoice_action_log"
+"""
+input invoice_action_log_on_conflict {
+  constraint: invoice_action_log_constraint!
+  update_columns: [invoice_action_log_update_column!]!
+  where: invoice_action_log_bool_exp
+}
+
+"""
+ordering options when selecting data from "invoice_action_log"
+"""
+input invoice_action_log_order_by {
+  action: order_by
+  action_comment: order_by
+  action_detail: order_by
+  created_at: order_by
+  invoice_action_id: order_by
+  invoice_id: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_id: order_by
+}
+
+"""
+primary key columns input for table: "invoice_action_log"
+"""
+input invoice_action_log_pk_columns_input {
+  invoice_action_id: String!
+}
+
+"""
+select columns of table "invoice_action_log"
+"""
+enum invoice_action_log_select_column {
+  """column name"""
+  action
+
+  """column name"""
+  action_comment
+
+  """column name"""
+  action_detail
+
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_action_id
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_id
+}
+
+"""
+input type for updating data in table "invoice_action_log"
+"""
+input invoice_action_log_set_input {
+  action: String
+  action_comment: String
+  action_detail: String
+  created_at: timestamptz
+  invoice_action_id: String
+  invoice_id: String
+  resource_path: String
+  updated_at: timestamptz
+  user_id: String
+}
+
+"""
+update columns of table "invoice_action_log"
+"""
+enum invoice_action_log_update_column {
+  """column name"""
+  action
+
+  """column name"""
+  action_comment
+
+  """column name"""
+  action_detail
+
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_action_id
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_id
+}
+
+"""
+aggregated selection of "invoice"
+"""
+type invoice_aggregate {
+  aggregate: invoice_aggregate_fields
+  nodes: [invoice!]!
+}
+
+"""
+aggregate fields of "invoice"
+"""
+type invoice_aggregate_fields {
+  avg: invoice_avg_fields
+  count(columns: [invoice_select_column!], distinct: Boolean): Int
+  max: invoice_max_fields
+  min: invoice_min_fields
+  stddev: invoice_stddev_fields
+  stddev_pop: invoice_stddev_pop_fields
+  stddev_samp: invoice_stddev_samp_fields
+  sum: invoice_sum_fields
+  var_pop: invoice_var_pop_fields
+  var_samp: invoice_var_samp_fields
+  variance: invoice_variance_fields
+}
+
+"""
+order by aggregate values of table "invoice"
+"""
+input invoice_aggregate_order_by {
+  avg: invoice_avg_order_by
+  count: order_by
+  max: invoice_max_order_by
+  min: invoice_min_order_by
+  stddev: invoice_stddev_order_by
+  stddev_pop: invoice_stddev_pop_order_by
+  stddev_samp: invoice_stddev_samp_order_by
+  sum: invoice_sum_order_by
+  var_pop: invoice_var_pop_order_by
+  var_samp: invoice_var_samp_order_by
+  variance: invoice_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "invoice"
+"""
+input invoice_arr_rel_insert_input {
+  data: [invoice_insert_input!]!
+  on_conflict: invoice_on_conflict
+}
+
+"""aggregate avg on columns"""
+type invoice_avg_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by avg() on columns of table "invoice"
+"""
+input invoice_avg_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""
+columns and relationships of "invoice_bill_item"
+"""
+type invoice_bill_item {
+  bill_item_sequence_number: Int!
+  created_at: timestamptz!
+  invoice_bill_item_id: String!
+  invoice_id: String!
+  past_billing_status: String!
+  resource_path: String
+}
+
+"""
+aggregated selection of "invoice_bill_item"
+"""
+type invoice_bill_item_aggregate {
+  aggregate: invoice_bill_item_aggregate_fields
+  nodes: [invoice_bill_item!]!
+}
+
+"""
+aggregate fields of "invoice_bill_item"
+"""
+type invoice_bill_item_aggregate_fields {
+  avg: invoice_bill_item_avg_fields
+  count(columns: [invoice_bill_item_select_column!], distinct: Boolean): Int
+  max: invoice_bill_item_max_fields
+  min: invoice_bill_item_min_fields
+  stddev: invoice_bill_item_stddev_fields
+  stddev_pop: invoice_bill_item_stddev_pop_fields
+  stddev_samp: invoice_bill_item_stddev_samp_fields
+  sum: invoice_bill_item_sum_fields
+  var_pop: invoice_bill_item_var_pop_fields
+  var_samp: invoice_bill_item_var_samp_fields
+  variance: invoice_bill_item_variance_fields
+}
+
+"""
+order by aggregate values of table "invoice_bill_item"
+"""
+input invoice_bill_item_aggregate_order_by {
+  avg: invoice_bill_item_avg_order_by
+  count: order_by
+  max: invoice_bill_item_max_order_by
+  min: invoice_bill_item_min_order_by
+  stddev: invoice_bill_item_stddev_order_by
+  stddev_pop: invoice_bill_item_stddev_pop_order_by
+  stddev_samp: invoice_bill_item_stddev_samp_order_by
+  sum: invoice_bill_item_sum_order_by
+  var_pop: invoice_bill_item_var_pop_order_by
+  var_samp: invoice_bill_item_var_samp_order_by
+  variance: invoice_bill_item_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "invoice_bill_item"
+"""
+input invoice_bill_item_arr_rel_insert_input {
+  data: [invoice_bill_item_insert_input!]!
+  on_conflict: invoice_bill_item_on_conflict
+}
+
+"""aggregate avg on columns"""
+type invoice_bill_item_avg_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by avg() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_avg_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "invoice_bill_item". All fields are combined with a logical 'AND'.
+"""
+input invoice_bill_item_bool_exp {
+  _and: [invoice_bill_item_bool_exp]
+  _not: invoice_bill_item_bool_exp
+  _or: [invoice_bill_item_bool_exp]
+  bill_item_sequence_number: Int_comparison_exp
+  created_at: timestamptz_comparison_exp
+  invoice_bill_item_id: String_comparison_exp
+  invoice_id: String_comparison_exp
+  past_billing_status: String_comparison_exp
+  resource_path: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "invoice_bill_item"
+"""
+enum invoice_bill_item_constraint {
+  """unique or primary key constraint"""
+  invoice_bill_item_pk
+}
+
+"""
+input type for incrementing integer column in table "invoice_bill_item"
+"""
+input invoice_bill_item_inc_input {
+  bill_item_sequence_number: Int
+}
+
+"""
+input type for inserting data into table "invoice_bill_item"
+"""
+input invoice_bill_item_insert_input {
+  bill_item_sequence_number: Int
+  created_at: timestamptz
+  invoice_bill_item_id: String
+  invoice_id: String
+  past_billing_status: String
+  resource_path: String
+}
+
+"""aggregate max on columns"""
+type invoice_bill_item_max_fields {
+  bill_item_sequence_number: Int
+  created_at: timestamptz
+  invoice_bill_item_id: String
+  invoice_id: String
+  past_billing_status: String
+  resource_path: String
+}
+
+"""
+order by max() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_max_order_by {
+  bill_item_sequence_number: order_by
+  created_at: order_by
+  invoice_bill_item_id: order_by
+  invoice_id: order_by
+  past_billing_status: order_by
+  resource_path: order_by
+}
+
+"""aggregate min on columns"""
+type invoice_bill_item_min_fields {
+  bill_item_sequence_number: Int
+  created_at: timestamptz
+  invoice_bill_item_id: String
+  invoice_id: String
+  past_billing_status: String
+  resource_path: String
+}
+
+"""
+order by min() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_min_order_by {
+  bill_item_sequence_number: order_by
+  created_at: order_by
+  invoice_bill_item_id: order_by
+  invoice_id: order_by
+  past_billing_status: order_by
+  resource_path: order_by
+}
+
+"""
+response of any mutation on the table "invoice_bill_item"
+"""
+type invoice_bill_item_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [invoice_bill_item!]!
+}
+
+"""
+input type for inserting object relation for remote table "invoice_bill_item"
+"""
+input invoice_bill_item_obj_rel_insert_input {
+  data: invoice_bill_item_insert_input!
+  on_conflict: invoice_bill_item_on_conflict
+}
+
+"""
+on conflict condition type for table "invoice_bill_item"
+"""
+input invoice_bill_item_on_conflict {
+  constraint: invoice_bill_item_constraint!
+  update_columns: [invoice_bill_item_update_column!]!
+  where: invoice_bill_item_bool_exp
+}
+
+"""
+ordering options when selecting data from "invoice_bill_item"
+"""
+input invoice_bill_item_order_by {
+  bill_item_sequence_number: order_by
+  created_at: order_by
+  invoice_bill_item_id: order_by
+  invoice_id: order_by
+  past_billing_status: order_by
+  resource_path: order_by
+}
+
+"""
+primary key columns input for table: "invoice_bill_item"
+"""
+input invoice_bill_item_pk_columns_input {
+  invoice_bill_item_id: String!
+}
+
+"""
+select columns of table "invoice_bill_item"
+"""
+enum invoice_bill_item_select_column {
+  """column name"""
+  bill_item_sequence_number
+
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_bill_item_id
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  past_billing_status
+
+  """column name"""
+  resource_path
+}
+
+"""
+input type for updating data in table "invoice_bill_item"
+"""
+input invoice_bill_item_set_input {
+  bill_item_sequence_number: Int
+  created_at: timestamptz
+  invoice_bill_item_id: String
+  invoice_id: String
+  past_billing_status: String
+  resource_path: String
+}
+
+"""aggregate stddev on columns"""
+type invoice_bill_item_stddev_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by stddev() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_stddev_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type invoice_bill_item_stddev_pop_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by stddev_pop() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_stddev_pop_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type invoice_bill_item_stddev_samp_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by stddev_samp() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_stddev_samp_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""aggregate sum on columns"""
+type invoice_bill_item_sum_fields {
+  bill_item_sequence_number: Int
+}
+
+"""
+order by sum() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_sum_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""
+update columns of table "invoice_bill_item"
+"""
+enum invoice_bill_item_update_column {
+  """column name"""
+  bill_item_sequence_number
+
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_bill_item_id
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  past_billing_status
+
+  """column name"""
+  resource_path
+}
+
+"""aggregate var_pop on columns"""
+type invoice_bill_item_var_pop_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by var_pop() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_var_pop_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""aggregate var_samp on columns"""
+type invoice_bill_item_var_samp_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by var_samp() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_var_samp_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""aggregate variance on columns"""
+type invoice_bill_item_variance_fields {
+  bill_item_sequence_number: Float
+}
+
+"""
+order by variance() on columns of table "invoice_bill_item"
+"""
+input invoice_bill_item_variance_order_by {
+  bill_item_sequence_number: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "invoice". All fields are combined with a logical 'AND'.
+"""
+input invoice_bool_exp {
+  _and: [invoice_bool_exp]
+  _not: invoice_bool_exp
+  _or: [invoice_bool_exp]
+  created_at: timestamptz_comparison_exp
+  invoice_id: String_comparison_exp
+  invoice_sequence_number: Int_comparison_exp
+  resource_path: String_comparison_exp
+  status: String_comparison_exp
+  student_id: String_comparison_exp
+  sub_total: numeric_comparison_exp
+  total: numeric_comparison_exp
+  type: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "invoice"
+"""
+enum invoice_constraint {
+  """unique or primary key constraint"""
+  invoice_pk
+
+  """unique or primary key constraint"""
+  invoice_sequence_number_resource_path_unique
+}
+
+"""
+input type for incrementing integer column in table "invoice"
+"""
+input invoice_inc_input {
+  invoice_sequence_number: Int
+  sub_total: numeric
+  total: numeric
+}
+
+"""
+input type for inserting data into table "invoice"
+"""
+input invoice_insert_input {
+  created_at: timestamptz
+  invoice_id: String
+  invoice_sequence_number: Int
+  resource_path: String
+  status: String
+  student_id: String
+  sub_total: numeric
+  total: numeric
+  type: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type invoice_max_fields {
+  created_at: timestamptz
+  invoice_id: String
+  invoice_sequence_number: Int
+  resource_path: String
+  status: String
+  student_id: String
+  sub_total: numeric
+  total: numeric
+  type: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "invoice"
+"""
+input invoice_max_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  invoice_sequence_number: order_by
+  resource_path: order_by
+  status: order_by
+  student_id: order_by
+  sub_total: order_by
+  total: order_by
+  type: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type invoice_min_fields {
+  created_at: timestamptz
+  invoice_id: String
+  invoice_sequence_number: Int
+  resource_path: String
+  status: String
+  student_id: String
+  sub_total: numeric
+  total: numeric
+  type: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "invoice"
+"""
+input invoice_min_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  invoice_sequence_number: order_by
+  resource_path: order_by
+  status: order_by
+  student_id: order_by
+  sub_total: order_by
+  total: order_by
+  type: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "invoice"
+"""
+type invoice_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [invoice!]!
+}
+
+"""
+input type for inserting object relation for remote table "invoice"
+"""
+input invoice_obj_rel_insert_input {
+  data: invoice_insert_input!
+  on_conflict: invoice_on_conflict
+}
+
+"""
+on conflict condition type for table "invoice"
+"""
+input invoice_on_conflict {
+  constraint: invoice_constraint!
+  update_columns: [invoice_update_column!]!
+  where: invoice_bool_exp
+}
+
+"""
+ordering options when selecting data from "invoice"
+"""
+input invoice_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  invoice_sequence_number: order_by
+  resource_path: order_by
+  status: order_by
+  student_id: order_by
+  sub_total: order_by
+  total: order_by
+  type: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "invoice"
+"""
+input invoice_pk_columns_input {
+  invoice_id: String!
+}
+
+"""
+select columns of table "invoice"
+"""
+enum invoice_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  invoice_sequence_number
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  status
+
+  """column name"""
+  student_id
+
+  """column name"""
+  sub_total
+
+  """column name"""
+  total
+
+  """column name"""
+  type
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "invoice"
+"""
+input invoice_set_input {
+  created_at: timestamptz
+  invoice_id: String
+  invoice_sequence_number: Int
+  resource_path: String
+  status: String
+  student_id: String
+  sub_total: numeric
+  total: numeric
+  type: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type invoice_stddev_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by stddev() on columns of table "invoice"
+"""
+input invoice_stddev_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type invoice_stddev_pop_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by stddev_pop() on columns of table "invoice"
+"""
+input invoice_stddev_pop_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type invoice_stddev_samp_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by stddev_samp() on columns of table "invoice"
+"""
+input invoice_stddev_samp_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""aggregate sum on columns"""
+type invoice_sum_fields {
+  invoice_sequence_number: Int
+  sub_total: numeric
+  total: numeric
+}
+
+"""
+order by sum() on columns of table "invoice"
+"""
+input invoice_sum_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""
+update columns of table "invoice"
+"""
+enum invoice_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  invoice_sequence_number
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  status
+
+  """column name"""
+  student_id
+
+  """column name"""
+  sub_total
+
+  """column name"""
+  total
+
+  """column name"""
+  type
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type invoice_var_pop_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by var_pop() on columns of table "invoice"
+"""
+input invoice_var_pop_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""aggregate var_samp on columns"""
+type invoice_var_samp_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by var_samp() on columns of table "invoice"
+"""
+input invoice_var_samp_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+"""aggregate variance on columns"""
+type invoice_variance_fields {
+  invoice_sequence_number: Float
+  sub_total: Float
+  total: Float
+}
+
+"""
+order by variance() on columns of table "invoice"
+"""
+input invoice_variance_order_by {
+  invoice_sequence_number: order_by
+  sub_total: order_by
+  total: order_by
+}
+
+scalar jsonb
+
+"""
+expression to compare columns of type jsonb. All fields are combined with logical 'AND'.
+"""
+input jsonb_comparison_exp {
+  """is the column contained in the given json value"""
+  _contained_in: jsonb
+
+  """does the column contain the given json value at the top level"""
+  _contains: jsonb
+  _eq: jsonb
+  _gt: jsonb
+  _gte: jsonb
+
+  """does the string exist as a top-level key in the column"""
+  _has_key: String
+
+  """do all of these strings exist as top-level keys in the column"""
+  _has_keys_all: [String!]
+
+  """do any of these strings exist as top-level keys in the column"""
+  _has_keys_any: [String!]
+  _in: [jsonb!]
+  _is_null: Boolean
+  _lt: jsonb
+  _lte: jsonb
+  _neq: jsonb
+  _nin: [jsonb!]
+}
+
+"""mutation root"""
+type mutation_root {
+  """
+  delete data from the table: "bill_item"
+  """
+  delete_bill_item(
+    """filter the rows which have to be deleted"""
+    where: bill_item_bool_exp!
+  ): bill_item_mutation_response
+
+  """
+  delete single row from the table: "bill_item"
+  """
+  delete_bill_item_by_pk(bill_item_sequence_number: Int!, order_id: String!): bill_item
+
+  """
+  delete data from the table: "invoice"
+  """
+  delete_invoice(
+    """filter the rows which have to be deleted"""
+    where: invoice_bool_exp!
+  ): invoice_mutation_response
+
+  """
+  delete data from the table: "invoice_action_log"
+  """
+  delete_invoice_action_log(
+    """filter the rows which have to be deleted"""
+    where: invoice_action_log_bool_exp!
+  ): invoice_action_log_mutation_response
+
+  """
+  delete single row from the table: "invoice_action_log"
+  """
+  delete_invoice_action_log_by_pk(invoice_action_id: String!): invoice_action_log
+
+  """
+  delete data from the table: "invoice_bill_item"
+  """
+  delete_invoice_bill_item(
+    """filter the rows which have to be deleted"""
+    where: invoice_bill_item_bool_exp!
+  ): invoice_bill_item_mutation_response
+
+  """
+  delete single row from the table: "invoice_bill_item"
+  """
+  delete_invoice_bill_item_by_pk(invoice_bill_item_id: String!): invoice_bill_item
+
+  """
+  delete single row from the table: "invoice"
+  """
+  delete_invoice_by_pk(invoice_id: String!): invoice
+
+  """
+  delete data from the table: "payment"
+  """
+  delete_payment(
+    """filter the rows which have to be deleted"""
+    where: payment_bool_exp!
+  ): payment_mutation_response
+
+  """
+  delete single row from the table: "payment"
+  """
+  delete_payment_by_pk(payment_id: String!): payment
+
+  """
+  delete data from the table: "students"
+  """
+  delete_students(
+    """filter the rows which have to be deleted"""
+    where: students_bool_exp!
+  ): students_mutation_response
+
+  """
+  delete single row from the table: "students"
+  """
+  delete_students_by_pk(student_id: String!): students
+
+  """
+  delete data from the table: "users"
+  """
+  delete_users(
+    """filter the rows which have to be deleted"""
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  """
+  delete single row from the table: "users"
+  """
+  delete_users_by_pk(user_id: String!): users
+
+  """
+  insert data into the table: "bill_item"
+  """
+  insert_bill_item(
+    """the rows to be inserted"""
+    objects: [bill_item_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: bill_item_on_conflict
+  ): bill_item_mutation_response
+
+  """
+  insert a single row into the table: "bill_item"
+  """
+  insert_bill_item_one(
+    """the row to be inserted"""
+    object: bill_item_insert_input!
+
+    """on conflict condition"""
+    on_conflict: bill_item_on_conflict
+  ): bill_item
+
+  """
+  insert data into the table: "invoice"
+  """
+  insert_invoice(
+    """the rows to be inserted"""
+    objects: [invoice_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: invoice_on_conflict
+  ): invoice_mutation_response
+
+  """
+  insert data into the table: "invoice_action_log"
+  """
+  insert_invoice_action_log(
+    """the rows to be inserted"""
+    objects: [invoice_action_log_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: invoice_action_log_on_conflict
+  ): invoice_action_log_mutation_response
+
+  """
+  insert a single row into the table: "invoice_action_log"
+  """
+  insert_invoice_action_log_one(
+    """the row to be inserted"""
+    object: invoice_action_log_insert_input!
+
+    """on conflict condition"""
+    on_conflict: invoice_action_log_on_conflict
+  ): invoice_action_log
+
+  """
+  insert data into the table: "invoice_bill_item"
+  """
+  insert_invoice_bill_item(
+    """the rows to be inserted"""
+    objects: [invoice_bill_item_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: invoice_bill_item_on_conflict
+  ): invoice_bill_item_mutation_response
+
+  """
+  insert a single row into the table: "invoice_bill_item"
+  """
+  insert_invoice_bill_item_one(
+    """the row to be inserted"""
+    object: invoice_bill_item_insert_input!
+
+    """on conflict condition"""
+    on_conflict: invoice_bill_item_on_conflict
+  ): invoice_bill_item
+
+  """
+  insert a single row into the table: "invoice"
+  """
+  insert_invoice_one(
+    """the row to be inserted"""
+    object: invoice_insert_input!
+
+    """on conflict condition"""
+    on_conflict: invoice_on_conflict
+  ): invoice
+
+  """
+  insert data into the table: "payment"
+  """
+  insert_payment(
+    """the rows to be inserted"""
+    objects: [payment_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: payment_on_conflict
+  ): payment_mutation_response
+
+  """
+  insert a single row into the table: "payment"
+  """
+  insert_payment_one(
+    """the row to be inserted"""
+    object: payment_insert_input!
+
+    """on conflict condition"""
+    on_conflict: payment_on_conflict
+  ): payment
+
+  """
+  insert data into the table: "students"
+  """
+  insert_students(
+    """the rows to be inserted"""
+    objects: [students_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: students_on_conflict
+  ): students_mutation_response
+
+  """
+  insert a single row into the table: "students"
+  """
+  insert_students_one(
+    """the row to be inserted"""
+    object: students_insert_input!
+
+    """on conflict condition"""
+    on_conflict: students_on_conflict
+  ): students
+
+  """
+  insert data into the table: "users"
+  """
+  insert_users(
+    """the rows to be inserted"""
+    objects: [users_insert_input!]!
+
+    """on conflict condition"""
+    on_conflict: users_on_conflict
+  ): users_mutation_response
+
+  """
+  insert a single row into the table: "users"
+  """
+  insert_users_one(
+    """the row to be inserted"""
+    object: users_insert_input!
+
+    """on conflict condition"""
+    on_conflict: users_on_conflict
+  ): users
+
+  """
+  update data of the table: "bill_item"
+  """
+  update_bill_item(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: bill_item_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: bill_item_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: bill_item_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: bill_item_delete_key_input
+
+    """increments the integer columns with given value of the filtered values"""
+    _inc: bill_item_inc_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: bill_item_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: bill_item_set_input
+
+    """filter the rows which have to be updated"""
+    where: bill_item_bool_exp!
+  ): bill_item_mutation_response
+
+  """
+  update single row of the table: "bill_item"
+  """
+  update_bill_item_by_pk(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: bill_item_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: bill_item_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: bill_item_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: bill_item_delete_key_input
+
+    """increments the integer columns with given value of the filtered values"""
+    _inc: bill_item_inc_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: bill_item_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: bill_item_set_input
+    pk_columns: bill_item_pk_columns_input!
+  ): bill_item
+
+  """
+  update data of the table: "invoice"
+  """
+  update_invoice(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: invoice_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_set_input
+
+    """filter the rows which have to be updated"""
+    where: invoice_bool_exp!
+  ): invoice_mutation_response
+
+  """
+  update data of the table: "invoice_action_log"
+  """
+  update_invoice_action_log(
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_action_log_set_input
+
+    """filter the rows which have to be updated"""
+    where: invoice_action_log_bool_exp!
+  ): invoice_action_log_mutation_response
+
+  """
+  update single row of the table: "invoice_action_log"
+  """
+  update_invoice_action_log_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_action_log_set_input
+    pk_columns: invoice_action_log_pk_columns_input!
+  ): invoice_action_log
+
+  """
+  update data of the table: "invoice_bill_item"
+  """
+  update_invoice_bill_item(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: invoice_bill_item_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_bill_item_set_input
+
+    """filter the rows which have to be updated"""
+    where: invoice_bill_item_bool_exp!
+  ): invoice_bill_item_mutation_response
+
+  """
+  update single row of the table: "invoice_bill_item"
+  """
+  update_invoice_bill_item_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: invoice_bill_item_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_bill_item_set_input
+    pk_columns: invoice_bill_item_pk_columns_input!
+  ): invoice_bill_item
+
+  """
+  update single row of the table: "invoice"
+  """
+  update_invoice_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: invoice_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: invoice_set_input
+    pk_columns: invoice_pk_columns_input!
+  ): invoice
+
+  """
+  update data of the table: "payment"
+  """
+  update_payment(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: payment_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: payment_set_input
+
+    """filter the rows which have to be updated"""
+    where: payment_bool_exp!
+  ): payment_mutation_response
+
+  """
+  update single row of the table: "payment"
+  """
+  update_payment_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: payment_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: payment_set_input
+    pk_columns: payment_pk_columns_input!
+  ): payment
+
+  """
+  update data of the table: "students"
+  """
+  update_students(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: students_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: students_set_input
+
+    """filter the rows which have to be updated"""
+    where: students_bool_exp!
+  ): students_mutation_response
+
+  """
+  update single row of the table: "students"
+  """
+  update_students_by_pk(
+    """increments the integer columns with given value of the filtered values"""
+    _inc: students_inc_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: students_set_input
+    pk_columns: students_pk_columns_input!
+  ): students
+
+  """
+  update data of the table: "users"
+  """
+  update_users(
+    """sets the columns of the filtered rows to the given values"""
+    _set: users_set_input
+
+    """filter the rows which have to be updated"""
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  """
+  update single row of the table: "users"
+  """
+  update_users_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: users_set_input
+    pk_columns: users_pk_columns_input!
+  ): users
+}
+
+scalar numeric
+
+"""
+expression to compare columns of type numeric. All fields are combined with logical 'AND'.
+"""
+input numeric_comparison_exp {
+  _eq: numeric
+  _gt: numeric
+  _gte: numeric
+  _in: [numeric!]
+  _is_null: Boolean
+  _lt: numeric
+  _lte: numeric
+  _neq: numeric
+  _nin: [numeric!]
+}
+
+"""column ordering options"""
+enum order_by {
+  """in the ascending order, nulls last"""
+  asc
+
+  """in the ascending order, nulls first"""
+  asc_nulls_first
+
+  """in the ascending order, nulls last"""
+  asc_nulls_last
+
+  """in the descending order, nulls first"""
+  desc
+
+  """in the descending order, nulls first"""
+  desc_nulls_first
+
+  """in the descending order, nulls last"""
+  desc_nulls_last
+}
+
+"""
+columns and relationships of "payment"
+"""
+type payment {
+  created_at: timestamptz!
+  invoice_id: String!
+  payment_date: timestamptz
+  payment_due_date: timestamptz!
+  payment_expiry_date: timestamptz!
+  payment_id: String!
+  payment_method: String!
+  payment_sequence_number: Int
+  payment_status: String!
+  resource_path: String
+  result: String
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "payment"
+"""
+type payment_aggregate {
+  aggregate: payment_aggregate_fields
+  nodes: [payment!]!
+}
+
+"""
+aggregate fields of "payment"
+"""
+type payment_aggregate_fields {
+  avg: payment_avg_fields
+  count(columns: [payment_select_column!], distinct: Boolean): Int
+  max: payment_max_fields
+  min: payment_min_fields
+  stddev: payment_stddev_fields
+  stddev_pop: payment_stddev_pop_fields
+  stddev_samp: payment_stddev_samp_fields
+  sum: payment_sum_fields
+  var_pop: payment_var_pop_fields
+  var_samp: payment_var_samp_fields
+  variance: payment_variance_fields
+}
+
+"""
+order by aggregate values of table "payment"
+"""
+input payment_aggregate_order_by {
+  avg: payment_avg_order_by
+  count: order_by
+  max: payment_max_order_by
+  min: payment_min_order_by
+  stddev: payment_stddev_order_by
+  stddev_pop: payment_stddev_pop_order_by
+  stddev_samp: payment_stddev_samp_order_by
+  sum: payment_sum_order_by
+  var_pop: payment_var_pop_order_by
+  var_samp: payment_var_samp_order_by
+  variance: payment_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "payment"
+"""
+input payment_arr_rel_insert_input {
+  data: [payment_insert_input!]!
+  on_conflict: payment_on_conflict
+}
+
+"""aggregate avg on columns"""
+type payment_avg_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by avg() on columns of table "payment"
+"""
+input payment_avg_order_by {
+  payment_sequence_number: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "payment". All fields are combined with a logical 'AND'.
+"""
+input payment_bool_exp {
+  _and: [payment_bool_exp]
+  _not: payment_bool_exp
+  _or: [payment_bool_exp]
+  created_at: timestamptz_comparison_exp
+  invoice_id: String_comparison_exp
+  payment_date: timestamptz_comparison_exp
+  payment_due_date: timestamptz_comparison_exp
+  payment_expiry_date: timestamptz_comparison_exp
+  payment_id: String_comparison_exp
+  payment_method: String_comparison_exp
+  payment_sequence_number: Int_comparison_exp
+  payment_status: String_comparison_exp
+  resource_path: String_comparison_exp
+  result: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "payment"
+"""
+enum payment_constraint {
+  """unique or primary key constraint"""
+  payment_pk
+
+  """unique or primary key constraint"""
+  payment_sequence_number_resource_path_unique
+}
+
+"""
+input type for incrementing integer column in table "payment"
+"""
+input payment_inc_input {
+  payment_sequence_number: Int
+}
+
+"""
+input type for inserting data into table "payment"
+"""
+input payment_insert_input {
+  created_at: timestamptz
+  invoice_id: String
+  payment_date: timestamptz
+  payment_due_date: timestamptz
+  payment_expiry_date: timestamptz
+  payment_id: String
+  payment_method: String
+  payment_sequence_number: Int
+  payment_status: String
+  resource_path: String
+  result: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type payment_max_fields {
+  created_at: timestamptz
+  invoice_id: String
+  payment_date: timestamptz
+  payment_due_date: timestamptz
+  payment_expiry_date: timestamptz
+  payment_id: String
+  payment_method: String
+  payment_sequence_number: Int
+  payment_status: String
+  resource_path: String
+  result: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "payment"
+"""
+input payment_max_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  payment_date: order_by
+  payment_due_date: order_by
+  payment_expiry_date: order_by
+  payment_id: order_by
+  payment_method: order_by
+  payment_sequence_number: order_by
+  payment_status: order_by
+  resource_path: order_by
+  result: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type payment_min_fields {
+  created_at: timestamptz
+  invoice_id: String
+  payment_date: timestamptz
+  payment_due_date: timestamptz
+  payment_expiry_date: timestamptz
+  payment_id: String
+  payment_method: String
+  payment_sequence_number: Int
+  payment_status: String
+  resource_path: String
+  result: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "payment"
+"""
+input payment_min_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  payment_date: order_by
+  payment_due_date: order_by
+  payment_expiry_date: order_by
+  payment_id: order_by
+  payment_method: order_by
+  payment_sequence_number: order_by
+  payment_status: order_by
+  resource_path: order_by
+  result: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "payment"
+"""
+type payment_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [payment!]!
+}
+
+"""
+input type for inserting object relation for remote table "payment"
+"""
+input payment_obj_rel_insert_input {
+  data: payment_insert_input!
+  on_conflict: payment_on_conflict
+}
+
+"""
+on conflict condition type for table "payment"
+"""
+input payment_on_conflict {
+  constraint: payment_constraint!
+  update_columns: [payment_update_column!]!
+  where: payment_bool_exp
+}
+
+"""
+ordering options when selecting data from "payment"
+"""
+input payment_order_by {
+  created_at: order_by
+  invoice_id: order_by
+  payment_date: order_by
+  payment_due_date: order_by
+  payment_expiry_date: order_by
+  payment_id: order_by
+  payment_method: order_by
+  payment_sequence_number: order_by
+  payment_status: order_by
+  resource_path: order_by
+  result: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "payment"
+"""
+input payment_pk_columns_input {
+  payment_id: String!
+}
+
+"""
+select columns of table "payment"
+"""
+enum payment_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  payment_date
+
+  """column name"""
+  payment_due_date
+
+  """column name"""
+  payment_expiry_date
+
+  """column name"""
+  payment_id
+
+  """column name"""
+  payment_method
+
+  """column name"""
+  payment_sequence_number
+
+  """column name"""
+  payment_status
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  result
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "payment"
+"""
+input payment_set_input {
+  created_at: timestamptz
+  invoice_id: String
+  payment_date: timestamptz
+  payment_due_date: timestamptz
+  payment_expiry_date: timestamptz
+  payment_id: String
+  payment_method: String
+  payment_sequence_number: Int
+  payment_status: String
+  resource_path: String
+  result: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type payment_stddev_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by stddev() on columns of table "payment"
+"""
+input payment_stddev_order_by {
+  payment_sequence_number: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type payment_stddev_pop_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by stddev_pop() on columns of table "payment"
+"""
+input payment_stddev_pop_order_by {
+  payment_sequence_number: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type payment_stddev_samp_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by stddev_samp() on columns of table "payment"
+"""
+input payment_stddev_samp_order_by {
+  payment_sequence_number: order_by
+}
+
+"""aggregate sum on columns"""
+type payment_sum_fields {
+  payment_sequence_number: Int
+}
+
+"""
+order by sum() on columns of table "payment"
+"""
+input payment_sum_order_by {
+  payment_sequence_number: order_by
+}
+
+"""
+update columns of table "payment"
+"""
+enum payment_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  invoice_id
+
+  """column name"""
+  payment_date
+
+  """column name"""
+  payment_due_date
+
+  """column name"""
+  payment_expiry_date
+
+  """column name"""
+  payment_id
+
+  """column name"""
+  payment_method
+
+  """column name"""
+  payment_sequence_number
+
+  """column name"""
+  payment_status
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  result
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type payment_var_pop_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by var_pop() on columns of table "payment"
+"""
+input payment_var_pop_order_by {
+  payment_sequence_number: order_by
+}
+
+"""aggregate var_samp on columns"""
+type payment_var_samp_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by var_samp() on columns of table "payment"
+"""
+input payment_var_samp_order_by {
+  payment_sequence_number: order_by
+}
+
+"""aggregate variance on columns"""
+type payment_variance_fields {
+  payment_sequence_number: Float
+}
+
+"""
+order by variance() on columns of table "payment"
+"""
+input payment_variance_order_by {
+  payment_sequence_number: order_by
+}
+
+"""query root"""
+type query_root {
+  """
+  fetch data from the table: "bill_item"
+  """
+  bill_item(
+    """distinct select on columns"""
+    distinct_on: [bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: bill_item_bool_exp
+  ): [bill_item!]!
+
+  """
+  fetch aggregated fields from the table: "bill_item"
+  """
+  bill_item_aggregate(
+    """distinct select on columns"""
+    distinct_on: [bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: bill_item_bool_exp
+  ): bill_item_aggregate!
+
+  """fetch data from the table: "bill_item" using primary key columns"""
+  bill_item_by_pk(bill_item_sequence_number: Int!, order_id: String!): bill_item
+
+  """
+  fetch data from the table: "invoice"
+  """
+  invoice(
+    """distinct select on columns"""
+    distinct_on: [invoice_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bool_exp
+  ): [invoice!]!
+
+  """
+  fetch data from the table: "invoice_action_log"
+  """
+  invoice_action_log(
+    """distinct select on columns"""
+    distinct_on: [invoice_action_log_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_action_log_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_action_log_bool_exp
+  ): [invoice_action_log!]!
+
+  """
+  fetch aggregated fields from the table: "invoice_action_log"
+  """
+  invoice_action_log_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_action_log_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_action_log_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_action_log_bool_exp
+  ): invoice_action_log_aggregate!
+
+  """
+  fetch data from the table: "invoice_action_log" using primary key columns
+  """
+  invoice_action_log_by_pk(invoice_action_id: String!): invoice_action_log
+
+  """
+  fetch aggregated fields from the table: "invoice"
+  """
+  invoice_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bool_exp
+  ): invoice_aggregate!
+
+  """
+  fetch data from the table: "invoice_bill_item"
+  """
+  invoice_bill_item(
+    """distinct select on columns"""
+    distinct_on: [invoice_bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bill_item_bool_exp
+  ): [invoice_bill_item!]!
+
+  """
+  fetch aggregated fields from the table: "invoice_bill_item"
+  """
+  invoice_bill_item_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bill_item_bool_exp
+  ): invoice_bill_item_aggregate!
+
+  """
+  fetch data from the table: "invoice_bill_item" using primary key columns
+  """
+  invoice_bill_item_by_pk(invoice_bill_item_id: String!): invoice_bill_item
+
+  """fetch data from the table: "invoice" using primary key columns"""
+  invoice_by_pk(invoice_id: String!): invoice
+
+  """
+  fetch data from the table: "payment"
+  """
+  payment(
+    """distinct select on columns"""
+    distinct_on: [payment_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [payment_order_by!]
+
+    """filter the rows returned"""
+    where: payment_bool_exp
+  ): [payment!]!
+
+  """
+  fetch aggregated fields from the table: "payment"
+  """
+  payment_aggregate(
+    """distinct select on columns"""
+    distinct_on: [payment_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [payment_order_by!]
+
+    """filter the rows returned"""
+    where: payment_bool_exp
+  ): payment_aggregate!
+
+  """fetch data from the table: "payment" using primary key columns"""
+  payment_by_pk(payment_id: String!): payment
+
+  """
+  fetch data from the table: "students"
+  """
+  students(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): [students!]!
+
+  """
+  fetch aggregated fields from the table: "students"
+  """
+  students_aggregate(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): students_aggregate!
+
+  """fetch data from the table: "students" using primary key columns"""
+  students_by_pk(student_id: String!): students
+
+  """
+  fetch data from the table: "users"
+  """
+  users(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): [users!]!
+
+  """
+  fetch aggregated fields from the table: "users"
+  """
+  users_aggregate(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): users_aggregate!
+
+  """fetch data from the table: "users" using primary key columns"""
+  users_by_pk(user_id: String!): users
+}
+
+scalar smallint
+
+"""
+expression to compare columns of type smallint. All fields are combined with logical 'AND'.
+"""
+input smallint_comparison_exp {
+  _eq: smallint
+  _gt: smallint
+  _gte: smallint
+  _in: [smallint!]
+  _is_null: Boolean
+  _lt: smallint
+  _lte: smallint
+  _neq: smallint
+  _nin: [smallint!]
+}
+
+"""
+columns and relationships of "students"
+"""
+type students {
+  created_at: timestamptz!
+  current_grade: smallint
+  deleted_at: timestamptz
+  resource_path: String!
+  student_id: String!
+  updated_at: timestamptz!
+}
+
+"""
+aggregated selection of "students"
+"""
+type students_aggregate {
+  aggregate: students_aggregate_fields
+  nodes: [students!]!
+}
+
+"""
+aggregate fields of "students"
+"""
+type students_aggregate_fields {
+  avg: students_avg_fields
+  count(columns: [students_select_column!], distinct: Boolean): Int
+  max: students_max_fields
+  min: students_min_fields
+  stddev: students_stddev_fields
+  stddev_pop: students_stddev_pop_fields
+  stddev_samp: students_stddev_samp_fields
+  sum: students_sum_fields
+  var_pop: students_var_pop_fields
+  var_samp: students_var_samp_fields
+  variance: students_variance_fields
+}
+
+"""
+order by aggregate values of table "students"
+"""
+input students_aggregate_order_by {
+  avg: students_avg_order_by
+  count: order_by
+  max: students_max_order_by
+  min: students_min_order_by
+  stddev: students_stddev_order_by
+  stddev_pop: students_stddev_pop_order_by
+  stddev_samp: students_stddev_samp_order_by
+  sum: students_sum_order_by
+  var_pop: students_var_pop_order_by
+  var_samp: students_var_samp_order_by
+  variance: students_variance_order_by
+}
+
+"""
+input type for inserting array relation for remote table "students"
+"""
+input students_arr_rel_insert_input {
+  data: [students_insert_input!]!
+  on_conflict: students_on_conflict
+}
+
+"""aggregate avg on columns"""
+type students_avg_fields {
+  current_grade: Float
+}
+
+"""
+order by avg() on columns of table "students"
+"""
+input students_avg_order_by {
+  current_grade: order_by
+}
+
+"""
+Boolean expression to filter rows from the table "students". All fields are combined with a logical 'AND'.
+"""
+input students_bool_exp {
+  _and: [students_bool_exp]
+  _not: students_bool_exp
+  _or: [students_bool_exp]
+  created_at: timestamptz_comparison_exp
+  current_grade: smallint_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  resource_path: String_comparison_exp
+  student_id: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "students"
+"""
+enum students_constraint {
+  """unique or primary key constraint"""
+  student_pk
+}
+
+"""
+input type for incrementing integer column in table "students"
+"""
+input students_inc_input {
+  current_grade: smallint
+}
+
+"""
+input type for inserting data into table "students"
+"""
+input students_insert_input {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate max on columns"""
+type students_max_fields {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by max() on columns of table "students"
+"""
+input students_max_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""aggregate min on columns"""
+type students_min_fields {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""
+order by min() on columns of table "students"
+"""
+input students_min_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+response of any mutation on the table "students"
+"""
+type students_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [students!]!
+}
+
+"""
+input type for inserting object relation for remote table "students"
+"""
+input students_obj_rel_insert_input {
+  data: students_insert_input!
+  on_conflict: students_on_conflict
+}
+
+"""
+on conflict condition type for table "students"
+"""
+input students_on_conflict {
+  constraint: students_constraint!
+  update_columns: [students_update_column!]!
+  where: students_bool_exp
+}
+
+"""
+ordering options when selecting data from "students"
+"""
+input students_order_by {
+  created_at: order_by
+  current_grade: order_by
+  deleted_at: order_by
+  resource_path: order_by
+  student_id: order_by
+  updated_at: order_by
+}
+
+"""
+primary key columns input for table: "students"
+"""
+input students_pk_columns_input {
+  student_id: String!
+}
+
+"""
+select columns of table "students"
+"""
+enum students_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  current_grade
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""
+input type for updating data in table "students"
+"""
+input students_set_input {
+  created_at: timestamptz
+  current_grade: smallint
+  deleted_at: timestamptz
+  resource_path: String
+  student_id: String
+  updated_at: timestamptz
+}
+
+"""aggregate stddev on columns"""
+type students_stddev_fields {
+  current_grade: Float
+}
+
+"""
+order by stddev() on columns of table "students"
+"""
+input students_stddev_order_by {
+  current_grade: order_by
+}
+
+"""aggregate stddev_pop on columns"""
+type students_stddev_pop_fields {
+  current_grade: Float
+}
+
+"""
+order by stddev_pop() on columns of table "students"
+"""
+input students_stddev_pop_order_by {
+  current_grade: order_by
+}
+
+"""aggregate stddev_samp on columns"""
+type students_stddev_samp_fields {
+  current_grade: Float
+}
+
+"""
+order by stddev_samp() on columns of table "students"
+"""
+input students_stddev_samp_order_by {
+  current_grade: order_by
+}
+
+"""aggregate sum on columns"""
+type students_sum_fields {
+  current_grade: smallint
+}
+
+"""
+order by sum() on columns of table "students"
+"""
+input students_sum_order_by {
+  current_grade: order_by
+}
+
+"""
+update columns of table "students"
+"""
+enum students_update_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  current_grade
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  student_id
+
+  """column name"""
+  updated_at
+}
+
+"""aggregate var_pop on columns"""
+type students_var_pop_fields {
+  current_grade: Float
+}
+
+"""
+order by var_pop() on columns of table "students"
+"""
+input students_var_pop_order_by {
+  current_grade: order_by
+}
+
+"""aggregate var_samp on columns"""
+type students_var_samp_fields {
+  current_grade: Float
+}
+
+"""
+order by var_samp() on columns of table "students"
+"""
+input students_var_samp_order_by {
+  current_grade: order_by
+}
+
+"""aggregate variance on columns"""
+type students_variance_fields {
+  current_grade: Float
+}
+
+"""
+order by variance() on columns of table "students"
+"""
+input students_variance_order_by {
+  current_grade: order_by
+}
+
+"""subscription root"""
+type subscription_root {
+  """
+  fetch data from the table: "bill_item"
+  """
+  bill_item(
+    """distinct select on columns"""
+    distinct_on: [bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: bill_item_bool_exp
+  ): [bill_item!]!
+
+  """
+  fetch aggregated fields from the table: "bill_item"
+  """
+  bill_item_aggregate(
+    """distinct select on columns"""
+    distinct_on: [bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: bill_item_bool_exp
+  ): bill_item_aggregate!
+
+  """fetch data from the table: "bill_item" using primary key columns"""
+  bill_item_by_pk(bill_item_sequence_number: Int!, order_id: String!): bill_item
+
+  """
+  fetch data from the table: "invoice"
+  """
+  invoice(
+    """distinct select on columns"""
+    distinct_on: [invoice_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bool_exp
+  ): [invoice!]!
+
+  """
+  fetch data from the table: "invoice_action_log"
+  """
+  invoice_action_log(
+    """distinct select on columns"""
+    distinct_on: [invoice_action_log_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_action_log_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_action_log_bool_exp
+  ): [invoice_action_log!]!
+
+  """
+  fetch aggregated fields from the table: "invoice_action_log"
+  """
+  invoice_action_log_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_action_log_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_action_log_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_action_log_bool_exp
+  ): invoice_action_log_aggregate!
+
+  """
+  fetch data from the table: "invoice_action_log" using primary key columns
+  """
+  invoice_action_log_by_pk(invoice_action_id: String!): invoice_action_log
+
+  """
+  fetch aggregated fields from the table: "invoice"
+  """
+  invoice_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bool_exp
+  ): invoice_aggregate!
+
+  """
+  fetch data from the table: "invoice_bill_item"
+  """
+  invoice_bill_item(
+    """distinct select on columns"""
+    distinct_on: [invoice_bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bill_item_bool_exp
+  ): [invoice_bill_item!]!
+
+  """
+  fetch aggregated fields from the table: "invoice_bill_item"
+  """
+  invoice_bill_item_aggregate(
+    """distinct select on columns"""
+    distinct_on: [invoice_bill_item_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [invoice_bill_item_order_by!]
+
+    """filter the rows returned"""
+    where: invoice_bill_item_bool_exp
+  ): invoice_bill_item_aggregate!
+
+  """
+  fetch data from the table: "invoice_bill_item" using primary key columns
+  """
+  invoice_bill_item_by_pk(invoice_bill_item_id: String!): invoice_bill_item
+
+  """fetch data from the table: "invoice" using primary key columns"""
+  invoice_by_pk(invoice_id: String!): invoice
+
+  """
+  fetch data from the table: "payment"
+  """
+  payment(
+    """distinct select on columns"""
+    distinct_on: [payment_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [payment_order_by!]
+
+    """filter the rows returned"""
+    where: payment_bool_exp
+  ): [payment!]!
+
+  """
+  fetch aggregated fields from the table: "payment"
+  """
+  payment_aggregate(
+    """distinct select on columns"""
+    distinct_on: [payment_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [payment_order_by!]
+
+    """filter the rows returned"""
+    where: payment_bool_exp
+  ): payment_aggregate!
+
+  """fetch data from the table: "payment" using primary key columns"""
+  payment_by_pk(payment_id: String!): payment
+
+  """
+  fetch data from the table: "students"
+  """
+  students(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): [students!]!
+
+  """
+  fetch aggregated fields from the table: "students"
+  """
+  students_aggregate(
+    """distinct select on columns"""
+    distinct_on: [students_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [students_order_by!]
+
+    """filter the rows returned"""
+    where: students_bool_exp
+  ): students_aggregate!
+
+  """fetch data from the table: "students" using primary key columns"""
+  students_by_pk(student_id: String!): students
+
+  """
+  fetch data from the table: "users"
+  """
+  users(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): [users!]!
+
+  """
+  fetch aggregated fields from the table: "users"
+  """
+  users_aggregate(
+    """distinct select on columns"""
+    distinct_on: [users_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [users_order_by!]
+
+    """filter the rows returned"""
+    where: users_bool_exp
+  ): users_aggregate!
+
+  """fetch data from the table: "users" using primary key columns"""
+  users_by_pk(user_id: String!): users
+}
+
+scalar timestamptz
+
+"""
+expression to compare columns of type timestamptz. All fields are combined with logical 'AND'.
+"""
+input timestamptz_comparison_exp {
+  _eq: timestamptz
+  _gt: timestamptz
+  _gte: timestamptz
+  _in: [timestamptz!]
+  _is_null: Boolean
+  _lt: timestamptz
+  _lte: timestamptz
+  _neq: timestamptz
+  _nin: [timestamptz!]
+}
+
+"""
+columns and relationships of "users"
+"""
+type users {
+  allow_notification: Boolean
+  avatar: String
+  birthday: date
+  country: String!
+  created_at: timestamptz!
+  deleted_at: timestamptz
+  device_token: String
+  email: String
+  email_verified: Boolean
+  facebook_id: String
+  first_name: String!
+  first_name_phonetic: String
+  full_name_phonetic: String
+  gender: String
+  given_name: String
+  is_tester: Boolean
+  last_login_date: timestamptz
+  last_name: String!
+  last_name_phonetic: String
+  name: String!
+  phone_number: String
+  phone_verified: Boolean
+  platform: String
+  resource_path: String!
+  updated_at: timestamptz!
+  user_group: String!
+  user_id: String!
+}
+
+"""
+aggregated selection of "users"
+"""
+type users_aggregate {
+  aggregate: users_aggregate_fields
+  nodes: [users!]!
+}
+
+"""
+aggregate fields of "users"
+"""
+type users_aggregate_fields {
+  count(columns: [users_select_column!], distinct: Boolean): Int
+  max: users_max_fields
+  min: users_min_fields
+}
+
+"""
+order by aggregate values of table "users"
+"""
+input users_aggregate_order_by {
+  count: order_by
+  max: users_max_order_by
+  min: users_min_order_by
+}
+
+"""
+input type for inserting array relation for remote table "users"
+"""
+input users_arr_rel_insert_input {
+  data: [users_insert_input!]!
+  on_conflict: users_on_conflict
+}
+
+"""
+Boolean expression to filter rows from the table "users". All fields are combined with a logical 'AND'.
+"""
+input users_bool_exp {
+  _and: [users_bool_exp]
+  _not: users_bool_exp
+  _or: [users_bool_exp]
+  allow_notification: Boolean_comparison_exp
+  avatar: String_comparison_exp
+  birthday: date_comparison_exp
+  country: String_comparison_exp
+  created_at: timestamptz_comparison_exp
+  deleted_at: timestamptz_comparison_exp
+  device_token: String_comparison_exp
+  email: String_comparison_exp
+  email_verified: Boolean_comparison_exp
+  facebook_id: String_comparison_exp
+  first_name: String_comparison_exp
+  first_name_phonetic: String_comparison_exp
+  full_name_phonetic: String_comparison_exp
+  gender: String_comparison_exp
+  given_name: String_comparison_exp
+  is_tester: Boolean_comparison_exp
+  last_login_date: timestamptz_comparison_exp
+  last_name: String_comparison_exp
+  last_name_phonetic: String_comparison_exp
+  name: String_comparison_exp
+  phone_number: String_comparison_exp
+  phone_verified: Boolean_comparison_exp
+  platform: String_comparison_exp
+  resource_path: String_comparison_exp
+  updated_at: timestamptz_comparison_exp
+  user_group: String_comparison_exp
+  user_id: String_comparison_exp
+}
+
+"""
+unique or primary key constraints on table "users"
+"""
+enum users_constraint {
+  """unique or primary key constraint"""
+  users_pk
+}
+
+"""
+input type for inserting data into table "users"
+"""
+input users_insert_input {
+  allow_notification: Boolean
+  avatar: String
+  birthday: date
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  email: String
+  email_verified: Boolean
+  facebook_id: String
+  first_name: String
+  first_name_phonetic: String
+  full_name_phonetic: String
+  gender: String
+  given_name: String
+  is_tester: Boolean
+  last_login_date: timestamptz
+  last_name: String
+  last_name_phonetic: String
+  name: String
+  phone_number: String
+  phone_verified: Boolean
+  platform: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""aggregate max on columns"""
+type users_max_fields {
+  avatar: String
+  birthday: date
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  email: String
+  facebook_id: String
+  first_name: String
+  first_name_phonetic: String
+  full_name_phonetic: String
+  gender: String
+  given_name: String
+  last_login_date: timestamptz
+  last_name: String
+  last_name_phonetic: String
+  name: String
+  phone_number: String
+  platform: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+order by max() on columns of table "users"
+"""
+input users_max_order_by {
+  avatar: order_by
+  birthday: order_by
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  email: order_by
+  facebook_id: order_by
+  first_name: order_by
+  first_name_phonetic: order_by
+  full_name_phonetic: order_by
+  gender: order_by
+  given_name: order_by
+  last_login_date: order_by
+  last_name: order_by
+  last_name_phonetic: order_by
+  name: order_by
+  phone_number: order_by
+  platform: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""aggregate min on columns"""
+type users_min_fields {
+  avatar: String
+  birthday: date
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  email: String
+  facebook_id: String
+  first_name: String
+  first_name_phonetic: String
+  full_name_phonetic: String
+  gender: String
+  given_name: String
+  last_login_date: timestamptz
+  last_name: String
+  last_name_phonetic: String
+  name: String
+  phone_number: String
+  platform: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+order by min() on columns of table "users"
+"""
+input users_min_order_by {
+  avatar: order_by
+  birthday: order_by
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  email: order_by
+  facebook_id: order_by
+  first_name: order_by
+  first_name_phonetic: order_by
+  full_name_phonetic: order_by
+  gender: order_by
+  given_name: order_by
+  last_login_date: order_by
+  last_name: order_by
+  last_name_phonetic: order_by
+  name: order_by
+  phone_number: order_by
+  platform: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""
+response of any mutation on the table "users"
+"""
+type users_mutation_response {
+  """number of affected rows by the mutation"""
+  affected_rows: Int!
+
+  """data of the affected rows by the mutation"""
+  returning: [users!]!
+}
+
+"""
+input type for inserting object relation for remote table "users"
+"""
+input users_obj_rel_insert_input {
+  data: users_insert_input!
+  on_conflict: users_on_conflict
+}
+
+"""
+on conflict condition type for table "users"
+"""
+input users_on_conflict {
+  constraint: users_constraint!
+  update_columns: [users_update_column!]!
+  where: users_bool_exp
+}
+
+"""
+ordering options when selecting data from "users"
+"""
+input users_order_by {
+  allow_notification: order_by
+  avatar: order_by
+  birthday: order_by
+  country: order_by
+  created_at: order_by
+  deleted_at: order_by
+  device_token: order_by
+  email: order_by
+  email_verified: order_by
+  facebook_id: order_by
+  first_name: order_by
+  first_name_phonetic: order_by
+  full_name_phonetic: order_by
+  gender: order_by
+  given_name: order_by
+  is_tester: order_by
+  last_login_date: order_by
+  last_name: order_by
+  last_name_phonetic: order_by
+  name: order_by
+  phone_number: order_by
+  phone_verified: order_by
+  platform: order_by
+  resource_path: order_by
+  updated_at: order_by
+  user_group: order_by
+  user_id: order_by
+}
+
+"""
+primary key columns input for table: "users"
+"""
+input users_pk_columns_input {
+  user_id: String!
+}
+
+"""
+select columns of table "users"
+"""
+enum users_select_column {
+  """column name"""
+  allow_notification
+
+  """column name"""
+  avatar
+
+  """column name"""
+  birthday
+
+  """column name"""
+  country
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  device_token
+
+  """column name"""
+  email
+
+  """column name"""
+  email_verified
+
+  """column name"""
+  facebook_id
+
+  """column name"""
+  first_name
+
+  """column name"""
+  first_name_phonetic
+
+  """column name"""
+  full_name_phonetic
+
+  """column name"""
+  gender
+
+  """column name"""
+  given_name
+
+  """column name"""
+  is_tester
+
+  """column name"""
+  last_login_date
+
+  """column name"""
+  last_name
+
+  """column name"""
+  last_name_phonetic
+
+  """column name"""
+  name
+
+  """column name"""
+  phone_number
+
+  """column name"""
+  phone_verified
+
+  """column name"""
+  platform
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_group
+
+  """column name"""
+  user_id
+}
+
+"""
+input type for updating data in table "users"
+"""
+input users_set_input {
+  allow_notification: Boolean
+  avatar: String
+  birthday: date
+  country: String
+  created_at: timestamptz
+  deleted_at: timestamptz
+  device_token: String
+  email: String
+  email_verified: Boolean
+  facebook_id: String
+  first_name: String
+  first_name_phonetic: String
+  full_name_phonetic: String
+  gender: String
+  given_name: String
+  is_tester: Boolean
+  last_login_date: timestamptz
+  last_name: String
+  last_name_phonetic: String
+  name: String
+  phone_number: String
+  phone_verified: Boolean
+  platform: String
+  resource_path: String
+  updated_at: timestamptz
+  user_group: String
+  user_id: String
+}
+
+"""
+update columns of table "users"
+"""
+enum users_update_column {
+  """column name"""
+  allow_notification
+
+  """column name"""
+  avatar
+
+  """column name"""
+  birthday
+
+  """column name"""
+  country
+
+  """column name"""
+  created_at
+
+  """column name"""
+  deleted_at
+
+  """column name"""
+  device_token
+
+  """column name"""
+  email
+
+  """column name"""
+  email_verified
+
+  """column name"""
+  facebook_id
+
+  """column name"""
+  first_name
+
+  """column name"""
+  first_name_phonetic
+
+  """column name"""
+  full_name_phonetic
+
+  """column name"""
+  gender
+
+  """column name"""
+  given_name
+
+  """column name"""
+  is_tester
+
+  """column name"""
+  last_login_date
+
+  """column name"""
+  last_name
+
+  """column name"""
+  last_name_phonetic
+
+  """column name"""
+  name
+
+  """column name"""
+  phone_number
+
+  """column name"""
+  phone_verified
+
+  """column name"""
+  platform
+
+  """column name"""
+  resource_path
+
+  """column name"""
+  updated_at
+
+  """column name"""
+  user_group
+
+  """column name"""
+  user_id
+}

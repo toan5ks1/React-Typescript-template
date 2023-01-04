@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> should match snapshot 1`] = `
+.emotion-0 {
+  margin-bottom: 4px;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <nav
+      aria-label="breadcrumb"
+      class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root emotion-1"
+    >
+      <ol
+        class="MuiBreadcrumbs-ol emotion-2"
+      >
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption emotion-3"
+            data-testid="Breadcrumbs__entityName"
+            title="Breadcrumb name name name. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+          >
+            Breadcrumb name name name. It ...
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+`;

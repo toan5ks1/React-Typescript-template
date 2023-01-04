@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyWordBreak /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+.emotion-0 accordion {
+  width: calc(100% - 24px - 8px);
+}
+
+.emotion-0 wordBreak {
+  word-break: break-word;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+  />
+</div>
+`;
+
+exports[`<TypographyWordBreak /> should match snapshot when typography's text is in accordion 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  width: calc(100% - 24px - 8px);
+}
+
+.emotion-0 accordion {
+  width: calc(100% - 24px - 8px);
+}
+
+.emotion-0 wordBreak {
+  word-break: break-word;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body1 emotion-0"
+  />
+</div>
+`;

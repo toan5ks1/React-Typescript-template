@@ -1,0 +1,315 @@
+{
+    "ra": {
+        "message": {
+            "maxFileSizeIs": "ファイルサイズは最大で%{fileSize}%{fileUnit}です",
+            "unableToLoadData": "データの読み込みに失敗しました。もう一度お試しください。"
+        },
+        "navigation": {
+            "page_range_info": "%{offsetBegin}-%{offsetEnd} / %{total}",
+            "page_rows_per_page": "ページ当たりの行数:"
+        },
+        "notification": {
+            "item_doesnt_exist": "要素が存在しません"
+        },
+        "manabie-error": {
+            "specified": {
+                "cantDiscardDeletedNotification": "このお知らせはすでに削除されました",
+                "cantEditSentNotification": "このお知らせはすでに送信されたため、編集できません",
+                "cantDiscardSentNotification": "このお知らせはすでに送信されたため、破棄することはできません",
+                "cantSendSentNotification": "このお知らせはすでに送信されました",
+                "cantEditDiscardedNotification": "このお知らせはすでに削除されたため、編集できません",
+                "cantSendDiscardedNotification": "このお知らせはすでに削除されたため、送信することはできません",
+                "cantSchedulePastTimeNotification": "過去の時刻を設定することはできません",
+                "cantScheduleInvalidTimeNotification": "有効期限(日) には過去または配信スケジュールより前の日付を設定できません",
+                "cantSentNotificationWithInvalidToken": "サーバーエラー: 送信に失敗しました。再度お試しください",
+                "tagNameIsExist": "不具合が発生しました。再度お試しください。",
+                "tagNameIsEmpty": "タグ名の追加に失敗しました。再度お試しください。",
+                "getBrightcoveProfileFail": "Brightcoveアカウント情報の取得に失敗しました"
+            },
+            "unknown": "原因不明のエラーが発生しました。再度お試しいただくか、マナビースタッフにお問い合わせください。",
+            "cannotUpload": "ファイルをアップロードできません",
+            "uploadedFileIsInvalid": "ファイル名 %{fileName} が有効ではありません。ファイル名には特殊文字を含まない英数字、ハイフン、アンダースコアを使用してください",
+            "not_found": "データが見つかりませんでした"
+        },
+        "common": {
+            "action": {
+                "delete": "削除する",
+                "discard": "削除",
+                "dispose": "削除",
+                "upload": "アップロード",
+                "cancel": "キャンセル",
+                "remove": "削除",
+                "save": "Save",
+                "viewResultQuestionnaire": "結果を確認",
+                "downloadResultQuestionnaire": "結果をダウンロード",
+                "notifyUnread": "未読者に再通知",
+                "filter": "フィルター"
+            },
+            "send": "送信",
+            "saveDraft": "下書き保存",
+            "saveSchedule": "保存",
+            "editedSuccess": "編集しました ||||  %{smart_count} を編集しました",
+            "sendSuccess": "送信完了 |||| %{smart_count} は正常に送信されました ",
+            "createdSuccess": "正常に作成されました |||| %{smart_count} が正常に作成されました",
+            "resendSuccess": "未読ユーザーに通知を再送しました",
+            "resendFail": "エラーが発生しました。時間をおいて再度お試しください。",
+            "deleteSuccess": "正常に削除されました |||| %{smart_count} が正常に削除されました",
+            "discardMessage": "メッセージの削除",
+            "areYouSureWantToDiscardThisMessage": "一度削除されたメッセージは元に戻すことができません。\n本当に削除しますか？",
+            "disposeNotification": "お知らせの削除?",
+            "areYouSureWantToExitThisForm": "一度削除されたお知らせは元に戻すことができません。\n本当に削除しますか？",
+            "resendNotification": "すべての未読ユーザーに再通知しますか？",
+            "createdTagSuccess": "新しいタグを正常に作成されました",
+            "addNewTag": "本当に新しいタグを追加しますか？",
+            "addOptionPrefix": "追加",
+            "workInProgress": "処理中"
+        }
+    },
+    "resources": {
+        "configs": {
+            "config_title": "設定",
+            "apply": "適用する",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "グローバル",
+                    "COUNTRY_VN": "ベトナム",
+                    "COUNTRY_ID": "インドネシア",
+                    "COUNTRY_SG": "シンガポール",
+                    "COUNTRY_JP": "日本"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "月曜日",
+                "tuesday": "火曜日",
+                "wednesday": "水曜日",
+                "thursday": "木曜日",
+                "friday": "金曜日",
+                "saturday": "土曜日",
+                "sunday": "日曜日"
+            },
+            "name": "名前",
+            "city": "市",
+            "district": "地区",
+            "school": "校舎 (%{smart_count})",
+            "just_show_system_school": "有効な校舎のみ表示",
+            "teacher": "講師 (%{smart_count})",
+            "config": "コンフィグ",
+            "material": "資料",
+            "removeMaterial": "教材を削除",
+            "removeMaterialConfirmText": "本当にこのファイルを削除しますか？ |||| ファイル「%{name}」( %{week} ) を削除しようとしています",
+            "doYouWantToDoThis": "本当に実行しますか？",
+            "viewDetail": "詳細を見る",
+            "accountInfo": "アカウント情報",
+            "account": "アカウント",
+            "enterYourKeyword": "キーワードを入力",
+            "noResult": "検索結果はありませんでした",
+            "noResultSearchAndFilter": "他のキーワード、またはフィルターをお試しください",
+            "noResultSearch": "他のキーワードで検索してください",
+            "studyItem": "学習アイテム",
+            "students": "生徒",
+            "parents": "保護者",
+            "youFilterBy": "適応中のフィルター",
+            "all": "すべて",
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "cannotLoadPage": "読み込みに失敗しました。通信環境の良い状態で再度お試しください",
+            "somethingWentWrong": "エラーが発生しました",
+            "pleaseHelpUsReport": "下記よりエラー報告にご協力ください",
+            "back": "戻る",
+            "details": "詳細",
+            "netWorkUnstable": "インターネット接続が不安定です。ページを更新するか、再度お試しください"
+        },
+        "input": {
+            "error": {
+                "required": "*必須項目です",
+                "limitLength": "%{length} 文字以下で入力してください",
+                "dateMustComeAfter": "%{endDate} は %{startDate}の後に設定する必要があります",
+                "timeMustComeBefore": "%{startTime} は %{endTime}より前に設定してください",
+                "fieldCannotBeBlank": "%{field} は必須項目です",
+                "duplicatedAnswer": "回答の選択肢が重複しています",
+                "invalidExpirationDate": "有効期限(日)が無効です",
+                "invalidExpirationTime": "有効期限(時)が無効です",
+                "invalidFromDate": "開始日は終了日以前である必要があります",
+                "invalidToDate": "終了日は開始日以降である必要があります",
+                "invalidFromTime": "開始時刻は終了時刻以前である必要があります",
+                "invalidToTime": "終了時刻は開始時刻以降である必要があります"
+            },
+            "dropFileHere": "ここにファイルをドロップしてください",
+            "pleaseUploadFileSizeLessThan": "サイズが %{maxSize}MB以下のファイルをアップロードしてください",
+            "dragAndDropFileHere": "ファイルをドラッグ＆ドロップ または",
+            "dragAndDropCSVFileHere": "CSVファイルをドラッグ＆ドロップまたは選択してアップロードしてください",
+            "uploading": "アップロード中です",
+            "cannotUpload": "アップロードできませんでした",
+            "pasteVideoLink": "動画リンク",
+            "chooseFilesToUpload": "ファイルを選択",
+            "browse": "ファイルを選択",
+            "pleaseUploadFileSizeSmaller": "ファイルサイズが規定値を超えています"
+        },
+        "choices": {
+            "grades": {
+                "0": "その他",
+                "1": "小学1年生",
+                "2": "小学2年生",
+                "3": "小学3年生",
+                "4": "小学4年生",
+                "5": "小学5年生",
+                "6": "小学6年生",
+                "7": "中学1年生",
+                "8": "中学2年生",
+                "9": "中学3年生",
+                "10": "高校1年生",
+                "11": "高校2年生",
+                "12": "高校3年生",
+                "13": "大学1年生",
+                "14": "大学2年生",
+                "15": "大学3年生",
+                "16": "大学4年生"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Manabie管理者",
+                "USER_GROUP_SCHOOL_ADMIN": "管理アカウント |||| 管理アカウント %{smart_count}",
+                "USER_GROUP_STUDENT": "生徒",
+                "USER_GROUP_TEACHER": "講師",
+                "USER_GROUP_PARENT": "保護者"
+            }
+        },
+        "notificationsv2": {
+            "name": "お知らせ配信 V2"
+        },
+        "notifications": {
+            "name": "お知らせ配信",
+            "notificationStatus": {
+                "ALL_STATUS": "すべて |||| すべて (%{count})",
+                "NOTIFICATION_STATUS_NONE": "なし",
+                "NOTIFICATION_STATUS_DRAFT": "下書き |||| 下書き (%{count})",
+                "NOTIFICATION_STATUS_SCHEDULED": "送信予定 |||| 送信予定 (%{count})",
+                "NOTIFICATION_STATUS_SENT": "送信済 |||| 送信済 (%{count})",
+                "NOTIFICATION_STATUS_DISCARD": "削除 |||| 削除 (%{count})"
+            },
+            "questionnaireStatus": {
+                "USER_NOTIFICATION_QUESTIONNAIRE_STATUS_ANSWERED": "提出済み",
+                "USER_NOTIFICATION_QUESTIONNAIRE_STATUS_UNANSWERED": "未提出"
+            },
+            "label": {
+                "recipientGroup": "受信者",
+                "individualRecipient": "個別ユーザー",
+                "grades": "学年",
+                "courses": "コース",
+                "userType": "ユーザータイプ",
+                "to": "受信者*",
+                "title": "件名",
+                "content": "本文",
+                "attachment": "添付",
+                "recipient": "受信者 |||| 受信者",
+                "recipientName": "受信者名",
+                "audience": "受信者",
+                "composer": "送信者",
+                "lastUpdated": "最終更新日",
+                "sentDate": "送信日時",
+                "status": "ステータス",
+                "parent": "保護者 |||| 保護者",
+                "student": "生徒 |||| 生徒",
+                "parentOfStudent": "%{parentName} (生徒: %{studentName})",
+                "all": "すべて",
+                "allCourses": "すべてのコース",
+                "allGrades": "すべての学年",
+                "read": "既読数",
+                "unRead": "未読",
+                "target": "受信者",
+                "deliveryOption": "配信設定",
+                "now": "今すぐ",
+                "schedule": "送信日時の設定",
+                "uploadYourFile": "ファイルをアップロードしてください",
+                "notificationDate": "配信日",
+                "question": "質問",
+                "placeholder": {
+                    "selectCourse": "コースを選択",
+                    "selectCourses": "コースを選択",
+                    "selectGrade": "学年を選択",
+                    "selectIndividualRecipient": "受信者",
+                    "notificationTitle": "件名を記入",
+                    "selectContent": "本文を記入",
+                    "selectTime": "時間",
+                    "question": "質問",
+                    "answer": "回答",
+                    "tags": "タグ",
+                    "searchByNotificationTitles": "通知タイトルで検索"
+                },
+                "questionnaire": "アンケート",
+                "allowResubmission": "再提出を許可する",
+                "questionType": "質問形式",
+                "requiredQuestion": "必須",
+                "expirationDate": "有効期限(日)",
+                "expirationTime": "有効期限(時)",
+                "importantNotification": "重要なお知らせ",
+                "timeStamp": "タイムスタンプ",
+                "responderName": "回答者名",
+                "listQuestion": "質問一覧",
+                "tags": "タグ",
+                "filters": "フィルター",
+                "tag": "タグ",
+                "votes": "%{numberOfVotes} 件の回答",
+                "numberOfRespondents": "回答者数"
+            },
+            "message": {
+                "reloadPage": "このお知らせは削除されています。ページを再度読み込んでください"
+            },
+            "title": {
+                "generalInfo": "内容",
+                "composeMessage": "新規作成",
+                "editMessage": "お知らせの編集",
+                "notification": "お知らせ",
+                "notificationCenter": "お知らせ",
+                "questionnaireResult": "アンケート結果",
+                "addTag": "追加"
+            },
+            "button": {
+                "notifyUnread": "未読者に再通知",
+                "compose": "新規作成",
+                "clone": "複製",
+                "addInlineLink": "追加",
+                "addQuestion": "質問を追加する",
+                "addAnswer": "回答を追加する",
+                "viewLess": "閉じる",
+                "viewMore": "さらに表示",
+                "clearAll": "リセット"
+            },
+            "userNotificationStatus": {
+                "USER_NOTIFICATION_STATUS_NEW": "未読",
+                "USER_NOTIFICATION_STATUS_SEEN": "既読",
+                "USER_NOTIFICATION_STATUS_NONE": "なし",
+                "USER_NOTIFICATION_STATUS_READ": "既読",
+                "USER_NOTIFICATION_STATUS_FAILED": "送信失敗"
+            },
+            "targetGroupSelect": {
+                "NOTIFICATION_TARGET_GROUP_SELECT_NONE": "なし",
+                "NOTIFICATION_TARGET_GROUP_SELECT_ALL": "すべて"
+            },
+            "image": "画像",
+            "heading": "見出し",
+            "orderList": "番号付きリスト ",
+            "ul": "箇条書きリスト",
+            "bold": "太字",
+            "color": "色",
+            "italic": "斜体",
+            "insertLink": "リンクの挿入",
+            "underline": "下線",
+            "choices": {
+                "questionType": {
+                    "QUESTION_TYPE_MULTIPLE_CHOICE": "単一選択",
+                    "QUESTION_TYPE_FREE_TEXT": "記述式",
+                    "QUESTION_TYPE_CHECK_BOX": "複数選択"
+                }
+            },
+            "filters": {
+                "fromDate": "開始日",
+                "toDate": "終了日",
+                "fromTime": "開始時刻",
+                "toTime": "終了時刻",
+                "tags": "タグ"
+            }
+        }
+    }
+}

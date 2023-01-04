@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WrapperHorizontalGroup /> array children should match snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: -16px;
+  width: calc(100% + 16px);
+  margin-left: -16px;
+}
+
+.emotion-0>.MuiGrid-item {
+  padding-top: 16px;
+}
+
+.emotion-0>.MuiGrid-item {
+  padding-left: 16px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap emotion-0"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item emotion-1"
+    >
+      <div>
+        Text 1
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item emotion-1"
+    >
+      <div>
+        Test 2
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<WrapperHorizontalGroup /> single children should match snapshot 1`] = `
+<div>
+  <div>
+    Text 1
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TranslationProvider/> should match to snapshot and render correctly lang = en 1`] = `
+<div>
+  <div>
+    Student Management
+  </div>
+</div>
+`;
+
+exports[`<TranslationProvider/> should match to snapshot and render correctly when change form lang = en to lang = ja 1`] = `
+<div>
+  <div>
+    生徒管理
+  </div>
+</div>
+`;

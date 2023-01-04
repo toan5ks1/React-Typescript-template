@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DividerBase /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-bottom-width: thin;
+}
+
+<div>
+  <hr
+    class="MuiDivider-root MuiDivider-fullWidth emotion-0"
+  />
+</div>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyNotificationDate/>  should match value when status is draft 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 emotion-0"
+    data-testid="TypographyNotificationDate__root"
+  >
+    --
+  </p>
+</div>
+`;
+
+exports[`<TypographyNotificationDate/>  should match value when status is scheduled and column is sentDate 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 emotion-0"
+    data-testid="TypographyNotificationDate__root"
+  >
+    resources.notifications.notificationStatus.NOTIFICATION_STATUS_SCHEDULED
+  </p>
+</div>
+`;
+
+exports[`<TypographyNotificationDate/>  should render snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 emotion-0"
+    data-testid="TypographyNotificationDate__root"
+  >
+    2020/01/01, 07:00
+  </p>
+</div>
+`;

@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBaseBodyObserveVisible /> should match snapshot 1`] = `
+.emotion-0 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-0 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-1 {
+  display: table-row-group;
+}
+
+.emotion-2 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-2.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-2.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-2.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-2.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+
+.emotion-4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: none;
+}
+
+<div>
+  <table
+    class="MuiTable-root emotion-0"
+  >
+    <tbody
+      class="MuiTableBody-root emotion-1"
+      data-testid="TableBaseBody__root"
+    >
+      <tr
+        class="MuiTableRow-root emotion-2"
+        data-testid="TableBase__row"
+        data-value="1"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-3"
+          style="width: 60%;"
+        >
+          <div>
+            Nam
+          </div>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-4"
+          style="width: 40%;"
+        >
+          <div>
+            thanhnam@manabie.com
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root emotion-2"
+        data-testid="TableBase__row"
+        data-value="2"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-3"
+          style="width: 60%;"
+        >
+          <div>
+            Nam 2
+          </div>
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-4"
+          style="width: 40%;"
+        >
+          <div>
+            thanhnam2@manabie.com
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

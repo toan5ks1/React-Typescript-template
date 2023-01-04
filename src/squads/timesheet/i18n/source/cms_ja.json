@@ -1,0 +1,363 @@
+{
+    "resources": {
+        "languages": {
+            "en": "英語",
+            "vi": "ベトナム語",
+            "ja": "日本語"
+        },
+        "configs": {
+            "config_title": "設定",
+            "apply": "適用する",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "グローバル",
+                    "COUNTRY_VN": "ベトナム",
+                    "COUNTRY_ID": "インドネシア",
+                    "COUNTRY_SG": "シンガポール",
+                    "COUNTRY_JP": "日本"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "月曜日",
+                "tuesday": "火曜日",
+                "wednesday": "水曜日",
+                "thursday": "木曜日",
+                "friday": "金曜日",
+                "saturday": "土曜日",
+                "sunday": "日曜日"
+            },
+            "name": "名前",
+            "city": "市",
+            "district": "地区",
+            "school": "校舎 (%{smart_count})",
+            "just_show_system_school": "有効な校舎のみ表示",
+            "teacher": "講師 (%{smart_count})",
+            "config": "コンフィグ",
+            "material": "資料",
+            "removeMaterial": "教材を削除",
+            "removeMaterialConfirmText": "本当にこのファイルを削除しますか？ |||| ファイル「%{name}」( %{week} ) を削除しようとしています",
+            "doYouWantToDoThis": "本当に実行しますか？",
+            "viewDetail": "詳細を見る",
+            "accountInfo": "アカウント情報",
+            "account": "アカウント",
+            "enterYourKeyword": "キーワードを入力",
+            "noResult": "検索結果はありませんでした",
+            "noResultSearchAndFilter": "他のキーワード、またはフィルターをお試しください",
+            "noResultSearch": "他のキーワードで検索してください",
+            "studyItem": "学習アイテム",
+            "students": "生徒",
+            "parents": "保護者",
+            "youFilterBy": "適応中のフィルター",
+            "all": "すべて",
+            "deleteDialogTitle": "項目の削除 |||| %{smart_count}を削除する",
+            "deleteConfirmText": "一度削除された||||は元に戻すことができません。本当に削除しますか？",
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "createdFail": "作成に失敗しました",
+            "updatedFail": "アップデートに失敗しました",
+            "cannotLoadPage": "読み込みに失敗しました。通信環境の良い状態で再度お試しください",
+            "somethingWentWrong": "エラーが発生しました",
+            "pleaseHelpUsReport": "下記よりエラー報告にご協力ください",
+            "back": "戻る",
+            "details": "詳細",
+            "netWorkUnstable": "インターネット接続が不安定です。ページを更新するか、再度お試しください"
+        },
+        "input": {
+            "error": {
+                "required": "*必須項目です",
+                "limitLength": "%{length} 文字以下で入力してください",
+                "dateMustComeAfter": "%{endDate} は %{startDate}の後に設定する必要があります",
+                "timeMustComeBefore": "%{startTime} は %{endTime}より前に設定してください",
+                "fieldCannotBeBlank": "%{field} は必須項目です"
+            },
+            "dropFileHere": "ここにファイルをドロップしてください",
+            "pleaseUploadFileSizeLessThan": "サイズが %{maxSize}MB以下のファイルをアップロードしてください",
+            "dragAndDropFileHere": "ファイルをドラッグ＆ドロップ または",
+            "dragAndDropCSVFileHere": "CSVファイルをドラッグ＆ドロップまたは選択してアップロードしてください",
+            "uploading": "アップロード中です",
+            "cannotUpload": "アップロードできませんでした",
+            "pasteVideoLink": "動画リンク",
+            "chooseFilesToUpload": "ファイルを選択",
+            "browse": "ファイルを選択",
+            "pleaseUploadFileSizeSmaller": "ファイルサイズが規定値を超えています"
+        },
+        "button": {
+            "audio": "音声",
+            "image": "画像",
+            "blank": "空欄",
+            "advanced": "絞り込み",
+            "clearAll": "リセット"
+        },
+        "from_to": "%{from} から %{to}",
+        "choices": {
+            "grades": {
+                "0": "その他",
+                "1": "小学1年生",
+                "2": "小学2年生",
+                "3": "小学3年生",
+                "4": "小学4年生",
+                "5": "小学5年生",
+                "6": "小学6年生",
+                "7": "中学1年生",
+                "8": "中学2年生",
+                "9": "中学3年生",
+                "10": "高校1年生",
+                "11": "高校2年生",
+                "12": "高校3年生",
+                "13": "大学1年生",
+                "14": "大学2年生",
+                "15": "大学3年生",
+                "16": "大学4年生"
+            },
+            "subjects": {
+                "SUBJECT_NONE": "",
+                "SUBJECT_MATHS": "算数・数学",
+                "SUBJECT_BIOLOGY": "生物",
+                "SUBJECT_PHYSICS": "物理",
+                "SUBJECT_CHEMISTRY": "化学",
+                "SUBJECT_GEOGRAPHY": "地理",
+                "SUBJECT_ENGLISH": "英語",
+                "SUBJECT_ENGLISH_2": "英語 2",
+                "SUBJECT_JAPANESE": "日本語",
+                "SUBJECT_SCIENCE": "理科",
+                "SUBJECT_SOCIAL_STUDIES": "社会",
+                "SUBJECT_LITERATURE": "文学"
+            },
+            "plan_privileges": {
+                "CAN_ACCESS_LEARNING_TOPICS": "学習中のトピックにアクセスできます",
+                "CAN_ACCESS_PRACTICE_TOPICS": "練習トピックにアクセスできます",
+                "CAN_ACCESS_MOCK_EXAMS": "模擬試験へのアクセスが可能です",
+                "CAN_ACCESS_ALL_LOS": "すべての学習項目にアクセスできます",
+                "CAN_ACCESS_SOME_LOS": "一部の学習項目にアクセスできます",
+                "CAN_WATCH_VIDEOS": "動画を視聴できます",
+                "CAN_READ_STUDY_GUIDES": "学習ガイドを読むことができます",
+                "CAN_SKIP_VIDEOS": "動画をスキップすることができます",
+                "CAN_CHAT_WITH_TEACHER": "講師とのチャットが可能です"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Manabie管理者",
+                "USER_GROUP_SCHOOL_ADMIN": "管理アカウント |||| 管理アカウント %{smart_count}",
+                "USER_GROUP_STUDENT": "生徒",
+                "USER_GROUP_TEACHER": "講師",
+                "USER_GROUP_PARENT": "保護者"
+            },
+            "topic_types": {
+                "TOPIC_TYPE_LEARNING": "学習",
+                "TOPIC_TYPE_PRACTICAL": "演習",
+                "TOPIC_TYPE_EXAM": "試験",
+                "TOPIC_TYPE_ASSIGNMENT": "課題",
+                "TOPIC_TYPE_LIVE_LESSON": "ビデオ通話"
+            },
+            "topic_statuses": {
+                "TOPIC_STATUS_NONE": "Unknown",
+                "TOPIC_STATUS_DRAFT": "下書き",
+                "TOPIC_STATUS_PUBLISHED": "公開済み"
+            },
+            "quizTypes": {
+                "0": "選択問題",
+                "1": "空欄補充",
+                "2": "単語のペア",
+                "3": "用語と定義",
+                "4": "自己採点",
+                "5": "複数回答"
+            },
+            "listTypes": {
+                "NUMBER": "1, 2, 3...",
+                "TEXT": "a, b, c...",
+                "TEXT_UPPERCASE": "A, B, C...",
+                "CUSTOM": "カスタム"
+            },
+            "answerConfigs": {
+                "0": "大文字小文字を区別する",
+                "1": "部分点"
+            },
+            "languages": {
+                "en": "英語",
+                "vi": "ベトナム語",
+                "ja": "日本語"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "月曜日",
+                "DATE_OF_WEEK_TUESDAY": "火曜日",
+                "DATE_OF_WEEK_WEDNESDAY": "水曜日",
+                "DATE_OF_WEEK_THURSDAY": "木曜日",
+                "DATE_OF_WEEK_FRIDAY": "金曜日",
+                "DATE_OF_WEEK_SATURDAY": "土曜日",
+                "DATE_OF_WEEK_SUNDAY": "日曜日"
+            }
+        },
+        "action": {
+            "add_filter": "フィルタを追加",
+            "add": "追加",
+            "back": "戻る",
+            "bulk_actions": "1件の項目が選択されています |||| %{smart_count} 件の項目が選択されています",
+            "cancel": "キャンセル",
+            "clear_input_value": "値をクリア",
+            "clone": "複製",
+            "confirm": "確定",
+            "create": "新規作成",
+            "create_item": "%{item} を新規作成",
+            "delete": "削除",
+            "discard": "削除",
+            "edit": "編集",
+            "export": "エクスポート",
+            "list": "一覧",
+            "refresh": "最新を表示",
+            "remove_filter": "フィルタを削除",
+            "remove": "削除",
+            "save": "保存",
+            "search": "検索",
+            "show": "表示",
+            "sort": "ソート",
+            "undo": "やり直し",
+            "unselect": "選択を解除する",
+            "expand": "拡大する",
+            "close": "閉じる",
+            "open_menu": "メニューを開く",
+            "close_menu": "メニューを閉じる",
+            "copy": "コピー",
+            "leave": "破棄",
+            "addMore": "カードを追加",
+            "moveUp": "上に移動",
+            "moveDown": "下に移動",
+            "detail": "詳細",
+            "duplicate": "コピーを作成する",
+            "moreAction": "変更",
+            "warning": "警告",
+            "OK": "確認",
+            "resend": "再送する",
+            "download": "ダウンロード |||| ダウンロード %{extension}",
+            "update": "更新する",
+            "uploadFile": "ファイルをアップロードする",
+            "addCourse": "コースを追加する",
+            "upload": "アップロード",
+            "reset": "リセット",
+            "apply": "適用",
+            "rename": "名前の変更",
+            "selectAllItems": "すべてを選択",
+            "filter": "フィルター",
+            "archive": "アーカイブ",
+            "unarchive": "アーカイブ解除",
+            "activate": "有効化",
+            "reIssuePassword": "パスワードの再発行",
+            "printAsStudentCard": "QRカード印刷",
+            "printAsQrCodeSheet": "QRコード印刷",
+            "createNewOrder": "新規オーダー",
+            "createEnrollmentOrder": "入塾申請作成",
+            "createBulkOrder": "新規オーダー",
+            "downloadStudentQrUrls": "QRコード印刷",
+            "importParents": "保護者のインポート",
+            "createCustomBillingOrder": "請求項目作成"
+        },
+        "message": {
+            "about": "について",
+            "are_you_sure": "本当によろしいですか？",
+            "bulk_delete_content": "本当に %{name} を削除しますか？ |||| 本当に %{smart_count} を削除しますか？",
+            "bulk_delete_title": "%{name}を削除 |||| %{smart_count}件の%{name}を削除します",
+            "delete_content": "このデータを削除して本当によろしいですか？",
+            "delete_title": "%{name} #%{id}を削除します",
+            "details": "詳細",
+            "error": "クライアントエラーが発生し、処理は完了しませんでした",
+            "invalid_form": "このフォームは正しくありません。エラーをチェックしてください。",
+            "loading": "ページの読み込み中です、少々お待ちください。",
+            "no": "いいえ",
+            "not_found": "URLが間違っているか、リンクが無効です",
+            "yes": "はい",
+            "unsaved_changes": "行った変更が保存されない可能性があります。本当にページを離れますか？",
+            "schoolDontHaveTeacherPleaseCreateTeacherBeforeCreateClass": "この校舎には講師が登録されていません。授業を作成する前に、講師アカウントを作成してください。",
+            "just_show_verified_schools": "リストには有効な校舎のみ表示されています",
+            "please_select_member_before_update": "編集するメンバーを指定してください",
+            "please_select_teacher_before_add": "追加する講師を選んでください",
+            "this_school_dont_have_specify_config": "この校舎には個別設定はありません",
+            "this_is_default_config": "デフォルトの設定です",
+            "pls_select_time_duration_or_expired_at": "有効期限を設定してください",
+            "pleaseSearchByTeacherEmail": "講師のメールアドレスで検索してください",
+            "maxFileSizeIs": "ファイルサイズは最大で%{fileSize}%{fileUnit}です",
+            "noDataMessage": "%{name}がありません",
+            "noData": "データがありません",
+            "noDataInformation": "表示情報がありません",
+            "canNotRemoveBooksFromCourse": "教材をコースから削除することができません",
+            "downloadBookSuccess": "教材が正常にダウンロードされました",
+            "downloadBookFail": "教材のダウンロードに失敗しました",
+            "downloadStudyPlanSuccess": "学習計画が正常にダウンロードされました",
+            "duplicateBookSuccess": "教材のコピーが作成されました",
+            "duplicateBookFail": "教材のコピーに失敗しました",
+            "mustBeAValidPhoneNumber": "電話番号が正しくありません。もう一度確認してください。",
+            "moveSuccess": "項目を移動しました",
+            "moveFail": "項目を移動できませんでした",
+            "uploadBrightcoveLinkFail": "リンクが識別できません",
+            "brightcoveVideoLinkHasExisted": "既に存在するBrightcoveリンクです。別のリンクをお試しください。",
+            "unableToLoadData": "データの読み込みに失敗しました。もう一度お試しください。",
+            "unexpected": "予期せぬエラーが発生しました。もう一度ログインしてください。",
+            "invalidSearchQueryReturningAllItems": "無効な検索項目です",
+            "linkLOsSuccess": "学習項目は正常に登録されました",
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "youAreRestoredNetwork": "ネットワーク接続が回復しました",
+            "unknown": "原因不明のエラーが発生しました。再度お試しいただくか、マナビースタッフにお問い合わせください。"
+        },
+        "timesheet_management": {
+            "name": "勤怠管理",
+            "titles": {
+                "timesheetManagement": "勤怠管理",
+                "generalInfo": "基本情報",
+                "createTimesheet": "勤怠の作成",
+                "editTimesheet": "勤怠の編集",
+                "remarks": "リマーク",
+                "remark": "リマーク",
+                "otherWorkingHours": "Other Working Hours",
+                "lessonHours": "Lesson Hours"
+            },
+            "labels": {
+                "date": "日付",
+                "location": "所属",
+                "staffName": "名前",
+                "staff": "スタッフ",
+                "staffEmail": "メールアドレス",
+                "workingType": "Working Type",
+                "timeRange": "Time Range",
+                "totalHours": "Total Hours",
+                "remarks": "Remarks",
+                "otherWorkingHours": "Other Working Hours",
+                "start": "Start",
+                "end": "End",
+                "status": "Status",
+                "type": "Type",
+                "numberOfLessons": "Number of Lessons",
+                "lessonHours": "Lesson Hours"
+            },
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "Published",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "Completed",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "Canceled"
+            },
+            "lessonType": {
+                "LESSON_TEACHING_METHOD_INDIVIDUAL": "Individual",
+                "LESSON_TEACHING_METHOD_GROUP": "Group"
+            },
+            "timesheetStatus": {
+                "TIMESHEET_STATUS_ALL": "All",
+                "TIMESHEET_STATUS_DRAFT": "Draft",
+                "TIMESHEET_STATUS_SUBMITTED": "Submitted",
+                "TIMESHEET_STATUS_REJECTED": "Rejected",
+                "TIMESHEET_STATUS_APPROVED": "Approved",
+                "TIMESHEET_STATUS_CONFIRMED": "Confirmed"
+            },
+            "timesheetDetail": "勤怠詳細",
+            "messages": {
+                "success": {
+                    "addTimesheet": "勤怠は正常に作成されました!",
+                    "updateTimesheet": "勤怠は正常に更新されました!"
+                },
+                "error": {
+                    "timesheetAlreadyExists": "選択された日付は作成されています。他の日付を選んで下さい。"
+                },
+                "validation": {
+                    "requiredField": "This field is required!",
+                    "invalidTimeRange": "Start Time must come before End Time"
+                }
+            }
+        }
+    }
+}

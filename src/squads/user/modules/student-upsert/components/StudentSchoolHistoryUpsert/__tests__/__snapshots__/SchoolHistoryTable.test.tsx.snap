@@ -1,0 +1,507 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SchoolHistoryTable/> should match snapshot empty table 1`] = `
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: #757575;
+}
+
+.emotion-10::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-10.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-10 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-10:hover {
+  background-color: rgba(33, 150, 243, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-10:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-10.Mui-checked,
+.emotion-10.MuiCheckbox-indeterminate {
+  color: #2196F3;
+}
+
+.emotion-10.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-10.MuiCheckbox-indeterminate {
+  color: #757575;
+}
+
+.emotion-11 {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-13 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-20 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-22 {
+  display: table-row-group;
+}
+
+.emotion-24 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: center;
+  padding: 0;
+  color: #212121;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  color: #757575;
+  background-color: #FAFAFA;
+  height: 80px;
+  border: none;
+}
+
+.emotion-26 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-28 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  height: 24px;
+  margin-right: 5px;
+  color: #00000061;
+}
+
+<div>
+  
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiTableContainer-root emotion-1"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="SchoolHistoryTable"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              scope="col"
+              style="min-width: 5%; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 5%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 170px;"
+            >
+              <div
+                class="MuiBox-root emotion-8"
+              >
+                <div
+                  class="MuiBox-root emotion-9"
+                >
+                  <span
+                    aria-disabled="true"
+                    class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-disabled emotion-10"
+                    data-testid="TableHeaderWithCheckbox__checkboxHeader"
+                    style="padding: 0px; width: 18px; height: 18px;"
+                    tabindex="-1"
+                  >
+                    <input
+                      aria-label="ra.common.action.selectAllItems"
+                      class="PrivateSwitchBase-input emotion-11"
+                      data-indeterminate="false"
+                      disabled=""
+                      type="checkbox"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                      data-testid="CheckBoxOutlineBlankIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 emotion-13"
+                  data-testid="TableHeaderWithCheckbox__cellHeader"
+                >
+                  Level
+                </h6>
+              </div>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 283px;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-13"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                School Name
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 283px;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-13"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                Course
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 170px;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-13"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                Start Date
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-20"
+              scope="col"
+              style="width: 170px;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-13"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                End Date
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-22"
+        >
+          <tr
+            class="MuiTableRow-root emotion-4"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-paddingNone MuiTableCell-sizeMedium emotion-24"
+              colspan="12"
+              data-testid="TableBase__noDataMessage"
+            >
+              <div
+                class="MuiBox-root emotion-25"
+              >
+                <div
+                  class="MuiBox-root emotion-26"
+                >
+                  <div
+                    class="MuiBox-root emotion-8"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-28"
+                      data-testid="NoData__icon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04-.39.08-.74.28-1.01.55-.18.18-.33.4-.43.64-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 emotion-6"
+                      data-testid="NoData__message"
+                    >
+                      ra.message.noDataInformation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

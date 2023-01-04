@@ -1,0 +1,363 @@
+{
+    "resources": {
+        "languages": {
+            "en": "Tiếng anh",
+            "vi": "Tiếng việt",
+            "ja": "Tiếng nhật"
+        },
+        "configs": {
+            "config_title": "Cấu hình",
+            "apply": "Áp dụng",
+            "choices": {
+                "countries": {
+                    "COUNTRY_NONE": "",
+                    "COUNTRY_MASTER": "Toàn cầu",
+                    "COUNTRY_VN": "Việt Nam",
+                    "COUNTRY_ID": "Indonesia",
+                    "COUNTRY_SG": "Singapore",
+                    "COUNTRY_JP": "Japan"
+                }
+            }
+        },
+        "common": {
+            "day": {
+                "monday": "Thứ Hai",
+                "tuesday": "Thứ Ba",
+                "wednesday": "Thứ Tư",
+                "thursday": "Thứ Năm",
+                "friday": "Thứ Sáu",
+                "saturday": "Thứ Bảy",
+                "sunday": "Chủ Nhật"
+            },
+            "name": "Tên",
+            "city": "Thành phố/Tỉnh",
+            "district": "Quận/Huyện",
+            "school": "Trường học (%{smart_count})",
+            "just_show_system_school": "Chỉ hiển thị những trường đã được xác minh",
+            "teacher": "Giáo viên (%{smart_count})",
+            "config": "Cấu hình",
+            "material": "Tài liệu",
+            "removeMaterial": "Xóa tài liệu",
+            "removeMaterialConfirmText": "Are you sure you want to remove this material? |||| You're about to remove the file named “%{name}” for %{week}.",
+            "doYouWantToDoThis": "Bạn có muốn thực hiện hành động này?",
+            "viewDetail": "Xem chi tiết",
+            "accountInfo": "Thông tin tài khoản",
+            "account": "Tài khoản",
+            "enterYourKeyword": "Enter your keyword",
+            "noResult": "No Result",
+            "noResultSearchAndFilter": "Please use try again with different keywords or filters",
+            "noResultSearch": "Please use try again with different keywords",
+            "studyItem": "Study Item",
+            "students": "Học sinh",
+            "parents": "Phụ huynh",
+            "youFilterBy": "You filter by",
+            "all": "All",
+            "deleteDialogTitle": "Delete item |||| Delete %{smart_count}",
+            "deleteConfirmText": "All |||| content will be deleted, do you want to proceed?",
+            "youAreOffline": "Please try again, your network is down",
+            "createdFail": "Created failed",
+            "updatedFail": "Updated failed",
+            "somethingWentWrong": "Có gì đó sai sai ở đây",
+            "netWorkUnstable": "Kết nối internet của bạn không ổn định, Vui lòng tải lại trang hoặc thử lại",
+            "pleaseHelpUsReport": "Vui lòng giúp chúng tôi báo cáo sự cố này bằng cách gửi hoặc thông báo lỗi này cho nhân viên của chúng tôi",
+            "cannotLoadPage": "We cannot load the page data, maybe the internet was disconnected, please try again",
+            "back": "Trở về",
+            "details": "Chi tiết"
+        },
+        "input": {
+            "error": {
+                "required": "This field is required",
+                "limitLength": "%{field} must not exceed %{length} characters",
+                "dateMustComeAfter": "%{endDate} must come after %{startDate}",
+                "timeMustComeBefore": "%{startTime} must come before %{endTime}",
+                "fieldCannotBeBlank": "%{field} cannot be blank!"
+            },
+            "dropFileHere": "Drop your file here",
+            "pleaseUploadFileSizeLessThan": "Please, upload file size less than %{maxSize}MB",
+            "dragAndDropFileHere": "Drag & drop your files or",
+            "dragAndDropCSVFileHere": "Drag and drop or select a CSV files to upload",
+            "uploading": "Đang tải lên...",
+            "cannotUpload": "Tải lên thất bại",
+            "pasteVideoLink": "Paste video link",
+            "chooseFilesToUpload": "Choose files to upload",
+            "browse": "browse",
+            "pleaseUploadFileSizeSmaller": "Please, upload file size smaller"
+        },
+        "button": {
+            "audio": "Audio",
+            "image": "Image",
+            "blank": "Blank",
+            "advanced": "Advanced",
+            "clearAll": "Clear All"
+        },
+        "from_to": "Từ %{from} đến %{to}",
+        "choices": {
+            "grades": {
+                "0": "Khác",
+                "1": "Lớp 1",
+                "2": "Lớp 2",
+                "3": "Lớp 3",
+                "4": "Lớp 4",
+                "5": "Lớp 5",
+                "6": "Lớp 6",
+                "7": "Lớp 7",
+                "8": "Lớp 8",
+                "9": "Lớp 9",
+                "10": "Lớp 10",
+                "11": "Lớp 11",
+                "12": "Lớp 12",
+                "13": "CĐ/ĐH năm 1",
+                "14": "CĐ/ĐH năm 2",
+                "15": "CĐ/ĐH năm 3",
+                "16": "CĐ/ĐH năm 4"
+            },
+            "subjects": {
+                "SUBJECT_NONE": "",
+                "SUBJECT_MATHS": "Toán",
+                "SUBJECT_BIOLOGY": "Sinh",
+                "SUBJECT_PHYSICS": "Lý",
+                "SUBJECT_CHEMISTRY": "Hóa",
+                "SUBJECT_GEOGRAPHY": "Địa lý",
+                "SUBJECT_ENGLISH": "Anh",
+                "SUBJECT_ENGLISH_2": "Anh 2",
+                "SUBJECT_JAPANESE": "Nhật ngữ",
+                "SUBJECT_SCIENCE": "Khoa học",
+                "SUBJECT_SOCIAL_STUDIES": "Nghiên cứu xã hội",
+                "SUBJECT_LITERATURE": "Ngữ văn"
+            },
+            "plan_privileges": {
+                "CAN_ACCESS_LEARNING_TOPICS": "Có thể truy cập các chủ đề học tập",
+                "CAN_ACCESS_PRACTICE_TOPICS": "Có thể truy cập các chủ đề thực tập",
+                "CAN_ACCESS_MOCK_EXAMS": "Có thể truy cập các bài kiểm tra giả",
+                "CAN_ACCESS_ALL_LOS": "Có thể truy cập tất cả các mục tiêu học tập",
+                "CAN_ACCESS_SOME_LOS": "Có thể truy cập một số mục tiêu học tập",
+                "CAN_WATCH_VIDEOS": "Có thể xem video",
+                "CAN_READ_STUDY_GUIDES": "Có thể đọc hướng dẫn học tập",
+                "CAN_SKIP_VIDEOS": "Có thể bỏ qua video",
+                "CAN_CHAT_WITH_TEACHER": "Có thể trò chuyện với giáo viên"
+            },
+            "user_group": {
+                "USER_GROUP_ADMIN": "Quản trị viên Manabie",
+                "USER_GROUP_SCHOOL_ADMIN": "Quản trị viên |||| Quản trị viên của trường %{smart_count}",
+                "USER_GROUP_STUDENT": "Student",
+                "USER_GROUP_TEACHER": "Teacher",
+                "USER_GROUP_PARENT": "Parent"
+            },
+            "topic_types": {
+                "TOPIC_TYPE_LEARNING": "Lý thuyết",
+                "TOPIC_TYPE_PRACTICAL": "Thực hành",
+                "TOPIC_TYPE_EXAM": "Thi",
+                "TOPIC_TYPE_ASSIGNMENT": "Bài tập",
+                "TOPIC_TYPE_LIVE_LESSON": "Bài học trực tuyến"
+            },
+            "topic_statuses": {
+                "TOPIC_STATUS_NONE": "None",
+                "TOPIC_STATUS_DRAFT": "Nháp",
+                "TOPIC_STATUS_PUBLISHED": "Xuất bản"
+            },
+            "quizTypes": {
+                "0": "Trắc nghiệm",
+                "1": "Điền vào chỗ trống",
+                "2": "Pair of words",
+                "3": "Term and definition",
+                "4": "Manual input",
+                "5": "Multiple answer"
+            },
+            "listTypes": {
+                "NUMBER": "1, 2, 3...",
+                "TEXT": "a, b, c...",
+                "TEXT_UPPERCASE": "A, B, C...",
+                "CUSTOM": "Tùy chỉnh"
+            },
+            "answerConfigs": {
+                "0": "Phân biệt chữ hoa, thường",
+                "1": "Partial credits"
+            },
+            "languages": {
+                "en": "English",
+                "vi": "Tiếng việt",
+                "ja": "日本語"
+            },
+            "dayOfWeek": {
+                "DATE_OF_WEEK_MONDAY": "Monday",
+                "DATE_OF_WEEK_TUESDAY": "Tuesday",
+                "DATE_OF_WEEK_WEDNESDAY": "Wednesday",
+                "DATE_OF_WEEK_THURSDAY": "Thursday",
+                "DATE_OF_WEEK_FRIDAY": "Friday",
+                "DATE_OF_WEEK_SATURDAY": "Saturday",
+                "DATE_OF_WEEK_SUNDAY": "Sunday"
+            }
+        },
+        "action": {
+            "add_filter": "Thêm bộ lọc",
+            "add": "Thêm",
+            "back": "Trở về",
+            "bulk_actions": "%{smart_count} đã chọn",
+            "cancel": "Hủy bỏ",
+            "clear_input_value": "Xóa giá trị",
+            "clone": "Nhân bản",
+            "confirm": "Xác nhận",
+            "create": "Tạo mới",
+            "create_item": "Create %{item}",
+            "delete": "Xóa",
+            "discard": "Discard",
+            "edit": "Sửa",
+            "export": "Xuất",
+            "list": "Danh sách",
+            "refresh": "Làm mới",
+            "remove_filter": "Bỏ bộ lọc",
+            "remove": "Xóa bỏ",
+            "save": "Lưu",
+            "search": "Tìm kiếm",
+            "show": "Hiển thị",
+            "sort": "Sắp xếp",
+            "undo": "Hoàn tác",
+            "unselect": "Huỷ chọn",
+            "expand": "Mở rộng",
+            "close": "Đóng",
+            "open_menu": "Mở menu",
+            "close_menu": "Đóng menu",
+            "copy": "Copy",
+            "leave": "Leave",
+            "addMore": "Add More",
+            "moveUp": "Move up",
+            "moveDown": "Move down",
+            "detail": "Detail",
+            "duplicate": "Duplicate",
+            "moreAction": "More Action",
+            "warning": "Warning",
+            "OK": "OK",
+            "resend": "Resend",
+            "download": "Download |||| Download %{extension}",
+            "update": "Update",
+            "uploadFile": "Upload file",
+            "addCourse": "Add course",
+            "upload": "Upload",
+            "reset": "Reset",
+            "apply": "Apply",
+            "rename": "Rename",
+            "selectAllItems": "Select all items",
+            "filter": "Filter",
+            "archive": "Archive",
+            "unarchive": "Unarchive",
+            "activate": "Activate",
+            "reIssuePassword": "Re-Issue password",
+            "printAsStudentCard": "Print as Student Card",
+            "printAsQrCodeSheet": "Print as QR code sheet",
+            "createNewOrder": "Create Order",
+            "createEnrollmentOrder": "Create Enrollment Request",
+            "createBulkOrder": "Create Order",
+            "downloadStudentQrUrls": "Download QR URLs",
+            "importParents": "Import Parents",
+            "createCustomBillingOrder": "Create Custom Billing"
+        },
+        "message": {
+            "about": "Về",
+            "are_you_sure": "Bạn có chắc chắn không?",
+            "bulk_delete_content": "Bạn có chắc chắn muốn xóa %{name} này? |||| Bạn có chắc chắn muốn xóa %{smart_count} vật phẩm này?",
+            "bulk_delete_title": "Delete the %{name} |||| Delete %{smart_count} %{name}",
+            "delete_content": "Bạn có chắc chắn muốn xóa vật phẩm này?",
+            "delete_title": "Xóa %{name} #%{id}",
+            "details": "Chi tiết",
+            "error": "Đã xảy ra lỗi ở phía người dùng và yêu cầu của bạn không thể hoàn thành.",
+            "invalid_form": "Dữ liệu nhập không đúng. Vui lòng kiểm tra lại",
+            "loading": "Trang web đang tải, vui lòng đợi trong giây lát",
+            "no": "Không",
+            "not_found": "Bạn đã nhập một URL sai hoặc bạn đã làm theo một liên kết không đúng.",
+            "yes": "Có",
+            "unsaved_changes": "Một vài thay đổi của bạn chưa được lưu. Bạn có chắc là muốn bỏ qua chúng?",
+            "schoolDontHaveTeacherPleaseCreateTeacherBeforeCreateClass": "Trường học không tồn tại giáo viên nào. Hãy tạo giáo viên trước khi tạo lớp.",
+            "just_show_verified_schools": "Danh sách này chỉ hiển thị các trường được xác minh",
+            "please_select_member_before_update": "Vui lòng chọn thành viên trước khi thực hiện",
+            "please_select_teacher_before_add": "Vui lòng chọn giáo viên trước khi thực hiện",
+            "this_school_dont_have_specify_config": "Trường này không có cấu hình riêng biệt.",
+            "this_is_default_config": "Đây là cấu hình mặc định.",
+            "pls_select_time_duration_or_expired_at": "Vui lòng nhập thời gian hết hạn",
+            "pleaseSearchByTeacherEmail": "Vui lòng tìm kiếm bởi email của giáo viên",
+            "maxFileSizeIs": "Max file size is: %{fileSize}%{fileUnit}",
+            "noDataMessage": "Không có dữ liệu cho %{name}",
+            "noData": "Không có dữ liệu",
+            "noDataInformation": "No Information",
+            "canNotRemoveBooksFromCourse": "Không thể xóa sách khỏi khóa học",
+            "downloadBookSuccess": "Bạn đã tải sách thành công",
+            "downloadBookFail": "Tải sách thất bại",
+            "downloadStudyPlanSuccess": "You have download study plan successfully",
+            "duplicateBookSuccess": "You have duplicated book successfully",
+            "duplicateBookFail": "Nhân bản sách thất bại",
+            "mustBeAValidPhoneNumber": "Số điện thoại phải hợp lệ",
+            "moveSuccess": "You have moved item successfully",
+            "moveFail": "Move item failed",
+            "uploadBrightcoveLinkFail": "Đường dẫn không được hỗ trợ, vui lòng thử lại!",
+            "brightcoveVideoLinkHasExisted": "Brightcove video link has uploaded, please try another link!",
+            "unableToLoadData": "Unable to load data, please try again!",
+            "unexpected": "An unexpected error occurred. Please log in again",
+            "invalidSearchQueryReturningAllItems": "Invalid search query - returning all items",
+            "linkLOsSuccess": "You have linked learning objectives successfully",
+            "youAreOffline": "Please try again, your network is down",
+            "youAreRestoredNetwork": "Restored your network",
+            "unknown": "We meet an unknown error. Please try again or contact with Staff."
+        },
+        "timesheet_management": {
+            "name": "Timesheet Management",
+            "titles": {
+                "timesheetManagement": "Timesheet Management",
+                "generalInfo": "General Info",
+                "createTimesheet": "Create Timesheet",
+                "editTimesheet": "Edit Timesheet",
+                "remarks": "Remarks",
+                "remark": "Remark",
+                "otherWorkingHours": "Other Working Hours",
+                "lessonHours": "Lesson Hours"
+            },
+            "labels": {
+                "date": "Date",
+                "location": "Location",
+                "staff": "Staff",
+                "staffName": "Name",
+                "staffEmail": "Email",
+                "workingType": "Working Type",
+                "timeRange": "Time Range",
+                "totalHours": "Total Hours",
+                "remarks": "Remarks",
+                "otherWorkingHours": "Other Working Hours",
+                "start": "Start",
+                "end": "End",
+                "status": "Status",
+                "type": "Type",
+                "numberOfLessons": "Number of Lessons",
+                "lessonHours": "Lesson Hours"
+            },
+            "lessonStatus": {
+                "LESSON_SCHEDULING_STATUS_PUBLISHED": "Published",
+                "LESSON_SCHEDULING_STATUS_COMPLETED": "Completed",
+                "LESSON_SCHEDULING_STATUS_CANCELED": "Canceled"
+            },
+            "lessonType": {
+                "LESSON_TEACHING_METHOD_INDIVIDUAL": "Individual",
+                "LESSON_TEACHING_METHOD_GROUP": "Group"
+            },
+            "timesheetStatus": {
+                "TIMESHEET_STATUS_ALL": "All",
+                "TIMESHEET_STATUS_DRAFT": "Draft",
+                "TIMESHEET_STATUS_SUBMITTED": "Submitted",
+                "TIMESHEET_STATUS_REJECTED": "Rejected",
+                "TIMESHEET_STATUS_APPROVED": "Approved",
+                "TIMESHEET_STATUS_CONFIRMED": "Confirmed"
+            },
+            "timesheetDetail": "Timesheet Detail",
+            "messages": {
+                "success": {
+                    "addTimesheet": "You have created the timesheet successfully!",
+                    "updateTimesheet": "You have edited the timesheet successfully!"
+                },
+                "error": {
+                    "timesheetAlreadyExists": "Timesheet for the date selected is already created."
+                },
+                "validation": {
+                    "requiredField": "This field is required!",
+                    "invalidTimeRange": "Start Time must come before End Time"
+                }
+            }
+        }
+    }
+}

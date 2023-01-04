@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalLocationsDisplay display a shorten version of locations based on LT-9751 should display locations using sortedLocationTypes from the globalLocationsTypes hook 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+<body>
+  <div>
+    <p
+      class="MuiTypography-root MuiTypography-body1 emotion-0"
+      data-testid="GlobalLocationsDisplay__root"
+    >
+      Group Brand
+       
+      ·
+       
+      Osaka prefecture
+       
+      ·
+       
+      Location 16
+    </p>
+  </div>
+</body>
+`;
+
+exports[`GlobalLocationsDisplay display a shorten version of locations based on LT-9751 should not display anything when the user hasn't selected any locations 1`] = `
+<body>
+  <div />
+</body>
+`;

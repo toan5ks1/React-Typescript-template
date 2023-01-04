@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound should render full screen without scroll 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.emotion-1 {
+  margin-top: 174px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  max-height: 380px;
+  max-width: 580px;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.emotion-6 {
+  margin-top: 42px;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.167;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.emotion-8 {
+  margin-top: 8px;
+}
+
+.emotion-9 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emotion-10 {
+  margin-top: 48px;
+}
+
+.emotion-11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #fff;
+  background-color: #1976d2;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+
+.emotion-11::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-11.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-11 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-11:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #1565c0;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+@media (hover: none) {
+  .emotion-11:hover {
+    background-color: #1976d2;
+  }
+}
+
+.emotion-11:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+
+.emotion-11.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+.emotion-11.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.emotion-12 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="PageNotFound__root"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+      style="position: absolute; left: 50%; transform: translateX(-50%);"
+    >
+      <div
+        class="MuiBox-root emotion-2"
+      >
+        <div
+          class="MuiBox-root emotion-3"
+        >
+          <div
+            class="MuiBox-root emotion-4"
+          >
+            <svg
+              fill="none"
+              height="373"
+              viewBox="0 0 582 373"
+              width="582"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                stroke="#266698"
+                stroke-width="8"
+                x1="-3.49691e-07"
+                x2="582"
+                y1="369"
+                y2="369"
+              />
+              <path
+                d="M251.938 310.142C251.938 327.912 247.879 341.504 239.759 350.919C231.639 360.334 219.752 365.041 204.097 365.041C188.638 365.041 176.815 360.422 168.631 351.184C160.446 341.946 156.256 328.706 156.062 311.466V287.811C156.062 269.864 160.154 256.243 168.338 246.946C176.588 237.649 188.443 233 203.903 233C219.362 233 231.185 237.619 239.369 246.857C247.554 256.037 251.744 269.247 251.938 286.487V310.142ZM223.779 284.192C223.779 273.542 222.156 265.804 218.908 260.979C215.725 256.095 210.723 253.653 203.903 253.653C197.277 253.653 192.373 255.978 189.19 260.626C186.072 265.216 184.415 272.424 184.22 282.251V313.496C184.22 323.969 185.779 331.766 188.897 336.885C192.08 341.946 197.147 344.476 204.097 344.476C210.983 344.476 215.952 342.034 219.005 337.15C222.058 332.266 223.65 324.793 223.779 314.731V284.192Z"
+                fill="#266698"
+              />
+              <path
+                d="M121.009 315.344H135.877V336.474H121.009V365.041H94.967V336.474H41.1714L40 319.969L94.6967 233H121.009V315.344ZM65.9517 315.344H94.967V268.731L93.255 271.724L65.9517 315.344Z"
+                fill="#266698"
+              />
+              <path
+                d="M353.132 315.344H368V336.474H353.132V365.041H327.09V336.474H273.294L272.123 319.969L326.82 233H353.132V315.344ZM298.075 315.344H327.09V268.731L325.378 271.724L298.075 315.344Z"
+                fill="#266698"
+              />
+              <path
+                d="M419.5 364.5V345.5H540.5V364.5H419.5Z"
+                fill="white"
+                stroke="#3B7FB4"
+                stroke-width="3"
+              />
+              <path
+                d="M446.5 150L432 344H529L514 150H446.5Z"
+                fill="white"
+                stroke="#3B7FB4"
+                stroke-width="3"
+              />
+              <path
+                d="M436.734 149.5L438.705 144.5H521.186L522.368 149.5H436.734Z"
+                fill="white"
+                stroke="#3B7FB4"
+              />
+              <path
+                d="M432.763 143.5L434.937 138.5H526.048L527.353 143.5H432.763Z"
+                fill="white"
+                stroke="#3B7FB4"
+              />
+              <path
+                d="M434.89 54.5L433.64 49.5H527.36L526.109 54.5H434.89Z"
+                fill="white"
+                stroke="#3B7FB4"
+              />
+              <rect
+                fill="white"
+                height="80"
+                stroke="#3B7FB4"
+                stroke-width="3"
+                width="83"
+                x="439.5"
+                y="56.5"
+              />
+              <rect
+                fill="white"
+                height="81"
+                stroke="#3B7FB4"
+                stroke-width="2"
+                width="6"
+                x="438"
+                y="56"
+              />
+              <rect
+                fill="white"
+                height="81"
+                stroke="#3B7FB4"
+                stroke-width="2"
+                width="6"
+                x="516"
+                y="56"
+              />
+              <path
+                d="M473.766 7.72728C476.53 4.4639 481.548 4.41984 484.369 7.63419L519.792 48H439.657L473.766 7.72728Z"
+                fill="white"
+                stroke="#3B7FB4"
+                stroke-width="2"
+              />
+              <path
+                d="M495 365H496V364V340.5C496 331.94 489.06 325 480.5 325C471.94 325 465 331.94 465 340.5V364V365H466H495Z"
+                fill="white"
+                stroke="#3B7FB4"
+                stroke-width="2"
+              />
+              <path
+                d="M445.5 111V111.5H446H449.5C457.784 111.5 464.5 104.784 464.5 96.5C464.5 88.2157 457.784 81.5 449.5 81.5H446H445.5V82V111Z"
+                fill="white"
+                stroke="#3B7FB4"
+              />
+              <path
+                d="M430.437 82.999C430.403 72.5653 91.3485 48.8655 91.3485 48.8655C76.4049 86.8905 76.2779 108.023 91.5938 144.865C91.5938 144.865 430.51 122.565 430.51 111.499C430.51 100.433 430.471 93.4326 430.437 82.999Z"
+                fill="#EBF0F3"
+              />
+              <rect
+                fill="#EBF0F3"
+                height="75.2818"
+                transform="rotate(62.5469 511.953 161)"
+                width="1.73679"
+                x="511.953"
+                y="161"
+              />
+              <rect
+                fill="#EBF0F3"
+                height="81.8024"
+                transform="rotate(61.6048 514.949 205.922)"
+                width="1.73679"
+                x="514.949"
+                y="205.922"
+              />
+              <rect
+                fill="#EBF0F3"
+                height="89.4701"
+                transform="rotate(61.6048 518.706 255.297)"
+                width="1.73679"
+                x="518.706"
+                y="255.297"
+              />
+              <rect
+                fill="#EBF0F3"
+                height="91.0016"
+                transform="rotate(60.1295 521.012 294.508)"
+                width="1.73679"
+                x="521.012"
+                y="294.508"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiBox-root emotion-5"
+          >
+            <div
+              class="MuiBox-root emotion-6"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 MuiTypography-alignCenter emotion-7"
+              >
+                ra.pageNotFound.title
+              </h3>
+            </div>
+            <div
+              class="MuiBox-root emotion-8"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter emotion-9"
+              >
+                ra.pageNotFound.pageLookingForDoesExist
+              </p>
+            </div>
+            <div
+              class="MuiBox-root emotion-10"
+            >
+              <button
+                class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  emotion-11"
+                data-testid="PageNotFound__backHome"
+                style="word-break: keep-all;"
+                tabindex="0"
+                type="button"
+              >
+                ra.pageNotFound.backToHome
+                <span
+                  class="MuiTouchRipple-root emotion-12"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

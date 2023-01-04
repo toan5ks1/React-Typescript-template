@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AssignmentVerticalField /> should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.emotion-1 {
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 emotion-2"
+      >
+        Name
+      </h6>
+    </div>
+    <p
+      class="MuiTypography-root MuiTypography-body2 emotion-3"
+      data-testid="Test_Id"
+    >
+      Test
+    </p>
+  </div>
+</div>
+`;

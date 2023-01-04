@@ -1,0 +1,1 @@
+import{r,ch as a}from"./index.7daee9ef.js";function k(t,o,u,e){const{register:p,setValue:s}=a(),[x,n]=r.exports.useState(o);return r.exports.useEffect(()=>{p(t,u),s(t,o)},[]),[x,r.exports.useCallback(c=>{n(c),s(t,c,e)},[t,s,e])]}export{k as u};

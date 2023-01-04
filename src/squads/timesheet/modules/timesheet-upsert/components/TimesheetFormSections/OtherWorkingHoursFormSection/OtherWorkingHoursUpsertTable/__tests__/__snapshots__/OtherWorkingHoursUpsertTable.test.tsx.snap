@@ -1,0 +1,1540 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OtherWorkingHoursUpsertTable /> should match snap shot 1`] = `
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 9px;
+  border-radius: 50%;
+  color: #757575;
+}
+
+.emotion-10::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-10.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-10 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-10:hover {
+  background-color: rgba(33, 150, 243, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-10:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-10.Mui-checked,
+.emotion-10.MuiCheckbox-indeterminate {
+  color: #2196F3;
+}
+
+.emotion-10.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-10.MuiCheckbox-indeterminate {
+  color: #757575;
+}
+
+.emotion-11 {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-12 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-13 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+.emotion-14 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-19 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-21 {
+  display: table-row-group;
+}
+
+.emotion-22 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-22.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-22.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-22.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-22.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-23 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-32 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: top;
+  width: 100%;
+}
+
+.emotion-33 {
+  width: 100%;
+}
+
+.emotion-33.Mui-focused .MuiAutocomplete-clearIndicator {
+  visibility: visible;
+}
+
+@media (pointer: fine) {
+  .emotion-33:hover .MuiAutocomplete-clearIndicator {
+    visibility: visible;
+  }
+}
+
+.emotion-33 .MuiAutocomplete-tag {
+  margin: 3px;
+  max-width: calc(100% - 6px);
+}
+
+.emotion-33 .MuiAutocomplete-inputRoot {
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-33 .MuiAutocomplete-inputRoot,
+.MuiAutocomplete-hasClearIcon.emotion-33 .MuiAutocomplete-inputRoot {
+  padding-right: 30px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-33 .MuiAutocomplete-inputRoot {
+  padding-right: 56px;
+}
+
+.emotion-33 .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+  width: 0;
+  min-width: 30px;
+}
+
+.emotion-33 .MuiInput-root {
+  padding-bottom: 1px;
+}
+
+.emotion-33 .MuiInput-root .MuiInput-input {
+  padding: 4px 4px 4px 0px;
+}
+
+.emotion-33 .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input {
+  padding: 2px 4px 3px 0;
+}
+
+.emotion-33 .MuiOutlinedInput-root {
+  padding: 9px;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-33 .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.emotion-33 .MuiOutlinedInput-root {
+  padding-right: 39px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-33 .MuiOutlinedInput-root {
+  padding-right: 65px;
+}
+
+.emotion-33 .MuiOutlinedInput-root .MuiAutocomplete-input {
+  padding: 7.5px 4px 7.5px 6px;
+}
+
+.emotion-33 .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {
+  right: 9px;
+}
+
+.emotion-33 .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+  padding: 6px;
+}
+
+.emotion-33 .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input {
+  padding: 2.5px 4px 2.5px 6px;
+}
+
+.emotion-33 .MuiFilledInput-root {
+  padding-top: 19px;
+  padding-left: 8px;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-33 .MuiFilledInput-root,
+.MuiAutocomplete-hasClearIcon.emotion-33 .MuiFilledInput-root {
+  padding-right: 39px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-33 .MuiFilledInput-root {
+  padding-right: 65px;
+}
+
+.emotion-33 .MuiFilledInput-root .MuiFilledInput-input {
+  padding: 7px 4px;
+}
+
+.emotion-33 .MuiFilledInput-root .MuiAutocomplete-endAdornment {
+  right: 9px;
+}
+
+.emotion-33 .MuiFilledInput-root.MuiInputBase-sizeSmall {
+  padding-bottom: 1px;
+}
+
+.emotion-33 .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input {
+  padding: 2.5px 4px;
+}
+
+.emotion-33 .MuiInputBase-hiddenLabel {
+  padding-top: 8px;
+}
+
+.emotion-33 .MuiAutocomplete-input {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  opacity: 1;
+}
+
+.emotion-34 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: top;
+  width: 100%;
+}
+
+.emotion-34 .TextFieldBase-readOnly .MuiInputBase-root {
+  background-color: #FAFAFA;
+}
+
+.emotion-35 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.1876em;
+  position: relative;
+  border-radius: 4px;
+  padding-right: 14px;
+}
+
+.emotion-35.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-35:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #212121;
+}
+
+@media (hover: none) {
+  .emotion-35:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+}
+
+.emotion-35.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.emotion-35.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: #F44336;
+}
+
+.emotion-35.Mui-disabled .MuiOutlinedInput-notchedOutline {
+  border-color: #BDBDBD;
+}
+
+.emotion-36 {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding-top: 1px;
+  padding: 8.5px 14px;
+  padding-right: 0;
+}
+
+.emotion-36::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-36::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-36:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-36::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-36:focus {
+  outline: 0;
+}
+
+.emotion-36:invalid {
+  box-shadow: none;
+}
+
+.emotion-36::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-36:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-36.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-36:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-36:-webkit-autofill {
+  border-radius: inherit;
+}
+
+.emotion-37 {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 14px);
+}
+
+.emotion-38 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  padding: 2px;
+  margin-right: -2px;
+}
+
+.emotion-38::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-38.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-38 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-38:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-38:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-38.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-41 {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: -5px;
+  left: 0;
+  margin: 0;
+  padding: 0 8px;
+  pointer-events: none;
+  border-radius: inherit;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  min-width: 0%;
+  border-color: rgba(0, 0, 0, 0.23);
+}
+
+.emotion-42 {
+  float: unset;
+  overflow: hidden;
+  padding: 0;
+  line-height: 11px;
+  -webkit-transition: width 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: width 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+}
+
+.emotion-44 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-46 {
+  width: 100%;
+}
+
+.emotion-46.Mui-focused .MuiAutocomplete-clearIndicator {
+  visibility: visible;
+}
+
+@media (pointer: fine) {
+  .emotion-46:hover .MuiAutocomplete-clearIndicator {
+    visibility: visible;
+  }
+}
+
+.emotion-46 .MuiAutocomplete-tag {
+  margin: 3px;
+  max-width: calc(100% - 6px);
+}
+
+.emotion-46 .MuiAutocomplete-inputRoot {
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-46 .MuiAutocomplete-inputRoot,
+.MuiAutocomplete-hasClearIcon.emotion-46 .MuiAutocomplete-inputRoot {
+  padding-right: 30px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-46 .MuiAutocomplete-inputRoot {
+  padding-right: 56px;
+}
+
+.emotion-46 .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+  width: 0;
+  min-width: 30px;
+}
+
+.emotion-46 .MuiInput-root {
+  padding-bottom: 1px;
+}
+
+.emotion-46 .MuiInput-root .MuiInput-input {
+  padding: 4px 4px 4px 0px;
+}
+
+.emotion-46 .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input {
+  padding: 2px 4px 3px 0;
+}
+
+.emotion-46 .MuiOutlinedInput-root {
+  padding: 9px;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-46 .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.emotion-46 .MuiOutlinedInput-root {
+  padding-right: 39px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-46 .MuiOutlinedInput-root {
+  padding-right: 65px;
+}
+
+.emotion-46 .MuiOutlinedInput-root .MuiAutocomplete-input {
+  padding: 7.5px 4px 7.5px 6px;
+}
+
+.emotion-46 .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {
+  right: 9px;
+}
+
+.emotion-46 .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+  padding: 6px;
+}
+
+.emotion-46 .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input {
+  padding: 2.5px 4px 2.5px 6px;
+}
+
+.emotion-46 .MuiFilledInput-root {
+  padding-top: 19px;
+  padding-left: 8px;
+}
+
+.MuiAutocomplete-hasPopupIcon.emotion-46 .MuiFilledInput-root,
+.MuiAutocomplete-hasClearIcon.emotion-46 .MuiFilledInput-root {
+  padding-right: 39px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.emotion-46 .MuiFilledInput-root {
+  padding-right: 65px;
+}
+
+.emotion-46 .MuiFilledInput-root .MuiFilledInput-input {
+  padding: 7px 4px;
+}
+
+.emotion-46 .MuiFilledInput-root .MuiAutocomplete-endAdornment {
+  right: 9px;
+}
+
+.emotion-46 .MuiFilledInput-root.MuiInputBase-sizeSmall {
+  padding-bottom: 1px;
+}
+
+.emotion-46 .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input {
+  padding: 2.5px 4px;
+}
+
+.emotion-46 .MuiInputBase-hiddenLabel {
+  padding-top: 8px;
+}
+
+.emotion-46 .MuiAutocomplete-input {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  opacity: 1;
+}
+
+.emotion-46 #TimePickerAutocompleteHF__autocomplete-helper-text {
+  white-space: pre;
+}
+
+.emotion-68 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-71 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.1876em;
+  position: relative;
+  border-radius: 4px;
+}
+
+.emotion-71.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-71:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #212121;
+}
+
+@media (hover: none) {
+  .emotion-71:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+}
+
+.emotion-71.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.emotion-71.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: #F44336;
+}
+
+.emotion-71.Mui-disabled .MuiOutlinedInput-notchedOutline {
+  border-color: #BDBDBD;
+}
+
+.emotion-72 {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding-top: 1px;
+  padding: 8.5px 14px;
+}
+
+.emotion-72::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-72::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-72:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-72::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-72:focus {
+  outline: 0;
+}
+
+.emotion-72:invalid {
+  box-shadow: none;
+}
+
+.emotion-72::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-72:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-72.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-72:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-72:-webkit-autofill {
+  border-radius: inherit;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiTableContainer-root emotion-1"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="OtherWorkingHoursUpsertTable"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              scope="col"
+              style="min-width: 5%; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 5%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 20%;"
+            >
+              <div
+                class="MuiBox-root emotion-8"
+              >
+                <div
+                  class="MuiBox-root emotion-9"
+                >
+                  <span
+                    class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-10"
+                    data-testid="TableHeaderWithCheckbox__checkboxHeader"
+                    style="padding: 0px; width: 18px; height: 18px;"
+                  >
+                    <input
+                      aria-label="Select all items"
+                      class="PrivateSwitchBase-input emotion-11"
+                      data-indeterminate="false"
+                      type="checkbox"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                      data-testid="CheckBoxOutlineBlankIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root emotion-13"
+                    />
+                  </span>
+                </div>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 emotion-14"
+                  data-testid="TableHeaderWithCheckbox__cellHeader"
+                >
+                  Working Type
+                </h6>
+              </div>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 30%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-14"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                Time Range
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 10%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-14"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                Total Hours
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-19"
+              scope="col"
+              style="width: 40%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-14"
+                data-testid="TableHeaderWithCheckbox__cellHeader"
+              >
+                Remarks
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-21"
+          data-testid="TableBaseBody__root"
+        >
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="0"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 5%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <div
+                class="MuiBox-root emotion-8"
+              >
+                <div
+                  class="MuiBox-root emotion-9"
+                >
+                  <span
+                    class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root emotion-10"
+                    data-testid="TableRowWithCheckbox__checkboxRow"
+                    style="padding: 0px; width: 18px; height: 18px;"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input emotion-11"
+                      data-indeterminate="false"
+                      type="checkbox"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                      data-testid="CheckBoxOutlineBlankIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root emotion-13"
+                    />
+                  </span>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth emotion-32"
+                >
+                  <div
+                    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon emotion-33"
+                    data-testid="OtherWorkingHoursUpsertTable__workingType"
+                  >
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root  emotion-34"
+                    >
+                      <div
+                        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd MuiAutocomplete-inputRoot emotion-35"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused emotion-36"
+                          data-testid="AutocompleteBase__input"
+                          id="WorkingTypeAutocompleteHF__autocomplete"
+                          name="otherWorkingHours[0].workingTypeAutocomplete"
+                          placeholder="Working Type"
+                          required=""
+                          role="combobox"
+                          spellcheck="false"
+                          type="text"
+                          value="config_value_0"
+                        />
+                        <div
+                          class="MuiAutocomplete-endAdornment emotion-37"
+                        >
+                          <button
+                            aria-label="Open"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator emotion-38"
+                            tabindex="-1"
+                            title="Open"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                              data-testid="ArrowDropDownIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M7 10l5 5 5-5z"
+                              />
+                            </svg>
+                            <span
+                              class="MuiTouchRipple-root emotion-13"
+                            />
+                          </button>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline emotion-41"
+                        >
+                          <legend
+                            class="emotion-42"
+                          >
+                            <span
+                              class="notranslate"
+                            >
+                              ​
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 30%;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container emotion-44"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth emotion-32"
+                >
+                  <div
+                    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon emotion-46"
+                    data-testid="OtherWorkingHoursUpsertTable__startTime"
+                  >
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root  emotion-34"
+                    >
+                      <div
+                        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd MuiAutocomplete-inputRoot emotion-35"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused emotion-36"
+                          data-testid="AutocompleteBase__input"
+                          id="TimePickerAutocompleteHF__autocomplete"
+                          name="otherWorkingHours[0].startTimeAutocomplete"
+                          placeholder="Start"
+                          role="combobox"
+                          spellcheck="false"
+                          type="text"
+                          value="10:00"
+                        />
+                        <div
+                          class="MuiAutocomplete-endAdornment emotion-37"
+                        >
+                          <button
+                            aria-label="Open"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator emotion-38"
+                            tabindex="-1"
+                            title="Open"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                              data-testid="ArrowDropDownIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M7 10l5 5 5-5z"
+                              />
+                            </svg>
+                            <span
+                              class="MuiTouchRipple-root emotion-13"
+                            />
+                          </button>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline emotion-41"
+                        >
+                          <legend
+                            class="emotion-42"
+                          >
+                            <span
+                              class="notranslate"
+                            >
+                              ​
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth emotion-32"
+                >
+                  <div
+                    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon emotion-46"
+                    data-testid="OtherWorkingHoursUpsertTable__endTime"
+                  >
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root  emotion-34"
+                    >
+                      <div
+                        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd MuiAutocomplete-inputRoot emotion-35"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-expanded="false"
+                          aria-invalid="false"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused emotion-36"
+                          data-testid="AutocompleteBase__input"
+                          id="TimePickerAutocompleteHF__autocomplete"
+                          name="otherWorkingHours[0].endTimeAutocomplete"
+                          placeholder="End"
+                          role="combobox"
+                          spellcheck="false"
+                          type="text"
+                          value="12:00"
+                        />
+                        <div
+                          class="MuiAutocomplete-endAdornment emotion-37"
+                        >
+                          <button
+                            aria-label="Open"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator emotion-38"
+                            tabindex="-1"
+                            title="Open"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-12"
+                              data-testid="ArrowDropDownIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M7 10l5 5 5-5z"
+                              />
+                            </svg>
+                            <span
+                              class="MuiTouchRipple-root emotion-13"
+                            />
+                          </button>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline emotion-41"
+                        >
+                          <legend
+                            class="emotion-42"
+                          >
+                            <span
+                              class="notranslate"
+                            >
+                              ​
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              --
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-68"
+              style="width: 40%;"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth emotion-32"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root  emotion-34"
+                >
+                  <div
+                    class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall emotion-71"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall emotion-72"
+                      data-testid="OtherWorkingHoursUpsertTable__remarkInput"
+                      id="mui-2"
+                      maxlength="100"
+                      name="otherWorkingHours[0].remarks"
+                      placeholder="Remark"
+                      rows="6.215"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline emotion-41"
+                    >
+                      <legend
+                        class="emotion-42"
+                      >
+                        <span
+                          class="notranslate"
+                        >
+                          ​
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

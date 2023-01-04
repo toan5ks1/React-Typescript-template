@@ -1,0 +1,3023 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationTable /> missing data should render loading Skeleton when isFetchingComposerList, readCountOfNotificationsLoading, notificationMsgTitlesFetched 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-19 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-21 {
+  display: table-row-group;
+}
+
+.emotion-22 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-22.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-22.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-22.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-22.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-23 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-26 {
+  display: block;
+  background-color: rgba(33, 33, 33, 0.11);
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform-origin: 0 55%;
+  -webkit-transform: scale(1, 0.60);
+  -moz-transform: scale(1, 0.60);
+  -ms-transform: scale(1, 0.60);
+  transform: scale(1, 0.60);
+  border-radius: 4px/6.7px;
+  -webkit-animation: animation-0 1.5s ease-in-out 0.5s infinite;
+  animation: animation-0 1.5s ease-in-out 0.5s infinite;
+}
+
+.emotion-26:empty:before {
+  content: "\\00a0";
+}
+
+.emotion-32 {
+  position: relative;
+}
+
+.emotion-33 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#F44336;
+  color: #F44336;
+}
+
+.emotion-33.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-33 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-33 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-33 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-33 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-33 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-33 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-33 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-34 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.emotion-39 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-52 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#4CAF50;
+  color: #3B873E;
+}
+
+.emotion-52.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-52 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-52 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-52 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-52 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-52 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-52 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-52 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-71 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#FF9800;
+  color: #C77700;
+}
+
+.emotion-71.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-71 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-71 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-71 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-71 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-71 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-71 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-71 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-79 {
+  overflow: auto;
+  color: #212121;
+  font-size: 0.875rem;
+}
+
+.emotion-79:last-child {
+  padding: 0;
+}
+
+.emotion-79 .MuiInputBase-input {
+  padding: 9px 35px 7px 8px;
+  font-size: 12px;
+}
+
+.emotion-79 .MuiTablePagination-selectIcon {
+  top: calc(50% - 13px);
+  right: 7px;
+}
+
+.emotion-79 .MuiTablePagination-select {
+  padding-right: 35px!important;
+}
+
+.emotion-80 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+  min-height: 52px;
+  padding-right: 2px;
+}
+
+@media (min-width:600px) {
+  .emotion-80 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-80 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-80 {
+    min-height: 64px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-80 {
+    min-height: 52px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-80 {
+    min-height: 52px;
+    padding-right: 2px;
+  }
+}
+
+.emotion-80 .MuiTablePagination-actions {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.emotion-81 {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.emotion-82 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-83 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+}
+
+.emotion-84 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.1876em;
+  color: inherit;
+  font-size: inherit;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 32px;
+  margin-left: 8px;
+}
+
+.emotion-84.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-84 .MuiTablePagination-select {
+  padding-left: 8px;
+  padding-right: 24px;
+  text-align: right;
+  -webkit-text-align-last: right;
+  text-align-last: right;
+}
+
+.emotion-85 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+}
+
+.emotion-85:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.emotion-85::-ms-expand {
+  display: none;
+}
+
+.emotion-85.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-85[multiple] {
+  height: auto;
+}
+
+.emotion-85:not([multiple]) option,
+.emotion-85:not([multiple]) optgroup {
+  background-color: #fff;
+}
+
+.emotion-85.emotion-85.emotion-85 {
+  padding-right: 24px;
+  min-width: 16px;
+}
+
+.emotion-85.MuiSelect-select {
+  height: auto;
+  min-height: 1.4375em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.emotion-85.MuiSelect-select {
+  line-height: 1.4375em;
+}
+
+.emotion-85::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-85::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-85:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-85::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-85:focus {
+  outline: 0;
+}
+
+.emotion-85:invalid {
+  box-shadow: none;
+}
+
+.emotion-85::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-85:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-85.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-85:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-86 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-87 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: calc(50% - .5em);
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-87.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-88 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-90 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.emotion-90::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-90.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-90 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-90:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-90:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-90.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-91 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-94 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiTableContainer-root emotion-1"
+      style="overflow-x: unset;"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="Notification__table"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              scope="col"
+              style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 20%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Title
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 18%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Composer
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 12%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Audience Type
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 10%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Status
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 7%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Read
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Sent Date
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-19"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Last Updated
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-21"
+          data-testid="TableBaseBody__root"
+        >
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id1"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                All
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-32"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-33"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-34"
+                  >
+                    Draft
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                --
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-39"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 07:15
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id2"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                All
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-32"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-52"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-34"
+                  >
+                    Sent
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-39"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id3"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                3
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                Student
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-32"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-71"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-34"
+                  >
+                    Scheduled
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse emotion-26"
+                style="width: 100%; height: 100%;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                Scheduled
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-39"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="MuiTablePagination-root emotion-79"
+        data-testid="TableBaseFooter"
+        limit="10"
+        offset="0"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar emotion-80"
+        >
+          <div
+            class="MuiTablePagination-spacer emotion-81"
+          />
+          <p
+            class="MuiTablePagination-selectLabel emotion-82"
+            id="mui-4"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-83"
+            >
+              ra.navigation.page_rows_per_page
+            </span>
+          </p>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary emotion-84"
+            variant="standard"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="mui-4 TableBaseFooter__select"
+              class="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input emotion-85"
+              id="TableBaseFooter__select"
+              role="button"
+              tabindex="0"
+            >
+              10
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput emotion-86"
+              tabindex="-1"
+              value="10"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard emotion-87"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTablePagination-displayedRows emotion-88"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-83"
+              data-testid="TableBaseFooter__totalRows"
+            >
+              ra.navigation.page_range_info
+            </span>
+          </p>
+          <div
+            class="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-90"
+              disabled=""
+              tabindex="-1"
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-91"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-90"
+              tabindex="0"
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-91"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-94"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<NotificationTable /> should render snapshot and correct UI 1`] = `
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-19 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-21 {
+  display: table-row-group;
+}
+
+.emotion-22 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-22.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-22.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-22.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-22.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-23 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-26 {
+  cursor: pointer;
+  color: #2196F3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-26:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-34 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#F44336;
+  color: #F44336;
+}
+
+.emotion-34.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-34 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-34 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-34 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-34 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-34 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-34 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-34 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-35 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.emotion-37 {
+  color: #212121;
+}
+
+.emotion-41 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-55 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#4CAF50;
+  color: #3B873E;
+}
+
+.emotion-55.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-55 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-55 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-55 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-55 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-55 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-55 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-55 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-76 {
+  max-width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 0.8125rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 24px;
+  color: #212121;
+  background-color: #EBEBEB;
+  border-radius: 16px;
+  white-space: nowrap;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #E0E0E0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),#FF9800;
+  color: #C77700;
+}
+
+.emotion-76.Mui-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.emotion-76 .MuiChip-avatar {
+  margin-left: 5px;
+  margin-right: -6px;
+  width: 24px;
+  height: 24px;
+  color: #616161;
+  font-size: 0.75rem;
+}
+
+.emotion-76 .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #0B79D0;
+}
+
+.emotion-76 .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #BE134D;
+}
+
+.emotion-76 .MuiChip-avatarSmall {
+  margin-left: 4px;
+  margin-right: -4px;
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+}
+
+.emotion-76 .MuiChip-icon {
+  color: #616161;
+  margin-left: 4px;
+  margin-right: -4px;
+  font-size: 18px;
+}
+
+.emotion-76 .MuiChip-deleteIcon {
+  -webkit-tap-highlight-color: transparent;
+  color: rgba(33, 33, 33, 0.26);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px 0 -6px;
+  margin-right: 4px;
+  margin-left: -4px;
+}
+
+.emotion-76 .MuiChip-deleteIcon:hover {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.emotion-85 {
+  overflow: auto;
+  color: #212121;
+  font-size: 0.875rem;
+}
+
+.emotion-85:last-child {
+  padding: 0;
+}
+
+.emotion-85 .MuiInputBase-input {
+  padding: 9px 35px 7px 8px;
+  font-size: 12px;
+}
+
+.emotion-85 .MuiTablePagination-selectIcon {
+  top: calc(50% - 13px);
+  right: 7px;
+}
+
+.emotion-85 .MuiTablePagination-select {
+  padding-right: 35px!important;
+}
+
+.emotion-86 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+  min-height: 52px;
+  padding-right: 2px;
+}
+
+@media (min-width:600px) {
+  .emotion-86 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-86 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-86 {
+    min-height: 64px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-86 {
+    min-height: 52px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-86 {
+    min-height: 52px;
+    padding-right: 2px;
+  }
+}
+
+.emotion-86 .MuiTablePagination-actions {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.emotion-87 {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.emotion-88 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-89 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+}
+
+.emotion-90 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.1876em;
+  color: inherit;
+  font-size: inherit;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 32px;
+  margin-left: 8px;
+}
+
+.emotion-90.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-90 .MuiTablePagination-select {
+  padding-left: 8px;
+  padding-right: 24px;
+  text-align: right;
+  -webkit-text-align-last: right;
+  text-align-last: right;
+}
+
+.emotion-91 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+}
+
+.emotion-91:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.emotion-91::-ms-expand {
+  display: none;
+}
+
+.emotion-91.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-91[multiple] {
+  height: auto;
+}
+
+.emotion-91:not([multiple]) option,
+.emotion-91:not([multiple]) optgroup {
+  background-color: #fff;
+}
+
+.emotion-91.emotion-91.emotion-91 {
+  padding-right: 24px;
+  min-width: 16px;
+}
+
+.emotion-91.MuiSelect-select {
+  height: auto;
+  min-height: 1.4375em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.emotion-91.MuiSelect-select {
+  line-height: 1.4375em;
+}
+
+.emotion-91::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-91::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-91:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-91::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-91:focus {
+  outline: 0;
+}
+
+.emotion-91:invalid {
+  box-shadow: none;
+}
+
+.emotion-91::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-91:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-91.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-91:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-92 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-93 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: calc(50% - .5em);
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-93.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-94 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-96 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.emotion-96::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-96.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-96 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-96:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-96:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-96.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-97 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.emotion-100 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiTableContainer-root emotion-1"
+      style="overflow-x: unset;"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="Notification__table"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              scope="col"
+              style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 20%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Title
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 18%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Composer
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 12%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Audience Type
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 10%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Status
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 7%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Read
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Sent Date
+              </h6>
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-19"
+              scope="col"
+              style="width: 15%;"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Last Updated
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-21"
+          data-testid="TableBaseBody__root"
+        >
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id1"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-26"
+                data-testid="NotificationTable__title"
+                href="/communication/notifications/notification_id1/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="TypographyShortenStr"
+                  title="I want notification's title to have > 24 characters, so I write more"
+                >
+                  I want notification's ti...
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationList__typographyComposer"
+                title="I want user's name to have > 24 characters, so I write more"
+              >
+                I want user's name to ha...
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                All
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-33"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-34"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-35"
+                  >
+                    Draft
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-37"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                >
+                  --
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                --
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-41"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 07:15
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id2"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-26"
+                data-testid="NotificationTable__title"
+                href="/communication/notifications/notification_id2/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  title="Msg 2"
+                >
+                  Msg 2
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationList__typographyComposer"
+              >
+                name 2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                All
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-33"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-55"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-35"
+                  >
+                    Sent
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-37"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                >
+                  2/2
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-41"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-22"
+            data-testid="TableBase__row"
+            data-value="notification_id3"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                3
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 20%;"
+            >
+              <a
+                class="emotion-26"
+                data-testid="NotificationTable__title"
+                href="/communication/notifications/notification_id3/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  title="Msg 3"
+                >
+                  Msg 3
+                </p>
+              </a>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 18%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationList__typographyComposer"
+              >
+                name 3
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 12%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__recipient"
+              >
+                Student
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 10%;"
+            >
+              <div
+                class="MuiBox-root emotion-33"
+                data-testid="NotificationTable__status"
+              >
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault emotion-76"
+                  data-testid="ChipNotificationStatus"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelSmall emotion-35"
+                  >
+                    Scheduled
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 7%;"
+            >
+              <div
+                class="MuiBox-root emotion-37"
+                data-testid="ReadCountColumn__box"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                >
+                  --
+                </p>
+              </div>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-23"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__sentDate"
+              >
+                Scheduled
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-41"
+              style="width: 15%;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="NotificationTable__lastUpdated"
+              >
+                2021/05/12, 08:15
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="MuiTablePagination-root emotion-85"
+        data-testid="TableBaseFooter"
+        limit="10"
+        offset="0"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar emotion-86"
+        >
+          <div
+            class="MuiTablePagination-spacer emotion-87"
+          />
+          <p
+            class="MuiTablePagination-selectLabel emotion-88"
+            id="mui-1"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-89"
+            >
+              ra.navigation.page_rows_per_page
+            </span>
+          </p>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary emotion-90"
+            variant="standard"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="mui-1 TableBaseFooter__select"
+              class="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input emotion-91"
+              id="TableBaseFooter__select"
+              role="button"
+              tabindex="0"
+            >
+              10
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput emotion-92"
+              tabindex="-1"
+              value="10"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard emotion-93"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTablePagination-displayedRows emotion-94"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-89"
+              data-testid="TableBaseFooter__totalRows"
+            >
+              ra.navigation.page_range_info
+            </span>
+          </p>
+          <div
+            class="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-96"
+              disabled=""
+              tabindex="-1"
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-97"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-96"
+              tabindex="0"
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-97"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root emotion-100"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

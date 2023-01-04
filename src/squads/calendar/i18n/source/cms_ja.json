@@ -1,0 +1,148 @@
+{
+    "ra": {
+        "message": {
+            "unableToLoadData": "データの読み込みに失敗しました。もう一度お試しください。"
+        },
+        "action": {
+            "cancel": "キャンセル",
+            "save": "保存",
+            "search": "検索",
+            "close": "閉じる"
+        },
+        "boolean": {
+            "true": "はい",
+            "false": "いいえ",
+            "null": ""
+        },
+        "manabie-error": {
+            "invalid_params": "Paramsが有効ではありません。データを確認してください。"
+        },
+        "common": {
+            "action": {
+                "cancel": "キャンセル",
+                "confirm": "確認",
+                "search": "検索",
+                "save": "保存",
+                "OK": "確認"
+            },
+            "save": "保存",
+            "more": "変更"
+        }
+    },
+    "resources": {
+        "schedule": {
+            "name": "カレンダー",
+            "button": {
+                "today": "今日",
+                "releaseTime": "授業時刻を更新",
+                "releaseEvent": "イベントを更新",
+                "addEvent": "イベントを追加",
+                "openTime": "ひらく",
+                "setTime": "授業時刻の設定",
+                "moreEvent": "さらに表示",
+                "viewCenter": "教室を見る"
+            },
+            "label": {
+                "scheduleTitle": "%{brand} セミナースケジュール",
+                "datePickerTitle": "日付を選択",
+                "openingStatus": "開講状況",
+                "repeatType": "繰り返し設定",
+                "openingHour": "開講時刻（時間）",
+                "openingMinute": "開講時刻（分）",
+                "endHour": "終了時刻（時間）",
+                "endMinute": "終了時刻（分）",
+                "openingDate": "開講日",
+                "endDate": "終了日",
+                "date": "日付",
+                "brandName": "ブランド名",
+                "centerName": "教室名",
+                "month": "月",
+                "week": "週",
+                "day": "日",
+                "year": "年",
+                "remark": "備考",
+                "eventName": "イベント名",
+                "tomorrow": "明日",
+                "lookingFor": "検索",
+                "schedule": "スケジュール",
+                "lookingForSchedule": "スケジュールの検索",
+                "helperText": "フィルターをお試しください",
+                "selectLocation": "所属の選択"
+            },
+            "openingStatus": {
+                "0": "通常",
+                "1": "特別",
+                "2": "予備",
+                "3": "休講"
+            },
+            "choices": {
+                "openingStatus": {
+                    "0": "通常授業",
+                    "1": "特別授業",
+                    "2": "予備授業",
+                    "3": "休講"
+                },
+                "repeatType": {
+                    "0": "繰り返さない",
+                    "1": "まで毎日繰り返す",
+                    "2": "まで毎週繰り返す",
+                    "3": "まで毎月繰り返す"
+                },
+                "scheduleSearchType": {
+                    "0": "ブランド",
+                    "1": "教室"
+                },
+                "dayConditionType": {
+                    "0": "全日",
+                    "1": "時刻指定"
+                }
+            },
+            "event": {
+                "addEventTitle": "イベントを追加",
+                "editEventTitle": "イベントを編集",
+                "eventCentersApplied": "このイベントは %{centerNumber} 教室に適用されます",
+                "allDayEventDescription": "%{openingDate} から %{closeDate} までの全日イベントです",
+                "specificTimeEventDescription": "時刻指定のあるイベントです",
+                "missingName": "イベント名がありません",
+                "releaseEventTitle": "イベントを適用しますか？",
+                "releaseEventMessage": "選択した教室にイベントが適用されます"
+            },
+            "message": {
+                "success": {
+                    "releaseEvent": "イベントを適用しました",
+                    "releaseTime": "開講時刻を適用しました",
+                    "addOpenningTime": "開講時刻を追加しました"
+                }
+            },
+            "error": {
+                "eventName": {
+                    "required": "イベント名は必須です"
+                },
+                "openingStatus": {
+                    "required": "開講状況は必須です"
+                },
+                "openingHour": {
+                    "required": "開講時刻は必須です"
+                },
+                "openingMinutes": {
+                    "required": "開講時刻は必須です"
+                },
+                "repeatOption": {
+                    "required": "繰り返し設定は必須です"
+                },
+                "date": {
+                    "required": "日付は必須です"
+                }
+            }
+        },
+        "common": {
+            "youAreOffline": "接続できません。通信環境の良い状態で再度お試しください",
+            "cannotLoadPage": "読み込みに失敗しました。通信環境の良い状態で再度お試しください",
+            "somethingWentWrong": "エラーが発生しました",
+            "pleaseHelpUsReport": "下記よりエラー報告にご協力ください",
+            "back": "戻る",
+            "details": "詳細",
+            "netWorkUnstable": "インターネット接続が不安定です。ページを更新するか、再度お試しください"
+        }
+    }
+}

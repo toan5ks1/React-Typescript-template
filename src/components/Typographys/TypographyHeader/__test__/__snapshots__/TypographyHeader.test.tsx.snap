@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyHeader /> should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+<div>
+  <h6
+    class="MuiTypography-root MuiTypography-h6 emotion-0"
+  >
+    Test
+  </h6>
+</div>
+`;

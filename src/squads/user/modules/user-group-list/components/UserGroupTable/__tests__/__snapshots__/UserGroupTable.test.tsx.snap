@@ -1,0 +1,1131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserGroupTable /> should match snapshot 1`] = `
+.emotion-0 {
+  position: relative;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),0px 3px 4px rgba(0, 0, 0, 0.14),0px 1px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emotion-1 {
+  background-color: #fff;
+  color: #212121;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px rgba(0, 0, 0, 0.14),0px 1px 5px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emotion-2 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-2 caption {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  padding: 16px;
+  color: #757575;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-3 {
+  display: table-header-group;
+}
+
+.emotion-4 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-4.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-4.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-4.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.57;
+}
+
+.emotion-9 {
+  display: table-row-group;
+}
+
+.emotion-10 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-10.MuiTableRow-hover:hover {
+  background-color: #F5F5F5;
+}
+
+.emotion-10.Mui-selected {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.emotion-10.Mui-selected:hover {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+.emotion-10.TableBaseRow-selected {
+  background-color: #EDF7FE;
+}
+
+.emotion-11 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-13 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(251, 251, 251, 1);
+  text-align: left;
+  padding: 16px;
+  color: #212121;
+  position: relative;
+  border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  color: #2196F3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-14:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-70 {
+  overflow: auto;
+  color: #212121;
+  font-size: 0.875rem;
+}
+
+.emotion-70:last-child {
+  padding: 0;
+}
+
+.emotion-70 .MuiInputBase-input {
+  padding: 9px 35px 7px 8px;
+  font-size: 12px;
+}
+
+.emotion-70 .MuiTablePagination-selectIcon {
+  top: calc(50% - 13px);
+  right: 7px;
+}
+
+.emotion-70 .MuiTablePagination-select {
+  padding-right: 35px!important;
+}
+
+.emotion-71 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-height: 56px;
+  min-height: 52px;
+  padding-right: 2px;
+}
+
+@media (min-width:600px) {
+  .emotion-71 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-71 {
+    min-height: 48px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-71 {
+    min-height: 64px;
+  }
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .emotion-71 {
+    min-height: 52px;
+  }
+}
+
+@media (min-width:600px) {
+  .emotion-71 {
+    min-height: 52px;
+    padding-right: 2px;
+  }
+}
+
+.emotion-71 .MuiTablePagination-actions {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.emotion-72 {
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.emotion-73 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-74 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+}
+
+.emotion-75 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.4375em;
+  color: #212121;
+  box-sizing: border-box;
+  position: relative;
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.1876em;
+  color: inherit;
+  font-size: inherit;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 32px;
+  margin-left: 8px;
+}
+
+.emotion-75.Mui-disabled {
+  color: #9E9E9E;
+  cursor: default;
+}
+
+.emotion-75 .MuiTablePagination-select {
+  padding-left: 8px;
+  padding-right: 24px;
+  text-align: right;
+  -webkit-text-align-last: right;
+  text-align-last: right;
+}
+
+.emotion-76 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+}
+
+.emotion-76:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.emotion-76::-ms-expand {
+  display: none;
+}
+
+.emotion-76.Mui-disabled {
+  cursor: default;
+}
+
+.emotion-76[multiple] {
+  height: auto;
+}
+
+.emotion-76:not([multiple]) option,
+.emotion-76:not([multiple]) optgroup {
+  background-color: #fff;
+}
+
+.emotion-76.emotion-76.emotion-76 {
+  padding-right: 24px;
+  min-width: 16px;
+}
+
+.emotion-76.MuiSelect-select {
+  height: auto;
+  min-height: 1.4375em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.emotion-76.MuiSelect-select {
+  line-height: 1.4375em;
+}
+
+.emotion-76::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-76::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-76:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-76::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.emotion-76:focus {
+  outline: 0;
+}
+
+.emotion-76:invalid {
+  box-shadow: none;
+}
+
+.emotion-76::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76::-webkit-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76::-moz-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76:-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76::-ms-input-placeholder {
+  opacity: 0!important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .emotion-76:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+
+.emotion-76.Mui-disabled {
+  opacity: 1;
+  -webkit-text-fill-color: #9E9E9E;
+}
+
+.emotion-76:-webkit-autofill {
+  -webkit-animation-duration: 5000s;
+  animation-duration: 5000s;
+  -webkit-animation-name: mui-auto-fill;
+  animation-name: mui-auto-fill;
+}
+
+.emotion-77 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-78 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: calc(50% - .5em);
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-78.Mui-disabled {
+  color: #BDBDBD;
+}
+
+.emotion-79 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.emotion-81::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-81.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-81 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-81:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-81:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-81.Mui-disabled {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.emotion-82 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiTableContainer-root emotion-1"
+    >
+      <table
+        class="MuiTable-root emotion-2"
+        data-testid="UserGroupList__table"
+      >
+        <thead
+          class="MuiTableHead-root emotion-3"
+          data-testid="TableBase__header"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head emotion-4"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-5"
+              scope="col"
+              style="min-width: 60px; border-right: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-7"
+              scope="col"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 emotion-8"
+                data-testid="TableBase__cellHeader"
+              >
+                Name
+              </h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root emotion-9"
+          data-testid="TableBaseBody__root"
+        >
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="0"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user0/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 00
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="1"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user1/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 01
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="2"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                3
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user2/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 02
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="3"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                4
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user3/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 03
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="4"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                5
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user4/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 04
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="5"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                6
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user5/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 05
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="6"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                7
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user6/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 06
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="7"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                8
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user7/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 07
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                9
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user8/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 08
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root emotion-10"
+            data-testid="TableBase__row"
+            data-value="9"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-11"
+              style="min-width: 60px;"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-6"
+                data-testid="TableIndexCell__index"
+              >
+                10
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-13"
+            >
+              <a
+                class="emotion-14"
+                data-testid="UserGroupList__userGroupNameLink"
+                href="/undefined/user9/show"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 emotion-6"
+                  data-testid="UserGroupList__userGroupName"
+                >
+                  User Group 09
+                </p>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="MuiTablePagination-root emotion-70"
+        data-testid="TableBaseFooter"
+        limit="10"
+        offset="0"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar emotion-71"
+        >
+          <div
+            class="MuiTablePagination-spacer emotion-72"
+          />
+          <p
+            class="MuiTablePagination-selectLabel emotion-73"
+            id="mui-1"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-74"
+            >
+              ra.navigation.page_rows_per_page
+            </span>
+          </p>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary emotion-75"
+            variant="standard"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="mui-1 TableBaseFooter__select"
+              class="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input emotion-76"
+              id="TableBaseFooter__select"
+              role="button"
+              tabindex="0"
+            >
+              10
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput emotion-77"
+              tabindex="-1"
+              value="10"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard emotion-78"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTablePagination-displayedRows emotion-79"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-74"
+              data-testid="TableBaseFooter__totalRows"
+            >
+              ra.navigation.page_range_info
+            </span>
+          </p>
+          <div
+            class="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-81"
+              disabled=""
+              tabindex="-1"
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-82"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeLarge emotion-81"
+              disabled=""
+              tabindex="-1"
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-82"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

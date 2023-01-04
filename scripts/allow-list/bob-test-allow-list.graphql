@@ -1,0 +1,32 @@
+query getBooksChapterByChapterIdForTest($chapter_id: String!) {
+    books_chapters(where: { chapter_id: { _eq: $chapter_id } }, limit: 1) {
+        chapter_id
+        book_id
+    }
+}
+
+query getLOsByTopicIdsForTest($topic_ids: [String!]) {
+    learning_objectives(
+        where: { topic_id: { _in: $topic_ids } }
+        order_by: { display_order: asc }
+    ) {
+        lo_id
+        type
+        name
+        display_order
+        topic_id
+    }
+}
+
+query queryVideoIdByTypeForTest($type: String!) {
+    media(where: { type: { _eq: $type } }, limit: 2) {
+        media_id
+        name
+        resource
+    }
+}
+query queryStudentIdByStudentEmailForTest($email: String!) {
+    students(where: { user: { email: { _eq: $email } } }, limit: 1) {
+        student_id
+    }
+}

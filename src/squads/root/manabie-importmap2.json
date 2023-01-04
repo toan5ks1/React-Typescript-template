@@ -1,0 +1,9 @@
+{
+    "imports": {
+        "@manabie-com/mfe/syllabus": "https://storage.googleapis.com/import-map-deployer-staging/Manabie/syllabus/v0.0.1/index.js",
+        "@manabie-com/mfe/adobo": "https://storage.googleapis.com/import-map-deployer-staging/Manabie/adobo/v0.0.1/index.js",
+        "@manabie-com/mfe/user": "https://storage.googleapis.com/import-map-deployer-staging/Manabie/user/v0.0.1/index.js",
+        "react": "https://cdn.jsdelivr.net/npm/@esm-bundle/react/esm/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/@esm-bundle/react-dom/esm/react-dom.production.min.js"
+    }
+}

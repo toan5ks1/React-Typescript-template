@@ -1,0 +1,1213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GeneralInfoDetail /> when disabled Student Contact Phone Number should render match snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  word-break: break-word;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 25%;
+}
+
+@media (min-width:600px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+.emotion-7 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 66.666667%;
+  -ms-flex-preferred-size: 66.666667%;
+  flex-basis: 66.666667%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 66.666667%;
+}
+
+@media (min-width:600px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="TabStudentDetail__generalInfo"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 emotion-2"
+        data-testid="TabStudentDetail__subTitle"
+      >
+        General Info
+      </p>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Name
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn emotion-8"
+            data-testid="TabStudentDetail__generalNameValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Name student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Phonetic Name
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn emotion-8"
+            data-testid="TabStudentDetail__generalPhoneticNameValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Email
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalEmailValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                student_id_01@example.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Phone Number
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalPhoneNumberValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                (+81) 0364579988
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Grade
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalGradeValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Grade 10
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Enrollment Status
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalEnrollmentStatusValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Enrolled
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Birthday
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalBirthdayValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                2021/01/01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Gender
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalGenderValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Male
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              External Student ID
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalExternalStudentIDValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                external_id student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Location
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalLocationValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Center 1, Center 2, Center JP 3
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Note
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn TabStudentDetail-breakWord emotion-8"
+            data-testid="TabStudentDetail__generalNoteValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Student note student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GeneralInfoDetail /> when enabled Student Contact Phone Number should render match snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  word-break: break-word;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 25%;
+}
+
+@media (min-width:600px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-6 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 25%;
+  }
+}
+
+.emotion-7 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.66;
+  color: #757575;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-basis: 66.666667%;
+  -ms-flex-preferred-size: 66.666667%;
+  flex-basis: 66.666667%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  max-width: 66.666667%;
+}
+
+@media (min-width:600px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:960px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width:1920px) {
+  .emotion-8 {
+    -webkit-flex-basis: 66.666667%;
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    max-width: 66.666667%;
+  }
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  font-family: Roboto,sans-serif;
+  line-height: 1.43;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+    data-testid="TabStudentDetail__generalInfo"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 emotion-2"
+        data-testid="TabStudentDetail__subTitle"
+      >
+        General Info
+      </p>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Name
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn emotion-8"
+            data-testid="TabStudentDetail__generalNameValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Name student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Phonetic Name
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn emotion-8"
+            data-testid="TabStudentDetail__generalPhoneticNameValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Email
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn emotion-8"
+            data-testid="TabStudentDetail__generalEmailValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                student_id_01@example.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Grade
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalGradeValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Grade 10
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Enrollment Status
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalEnrollmentStatusValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Enrolled
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Birthday
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalBirthdayValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                2021/01/01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Gender
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalGenderValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Male
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              External Student ID
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalExternalStudentIDValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                external_id student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Location
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 emotion-8"
+            data-testid="TabStudentDetail__generalLocationValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Center 1, Center 2, Center JP 3
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root emotion-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container emotion-4"
+        data-testid="TabStudentDetail__generalInfoItem"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container emotion-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 TabStudentDetail-labelOneColumn emotion-6"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption emotion-7"
+            >
+              Note
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 TabStudentDetail-valueOneColumn TabStudentDetail-breakWord emotion-8"
+            data-testid="TabStudentDetail__generalNoteValue"
+          >
+            <div
+              class="MuiBox-root emotion-9"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 emotion-10"
+              >
+                Student note student_id_01
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,1 @@
+import{_ as n}from"./_baseFlatten.b9c8ce3e.js";import{a,b as r}from"./_baseRest.fb013a79.js";var s=n;function l(t){var e=t==null?0:t.length;return e?s(t,1):[]}var o=l,f=o,i=a,v=r;function _(t){return v(i(t,void 0,f),t+"")}var m=_;export{m as _};
